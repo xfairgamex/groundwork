@@ -811,19 +811,8 @@ img, a img {
 .twelfths .skip-twelve, .columns .skip-twelve {
   margin-left: 100%;
 }
-.column .centered, .whole .centered,
-.wholes .centered, .half .centered,
-.halves .centered, .third .centered,
-.thirds .centered, .fourth .centered,
-.fourths .centered, .fifth .centered,
-.fifths .centered, .sixth .centered,
-.sixths .centered, .seventh .centered,
-.sevenths .centered, .eighth .centered,
-.eighths .centered, .ninth .centered,
-.ninths .centered, .tenth .centered,
-.tenths .centered, .eleventh .centered,
-.elevenths .centered, .twelfth .centered,
-.twelfths .centered, .columns .centered {
+
+.centered {
   float: none;
   margin: 0 auto;
 }
@@ -1877,17 +1866,6 @@ body {
   color: white;
 }
 
-* {
-  outline: none;
-}
-*:focus {
-  -ms-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.35));
-  -o-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.35));
-  -moz-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.35));
-  -webkit-filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.35));
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.35));
-}
-
 a, a:link, a:visited {
   color: #489ac1;
   -ms-transition: color 0.25s;
@@ -2597,8 +2575,30 @@ nav ul li a:hover, nav ul li a:focus, nav ul li a:link:hover, nav ul li a:link:f
 nav ul li a.active:hover, nav ul li a.active:focus, nav ul li a:link.active:hover, nav ul li a:link.active:focus, nav ul li a:visited.active:hover, nav ul li a:visited.active:focus {
   background: #198d98;
 }
-nav ul li:hover ul, nav ul li:focus ul, nav ul li.on ul {
-  display: block;
+nav ul li.menu > a:after {
+  content: '\f0d7';
+  display: inline-block;
+  width: 1.1em;
+  margin-left: 0.25em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.1em;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+nav ul li.on a {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+nav ul li.on ul {
+  display: block !important;
 }
 nav ul li:first-child a, nav ul li:first-child a:link, nav ul li:first-child a:visited {
   -ms-border-radius: 4px 4px 0 0;
@@ -2745,6 +2745,10 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, n
   -moz-border-radius: 0 0 4px 4px !important;
   -webkit-border-radius: 0 0 4px 4px !important;
   border-radius: 0 0 4px 4px !important;
+}
+
+.no-js nav ul li.menu:hover ul, .no-js nav ul li.menu:focus ul {
+  display: block !important;
 }
 
 .tabs {
@@ -6142,8 +6146,35 @@ ul.icons li [class*=" icon-"] {
     margin-left: 0;
   }
 
-  nav:not(.small-tablet):not(.mobile) > ul li ul {
+  nav, nav.inline {
+    width: 100%;
+  }
+  nav ul li, nav ul.row li, nav.inline ul li, nav.inline ul.row li {
     display: block;
+    width: 100% !important;
+  }
+  nav ul li.menu > a:after, nav ul.row li.menu > a:after, nav.inline ul li.menu > a:after, nav.inline ul.row li.menu > a:after {
+    display: none !important;
+  }
+  nav ul li.menu > a:before, nav ul.row li.menu > a:before, nav.inline ul li.menu > a:before, nav.inline ul.row li.menu > a:before {
+    content: '\f0c9';
+    display: inline-block;
+    width: 1.1em;
+    margin-left: 0.25em;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.1em;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    line-height: normal;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    margin-top: 0;
+  }
+  nav ul li ul, nav ul.row li ul, nav.inline ul li ul, nav.inline ul.row li ul {
     position: static;
     -ms-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
     -o-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
@@ -6151,13 +6182,47 @@ ul.icons li [class*=" icon-"] {
     -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   }
-  nav:not(.small-tablet):not(.mobile).inline > ul li ul {
-    float: left;
+  nav ul li ul li:first-child a, nav ul li ul li:first-child a:link, nav ul li ul li:first-child a:visited, nav ul.row li ul li:first-child a, nav ul.row li ul li:first-child a:link, nav ul.row li ul li:first-child a:visited, nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:link, nav.inline ul li ul li:first-child a:visited, nav.inline ul.row li ul li:first-child a, nav.inline ul.row li ul li:first-child a:link, nav.inline ul.row li ul li:first-child a:visited {
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
   }
-  nav:not(.small-tablet):not(.mobile).inline > ul li ul li {
-    display: inline-block;
+  nav ul li ul li:last-child a, nav ul li ul li:last-child a:link, nav ul li ul li:last-child a:visited, nav ul.row li ul li:last-child a, nav ul.row li ul li:last-child a:link, nav ul.row li ul li:last-child a:visited, nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, nav.inline ul li ul li:last-child a:visited, nav.inline ul.row li ul li:last-child a, nav.inline ul.row li ul li:last-child a:link, nav.inline ul.row li ul li:last-child a:visited {
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
   }
-  nav:not(.small-tablet):not(.mobile).inline > ul li ul li a, nav:not(.small-tablet):not(.mobile).inline > ul li ul li a:link, nav:not(.small-tablet):not(.mobile).inline > ul li ul li a:visited {
+  nav ul:last-child li:last-child ul li:last-child a, nav ul:last-child li:last-child ul li:last-child a:link, nav ul:last-child li:last-child ul li:last-child a:visited, nav ul.row:last-child li:last-child ul li:last-child a, nav ul.row:last-child li:last-child ul li:last-child a:link, nav ul.row:last-child li:last-child ul li:last-child a:visited, nav.inline ul:last-child li:last-child ul li:last-child a, nav.inline ul:last-child li:last-child ul li:last-child a:link, nav.inline ul:last-child li:last-child ul li:last-child a:visited, nav.inline ul.row:last-child li:last-child ul li:last-child a, nav.inline ul.row:last-child li:last-child ul li:last-child a:link, nav.inline ul.row:last-child li:last-child ul li:last-child a:visited {
+    -ms-border-radius: 0 0 4px 4px !important;
+    -o-border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -webkit-border-radius: 0 0 4px 4px !important;
+    border-radius: 0 0 4px 4px !important;
+  }
+
+  nav ul li:first-child > a, nav ul li:first-child > a:link, nav ul li:first-child > a:visited, nav ul.row li:first-child > a, nav ul.row li:first-child > a:link, nav ul.row li:first-child > a:visited, nav.inline ul li:first-child > a, nav.inline ul li:first-child > a:link, nav.inline ul li:first-child > a:visited, nav.inline ul.row li:first-child > a, nav.inline ul.row li:first-child > a:link, nav.inline ul.row li:first-child > a:visited {
+    -ms-border-radius: 4px 4px 0 0 !important;
+    -o-border-radius: 4px 4px 0 0 !important;
+    -moz-border-radius: 4px 4px 0 0 !important;
+    -webkit-border-radius: 4px 4px 0 0 !important;
+    border-radius: 4px 4px 0 0 !important;
+  }
+  nav ul li:last-child > a, nav ul li:last-child > a:link, nav ul li:last-child > a:visited, nav ul.row li:last-child > a, nav ul.row li:last-child > a:link, nav ul.row li:last-child > a:visited, nav.inline ul li:last-child > a, nav.inline ul li:last-child > a:link, nav.inline ul li:last-child > a:visited, nav.inline ul.row li:last-child > a, nav.inline ul.row li:last-child > a:link, nav.inline ul.row li:last-child > a:visited {
+    -ms-border-radius: 0 0 4px 4px !important;
+    -o-border-radius: 0 0 4px 4px !important;
+    -moz-border-radius: 0 0 4px 4px !important;
+    -webkit-border-radius: 0 0 4px 4px !important;
+    border-radius: 0 0 4px 4px !important;
+  }
+  nav ul li:last-child.on > a, nav ul li:last-child.on > a:link, nav ul li:last-child.on > a:visited, nav ul.row li:last-child.on > a, nav ul.row li:last-child.on > a:link, nav ul.row li:last-child.on > a:visited, nav.inline ul li:last-child.on > a, nav.inline ul li:last-child.on > a:link, nav.inline ul li:last-child.on > a:visited, nav.inline ul.row li:last-child.on > a, nav.inline ul.row li:last-child.on > a:link, nav.inline ul.row li:last-child.on > a:visited {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  nav ul li ul li a, nav ul li ul li a:link, nav ul li ul li a:visited, nav ul.row li ul li a, nav ul.row li ul li a:link, nav ul.row li ul li a:visited, nav.inline ul li ul li a, nav.inline ul li ul li a:link, nav.inline ul li ul li a:visited, nav.inline ul.row li ul li a, nav.inline ul.row li ul li a:link, nav.inline ul.row li ul li a:visited {
     -ms-border-radius: 0 !important;
     -o-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
@@ -7601,35 +7666,6 @@ ul.icons li [class*=" icon-"] {
   .twelfth:not(.mobile).skip-twelve,
   .twelfths:not(.mobile).skip-twelve {
     margin-left: 0;
-  }
-
-  nav:not(.mobile) > ul li ul {
-    display: block;
-    position: static;
-    -ms-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    -o-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    -moz-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-  }
-  nav:not(.mobile).inline {
-    display: block;
-  }
-  nav:not(.mobile).inline > ul li {
-    display: block;
-  }
-  nav:not(.mobile).inline > ul li ul {
-    float: none !important;
-  }
-  nav:not(.mobile).inline > ul li ul li {
-    display: block !important;
-  }
-  nav:not(.mobile).inline > ul li ul li a, nav:not(.mobile).inline > ul li ul li a:link, nav:not(.mobile).inline > ul li ul li a:visited {
-    -ms-border-radius: 0 !important;
-    -o-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    border-radius: 0 !important;
   }
 
   .tabs:not(.mobile) > ul li {
