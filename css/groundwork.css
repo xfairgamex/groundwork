@@ -2769,6 +2769,7 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, n
 .tabs > ul li {
   display: block;
   float: left;
+  margin: 0 2px;
 }
 .tabs > ul li.pull-right {
   float: right;
@@ -2776,13 +2777,20 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, n
 .tabs > ul li.pull-left {
   float: left;
 }
+.tabs > ul li:first-child {
+  margin-left: 0;
+}
+.tabs > ul li:first-child a:before {
+  display: none;
+}
 .tabs > ul li a {
   display: block;
+  position: relative;
   width: 100%;
   word-wrap: break-word;
   padding: 0.25em 1em;
   background: #1dabb8;
-  border: 1px solid #dddddd;
+  border: 1px solid #1dabb8;
   color: white;
   font-weight: bold;
   font-size: 1em;
@@ -2804,22 +2812,74 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, n
 }
 .tabs > ul li a:hover, .tabs > ul li a:focus {
   background: #198d98;
-  border: 1px solid #dddddd;
+  border: 1px solid #198d98;
   color: white;
   text-decoration: none;
 }
+.tabs > ul li a:hover:before, .tabs > ul li a:focus:before {
+  box-shadow: 2px 1px 0 #198d98;
+}
+.tabs > ul li a:hover:after, .tabs > ul li a:focus:after {
+  box-shadow: -2px 1px 0 #198d98;
+}
 .tabs > ul li a.active, .tabs > ul li a.active:hover, .tabs > ul li a.active:focus {
   background: #198d98;
+  border: 1px solid #198d98;
   color: white;
+  z-index: 2;
+  -ms-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+  -o-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+  -moz-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+.tabs > ul li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ul li a.active:focus:before {
+  box-shadow: 2px 1px 0 #198d98;
+}
+.tabs > ul li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ul li a.active:focus:after {
+  box-shadow: -2px 1px 0 #198d98;
 }
 .tabs > ul li a.disabled {
   background: #a6a6a6;
   color: #d9d9d9;
   cursor: not-allowed;
+  border-color: #a6a6a6;
+}
+.tabs > ul li a.disabled:before {
+  box-shadow: 2px 1px 0 #a6a6a6;
+}
+.tabs > ul li a.disabled:after {
+  box-shadow: -2px 1px 0 #a6a6a6;
 }
 .tabs > ul li a.disabled:hover, .tabs > ul li a.disabled:focus {
   background: #a6a6a6;
+  border: 1px solid #a6a6a6;
   color: #d9d9d9;
+}
+.tabs > ul li a.disabled:hover:before, .tabs > ul li a.disabled:focus:before {
+  box-shadow: 2px 1px 0 #a6a6a6;
+}
+.tabs > ul li a.disabled:hover:after, .tabs > ul li a.disabled:focus:after {
+  box-shadow: -2px 1px 0 #a6a6a6;
+}
+.tabs > ul li a:before, .tabs > ul li a:after {
+  position: absolute;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  content: '';
+}
+.tabs > ul li a:before {
+  left: -6px;
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+  box-shadow: 2px 1px 0 #1dabb8;
+}
+.tabs > ul li a:after {
+  right: -6px;
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+  box-shadow: -2px 1px 0 #1dabb8;
 }
 .tabs > div {
   display: none;
@@ -2833,7 +2893,7 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, n
 }
 .tabs > div.active {
   display: block;
-  border: 1px solid #dddddd;
+  border: 1px solid #198d98;
 }
 
 .message {
