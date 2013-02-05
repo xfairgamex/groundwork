@@ -2248,7 +2248,7 @@ button.dropdown:hover ul, button.dropdown:focus ul, .button.dropdown:hover ul, .
   display: block;
 }
 button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:link.dropdown ul, a.button:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul {
-  margin: 0.45em 0 0;
+  margin: 0.3em 0 0;
   padding: 0;
   list-style: none;
   display: none;
@@ -2620,7 +2620,7 @@ nav ul ul {
   left: 100%;
   top: -1px;
   width: auto;
-  z-index: 10;
+  z-index: 99;
 }
 nav ul ul li a, nav ul ul li a:link, nav ul ul li a:visited {
   -ms-border-radius: 0 !important;
@@ -2674,7 +2674,7 @@ nav ul.row ul {
   left: auto;
   top: auto;
   min-width: 100%;
-  z-index: 10;
+  z-index: 99;
 }
 nav ul.row ul li a, nav ul.row ul li a:link, nav ul.row ul li a:visited {
   -ms-border-radius: 0 !important;
@@ -2727,7 +2727,7 @@ nav.inline ul li ul {
   left: auto;
   top: auto;
   min-width: 100%;
-  z-index: 10;
+  z-index: 99;
 }
 nav.inline ul li ul li {
   display: block;
