@@ -84,15 +84,40 @@
         $this = $(this);
         $this.attr('role', 'tooltip').attr('data-title', $this.attr('title'));
         $this.removeAttr("title");
-        return $this.bind({
-          mouseenter: function(e) {
-            return showtooltip(e);
-          },
-          mouseleave: function() {
-            clearTimeout(delayShow);
-            return closetooltip();
-          }
-        });
+        if ($this.is('input') || $this.is('select') || $this.is('textarea')) {
+          return $this.bind({
+            focus: function(e) {
+              showtooltip(e);
+              return $this.bind({
+                mouseenter: function(e) {
+                  return showtooltip(e);
+                }
+              });
+            },
+            blur: function(e) {
+              clearTimeout(delayShow);
+              closetooltip();
+              return $this.unbind('mouseenter');
+            }
+          });
+        } else {
+          return $this.bind({
+            mouseenter: function(e) {
+              return showtooltip(e);
+            },
+            mouseleave: function() {
+              clearTimeout(delayShow);
+              return closetooltip();
+            },
+            focus: function(e) {
+              return showtooltip(e);
+            },
+            blur: function(e) {
+              clearTimeout(delayShow);
+              return closetooltip();
+            }
+          });
+        }
       });
     };
   })(jQuery);
