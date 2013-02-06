@@ -90,6 +90,7 @@ img, a img {
 .twelfths, .columns {
   float: left;
   position: relative;
+  min-height: 1px;
 }
 .column .one, .whole .one,
 .wholes .one, .half .one,
