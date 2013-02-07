@@ -68,7 +68,7 @@
     $(window).resize(function() {
       if(parseInt($('iframe').css('max-width').replace('px','')) > 1280) {
         $('iframe').css('max-width', $(window).width());
-        $('iframe').css('max-height', $(window).width());
+        $('iframe').css('max-height', $(window).height());
       }
     });
   </script>
