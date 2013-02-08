@@ -3105,6 +3105,9 @@ table {
   margin: 0;
   font-size: 1em;
 }
+table.responsive {
+  table-layout: fixed;
+}
 table th, table td {
   padding: 10px;
   background: #fcfcfc;
