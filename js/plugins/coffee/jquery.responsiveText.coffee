@@ -17,16 +17,16 @@
       maxSize: options.maxSize or Number.POSITIVE_INFINITY
 
     @each ->
-      elem = $(this)
-      elem.attr('data-compression',settings.compressor)
-      elem.attr('data-min',settings.minSize)
-      elem.attr('data-max',settings.maxSize)
-      elem.css "font-size", Math.floor(Math.max(Math.min(elem.width() / (settings.compressor), parseFloat(settings.maxSize)), parseFloat(settings.minSize)))
-      elems.push elem
+    	elem = $(this)
+    	elem.attr('data-compression',settings.compressor)
+    	elem.attr('data-min',settings.minSize)
+    	elem.attr('data-max',settings.maxSize)
+    	elem.css "font-size", Math.floor(Math.max(Math.min(elem.width() / (settings.compressor), parseFloat(settings.maxSize)), parseFloat(settings.minSize)))
+    	elems.push elem
 
   $(window).on "resize", ->
-    $(elems).each ->
-      elem = $(this)
-      elem.css "font-size", Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min'))))
+   	$(elems).each ->
+   		elem = $(this)
+   		elem.css "font-size", Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min'))))
 
 ) jQuery

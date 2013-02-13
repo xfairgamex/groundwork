@@ -316,14 +316,14 @@
         $this.attr('role', 'tooltip').attr('data-title', $this.attr('title'));
         return $this.removeAttr("title");
       });
-      $('body').on('mouseenter', '[role=tooltip]:not(input,select,textarea)', function() {
+      $('body').on('focus', '[role=tooltip]', function() {
         return showtooltip($(this));
-      }).on('mouseleave', '[role=tooltip]:not(input,select,textarea)', function() {
+      }).on('blur', '[role=tooltip]', function() {
         clearTimeout(delayShow);
         return closetooltip();
-      }).on('focus', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', function() {
+      }).on('mouseenter', '[role=tooltip]:not(input,select,textarea)', function() {
         return showtooltip($(this));
-      }).on('blur', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', function() {
+      }).on('mouseleave', '[role=tooltip]:not(input,select,textarea)', function() {
         clearTimeout(delayShow);
         return closetooltip();
       });
@@ -677,7 +677,7 @@
   (function($) {
     var elems, modals;
     if ($('div#iframeModal').length < 1) {
-      $('body').append('<div class="iframe modal" id="iframeModal"><iframe></iframe></div>');
+      $('body').append('<div class="iframe modal" id="iframeModal"><iframe marginheight="0" marginwidth="0" frameborder="0"></iframe></div>');
       $('div#iframeModal').prepend('<i class="close icon-remove"></i>').prepend('<i class="fullscreen icon-resize-full"></i>');
     }
     $('a.modal').each(function() {
@@ -685,7 +685,7 @@
       return $(this).attr('href', '#iframeModal');
     });
     $('a.modal').on("click", function(e) {
-      $('div#iframeModal iframe').replaceWith('<iframe width="100%" height="100%" src="' + $(this).attr('data-url') + '"></iframe>');
+      $('div#iframeModal iframe').replaceWith('<iframe marginheight="0" marginwidth="0" frameborder="0" width="100%" height="100%" src="' + $(this).attr('data-url') + '"></iframe>');
       e.preventDefault();
       return false;
     });
@@ -753,7 +753,7 @@
         $(window).unbind("keydown");
         $('html').removeClass("modal-active").addClass('modal-ready');
         if (modal.hasClass('iframe')) {
-          $('div#iframeModal iframe').replaceWith('<iframe></iframe>');
+          $('div#iframeModal iframe').replaceWith('<iframe marginheight="0" marginwidth="0" frameborder="0"></iframe>');
           modal.css({
             width: '80%',
             height: '80%'

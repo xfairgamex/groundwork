@@ -90,14 +90,14 @@
         $this.attr('role', 'tooltip').attr('data-title', $this.attr('title'));
         return $this.removeAttr("title");
       });
-      $('body').on('mouseenter', '[role=tooltip]:not(input,select,textarea)', function() {
+      $('body').on('focus', '[role=tooltip]', function() {
         return showtooltip($(this));
-      }).on('mouseleave', '[role=tooltip]:not(input,select,textarea)', function() {
+      }).on('blur', '[role=tooltip]', function() {
         clearTimeout(delayShow);
         return closetooltip();
-      }).on('focus', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', function() {
+      }).on('mouseenter', '[role=tooltip]:not(input,select,textarea)', function() {
         return showtooltip($(this));
-      }).on('blur', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', function() {
+      }).on('mouseleave', '[role=tooltip]:not(input,select,textarea)', function() {
         clearTimeout(delayShow);
         return closetooltip();
       });

@@ -95,17 +95,17 @@
     
     # focus behavior
     $('body').on(
+      'focus', '[role=tooltip]', ->
+        showtooltip($(this))
+    ).on(
+      'blur', '[role=tooltip]', ->
+        clearTimeout(delayShow)
+        closetooltip()
+    ).on(
       'mouseenter', '[role=tooltip]:not(input,select,textarea)', ->
         showtooltip($(this))
     ).on(
       'mouseleave', '[role=tooltip]:not(input,select,textarea)', ->
-        clearTimeout(delayShow)
-        closetooltip()
-    ).on(
-      'focus', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', ->
-        showtooltip($(this))
-    ).on(
-      'blur', 'input[role=tooltip],select[role=tooltip],textarea[role=tooltip]', ->
         clearTimeout(delayShow)
         closetooltip()
     )
