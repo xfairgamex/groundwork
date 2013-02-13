@@ -1849,6 +1849,138 @@ img, a img {
 .twelfths.twelve {
   width: 100%;
 }
+.twelfth.right-one,
+.twelfths.right-one {
+  left: 8.33333%;
+}
+.twelfth.right-two,
+.twelfths.right-two {
+  left: 16.66667%;
+}
+.twelfth.right-three,
+.twelfths.right-three {
+  left: 25%;
+}
+.twelfth.right-four,
+.twelfths.right-four {
+  left: 33.33333%;
+}
+.twelfth.right-five,
+.twelfths.right-five {
+  left: 41.66667%;
+}
+.twelfth.right-six,
+.twelfths.right-six {
+  left: 50%;
+}
+.twelfth.right-seven,
+.twelfths.right-seven {
+  left: 58.33333%;
+}
+.twelfth.right-eight,
+.twelfths.right-eight {
+  left: 66.66667%;
+}
+.twelfth.right-nine,
+.twelfths.right-nine {
+  left: 75%;
+}
+.twelfth.right-ten,
+.twelfths.right-ten {
+  left: 83.33333%;
+}
+.twelfth.right-eleven,
+.twelfths.right-eleven {
+  left: 91.66667%;
+}
+.twelfth.left-one,
+.twelfths.left-one {
+  right: 8.33333%;
+}
+.twelfth.left-two,
+.twelfths.left-two {
+  right: 16.66667%;
+}
+.twelfth.left-three,
+.twelfths.left-three {
+  right: 25%;
+}
+.twelfth.left-four,
+.twelfths.left-four {
+  right: 33.33333%;
+}
+.twelfth.left-five,
+.twelfths.left-five {
+  right: 41.66667%;
+}
+.twelfth.left-six,
+.twelfths.left-six {
+  right: 50%;
+}
+.twelfth.left-seven,
+.twelfths.left-seven {
+  right: 58.33333%;
+}
+.twelfth.left-eight,
+.twelfths.left-eight {
+  right: 66.66667%;
+}
+.twelfth.left-nine,
+.twelfths.left-nine {
+  right: 75%;
+}
+.twelfth.left-ten,
+.twelfths.left-ten {
+  right: 83.33333%;
+}
+.twelfth.left-eleven,
+.twelfths.left-eleven {
+  right: 91.66667%;
+}
+.twelfth.skip-one,
+.twelfths.skip-one {
+  margin-left: 8.33333%;
+}
+.twelfth.skip-two,
+.twelfths.skip-two {
+  margin-left: 16.66667%;
+}
+.twelfth.skip-three,
+.twelfths.skip-three {
+  margin-left: 25%;
+}
+.twelfth.skip-four,
+.twelfths.skip-four {
+  margin-left: 33.33333%;
+}
+.twelfth.skip-five,
+.twelfths.skip-five {
+  margin-left: 41.66667%;
+}
+.twelfth.skip-six,
+.twelfths.skip-six {
+  margin-left: 50%;
+}
+.twelfth.skip-seven,
+.twelfths.skip-seven {
+  margin-left: 58.33333%;
+}
+.twelfth.skip-eight,
+.twelfths.skip-eight {
+  margin-left: 66.66667%;
+}
+.twelfth.skip-nine,
+.twelfths.skip-nine {
+  margin-left: 75%;
+}
+.twelfth.skip-ten,
+.twelfths.skip-ten {
+  margin-left: 83.33333%;
+}
+.twelfth.skip-eleven,
+.twelfths.skip-eleven {
+  margin-left: 91.66667%;
+}
 
 body {
   font-family: Helvetica, Arial, Geneva, sans-serif;
