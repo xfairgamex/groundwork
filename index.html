@@ -25,6 +25,11 @@
   <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
   <![endif]-->
   <script type="text/javascript">
+    // fallback if SVG unsupported
+    Modernizr.load({
+      test: Modernizr.svg,
+      nope: './css/no-svg.css'
+    });
     // polyfill for HTML5 placeholders
     Modernizr.load({
       test: Modernizr.input.placeholder,
@@ -87,6 +92,31 @@
     }
   </style>
   <script type="text/javascript">
+    function querystring(key) {
+      var re=new RegExp('(?:\\?|&)'+key+'=(.*?)(?=&|$)','gi');
+      var r=[], m;
+      while ((m=re.exec(document.location.search)) != null) r.push(m[1]);
+      return r;
+    }
+    function basename(str) {
+      var base = new String(str).substring(str.lastIndexOf('/') + 1);
+      if(base.lastIndexOf(".") != -1) {
+        base = base.substring(0, base.lastIndexOf("."));
+      }
+      return base;
+    }
+    function updateQueryStringParameter(uri, key, value) {
+      var re = new RegExp("([?|&])" + key + "=.*?(&|$)", "i");
+      separator = uri.indexOf('?') !== -1 ? "&" : "?";
+      var url = window.location.href;
+      if (uri.match(re)) {
+        url = uri.replace(re, '$1' + key + "=" + value + '$2');
+      }
+      else {
+        url = uri + separator + key + "=" + value;
+      }
+      return url;
+    }
     $(document).ready(function() {
       $('#resizerFrame').each(function() {
         $(this).css('max-width',$(window).width());
@@ -134,6 +164,15 @@
         e.preventDefault();
         return false;
       });
+      if(querystring('url').length > 0) {
+        $('#resizerFrame').attr('src',querystring('url'));
+      }
+      $('#resizerFrame').on('load', function() {
+        var url = basename(this.contentWindow.location.href);
+        var href = updateQueryStringParameter(document.location.href, 'url', url);
+        var stateObj = { resizer: 'resizer' };
+        history.pushState(stateObj, url, href);
+      });
     });
     $(window).resize(function() {
       if($('#resizer li:first-child a').hasClass('active')) {
@@ -155,7 +194,7 @@
       <a id="closeResizer" class="pull-left" title="Close Resizer" href="./home.html"><i class="icon-remove"></i></a>
     </div>
   </div>
-  <iframe id="resizerFrame" src="./home.html"></iframe>
+  <iframe id="resizerFrame" src="./home.html" frameborder="0"></iframe>
   <!-- scripts -->
   <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
   <script type="text/javascript" src="./js/groundwork.js"></script>

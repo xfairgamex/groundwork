@@ -25,6 +25,11 @@
   <link type="text/css" rel="stylesheet" href="./css/font-awesome-ie7.min.css">
   <![endif]-->
   <script type="text/javascript">
+    // fallback if SVG unsupported
+    Modernizr.load({
+      test: Modernizr.svg,
+      nope: './css/no-svg.css'
+    });
     // polyfill for HTML5 placeholders
     Modernizr.load({
       test: Modernizr.input.placeholder,

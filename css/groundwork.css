@@ -4584,6 +4584,333 @@ ul.icons li [class*=" icon-"] {
   content: "\f115";
 }
 
+.social-icon {
+  display: inline-block;
+  background-size: 100%;
+  width: 1em;
+  height: 1em;
+  text-indent: -999em;
+  text-align: left;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  vertical-align: bottom;
+  -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  filter: Glow(color=#33000000, strength=5);
+  -ms-filter: glow(color=#33000000, strength=5);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.social-icon.small {
+  width: 20px;
+  height: 20px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.social-icon.medium {
+  width: 30px;
+  height: 30px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.social-icon.large {
+  width: 48px;
+  height: 48px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+.social-icon.round {
+  -ms-border-radius: 50% 50%;
+  -o-border-radius: 50% 50%;
+  -moz-border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+  border-radius: 50% 50%;
+}
+.social-icon.aboutme {
+  background-image: url("../images/social-icons/aboutme.svg");
+  background-image: inline-image("social-icons/aboutme.svg");
+  *background-image: url("../images/social-icons/aboutme.svg");
+}
+.social-icon.adn {
+  background-image: url("../images/social-icons/adn.svg");
+  background-image: inline-image("social-icons/adn.svg");
+  *background-image: url("../images/social-icons/adn.svg");
+}
+.social-icon.android {
+  background-image: url("../images/social-icons/android.svg");
+  background-image: inline-image("social-icons/android.svg");
+  *background-image: url("../images/social-icons/android.svg");
+}
+.social-icon.apple {
+  background-image: url("../images/social-icons/apple.svg");
+  background-image: inline-image("social-icons/apple.svg");
+  *background-image: url("../images/social-icons/apple.svg");
+}
+.social-icon.behance {
+  background-image: url("../images/social-icons/behance.svg");
+  background-image: inline-image("social-icons/behance.svg");
+  *background-image: url("../images/social-icons/behance.svg");
+}
+.social-icon.bitbucket {
+  background-image: url("../images/social-icons/bitbucket.svg");
+  background-image: inline-image("social-icons/bitbucket.svg");
+  *background-image: url("../images/social-icons/bitbucket.svg");
+}
+.social-icon.coderwall {
+  background-image: url("../images/social-icons/coderwall.svg");
+  background-image: inline-image("social-icons/coderwall.svg");
+  *background-image: url("../images/social-icons/coderwall.svg");
+}
+.social-icon.creativecloud {
+  background-image: url("../images/social-icons/creativecloud.svg");
+  background-image: inline-image("social-icons/creativecloud.svg");
+  *background-image: url("../images/social-icons/creativecloud.svg");
+}
+.social-icon.dribbble {
+  background-image: url("../images/social-icons/dribbble.svg");
+  background-image: inline-image("social-icons/dribbble.svg");
+  *background-image: url("../images/social-icons/dribbble.svg");
+}
+.social-icon.dropbox {
+  background-image: url("../images/social-icons/dropbox.svg");
+  background-image: inline-image("social-icons/dropbox.svg");
+  *background-image: url("../images/social-icons/dropbox.svg");
+}
+.social-icon.evernote {
+  background-image: url("../images/social-icons/evernote.svg");
+  background-image: inline-image("social-icons/evernote.svg");
+  *background-image: url("../images/social-icons/evernote.svg");
+}
+.social-icon.facebook {
+  background-image: url("../images/social-icons/facebook.svg");
+  background-image: inline-image("social-icons/facebook.svg");
+  *background-image: url("../images/social-icons/facebook.svg");
+}
+.social-icon.flickr {
+  background-image: url("../images/social-icons/flickr.svg");
+  background-image: inline-image("social-icons/flickr.svg");
+  *background-image: url("../images/social-icons/flickr.svg");
+}
+.social-icon.foursquare {
+  background-image: url("../images/social-icons/foursquare.svg");
+  background-image: inline-image("social-icons/foursquare.svg");
+  *background-image: url("../images/social-icons/foursquare.svg");
+}
+.social-icon.git {
+  background-image: url("../images/social-icons/git.svg");
+  background-image: inline-image("social-icons/git.svg");
+  *background-image: url("../images/social-icons/git.svg");
+}
+.social-icon.github {
+  background-image: url("../images/social-icons/github.svg");
+  background-image: inline-image("social-icons/github.svg");
+  *background-image: url("../images/social-icons/github.svg");
+}
+.social-icon.googleplay {
+  background-image: url("../images/social-icons/googleplay.svg");
+  background-image: inline-image("social-icons/googleplay.svg");
+  *background-image: url("../images/social-icons/googleplay.svg");
+}
+.social-icon.googleplus {
+  background-image: url("../images/social-icons/googleplus.svg");
+  background-image: inline-image("social-icons/googleplus.svg");
+  *background-image: url("../images/social-icons/googleplus.svg");
+}
+.social-icon.html5 {
+  background-image: url("../images/social-icons/html5.svg");
+  background-image: inline-image("social-icons/html5.svg");
+  *background-image: url("../images/social-icons/html5.svg");
+}
+.social-icon.icloud {
+  background-image: url("../images/social-icons/icloud.svg");
+  background-image: inline-image("social-icons/icloud.svg");
+  *background-image: url("../images/social-icons/icloud.svg");
+}
+.social-icon.instagram {
+  background-image: url("../images/social-icons/instagram.svg");
+  background-image: inline-image("social-icons/instagram.svg");
+  *background-image: url("../images/social-icons/instagram.svg");
+}
+.social-icon.lastfm {
+  background-image: url("../images/social-icons/lastfm.svg");
+  background-image: inline-image("social-icons/lastfm.svg");
+  *background-image: url("../images/social-icons/lastfm.svg");
+}
+.social-icon.linkedin {
+  background-image: url("../images/social-icons/linkedin.svg");
+  background-image: inline-image("social-icons/linkedin.svg");
+  *background-image: url("../images/social-icons/linkedin.svg");
+}
+.social-icon.mail {
+  background-image: url("../images/social-icons/mail.svg");
+  background-image: inline-image("social-icons/mail.svg");
+  *background-image: url("../images/social-icons/mail.svg");
+}
+.social-icon.mixi {
+  background-image: url("../images/social-icons/mixi.svg");
+  background-image: inline-image("social-icons/mixi.svg");
+  *background-image: url("../images/social-icons/mixi.svg");
+}
+.social-icon.msn {
+  background-image: url("../images/social-icons/msn.svg");
+  background-image: inline-image("social-icons/msn.svg");
+  *background-image: url("../images/social-icons/msn.svg");
+}
+.social-icon.pinterest {
+  background-image: url("../images/social-icons/pinterest.svg");
+  background-image: inline-image("social-icons/pinterest.svg");
+  *background-image: url("../images/social-icons/pinterest.svg");
+}
+.social-icon.pocket {
+  background-image: url("../images/social-icons/pocketapp.svg");
+  background-image: inline-image("social-icons/pocketapp.svg");
+  *background-image: url("../images/social-icons/pocketapp.svg");
+}
+.social-icon.quora {
+  background-image: url("../images/social-icons/quora.svg");
+  background-image: inline-image("social-icons/quora.svg");
+  *background-image: url("../images/social-icons/quora.svg");
+}
+.social-icon.orkut {
+  background-image: url("../images/social-icons/orkut.svg");
+  background-image: inline-image("social-icons/orkut.svg");
+  *background-image: url("../images/social-icons/orkut.svg");
+}
+.social-icon.mercurial {
+  background-image: url("../images/social-icons/mercurial.svg");
+  background-image: inline-image("social-icons/mercurial.svg");
+  *background-image: url("../images/social-icons/mercurial.svg");
+}
+.social-icon.rdio {
+  background-image: url("../images/social-icons/rdio.svg");
+  background-image: inline-image("social-icons/rdio.svg");
+  *background-image: url("../images/social-icons/rdio.svg");
+}
+.social-icon.renren {
+  background-image: url("../images/social-icons/renren.svg");
+  background-image: inline-image("social-icons/renren.svg");
+  *background-image: url("../images/social-icons/renren.svg");
+}
+.social-icon.rss {
+  background-image: url("../images/social-icons/rss.svg");
+  background-image: inline-image("social-icons/rss.svg");
+  *background-image: url("../images/social-icons/rss.svg");
+}
+.social-icon.skitch {
+  background-image: url("../images/social-icons/skitch.svg");
+  background-image: inline-image("social-icons/skitch.svg");
+  *background-image: url("../images/social-icons/skitch.svg");
+}
+.social-icon.skype {
+  background-image: url("../images/social-icons/skype.svg");
+  background-image: inline-image("social-icons/skype.svg");
+  *background-image: url("../images/social-icons/skype.svg");
+}
+.social-icon.soundcloud {
+  background-image: url("../images/social-icons/soundcloud.svg");
+  background-image: inline-image("social-icons/soundcloud.svg");
+  *background-image: url("../images/social-icons/soundcloud.svg");
+}
+.social-icon.spotify {
+  background-image: url("../images/social-icons/spotify.svg");
+  background-image: inline-image("social-icons/spotify.svg");
+  *background-image: url("../images/social-icons/spotify.svg");
+}
+.social-icon.stackoverflow {
+  background-image: url("../images/social-icons/stackoverflow.svg");
+  background-image: inline-image("social-icons/stackoverflow.svg");
+  *background-image: url("../images/social-icons/stackoverflow.svg");
+}
+.social-icon.stumbleupon {
+  background-image: url("../images/social-icons/stumbleupon.svg");
+  background-image: inline-image("social-icons/stumbleupon.svg");
+  *background-image: url("../images/social-icons/stumbleupon.svg");
+}
+.social-icon.svn {
+  background-image: url("../images/social-icons/svn.svg");
+  background-image: inline-image("social-icons/svn.svg");
+  *background-image: url("../images/social-icons/svn.svg");
+}
+.social-icon.tent {
+  background-image: url("../images/social-icons/tent.svg");
+  background-image: inline-image("social-icons/tent.svg");
+  *background-image: url("../images/social-icons/tent.svg");
+}
+.social-icon.tripadvisor {
+  background-image: url("../images/social-icons/tripadvisor.svg");
+  background-image: inline-image("social-icons/tripadvisor.svg");
+  *background-image: url("../images/social-icons/tripadvisor.svg");
+}
+.social-icon.tumblr {
+  background-image: url("../images/social-icons/tumblr.svg");
+  background-image: inline-image("social-icons/tumblr.svg");
+  *background-image: url("../images/social-icons/tumblr.svg");
+}
+.social-icon.twitter {
+  background-image: url("../images/social-icons/twitter.svg");
+  background-image: inline-image("social-icons/twitter.svg");
+  *background-image: url("../images/social-icons/twitter.svg");
+}
+.social-icon.vimeo {
+  background-image: url("../images/social-icons/vimeo.svg");
+  background-image: inline-image("social-icons/vimeo.svg");
+  *background-image: url("../images/social-icons/vimeo.svg");
+}
+.social-icon.weibo {
+  background-image: url("../images/social-icons/weibo.svg");
+  background-image: inline-image("social-icons/weibo.svg");
+  *background-image: url("../images/social-icons/weibo.svg");
+}
+.social-icon.windows {
+  background-image: url("../images/social-icons/windows.svg");
+  background-image: inline-image("social-icons/windows.svg");
+  *background-image: url("../images/social-icons/windows.svg");
+}
+.social-icon.wordpress {
+  background-image: url("../images/social-icons/wordpress.svg");
+  background-image: inline-image("social-icons/wordpress.svg");
+  *background-image: url("../images/social-icons/wordpress.svg");
+}
+.social-icon.xing {
+  background-image: url("../images/social-icons/xing.svg");
+  background-image: inline-image("social-icons/xing.svg");
+  *background-image: url("../images/social-icons/xing.svg");
+}
+.social-icon.yelp {
+  background-image: url("../images/social-icons/yelp.svg");
+  background-image: inline-image("social-icons/yelp.svg");
+  *background-image: url("../images/social-icons/yelp.svg");
+}
+.social-icon.youtube {
+  background-image: url("../images/social-icons/youtube.svg");
+  background-image: inline-image("social-icons/youtube.svg");
+  *background-image: url("../images/social-icons/youtube.svg");
+}
+.social-icon.youversion {
+  background-image: url("../images/social-icons/youversion.svg");
+  background-image: inline-image("social-icons/youversion.svg");
+  *background-image: url("../images/social-icons/youversion.svg");
+}
+.social-icon.zerply {
+  background-image: url("../images/social-icons/zerply.svg");
+  background-image: inline-image("social-icons/zerply.svg");
+  *background-image: url("../images/social-icons/zerply.svg");
+}
+
 .tooltip:not([title]):not([role~=tooltip]) {
   position: relative;
   padding: 5px 15px;
