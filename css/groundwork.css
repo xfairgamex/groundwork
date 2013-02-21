@@ -1274,7 +1274,7 @@ body {
   color: white;
 }
 
-a, a:link, a:visited {
+a, a:visited {
   color: #489ac1;
   -ms-transition: color 0.25s;
   -o-transition: color 0.25s;
@@ -1282,7 +1282,7 @@ a, a:link, a:visited {
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
 }
-a:hover, a:focus, a:link:hover, a:link:focus, a:visited:hover, a:visited:focus {
+a:hover, a:focus, a:visited:hover, a:visited:focus {
   text-decoration: underline;
 }
 
@@ -1290,11 +1290,11 @@ h1.heading {
   font-size: 3em;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
-h1.heading a, h1.heading a:link, h1.heading a:visited {
+h1.heading a, h1.heading a:visited {
   color: #2b2b2d;
   text-decoration: none;
 }
-h1.heading a a:hover, h1.heading a a:focus, h1.heading a:link a:hover, h1.heading a:link a:focus, h1.heading a:visited a:hover, h1.heading a:visited a:focus {
+h1.heading a a:hover, h1.heading a a:focus, h1.heading a:visited a:hover, h1.heading a:visited a:focus {
   color: #2b2b2d;
   text-decoration: none;
 }
@@ -1503,12 +1503,30 @@ sub {
 
 code {
   color: white;
-  background: black;
-  font-size: 0.9em;
-  padding: 0.5em;
-  display: block;
-  border-left: 2.5em solid gray;
-  counter-reset: linenumber;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 1em;
+  line-height: 1.4;
+}
+code:not(.inline):before {
+  counter-increment: linenumber;
+  content: counter(linenumber) ".";
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  position: absolute;
+  left: 0.4em;
+  color: white;
+}
+code:before {
+  counter-increment: linenumber;
+  content: counter(linenumber) ".";
+  display: inline-block;
+  width: 2em;
+  text-align: right;
+  position: absolute;
+  left: 1em;
+  color: white;
 }
 code.inline {
   display: inline-block;
@@ -1521,20 +1539,13 @@ code.inline {
 }
 
 pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  min-height: 1em;
-  line-height: 1.4;
-}
-pre:before {
-  counter-increment: linenumber;
-  content: counter(linenumber) ".";
-  display: inline-block;
-  width: 2em;
-  text-align: right;
-  position: absolute;
-  left: 1em;
   color: white;
+  background: black;
+  font-size: 0.9em;
+  padding: 0.5em;
+  display: block;
+  border-left: 2.5em solid gray;
+  counter-reset: linenumber;
 }
 
 .error, .invalid {
@@ -1554,7 +1565,7 @@ pre:before {
   white-space: nowrap;
 }
 
-button, .button, a.button, a.button:link, a.button:visited, input[type=submit], input[type=button], input[type=reset] {
+button, .button, a.button, a.button:visited, input[type=submit], input[type=button], input[type=reset] {
   display: inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -1577,85 +1588,85 @@ button, .button, a.button, a.button:link, a.button:visited, input[type=submit], 
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-button:hover, button:focus, .button:hover, .button:focus, a.button:hover, a.button:focus, a.button:link:hover, a.button:link:focus, a.button:visited:hover, a.button:visited:focus, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, input[type=reset]:hover, input[type=reset]:focus {
+button:hover, button:focus, .button:hover, .button:focus, a.button:hover, a.button:focus, a.button:visited:hover, a.button:visited:focus, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, input[type=reset]:hover, input[type=reset]:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
 }
-button.active, button.active:hover, button.active:focus, .button.active, .button.active:hover, .button.active:focus, a.button.active, a.button.active:hover, a.button.active:focus, a.button:link.active, a.button:link.active:hover, a.button:link.active:focus, a.button:visited.active, a.button:visited.active:hover, a.button:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus {
+button.active, button.active:hover, button.active:focus, .button.active, .button.active:hover, .button.active:focus, a.button.active, a.button.active:hover, a.button.active:focus, a.button:visited.active, a.button:visited.active:hover, a.button:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus {
   background: #198d98;
   color: white;
 }
-button.disabled, .button.disabled, a.button.disabled, a.button:link.disabled, a.button:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled {
+button.disabled, .button.disabled, a.button.disabled, a.button:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled {
   background: #a6a6a6;
   border-color: gray;
   color: #d9d9d9;
   cursor: not-allowed;
   text-decoration: none;
 }
-button.small, .button.small, a.button.small, a.button:link.small, a.button:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small {
+button.small, .button.small, a.button.small, a.button:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small {
   font-size: 0.8em;
 }
-button.large, .button.large, a.button.large, a.button:link.large, a.button:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large {
+button.large, .button.large, a.button.large, a.button:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large {
   font-size: 1.5em;
 }
-button.error, .button.error, a.button.error, a.button:link.error, a.button:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error {
+button.error, .button.error, a.button.error, a.button:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error {
   background: #a40400;
   border: 1px solid #710300;
   color: white;
 }
-button.error:hover, button.error:focus, .button.error:hover, .button.error:focus, a.button.error:hover, a.button.error:focus, a.button:link.error:hover, a.button:link.error:focus, a.button:visited.error:hover, a.button:visited.error:focus, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error:hover, input[type=reset].error:focus {
+button.error:hover, button.error:focus, .button.error:hover, .button.error:focus, a.button.error:hover, a.button.error:focus, a.button:visited.error:hover, a.button:visited.error:focus, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error:hover, input[type=reset].error:focus {
   background: #710300;
 }
-button.warning, .button.warning, a.button.warning, a.button:link.warning, a.button:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning {
+button.warning, .button.warning, a.button.warning, a.button:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning {
   background: #ff971e;
   border: 1px solid #ea7e00;
   color: white;
 }
-button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus, a.button.warning:hover, a.button.warning:focus, a.button:link.warning:hover, a.button:link.warning:focus, a.button:visited.warning:hover, a.button:visited.warning:focus, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning:hover, input[type=reset].warning:focus {
+button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus, a.button.warning:hover, a.button.warning:focus, a.button:visited.warning:hover, a.button:visited.warning:focus, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning:hover, input[type=reset].warning:focus {
   background: #ea7e00;
 }
-button.success, .button.success, a.button.success, a.button:link.success, a.button:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success {
+button.success, .button.success, a.button.success, a.button:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success {
   background: #5fb40e;
   border: 1px solid #46850a;
   color: white;
 }
-button.success:hover, button.success:focus, .button.success:hover, .button.success:focus, a.button.success:hover, a.button.success:focus, a.button:link.success:hover, a.button:link.success:focus, a.button:visited.success:hover, a.button:visited.success:focus, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success:hover, input[type=reset].success:focus {
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus, a.button.success:hover, a.button.success:focus, a.button:visited.success:hover, a.button:visited.success:focus, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success:hover, input[type=reset].success:focus {
   background: #46850a;
 }
-button.square, .button.square, a.button.square, a.button:link.square, a.button:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square {
+button.square, .button.square, a.button.square, a.button:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-button.round, .button.round, a.button.round, a.button:link.round, a.button:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round {
+button.round, .button.round, a.button.round, a.button:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
 }
-button.block, .button.block, a.button.block, a.button:link.block, a.button:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block {
+button.block, .button.block, a.button.block, a.button:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block {
   display: block;
   width: 100%;
   text-align: center;
 }
-button.dropdown, .button.dropdown, a.button.dropdown, a.button:link.dropdown, a.button:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown {
+button.dropdown, .button.dropdown, a.button.dropdown, a.button:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown {
   position: relative;
   padding-right: 2em;
 }
-button.dropdown:after, .button.dropdown:after, a.button.dropdown:after, a.button:link.dropdown:after, a.button:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after {
+button.dropdown:after, .button.dropdown:after, a.button.dropdown:after, a.button:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after {
   content: '...';
   position: absolute;
   right: 1em;
   bottom: 0.25em;
 }
-button.dropdown:hover ul, button.dropdown:focus ul, .button.dropdown:hover ul, .button.dropdown:focus ul, a.button.dropdown:hover ul, a.button.dropdown:focus ul, a.button:link.dropdown:hover ul, a.button:link.dropdown:focus ul, a.button:visited.dropdown:hover ul, a.button:visited.dropdown:focus ul, input[type=submit].dropdown:hover ul, input[type=submit].dropdown:focus ul, input[type=button].dropdown:hover ul, input[type=button].dropdown:focus ul, input[type=reset].dropdown:hover ul, input[type=reset].dropdown:focus ul {
+button.dropdown:hover ul, button.dropdown:focus ul, .button.dropdown:hover ul, .button.dropdown:focus ul, a.button.dropdown:hover ul, a.button.dropdown:focus ul, a.button:visited.dropdown:hover ul, a.button:visited.dropdown:focus ul, input[type=submit].dropdown:hover ul, input[type=submit].dropdown:focus ul, input[type=button].dropdown:hover ul, input[type=button].dropdown:focus ul, input[type=reset].dropdown:hover ul, input[type=reset].dropdown:focus ul {
   display: block;
 }
-button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:link.dropdown ul, a.button:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul {
+button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul {
   margin: 0.3em 0 0;
   padding: 0;
   list-style: none;
@@ -1673,27 +1684,27 @@ button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:link.dro
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li, .button.dropdown ul li, a.button.dropdown ul li, a.button:link.dropdown ul li, a.button:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li {
+button.dropdown ul li, .button.dropdown ul li, a.button.dropdown ul li, a.button:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li {
   display: block;
 }
-button.dropdown ul li a, button.dropdown ul li a:link, button.dropdown ul li a:visited, .button.dropdown ul li a, .button.dropdown ul li a:link, .button.dropdown ul li a:visited, a.button.dropdown ul li a, a.button.dropdown ul li a:link, a.button.dropdown ul li a:visited, a.button:link.dropdown ul li a, a.button:link.dropdown ul li a:link, a.button:link.dropdown ul li a:visited, a.button:visited.dropdown ul li a, a.button:visited.dropdown ul li a:link, a.button:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:link, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:link, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:link, input[type=reset].dropdown ul li a:visited {
+button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li a, .button.dropdown ul li a:visited, a.button.dropdown ul li a, a.button.dropdown ul li a:visited, a.button:visited.dropdown ul li a, a.button:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
   text-shadow: none;
   text-decoration: none;
 }
-button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:link:hover, button.dropdown ul li a:link:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, .button.dropdown ul li a:focus, .button.dropdown ul li a:link:hover, .button.dropdown ul li a:link:focus, .button.dropdown ul li a:visited:hover, .button.dropdown ul li a:visited:focus, a.button.dropdown ul li a:hover, a.button.dropdown ul li a:focus, a.button.dropdown ul li a:link:hover, a.button.dropdown ul li a:link:focus, a.button.dropdown ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, a.button:link.dropdown ul li a:hover, a.button:link.dropdown ul li a:focus, a.button:link.dropdown ul li a:link:hover, a.button:link.dropdown ul li a:link:focus, a.button:link.dropdown ul li a:visited:hover, a.button:link.dropdown ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:link:hover, a.button:visited.dropdown ul li a:link:focus, a.button:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:link:hover, input[type=submit].dropdown ul li a:link:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:link:hover, input[type=button].dropdown ul li a:link:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:link:hover, input[type=reset].dropdown ul li a:link:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus {
+button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, .button.dropdown ul li a:focus, .button.dropdown ul li a:visited:hover, .button.dropdown ul li a:visited:focus, a.button.dropdown ul li a:hover, a.button.dropdown ul li a:focus, a.button.dropdown ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus {
   background: #efefef;
 }
-button.dropdown ul li:last-child, .button.dropdown ul li:last-child, a.button.dropdown ul li:last-child, a.button:link.dropdown ul li:last-child, a.button:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child {
+button.dropdown ul li:last-child, .button.dropdown ul li:last-child, a.button.dropdown ul li:last-child, a.button:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li hr, .button.dropdown ul li hr, a.button.dropdown ul li hr, a.button:link.dropdown ul li hr, a.button:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr {
+button.dropdown ul li hr, .button.dropdown ul li hr, a.button.dropdown ul li hr, a.button:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr {
   margin: 0;
   border-color: #ececec;
 }
@@ -1958,7 +1969,7 @@ nav ul li {
   display: block;
   position: relative;
 }
-nav ul li a, nav ul li a:link, nav ul li a:visited {
+nav ul li a, nav ul li a:visited {
   display: block;
   width: 100%;
   word-wrap: break-word;
@@ -1978,12 +1989,12 @@ nav ul li a, nav ul li a:link, nav ul li a:visited {
   -webkit-transition: background-color 0.25s ease-out;
   transition: background-color 0.25s ease-out;
 }
-nav ul li a:hover, nav ul li a:focus, nav ul li a:link:hover, nav ul li a:link:focus, nav ul li a:visited:hover, nav ul li a:visited:focus {
+nav ul li a:hover, nav ul li a:focus, nav ul li a:visited:hover, nav ul li a:visited:focus {
   background: #198d98;
   border: 1px solid #dddddd;
   text-decoration: none;
 }
-nav ul li a.active:hover, nav ul li a.active:focus, nav ul li a:link.active:hover, nav ul li a:link.active:focus, nav ul li a:visited.active:hover, nav ul li a:visited.active:focus {
+nav ul li a.active:hover, nav ul li a.active:focus, nav ul li a:visited.active:hover, nav ul li a:visited.active:focus {
   background: #198d98;
 }
 nav ul li.menu > a:after {
@@ -2011,14 +2022,14 @@ nav ul li.on a {
 nav ul li.on ul {
   display: block !important;
 }
-nav ul li:first-child a, nav ul li:first-child a:link, nav ul li:first-child a:visited {
+nav ul li:first-child a, nav ul li:first-child a:visited {
   -ms-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-nav ul li:last-child a, nav ul li:last-child a:link, nav ul li:last-child a:visited {
+nav ul li:last-child a, nav ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -2033,7 +2044,7 @@ nav ul ul {
   width: auto;
   z-index: 99;
 }
-nav ul ul li a, nav ul ul li a:link, nav ul ul li a:visited {
+nav ul ul li a, nav ul ul li a:visited {
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
@@ -2041,38 +2052,38 @@ nav ul ul li a, nav ul ul li a:link, nav ul ul li a:visited {
   border-radius: 0 !important;
   background: #20bfce;
 }
-nav ul ul li a:hover, nav ul ul li a:active, nav ul ul li a:link:hover, nav ul ul li a:link:active, nav ul ul li a:visited:hover, nav ul ul li a:visited:active {
+nav ul ul li a:hover, nav ul ul li a:active, nav ul ul li a:visited:hover, nav ul ul li a:visited:active {
   background: #1da1ae;
 }
-nav ul ul li:first-child a, nav ul ul li:first-child a:link, nav ul ul li:first-child a:visited {
+nav ul ul li:first-child a, nav ul ul li:first-child a:visited {
   -ms-border-radius: 0 4px 0 0 !important;
   -o-border-radius: 0 4px 0 0 !important;
   -moz-border-radius: 0 4px 0 0 !important;
   -webkit-border-radius: 0 4px 0 0 !important;
   border-radius: 0 4px 0 0 !important;
 }
-nav ul ul li:last-child a, nav ul ul li:last-child a:link, nav ul ul li:last-child a:visited {
+nav ul ul li:last-child a, nav ul ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px !important;
   -o-border-radius: 0 0 4px 4px !important;
   -moz-border-radius: 0 0 4px 4px !important;
   -webkit-border-radius: 0 0 4px 4px !important;
   border-radius: 0 0 4px 4px !important;
 }
-nav ul.row li a, nav ul.row li a:link, nav ul.row li a:visited {
+nav ul.row li a, nav ul.row li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-nav ul.row li:first-child a, nav ul.row li:first-child a:link, nav ul.row li:first-child a:visited {
+nav ul.row li:first-child a, nav ul.row li:first-child a:visited {
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
-nav ul.row li:last-child a, nav ul.row li:last-child a:link, nav ul.row li:last-child a:visited {
+nav ul.row li:last-child a, nav ul.row li:last-child a:visited {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -2087,14 +2098,14 @@ nav ul.row ul {
   min-width: 100%;
   z-index: 99;
 }
-nav ul.row ul li a, nav ul.row ul li a:link, nav ul.row ul li a:visited {
+nav ul.row ul li a, nav ul.row ul li a:visited {
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
 }
-nav ul.row ul li:last-child a, nav ul.row ul li:last-child a:link, nav ul.row ul li:last-child a:visited {
+nav ul.row ul li:last-child a, nav ul.row ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px !important;
   -o-border-radius: 0 0 4px 4px !important;
   -moz-border-radius: 0 0 4px 4px !important;
@@ -2118,14 +2129,14 @@ nav.inline ul li {
   white-space-collapse: discard;
   float: none;
 }
-nav.inline ul li:first-child a, nav.inline ul li:first-child a:link, nav.inline ul li:first-child a:visited {
+nav.inline ul li:first-child a, nav.inline ul li:first-child a:visited {
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
-nav.inline ul li:last-child a, nav.inline ul li:last-child a:link, nav.inline ul li:last-child a:visited {
+nav.inline ul li:last-child a, nav.inline ul li:last-child a:visited {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -2143,14 +2154,14 @@ nav.inline ul li ul {
 nav.inline ul li ul li {
   display: block;
 }
-nav.inline ul li ul li a, nav.inline ul li ul li a:link, nav.inline ul li ul li a:visited {
+nav.inline ul li ul li a, nav.inline ul li ul li a:visited {
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   -webkit-border-radius: 0 !important;
   border-radius: 0 !important;
 }
-nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, nav.inline ul li ul li:last-child a:visited {
+nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px !important;
   -o-border-radius: 0 0 4px 4px !important;
   -moz-border-radius: 0 0 4px 4px !important;
@@ -2222,14 +2233,14 @@ nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus {
   border-color: gray;
   color: #d9d9d9;
 }
-nav.pagination ul li:first-child a, nav.pagination ul li:first-child a:link, nav.pagination ul li:first-child a:visited {
+nav.pagination ul li:first-child a, nav.pagination ul li:first-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:link, nav.pagination ul li:last-child a:visited {
+nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -5331,21 +5342,21 @@ ul.orbit-bullets li.active.has-thumb {
     -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
     filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
   }
-  nav:not(.pagination) ul li ul li:first-child a, nav:not(.pagination) ul li ul li:first-child a:link, nav:not(.pagination) ul li ul li:first-child a:visited, nav:not(.pagination) ul.row li ul li:first-child a, nav:not(.pagination) ul.row li ul li:first-child a:link, nav:not(.pagination) ul.row li ul li:first-child a:visited, nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:link, nav.inline ul li ul li:first-child a:visited, nav.inline ul.row li ul li:first-child a, nav.inline ul.row li ul li:first-child a:link, nav.inline ul.row li ul li:first-child a:visited {
+  nav:not(.pagination) ul li ul li:first-child a, nav:not(.pagination) ul li ul li:first-child a:visited, nav:not(.pagination) ul.row li ul li:first-child a, nav:not(.pagination) ul.row li ul li:first-child a:visited, nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:visited, nav.inline ul.row li ul li:first-child a, nav.inline ul.row li ul li:first-child a:visited {
     -ms-border-radius: 0 !important;
     -o-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
   }
-  nav:not(.pagination) ul li ul li:last-child a, nav:not(.pagination) ul li ul li:last-child a:link, nav:not(.pagination) ul li ul li:last-child a:visited, nav:not(.pagination) ul.row li ul li:last-child a, nav:not(.pagination) ul.row li ul li:last-child a:link, nav:not(.pagination) ul.row li ul li:last-child a:visited, nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:link, nav.inline ul li ul li:last-child a:visited, nav.inline ul.row li ul li:last-child a, nav.inline ul.row li ul li:last-child a:link, nav.inline ul.row li ul li:last-child a:visited {
+  nav:not(.pagination) ul li ul li:last-child a, nav:not(.pagination) ul li ul li:last-child a:visited, nav:not(.pagination) ul.row li ul li:last-child a, nav:not(.pagination) ul.row li ul li:last-child a:visited, nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited, nav.inline ul.row li ul li:last-child a, nav.inline ul.row li ul li:last-child a:visited {
     -ms-border-radius: 0 !important;
     -o-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
   }
-  nav:not(.pagination) ul:last-child li:last-child ul li:last-child a, nav:not(.pagination) ul:last-child li:last-child ul li:last-child a:link, nav:not(.pagination) ul:last-child li:last-child ul li:last-child a:visited, nav:not(.pagination) ul.row:last-child li:last-child ul li:last-child a, nav:not(.pagination) ul.row:last-child li:last-child ul li:last-child a:link, nav:not(.pagination) ul.row:last-child li:last-child ul li:last-child a:visited, nav.inline ul:last-child li:last-child ul li:last-child a, nav.inline ul:last-child li:last-child ul li:last-child a:link, nav.inline ul:last-child li:last-child ul li:last-child a:visited, nav.inline ul.row:last-child li:last-child ul li:last-child a, nav.inline ul.row:last-child li:last-child ul li:last-child a:link, nav.inline ul.row:last-child li:last-child ul li:last-child a:visited {
+  nav:not(.pagination) ul:last-child li:last-child ul li:last-child a, nav:not(.pagination) ul:last-child li:last-child ul li:last-child a:visited, nav:not(.pagination) ul.row:last-child li:last-child ul li:last-child a, nav:not(.pagination) ul.row:last-child li:last-child ul li:last-child a:visited, nav.inline ul:last-child li:last-child ul li:last-child a, nav.inline ul:last-child li:last-child ul li:last-child a:visited, nav.inline ul.row:last-child li:last-child ul li:last-child a, nav.inline ul.row:last-child li:last-child ul li:last-child a:visited {
     -ms-border-radius: 0 0 4px 4px !important;
     -o-border-radius: 0 0 4px 4px !important;
     -moz-border-radius: 0 0 4px 4px !important;
@@ -5353,25 +5364,25 @@ ul.orbit-bullets li.active.has-thumb {
     border-radius: 0 0 4px 4px !important;
   }
 
-  nav:not(.pagination) ul li:first-child > a, nav:not(.pagination) ul li:first-child > a:link, nav:not(.pagination) ul li:first-child > a:visited, nav:not(.pagination) ul.row li:first-child > a, nav:not(.pagination) ul.row li:first-child > a:link, nav:not(.pagination) ul.row li:first-child > a:visited, nav.inline ul li:first-child > a, nav.inline ul li:first-child > a:link, nav.inline ul li:first-child > a:visited, nav.inline ul.row li:first-child > a, nav.inline ul.row li:first-child > a:link, nav.inline ul.row li:first-child > a:visited {
+  nav:not(.pagination) ul li:first-child > a, nav:not(.pagination) ul li:first-child >, nav:not(.pagination) ul li:first-child > a:visited, nav:not(.pagination) ul.row li:first-child > a, nav:not(.pagination) ul.row li:first-child >, nav:not(.pagination) ul.row li:first-child > a:visited, nav.inline ul li:first-child > a, nav.inline ul li:first-child >, nav.inline ul li:first-child > a:visited, nav.inline ul.row li:first-child > a, nav.inline ul.row li:first-child >, nav.inline ul.row li:first-child > a:visited {
     -ms-border-radius: 4px 4px 0 0 !important;
     -o-border-radius: 4px 4px 0 0 !important;
     -moz-border-radius: 4px 4px 0 0 !important;
     -webkit-border-radius: 4px 4px 0 0 !important;
     border-radius: 4px 4px 0 0 !important;
   }
-  nav:not(.pagination) ul li:last-child > a, nav:not(.pagination) ul li:last-child > a:link, nav:not(.pagination) ul li:last-child > a:visited, nav:not(.pagination) ul.row li:last-child > a, nav:not(.pagination) ul.row li:last-child > a:link, nav:not(.pagination) ul.row li:last-child > a:visited, nav.inline ul li:last-child > a, nav.inline ul li:last-child > a:link, nav.inline ul li:last-child > a:visited, nav.inline ul.row li:last-child > a, nav.inline ul.row li:last-child > a:link, nav.inline ul.row li:last-child > a:visited {
+  nav:not(.pagination) ul li:last-child > a, nav:not(.pagination) ul li:last-child >, nav:not(.pagination) ul li:last-child > a:visited, nav:not(.pagination) ul.row li:last-child > a, nav:not(.pagination) ul.row li:last-child >, nav:not(.pagination) ul.row li:last-child > a:visited, nav.inline ul li:last-child > a, nav.inline ul li:last-child >, nav.inline ul li:last-child > a:visited, nav.inline ul.row li:last-child > a, nav.inline ul.row li:last-child >, nav.inline ul.row li:last-child > a:visited {
     -ms-border-radius: 0 0 4px 4px !important;
     -o-border-radius: 0 0 4px 4px !important;
     -moz-border-radius: 0 0 4px 4px !important;
     -webkit-border-radius: 0 0 4px 4px !important;
     border-radius: 0 0 4px 4px !important;
   }
-  nav:not(.pagination) ul li:last-child.on > a, nav:not(.pagination) ul li:last-child.on > a:link, nav:not(.pagination) ul li:last-child.on > a:visited, nav:not(.pagination) ul.row li:last-child.on > a, nav:not(.pagination) ul.row li:last-child.on > a:link, nav:not(.pagination) ul.row li:last-child.on > a:visited, nav.inline ul li:last-child.on > a, nav.inline ul li:last-child.on > a:link, nav.inline ul li:last-child.on > a:visited, nav.inline ul.row li:last-child.on > a, nav.inline ul.row li:last-child.on > a:link, nav.inline ul.row li:last-child.on > a:visited {
+  nav:not(.pagination) ul li:last-child.on > a, nav:not(.pagination) ul li:last-child.on >, nav:not(.pagination) ul li:last-child.on > a:visited, nav:not(.pagination) ul.row li:last-child.on > a, nav:not(.pagination) ul.row li:last-child.on >, nav:not(.pagination) ul.row li:last-child.on > a:visited, nav.inline ul li:last-child.on > a, nav.inline ul li:last-child.on >, nav.inline ul li:last-child.on > a:visited, nav.inline ul.row li:last-child.on > a, nav.inline ul.row li:last-child.on >, nav.inline ul.row li:last-child.on > a:visited {
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
   }
-  nav:not(.pagination) ul li ul li a, nav:not(.pagination) ul li ul li a:link, nav:not(.pagination) ul li ul li a:visited, nav:not(.pagination) ul.row li ul li a, nav:not(.pagination) ul.row li ul li a:link, nav:not(.pagination) ul.row li ul li a:visited, nav.inline ul li ul li a, nav.inline ul li ul li a:link, nav.inline ul li ul li a:visited, nav.inline ul.row li ul li a, nav.inline ul.row li ul li a:link, nav.inline ul.row li ul li a:visited {
+  nav:not(.pagination) ul li ul li a, nav:not(.pagination) ul li ul li a:visited, nav:not(.pagination) ul.row li ul li a, nav:not(.pagination) ul.row li ul li a:visited, nav.inline ul li ul li a, nav.inline ul li ul li a:visited, nav.inline ul.row li ul li a, nav.inline ul.row li ul li a:visited {
     -ms-border-radius: 0 !important;
     -o-border-radius: 0 !important;
     -moz-border-radius: 0 !important;

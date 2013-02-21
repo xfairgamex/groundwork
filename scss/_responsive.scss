@@ -111,12 +111,12 @@
           @include filter-shadow(rgba(0,0,0,0), 0, 0, 0);
           li {
             &:first-child {
-              a, a:link, a:visited {
+              a, a:visited {
                 @include rounded(0 !important);
               }
             }
             &:last-child {
-              a, a:link, a:visited {
+              a, a:visited {
                 @include rounded(0 !important);
               }
             }
@@ -129,7 +129,7 @@
             ul {
               li {
                 &:last-child {
-                  a, a:link, a:visited {
+                  a, a:visited {
                     @include rounded(0 0 $radius $radius !important);
                   }
                 }
@@ -144,16 +144,16 @@
     ul, ul.row {
       li {
         &:first-child {
-          > a, > a:link, > a:visited {
+          > a, > , > a:visited {
             @include rounded($radius $radius 0 0 !important);
           }
         }
         &:last-child {
-          > a, > a:link, > a:visited {
+          > a, > , > a:visited {
             @include rounded(0 0 $radius $radius !important);
           }
           &.on {
-            > a, > a:link, > a:visited {
+            > a, > , > a:visited {
               border-bottom-right-radius:0 !important;
               border-bottom-left-radius:0 !important;
             }
@@ -163,7 +163,7 @@
       li {
         ul {
           li {
-            a, a:link, a:visited {
+            a, a:visited {
               @include rounded(0 !important);
             }
           }
@@ -185,7 +185,7 @@
           }
         }
         &:first-child a {
-          @include rounded($radius $radius 0 0); 
+          @include rounded($radius $radius 0 0);
         }
       }
     }
@@ -269,7 +269,7 @@
           border-bottom:none;
         }
         &:first-child a {
-          @include rounded($radius $radius 0 0); 
+          @include rounded($radius $radius 0 0);
         }
       }
     }
