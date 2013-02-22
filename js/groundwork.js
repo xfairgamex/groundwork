@@ -2,7 +2,7 @@
 
 /*
  *
- *  Groundwork JS by Gary Hepting - https://github.com/groundworkcss/groundwork
+ *  GroundworkCSS JS by Gary Hepting - https://github.com/groundworkcss/groundwork
  *  
  *  Open source under the BSD License. 
  *
