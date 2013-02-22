@@ -4381,12 +4381,14 @@ ul.icons li [class*=" icon-"] {
   width: 100%;
   height: 100%;
   -ms-box-shadow: inset 0 0 200px black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=200px, Direction=135, Color='#FF000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=200px, Direction=135, Color='#FF000000');
   -o-box-shadow: inset 0 0 200px black;
   -moz-box-shadow: inset 0 0 200px black;
   -webkit-box-shadow: inset 0 0 200px black;
   box-shadow: inset 0 0 200px black;
   background: rgba(0, 0, 0, 0.45);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.45)', endColorstr='rgba(0, 0, 0, 0.9)',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#73000000', endColorstr='#E6000000',GradientType=0 );
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.9) 100%);
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.9) 100%);
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.9) 100%);
