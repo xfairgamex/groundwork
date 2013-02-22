@@ -1506,30 +1506,8 @@ code {
   white-space: pre-wrap;
   word-wrap: break-word;
   min-height: 1em;
-  line-height: 1.4;
-}
-code:not(.inline):before {
-  counter-increment: linenumber;
-  content: counter(linenumber) ".";
   display: inline-block;
-  width: 2em;
-  text-align: right;
-  position: absolute;
-  left: 0.4em;
   color: white;
-}
-code:before {
-  counter-increment: linenumber;
-  content: counter(linenumber) ".";
-  display: inline-block;
-  width: 2em;
-  text-align: right;
-  position: absolute;
-  left: 1em;
-  color: white;
-}
-code.inline {
-  display: inline-block;
   background: #8d8d8d;
   border: none;
   padding: 0 0.3em;
@@ -1540,12 +1518,27 @@ code.inline {
 
 pre {
   color: white;
-  background: black;
+  background: #050505;
   font-size: 0.9em;
   padding: 0.5em;
   display: block;
   border-left: 2.5em solid gray;
   counter-reset: linenumber;
+}
+pre code {
+  background: inherit;
+  margin: 0;
+  padding: 0;
+}
+pre code:before {
+  text-align: right;
+  color: white;
+  width: 2em;
+  display: inline-block;
+  counter-increment: linenumber;
+  content: counter(linenumber) ".";
+  position: absolute;
+  left: 1.2em;
 }
 
 .error, .invalid {
