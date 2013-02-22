@@ -1522,6 +1522,7 @@ pre {
   font-size: 0.9em;
   padding: 0.5em;
   display: block;
+  margin-bottom: 10px;
   border-left: 2.5em solid gray;
   counter-reset: linenumber;
 }
