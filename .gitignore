@@ -1,3 +1,4 @@
 *.kit
 .DS_Store
+config.rb
 /.idea
