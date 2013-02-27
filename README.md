@@ -18,7 +18,7 @@ Using GroundworkCSS, you can quickly build web apps that work on virtually
 any device. The key elements that make GroundworkCSS stand out from other
 frameworks are:
 
-* flexible fluid grid system
+* nestable fractions-based fluid grid system
 * intelligent adjustments for mobile, small tablet, and larger screens
 * responsive font sizing
 * responsive tables
