@@ -12,6 +12,11 @@ table {
   padding:0;
   margin:0;
   font-size:1em;
+  &.align-center {
+    th, td {
+      text-align:center;
+    }
+  }
   &.responsive {
     table-layout:fixed;
   }
