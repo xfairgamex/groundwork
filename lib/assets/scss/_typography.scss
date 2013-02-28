@@ -185,7 +185,6 @@ code {
 	word-wrap:   break-word;
 	min-height:  1em;
 	display:     inline-block;
-	color:       white;
 	background:  lighten(gray, 5%);
 	border:      none;
 	padding:     0 0.3em;
@@ -195,12 +194,13 @@ code {
 }
 
 pre {
+	$border: 2.6em;
 	color:         white;
 	background:    #050505;
 	font-size:     0.9em;
 	padding:       0.5em;
 	display:       block;
-	border-left:   2.5em solid gray;
+	border-left:   #{$border} solid gray;
 	counter-reset: linenumber;
 	code {
 		background: inherit;
@@ -209,12 +209,11 @@ pre {
 		&:before {
 			text-align:        right;
 			color:             white;
-			width:             2em;
-			display:           inline-block;
 			counter-increment: linenumber;
 			content:           counter(linenumber) ".";
 			position:          absolute;
-			left:              1.2em;
+			left:              0.65em;
+			width: #{$border};
 		}
 	}
 }

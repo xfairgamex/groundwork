@@ -1146,7 +1146,6 @@ code {
   word-wrap: break-word;
   min-height: 1em;
   display: inline-block;
-  color: white;
   background: #8d8d8d;
   border: none;
   padding: 0 0.3em;
@@ -1160,7 +1159,7 @@ pre {
   font-size: 0.9em;
   padding: 0.5em;
   display: block;
-  border-left: 2.5em solid gray;
+  border-left: 2.6em solid gray;
   counter-reset: linenumber; }
   pre code {
     background: inherit;
@@ -1169,12 +1168,11 @@ pre {
     pre code:before {
       text-align: right;
       color: white;
-      width: 2em;
-      display: inline-block;
       counter-increment: linenumber;
       content: counter(linenumber) ".";
       position: absolute;
-      left: 1.2em; }
+      left: 0.65em;
+      width: 2.6em; }
 
 .error, .invalid {
   color: #a40400; }
