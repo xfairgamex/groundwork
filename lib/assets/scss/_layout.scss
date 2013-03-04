@@ -52,8 +52,8 @@
   &.tripple       { margin-bottom:$gutter*3; }
 }
 .gap-left         { margin-left:$gutter;
-  &.double        { padding:$gutter*2; }
-  &.tripple       { padding:$gutter*3; }
+  &.double        { margin-left:$gutter*2; }
+  &.tripple       { margin-left:$gutter*3; }
 }
 .border-right     { border-right:1px solid $border-color; }
 .border-left      { border-left:1px solid $border-color; }
