@@ -46,7 +46,7 @@
 }
 
 // grid classes responsive
-@mixin grid-responsive() {
+@mixin grid-responsive($both: true) {
   // responsive grid
   .half, .halves,
   .third, .thirds,
@@ -59,46 +59,91 @@
   .tenth, .tenths,
   .eleventh, .elevenths,
   .twelfth, .twelfths {
-    &:not(.small-tablet):not(.mobile) {
-      width:100% !important;
-      float:none;
-      clear:both;
-      // reset push
-      &.right-one,
-      &.right-two,
-      &.right-three,
-      &.right-four,
-      &.right-five,
-      &.right-six,
-      &.right-seven,
-      &.right-eight,
-      &.right-nine,
-      &.right-ten,
-      &.right-eleven  { left:0; }
-      // reset pull
-      &.left-one,
-      &.left-two,
-      &.left-three,
-      &.left-four,
-      &.left-five,
-      &.left-six,
-      &.left-seven,
-      &.left-eight,
-      &.left-nine,
-      &.left-ten,
-      &.left-eleven   { right:0; }
-      // reset offset
-      &.skip-one,
-      &.skip-two,
-      &.skip-three,
-      &.skip-four,
-      &.skip-five,
-      &.skip-six,
-      &.skip-seven,
-      &.skip-eight,
-      &.skip-nine,
-      &.skip-ten,
-      &.skip-eleven   { margin-left:0; }
+    @if $both {
+      &:not(.small-tablet):not(.mobile) {
+        width:100% !important;
+        float:none;
+        clear:both;
+        // reset push
+        &.right-one,
+        &.right-two,
+        &.right-three,
+        &.right-four,
+        &.right-five,
+        &.right-six,
+        &.right-seven,
+        &.right-eight,
+        &.right-nine,
+        &.right-ten,
+        &.right-eleven  { left:0; }
+        // reset pull
+        &.left-one,
+        &.left-two,
+        &.left-three,
+        &.left-four,
+        &.left-five,
+        &.left-six,
+        &.left-seven,
+        &.left-eight,
+        &.left-nine,
+        &.left-ten,
+        &.left-eleven   { right:0; }
+        // reset offset
+        &.skip-one,
+        &.skip-two,
+        &.skip-three,
+        &.skip-four,
+        &.skip-five,
+        &.skip-six,
+        &.skip-seven,
+        &.skip-eight,
+        &.skip-nine,
+        &.skip-ten,
+        &.skip-eleven   { margin-left:0; }
+      }
+    }
+    @else {
+      &:not(.mobile) {
+        width:100% !important;
+        float:none;
+        clear:both;
+        // reset push
+        &.right-one,
+        &.right-two,
+        &.right-three,
+        &.right-four,
+        &.right-five,
+        &.right-six,
+        &.right-seven,
+        &.right-eight,
+        &.right-nine,
+        &.right-ten,
+        &.right-eleven  { left:0; }
+        // reset pull
+        &.left-one,
+        &.left-two,
+        &.left-three,
+        &.left-four,
+        &.left-five,
+        &.left-six,
+        &.left-seven,
+        &.left-eight,
+        &.left-nine,
+        &.left-ten,
+        &.left-eleven   { right:0; }
+        // reset offset
+        &.skip-one,
+        &.skip-two,
+        &.skip-three,
+        &.skip-four,
+        &.skip-five,
+        &.skip-six,
+        &.skip-seven,
+        &.skip-eight,
+        &.skip-nine,
+        &.skip-ten,
+        &.skip-eleven   { margin-left:0; }
+      }
     }
   }
 }

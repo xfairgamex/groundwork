@@ -155,7 +155,7 @@
 ///////////////////////
 @media only screen and (max-width:480px) {
   @if $classes {
-    @include grid-responsive();
+    @include grid-responsive(false);
   }
   .tabs:not(.mobile) {
     > ul {
