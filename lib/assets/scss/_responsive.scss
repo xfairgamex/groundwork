@@ -21,59 +21,8 @@
 //   small tablets   //
 ///////////////////////
 @media only screen and (max-width:767px) {
-  // responsive grid
-  .half, .halves,
-  .third, .thirds,
-  .fourth, .fourths,
-  .fifth, .fifths,
-  .sixth, .sixths,
-  .seventh, .sevenths,
-  .eighth, .eighths,
-  .ninth, .ninths,
-  .tenth, .tenths,
-  .eleventh, .elevenths,
-  .twelfth, .twelfths {
-    &:not(.small-tablet):not(.mobile) {
-      width:100% !important;
-      float:none;
-      clear:both;
-      // reset push
-      &.right-one,
-      &.right-two,
-      &.right-three,
-      &.right-four,
-      &.right-five,
-      &.right-six,
-      &.right-seven,
-      &.right-eight,
-      &.right-nine,
-      &.right-ten,
-      &.right-eleven  { left:0; }
-      // reset pull
-      &.left-one,
-      &.left-two,
-      &.left-three,
-      &.left-four,
-      &.left-five,
-      &.left-six,
-      &.left-seven,
-      &.left-eight,
-      &.left-nine,
-      &.left-ten,
-      &.left-eleven   { right:0; }
-      // reset offset
-      &.skip-one,
-      &.skip-two,
-      &.skip-three,
-      &.skip-four,
-      &.skip-five,
-      &.skip-six,
-      &.skip-seven,
-      &.skip-eight,
-      &.skip-nine,
-      &.skip-ten,
-      &.skip-eleven   { margin-left:0; }
-    }
+  @if $classes {
+    @include grid-responsive();
   }
   nav:not(.pagination), nav.inline {
     width:100%;
@@ -205,59 +154,8 @@
 //     handhelds     //
 ///////////////////////
 @media only screen and (max-width:480px) {
-  // responsive grid
-  .half, .halves,
-  .third, .thirds,
-  .fourth, .fourths,
-  .fifth, .fifths,
-  .sixth, .sixths,
-  .seventh, .sevenths,
-  .eighth, .eighths,
-  .ninth, .ninths,
-  .tenth, .tenths,
-  .eleventh, .elevenths,
-  .twelfth, .twelfths {
-    &:not(.mobile) {
-      width:100% !important;
-      float:none;
-      clear:both;
-      // reset push
-      &.right-one,
-      &.right-two,
-      &.right-three,
-      &.right-four,
-      &.right-five,
-      &.right-six,
-      &.right-seven,
-      &.right-eight,
-      &.right-nine,
-      &.right-ten,
-      &.right-eleven  { left:0; }
-      // reset pull
-      &.left-one,
-      &.left-two,
-      &.left-three,
-      &.left-four,
-      &.left-five,
-      &.left-six,
-      &.left-seven,
-      &.left-eight,
-      &.left-nine,
-      &.left-ten,
-      &.left-eleven   { right:0; }
-      // reset offset
-      &.skip-one,
-      &.skip-two,
-      &.skip-three,
-      &.skip-four,
-      &.skip-five,
-      &.skip-six,
-      &.skip-seven,
-      &.skip-eight,
-      &.skip-nine,
-      &.skip-ten,
-      &.skip-eleven   { margin-left:0; }
-    }
+  @if $classes {
+    @include grid-responsive();
   }
   .tabs:not(.mobile) {
     > ul {

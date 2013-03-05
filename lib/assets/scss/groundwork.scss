@@ -16,7 +16,9 @@
 
 // components
 @import "grid";
-@import "classes";
+@if $classes {
+  @include grid-classes();
+}
 @import "typography";
 @import "buttons";
 @import "forms";

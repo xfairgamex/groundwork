@@ -40,13 +40,13 @@ $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths n
 // function to generate the grid code
 @for $i from 1 through length($numbers) {
   %#{nth($fractions, $i)},
-  %#{nth($fractions-plural, $i)} { //the parent placeholder
+  %#{nth($fractions-plural, $i)} {
     width: percentage(1 / $i);
     @extend %column;
     @for $width from 1 through $i {
       &%#{nth($numbers, $width)} {
         width: percentage($width / $i);
-        @extend %column //the column is again extended so you can use @extend %sixth%five without having to extend %sixth;
+        @extend %column;
       }
     }
     @for $right-left-skip from 1 through $i - 1 {
