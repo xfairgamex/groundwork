@@ -11,7 +11,7 @@
   background:$button-color;
   border:1px solid $border-color;
   @include rounded($radius);
-  @include filter-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
+  @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
   font-size:13px;
   color:$button-text;
   &:after {
@@ -64,19 +64,19 @@
   background:$button-color;
   border:1px solid $border-color;
   @include rounded($radius);
-  @include filter-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
+  @include drop-shadow(rgba(0,0,0,0.15), 8px, 3px, 3px); // color, blur, x, y
   font-size:13px;
   text-transform:normal;
   color:$button-text;
   &:after, &:before {
     content:'';
     position:absolute;
-    z-index:98;
+    z-index:101;
     width:0;
     height:0;
   }
   &:after {
-    z-index:99;
+    z-index:102;
   }
   &.top.right {
     &:after {
