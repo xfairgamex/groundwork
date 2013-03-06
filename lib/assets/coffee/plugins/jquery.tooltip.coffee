@@ -62,7 +62,7 @@
       tooltip.css attrs
 
     resettooltip = ->
-      tooltip.text('').css
+      tooltip.text('').removeClass('left right top bottom').css
         left: 'auto'
         right: 'auto'
         top: 'auto'
