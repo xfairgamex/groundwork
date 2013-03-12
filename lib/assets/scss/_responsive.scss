@@ -1,17 +1,28 @@
 ///////////////////////
-//      desktop      //
+//   large desktops  //
 ///////////////////////
-// @media only screen and (min-width:1024px) {
-    
+// @include large-desktop {
+
 // }
+
+
+
+
+///////////////////////
+//      desktops     //
+///////////////////////
+// @include desktop {
+
+// }
+
 
 
 
 ///////////////////////
 //       ipads       //
 ///////////////////////
-// @media only screen and (min-width:768px) and (max-width:1024px) {
-    
+// @include ipad {
+
 // }
 
 
@@ -20,7 +31,7 @@
 ///////////////////////
 //   small tablets   //
 ///////////////////////
-@media only screen and (max-width:767px) {
+@include small-tablet {
   @if $classes {
     @include grid-responsive();
   }
@@ -145,6 +156,9 @@
   .no-margin-small-tablet {
     margin:0;
   }
+  .zero-small-tablet {
+    @extend %zero;
+  }
 }
 
 
@@ -153,7 +167,7 @@
 ///////////////////////
 //     handhelds     //
 ///////////////////////
-@media only screen and (max-width:480px) {
+@include mobile {
   @if $classes {
     @include grid-responsive(false);
   }
@@ -178,6 +192,9 @@
   .no-margin-mobile {
     margin:0;
   }
+  .zero-mobile {
+    @extend %zero;
+  }
 }
 
 
@@ -186,6 +203,6 @@
 ///////////////////////
 //  small handhelds  //
 ///////////////////////
-// @media only screen and (max-width:320px) {
-    
+// @include small-mobile {
+
 // }

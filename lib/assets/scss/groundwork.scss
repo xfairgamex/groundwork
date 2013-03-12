@@ -14,11 +14,19 @@
 // webfonts
 @import "webfonts";
 
-// components
+// grid
 @import "grid";
 @if $classes {
   @include grid-classes();
 }
+
+// helper classes
+@import "helpers";
+@if $classes {
+  @include helper-classes();
+}
+
+// components
 @import "typography";
 @import "buttons";
 @import "forms";
@@ -32,9 +40,6 @@
 @import "popovers";
 @import "modals";
 @import "orbit";
-
-// helper classes
-@import "layout";
 
 // responsive adjustments
 @import "responsive";

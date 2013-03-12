@@ -61,89 +61,83 @@
   .twelfth, .twelfths {
     @if $both {
       &:not(.small-tablet):not(.mobile) {
-        width:100% !important;
-        float:none;
-        clear:both;
-        // reset push
-        &.right-one,
-        &.right-two,
-        &.right-three,
-        &.right-four,
-        &.right-five,
-        &.right-six,
-        &.right-seven,
-        &.right-eight,
-        &.right-nine,
-        &.right-ten,
-        &.right-eleven  { left:0; }
-        // reset pull
-        &.left-one,
-        &.left-two,
-        &.left-three,
-        &.left-four,
-        &.left-five,
-        &.left-six,
-        &.left-seven,
-        &.left-eight,
-        &.left-nine,
-        &.left-ten,
-        &.left-eleven   { right:0; }
-        // reset offset
-        &.skip-one,
-        &.skip-two,
-        &.skip-three,
-        &.skip-four,
-        &.skip-five,
-        &.skip-six,
-        &.skip-seven,
-        &.skip-eight,
-        &.skip-nine,
-        &.skip-ten,
-        &.skip-eleven   { margin-left:0; }
+        @include grid-collapse();
       }
     }
     @else {
       &:not(.mobile) {
-        width:100% !important;
-        float:none;
-        clear:both;
-        // reset push
-        &.right-one,
-        &.right-two,
-        &.right-three,
-        &.right-four,
-        &.right-five,
-        &.right-six,
-        &.right-seven,
-        &.right-eight,
-        &.right-nine,
-        &.right-ten,
-        &.right-eleven  { left:0; }
-        // reset pull
-        &.left-one,
-        &.left-two,
-        &.left-three,
-        &.left-four,
-        &.left-five,
-        &.left-six,
-        &.left-seven,
-        &.left-eight,
-        &.left-nine,
-        &.left-ten,
-        &.left-eleven   { right:0; }
-        // reset offset
-        &.skip-one,
-        &.skip-two,
-        &.skip-three,
-        &.skip-four,
-        &.skip-five,
-        &.skip-six,
-        &.skip-seven,
-        &.skip-eight,
-        &.skip-nine,
-        &.skip-ten,
-        &.skip-eleven   { margin-left:0; }
+        @include grid-collapse();
       }
     }
   }
+}
+
+@mixin grid-collapse() {
+  width:100% !important;
+  float:none;
+  clear:both;
+  // reset push
+  &.right-one,
+  &.right-two,
+  &.right-three,
+  &.right-four,
+  &.right-five,
+  &.right-six,
+  &.right-seven,
+  &.right-eight,
+  &.right-nine,
+  &.right-ten,
+  &.right-eleven  { left:0; }
+  // reset pull
+  &.left-one,
+  &.left-two,
+  &.left-three,
+  &.left-four,
+  &.left-five,
+  &.left-six,
+  &.left-seven,
+  &.left-eight,
+  &.left-nine,
+  &.left-ten,
+  &.left-eleven   { right:0; }
+  // reset offset
+  &.skip-one,
+  &.skip-two,
+  &.skip-three,
+  &.skip-four,
+  &.skip-five,
+  &.skip-six,
+  &.skip-seven,
+  &.skip-eight,
+  &.skip-nine,
+  &.skip-ten,
+  &.skip-eleven   { margin-left:0; }
+}
+
+// helper classes
+@mixin helper-classes() {
+  
+  $helpers: inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify center clear clearfix space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+  // function to generate the helpers
+  @for $i from 1 through length($helpers) {
+    .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
+  }
+
+  $spacers: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left;
+  $modifiers: double triple;
+  // function to generate the spacers
+  @for $i from 1 through length($spacers) {
+    .#{nth($spacers, $i)} { @extend %#{nth($spacers, $i)}; }
+
+  }
+
+  .stick            { @extend %stick;
+    &.middle        { @extend %middle; }
+    &.center        { @extend %center; }
+    &.right         { @extend %right; }
+    &.left          { @extend %left; }
+    &.top           { @extend %top; }
+    &.bottom        { @extend %bottom; }
+  }
+
 }

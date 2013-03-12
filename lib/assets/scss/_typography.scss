@@ -19,12 +19,12 @@ body {
   background:$selection-color;
   color:$selection-text;
 }
-* {
-  outline:none;
-  &:focus {
-    @include filter-shadow(rgba(0,0,0,0.35), 15px, 0, 0);
-  }
-}
+// * {
+//   outline:none;
+//   &:focus {
+//     @include filter-shadow(rgba(0,0,0,0.35), 15px, 0, 0);
+//   }
+// }
 a, a:visited {
   color:$link-color;
   @include transition(color 0.25s);

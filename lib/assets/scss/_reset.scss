@@ -61,8 +61,7 @@ form, fieldset, legend, label, input, textarea, select, button,
 table, caption, tbody, tfoot, thead, tr, th, td, 
 header, footer, aside, menu, nav, section, article, details, 
 pre, code, iframe, object, canvas, audio, video {
-  margin: 0;
-  padding: 0;
+  @extend %zero;
   border: 0;
 }
 
@@ -73,5 +72,5 @@ pre, code, iframe, object, canvas, audio, video {
 // HTML5 display fix //
 ///////////////////////
 header, footer, aside, menu, nav, section, article, details {
-  display: block;
+  @extend %block;
 }
