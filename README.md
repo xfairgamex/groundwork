@@ -4,7 +4,7 @@
   alt="GroundworkCSS">
 </a>
 
-GroundworkCSS Beta v1.1
+GroundworkCSS Beta v1.2
 =======================
 
 Say hello to responsive design made easy.
@@ -18,7 +18,9 @@ Using GroundworkCSS, you can quickly build web apps that work on virtually
 any device. The key elements that make GroundworkCSS stand out from other
 frameworks are:
 
-* nestable fractions-based fluid grid system
-* intelligent adjustments for mobile, small tablet, and larger screens
-* responsive font sizing
-* responsive tables
+* the nestable, fractions-based fluid grid system (config for supported range of fractions)
+* responsive adjustments for mobile, small tablet, and larger screens
+* responsive font sizing component
+* responsive tables support
+* easy customized using SCSS variables
+* made with modular components
