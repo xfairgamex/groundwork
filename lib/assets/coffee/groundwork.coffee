@@ -125,7 +125,7 @@ $(document).ready ->
         $(this).removeClass('unselected')
 
   # tabs
-  $('.tabs > ul > li > a').not('.disabled').click (e) ->
+  $('.tabs > ul > li > a').not('.disabled').on 'click', (e) ->
     tabs = $(this).parents('.tabs')
     tabs.find('> ul li a').removeClass('active')
     $(this).addClass('active')
