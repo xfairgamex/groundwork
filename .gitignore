@@ -1,5 +1,2 @@
-*.kit
 .DS_Store
-config.rb
-/.idea
 .sass-cache/*
