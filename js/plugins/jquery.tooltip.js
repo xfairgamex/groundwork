@@ -67,7 +67,7 @@
         return tooltip.css(attrs);
       };
       resettooltip = function() {
-        return tooltip.text('').css({
+        return tooltip.text('').removeClass('left right top bottom').css({
           left: 'auto',
           right: 'auto',
           top: 'auto',
