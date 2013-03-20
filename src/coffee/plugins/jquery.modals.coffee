@@ -29,6 +29,7 @@
       $(this).not('#iframeModal').wrapInner('<div class="modal-content"></div>')
       $(this).prepend('<i class="close icon-remove"></i>').prepend('<i class="fullscreen icon-resize-full"></i>').appendTo('body')
       # bind each modal link to a modal
+      $this = $(this)
       $('[href=#'+$(this).attr('id')+']').on "click", (e) ->
         modals.open($(this).attr('href'), $(this).hasClass('fullscreen'))
         e.preventDefault()
@@ -44,7 +45,7 @@
   modals = (->
 
     # ready state
-    $('html').addClass('modal-ready')
+    $('body').addClass('modal-ready')
     
     # create overlay
     if $("#overlay").length < 1
@@ -73,10 +74,10 @@
         'margin-top': ($(elem).outerHeight() / -2) + 'px',
         'margin-left': ($(elem).outerWidth() / -2) + 'px'
       setTimeout ->
-        $('html').addClass("modal-active")
+        $('body').addClass("modal-active")
       , 0
       setTimeout ->
-        $('html').removeClass('modal-ready')
+        $('body').removeClass('modal-ready')
       , 400
       if fullscreen
         modals.fullscreen(elem)
@@ -85,7 +86,7 @@
     close = ->
       modal = $('div.modal.active')
       $(window).unbind "keydown"
-      $('html').removeClass("modal-active").addClass('modal-ready')
+      $('body').removeClass("modal-active").addClass('modal-ready')
       if modal.hasClass('iframe')
         $('div#iframeModal iframe').replaceWith('<iframe marginheight="0" marginwidth="0" frameborder="0"></iframe>')
         modal.css

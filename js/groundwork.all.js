@@ -548,8 +548,10 @@
     elems = [];
     $.fn.modal = function() {
       this.each(function() {
+        var $this;
         $(this).not('#iframeModal').wrapInner('<div class="modal-content"></div>');
         $(this).prepend('<i class="close icon-remove"></i>').prepend('<i class="fullscreen icon-resize-full"></i>').appendTo('body');
+        $this = $(this);
         return $('[href=#' + $(this).attr('id') + ']').on("click", function(e) {
           modals.open($(this).attr('href'), $(this).hasClass('fullscreen'));
           e.preventDefault();
@@ -565,7 +567,7 @@
     };
     modals = (function() {
       var close, fullscreen, open;
-      $('html').addClass('modal-ready');
+      $('body').addClass('modal-ready');
       if ($("#overlay").length < 1) {
         $('body').append('<div id="overlay"></div>');
       }
@@ -597,10 +599,10 @@
           'margin-left': ($(elem).outerWidth() / -2) + 'px'
         });
         setTimeout(function() {
-          return $('html').addClass("modal-active");
+          return $('body').addClass("modal-active");
         }, 0);
         setTimeout(function() {
-          return $('html').removeClass('modal-ready');
+          return $('body').removeClass('modal-ready');
         }, 400);
         if (fullscreen) {
           modals.fullscreen(elem);
@@ -610,7 +612,7 @@
         var modal;
         modal = $('div.modal.active');
         $(window).unbind("keydown");
-        $('html').removeClass("modal-active").addClass('modal-ready');
+        $('body').removeClass("modal-active").addClass('modal-ready');
         if (modal.hasClass('iframe')) {
           $('div#iframeModal iframe').replaceWith('<iframe marginheight="0" marginwidth="0" frameborder="0"></iframe>');
           modal.css({
