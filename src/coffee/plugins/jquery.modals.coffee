@@ -30,7 +30,7 @@
       $(this).prepend('<i class="close icon-remove"></i>').prepend('<i class="fullscreen icon-resize-full"></i>').appendTo('body')
       # bind each modal link to a modal
       $('[href=#'+$(this).attr('id')+']').on "click", (e) ->
-        modals.open($(this).attr('href'))
+        modals.open($(this).attr('href'), $(this).hasClass('fullscreen'))
         e.preventDefault()
         return false
 
@@ -54,7 +54,7 @@
     $('#overlay, div.modal .close').bind "click", (e) ->
       close()
 
-    open = (elem) ->
+    open = (elem, fullscreen) ->
       # bind esc key
       $(window).bind "keydown", (e) ->
         keyCode = (if (e.which) then e.which else e.keyCode)
@@ -66,7 +66,7 @@
           width: 'auto',
           height: 'auto'
         $(elem).css
-          height: $(elem).outerHeight(),
+          height: $(elem).outerHeight()
       $(elem).css
         top: '50%',
         left: '50%',
@@ -78,6 +78,8 @@
       setTimeout ->
         $('html').removeClass('modal-ready')
       , 400
+      if fullscreen
+        modals.fullscreen(elem)
       return
 
     close = ->

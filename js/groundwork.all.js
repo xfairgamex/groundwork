@@ -551,7 +551,7 @@
         $(this).not('#iframeModal').wrapInner('<div class="modal-content"></div>');
         $(this).prepend('<i class="close icon-remove"></i>').prepend('<i class="fullscreen icon-resize-full"></i>').appendTo('body');
         return $('[href=#' + $(this).attr('id') + ']').on("click", function(e) {
-          modals.open($(this).attr('href'));
+          modals.open($(this).attr('href'), $(this).hasClass('fullscreen'));
           e.preventDefault();
           return false;
         });
@@ -572,7 +572,7 @@
       $('#overlay, div.modal .close').bind("click", function(e) {
         return close();
       });
-      open = function(elem) {
+      open = function(elem, fullscreen) {
         $(window).bind("keydown", function(e) {
           var keyCode;
           keyCode = (e.which ? e.which : e.keyCode);
@@ -602,6 +602,9 @@
         setTimeout(function() {
           return $('html').removeClass('modal-ready');
         }, 400);
+        if (fullscreen) {
+          modals.fullscreen(elem);
+        }
       };
       close = function() {
         var modal;
