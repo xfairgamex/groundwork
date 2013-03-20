@@ -183,13 +183,15 @@
         }
       }
     });
-    $('.tabs > ul > li > a[href^=#]').not('.disabled').on('click', function(e) {
+    $('.tabs > ul > li > a[href^=#]').on('click', function(e) {
       var tabs;
-      tabs = $(this).parents('.tabs');
-      tabs.find('> ul li a').removeClass('active');
-      $(this).addClass('active');
-      tabs.children('div').removeClass('active');
-      tabs.children($(this).attr('href')).addClass('active');
+      if (!$(this).hasClass('disabled')) {
+        tabs = $(this).parents('.tabs');
+        tabs.find('> ul li a').removeClass('active');
+        $(this).addClass('active');
+        tabs.children('div').removeClass('active');
+        tabs.children($(this).attr('href')).addClass('active');
+      }
       e.preventDefault();
       return false;
     });
