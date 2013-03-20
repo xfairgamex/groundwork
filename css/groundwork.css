@@ -1810,6 +1810,7 @@ button, .button, a.button, a.button:visited, input[type=submit], input[type=butt
   line-height: 1.5;
   width: auto;
   height: auto;
+  text-align: center;
   -ms-transition: background-color 0.25s ease-out;
   -o-transition: background-color 0.25s ease-out;
   -moz-transition: background-color 0.25s ease-out;
@@ -1821,7 +1822,7 @@ button, .button, a.button, a.button:visited, input[type=submit], input[type=butt
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-button:hover, button:focus, .button:hover, .button:focus, a.button:hover, a.button:focus, a.button:visited:hover, a.button:visited:focus, input[type=submit]:hover, input[type=submit]:focus, input[type=button]:hover, input[type=button]:focus, input[type=reset]:hover, input[type=reset]:focus {
+button.on, button:hover, button:focus, .button.on, .button:hover, .button:focus, a.button.on, a.button:hover, a.button:focus, a.button:visited.on, a.button:visited:hover, a.button:visited:focus, input[type=submit].on, input[type=submit]:hover, input[type=submit]:focus, input[type=button].on, input[type=button]:hover, input[type=button]:focus, input[type=reset].on, input[type=reset]:hover, input[type=reset]:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
@@ -1884,7 +1885,6 @@ button.round, .button.round, a.button.round, a.button:visited.round, input[type=
 button.block, .button.block, a.button.block, a.button:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block {
   display: block;
   width: 100%;
-  text-align: center;
 }
 button.dropdown, .button.dropdown, a.button.dropdown, a.button:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown {
   position: relative;
@@ -1896,10 +1896,11 @@ button.dropdown:after, .button.dropdown:after, a.button.dropdown:after, a.button
   right: 1em;
   bottom: 0.25em;
 }
-button.dropdown:hover ul, button.dropdown:focus ul, .button.dropdown:hover ul, .button.dropdown:focus ul, a.button.dropdown:hover ul, a.button.dropdown:focus ul, a.button:visited.dropdown:hover ul, a.button:visited.dropdown:focus ul, input[type=submit].dropdown:hover ul, input[type=submit].dropdown:focus ul, input[type=button].dropdown:hover ul, input[type=button].dropdown:focus ul, input[type=reset].dropdown:hover ul, input[type=reset].dropdown:focus ul {
+button.dropdown.on ul, .button.dropdown.on ul, a.button.dropdown.on ul, a.button:visited.dropdown.on ul, input[type=submit].dropdown.on ul, input[type=button].dropdown.on ul, input[type=reset].dropdown.on ul {
   display: block;
 }
 button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul {
+  text-align: left;
   margin: 0.3em 0 0;
   padding: 0;
   list-style: none;
@@ -2201,6 +2202,10 @@ nav ul {
 nav ul li {
   display: block;
   position: relative;
+}
+nav ul li.on > a, nav ul li.on > a:visited {
+  background: #198d98;
+  text-decoration: none;
 }
 nav ul li a, nav ul li a:visited {
   display: block;

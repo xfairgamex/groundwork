@@ -12,8 +12,15 @@ $(document).ready ->
 
   # navigation menus
   delay = ''
-  $submenu = $('nav > ul > li.menu')
-  $submenu.on
+
+  navitem = $('nav > ul > li')
+  navitem.find('>a').on
+    focus: (e) ->
+      $('nav > ul > li').removeClass('on')
+      $('nav > ul > li > ul').hide()
+
+  menu = $('nav > ul > li.menu')
+  menu.on
     mouseenter: (e) ->
       if $(window).width() > 768
         clearTimeout(delay)
@@ -42,21 +49,32 @@ $(document).ready ->
         e.preventDefault()
         return false
  
-  # a11y : tab access to submenu (by Geoffrey Crofte - CreativeJuiz.com)
-  $submenu.find('>a').on 'focus', ( ->
-    $(this).closest('li.menu').trigger('mouseenter')
-  )
+  menu.find('>a').on
+    focus: ->
+      $(this).parent('li.menu').trigger('mouseenter')
   
-  $submenu.find('li:last-child > a').on 'blur', ( -> 
-    $(this).closest('li.menu').trigger('mouseleave')
-  )
-  
-  # DropDown Button a11y (by Geoffrey Crofte - CreativeJuiz.com)
-  $('.dropdown.button').attr('tabindex', '0').on 'focus', ( ->
-    $(this).find('>ul').css('display', 'block')
-  ).find('>ul li:last-child a').on 'blur', ( ->
-    $(this).closest('ul').css('display', 'none')
-  )
+  menu.find('li:last-child > a').on
+    blur: ->
+      $(this).closest('li.menu').trigger('mouseleave')
+
+  dropdown = $('.dropdown')
+
+  dropdown.on
+    focus: ->
+      $(this).addClass('on')
+
+  dropdown.find('li:last-child a').on
+    blur: ->
+      dropdown.filter('.on').removeClass('on')
+
+  $('body').on 'click', (e) ->
+    if $(e.target).hasClass('dropdown')
+      $(e.target).toggleClass('on')
+    else
+      if dropdown.filter('.on').length
+        dropdown.filter('.on').removeClass('on')
+    if navitem.filter('.menu.on').length
+      navitem.filter('.menu.on').removeClass('on')
   
 
   # dynamically adjust pagination items

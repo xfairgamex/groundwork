@@ -14,6 +14,12 @@ nav {
     li {
       display:block;
       position:relative;
+      &.on {
+        > a, > a:visited {
+          background:$button-active;
+          text-decoration:none;
+        }
+      }
       a, a:visited {
         display:block;
         width:100%;

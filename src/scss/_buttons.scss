@@ -20,9 +20,10 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
   line-height:1.5;
   width:auto;
   height:auto;
+  text-align:center;
   @include transition(background-color 0.25s ease-out);
   @include rounded($radius);
-  &:hover, &:focus {
+  &.on, &:hover, &:focus {
     background:$button-active;
     text-decoration:none;
     color:$button-active-text;
@@ -77,7 +78,6 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
   &.block {
     display:block;
     width:100%;
-    text-align:center;
   }
   &.dropdown {
     position:relative;
@@ -88,10 +88,11 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
       right:1em;
       bottom:0.25em;
     }
-    &:hover ul, &:focus ul {
+    &.on ul {
       display:block;
     }
     ul {
+      text-align:left;
       margin:0.3em 0 0;
       padding:0;
       list-style:none;
