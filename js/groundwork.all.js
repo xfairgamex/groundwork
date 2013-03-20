@@ -183,7 +183,7 @@
         }
       }
     });
-    $('.tabs > ul > li > a').not('.disabled').on('click', function(e) {
+    $('.tabs > ul > li > a[href^=#]').not('.disabled').on('click', function(e) {
       var tabs;
       tabs = $(this).parents('.tabs');
       tabs.find('> ul li a').removeClass('active');
