@@ -16,7 +16,7 @@
 
   $(document).ready(function() {
     var delay;
-	var $submenu = $('nav > ul > li.menu');
+	  var $submenu = $('nav > ul > li.menu');
     delay = '';
     $submenu.on({
       mouseenter: function(e) {
@@ -60,24 +60,18 @@
         }
       }
     })
-	// a11y : tab access to submenu (by Geoffrey Crofte - CreativeJuiz.com)
-	.find('>a')
-	.on('focus', function() {
-		$(this).closest('li.menu').trigger('mouseenter');
-	});
-	
-	$submenu.find('li:last-child > a').on('blur', function(){	
-		$(this).closest('li.menu').trigger('mouseleave');
-	});
-	
-	// DropDown Button a11y (by Geoffrey Crofte - CreativeJuiz.com)
-	$('.dropdown.button').attr('tabindex', '0').on('focus', function(){
-		$(this).find('>ul').css('display', 'block');
-	})
-	.find('>ul li:last-child a')
-	.on('blur', function(){
-		$(this).closest('ul').css('display', 'none');
-	});
+	$submenu.find('>a').on('focus', function() {
+    $(this).closest('li.menu').trigger('mouseenter');
+  });
+  
+  $submenu.find('li:last-child > a').on('blur', function(){ 
+    $(this).closest('li.menu').trigger('mouseleave');
+  });
+  $('.dropdown.button').attr('tabindex', '0').on('focus', function(){
+    $(this).find('>ul').css('display', 'block');
+  }).find('>ul li:last-child a').on('blur', function(){
+    $(this).closest('ul').css('display', 'none');
+  });
 	
     limitPaginationItems();
     $('.pagination ul > li:not(.next, .prev) a').on('click', (function(e) {
