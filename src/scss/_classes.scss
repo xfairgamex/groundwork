@@ -6,45 +6,6 @@
 
 
 
-// grid classes
-@mixin grid-classes() {
-
-  .container          { @extend %container; }
-  .row                { @extend %row; }
-  .column             { @extend %column; }
-  .centered           { @extend %centered; }
-
-  $numbers: one two three four five six seven eight nine ten eleven twelve;
-  $fractions: whole half third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth;
-  $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
-
-  @for $i from 1 through length($numbers) {
-    .#{nth($fractions, $i)},
-    .#{nth($fractions-plural, $i)} {
-      width: percentage(1 / $i);
-      @extend %column;
-      @for $width from 1 through $i {
-        &.#{nth($numbers, $width)} {
-          width: percentage($width / $i);
-          @extend %column;
-        }
-      }
-      @for $right-left-skip from 1 through $i - 1 {
-        &.right-#{nth($numbers, $right-left-skip)} {
-          left: percentage($right-left-skip / $i);
-        }
-        &.left-#{nth($numbers, $right-left-skip)} {
-          right: percentage($right-left-skip / $i);
-        }
-        &.skip-#{nth($numbers, $right-left-skip)} {
-          margin-left: percentage($right-left-skip / $i);
-        }
-      }
-    }
-  }
-
-}
-
 // grid classes responsive
 @mixin grid-responsive($both: true) {
   // responsive grid
