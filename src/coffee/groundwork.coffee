@@ -207,9 +207,6 @@ $(document).ready ->
   $('div.modal').modal()
 
   
-$(window).load ->
-  $('.slider').orbit()
-
 $(window).resize ->
   limitPaginationItems()
 

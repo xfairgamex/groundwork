@@ -230,10 +230,6 @@
     return $('div.modal').modal();
   });
 
-  $(window).load(function() {
-    return $('.slider').orbit();
-  });
-
   $(window).resize(function() {
     return limitPaginationItems();
   });
