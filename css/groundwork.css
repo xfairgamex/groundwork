@@ -4701,6 +4701,17 @@ ul.icons li [class*=" icon-"] {
   border-left: 8px solid transparent;
 }
 
+.cycle-slideshow > * {
+  display: none;
+}
+.cycle-slideshow > *:first-child {
+  display: block;
+}
+
+.cycle-slide {
+  display: block;
+}
+
 .modal-active body {
   overflow: hidden;
 }
