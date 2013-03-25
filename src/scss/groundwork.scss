@@ -17,12 +17,6 @@
 // grid
 @import "grid";
 
-// helper classes
-@import "helpers";
-@if $classes {
-  @include helper-classes();
-}
-
 // components
 @import "typography";
 @import "buttons";
@@ -37,6 +31,9 @@
 @import "cycle";
 // @import "popovers";
 @import "modals";
+
+// helper classes
+@import "helpers";
 
 // responsive adjustments
 @import "responsive";
