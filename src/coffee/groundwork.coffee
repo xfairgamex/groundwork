@@ -252,7 +252,7 @@ equalizeColumns = ->
     tallest = 0
     collapsed = false
     $(this).children('*').each (i) ->
-      $(this).css('min-height','0')
+      $(this).css('min-height','1px')
       collapsed = ($(this).outerWidth() == $row.outerWidth())
       unless collapsed
         $(this).addClass('equal') unless $(this).hasClass('equal')
