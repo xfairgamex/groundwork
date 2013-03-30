@@ -222,13 +222,16 @@ limitPaginationItems = ->
     pagination = $(this)
     # pagination dimensions
     visibleSpace = pagination.outerWidth() - pagination.children('li.prev').outerWidth() - pagination.children('li.next').outerWidth()
+    totalItemsWidth = 0
+    pagination.children('li').each ->
+      totalItemsWidth += $(this).outerWidth()
     # hide pages that don't fit
     pagination.children('li').not('.prev, .next, .active').hide()
     visibleItemsWidth = 0
     pagination.children('li:visible').each ->
       visibleItemsWidth += $(this).outerWidth()
     # loop
-    while (visibleItemsWidth + 29) < visibleSpace
+    while (visibleItemsWidth + 29) < visibleSpace && (visibleItemsWidth + 29) < totalItemsWidth
       # show the next page number
       pagination.children('li:visible').not('.next').last().next().show()
       visibleItemsWidth = 0
