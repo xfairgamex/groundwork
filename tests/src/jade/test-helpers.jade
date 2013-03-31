@@ -27,7 +27,7 @@ html
           p SCSS: @extend %foo;
       
       //- This should sync with cases in test-helpers.scss
-      - var cases = ["padded", "pad-top", "pad-right", "pad-bottom", "pad-left", "gapped", "gap-top", "gap-right", "gap-bottom", "gap-left", "inline", "block", "zero", "pull-right", "pull-left", "border-right", "border-left", "border-top", "border-bottom", "align-top", "align-right", "align-bottom", "align-left", "align-center", "justify", "center", "space", "round", "rotate-90", "rotate-180", "rotate-270", "rotate-90-ctr", "rotate-180-ctr", "rotate-270-ctr"]
+      - var cases = ["padded", "pad-top", "pad-right", "pad-bottom", "pad-left", "gapped", "gap-top", "gap-right", "gap-bottom", "gap-left", "inline", "block", "zero", "pull-right", "pull-left", "border-right", "border-left", "border-top", "border-bottom", "align-top", "align-right", "align-bottom", "align-left", "align-center", "justify", "truncate", "center", "space", "round", "rotate-90", "rotate-180", "rotate-270", "rotate-90-ctr", "rotate-180-ctr", "rotate-270-ctr"]
       //- End cases
       
       each item in cases
@@ -40,5 +40,5 @@ html
       h2 Special Combinations
       .row
         .one.third: div(class="padded double"): p padded double
-        .one.third: div(class="include-padded include-double"): p include-padded include-double
+        .one.third: div(class="include-padded-2"): p @include _padded(2);
         .one.third: div(class="extend-padded extend-double"): p extend-padded extend-double
