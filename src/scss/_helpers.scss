@@ -73,6 +73,7 @@
 %center           { @extend %block; margin:0 auto; }
 %space            { height:$gutter; }
 %round            { @include rounded(9999px); }
+%disabled         { @include disabled(true); }
 %rotate-90        { @extend %inline; @include rotate(90deg); }
 %rotate-180       { @extend %inline; @include rotate(180deg); }
 %rotate-270       { @extend %inline; @include rotate(270deg); }
@@ -81,7 +82,7 @@
 %rotate-270-ctr   { @extend %inline; @include rotate(-270deg); }
 @if $classes {
 
-  $helpers: inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify center space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+  $helpers: inline block zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify center space round disabled rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
   // function to generate the helpers
   @for $i from 1 through length($helpers) {
     .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }

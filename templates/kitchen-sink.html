@@ -120,6 +120,60 @@
         </div>
       </div>
       <hr>
+      <div class="row">
+        <div class="one third padded">
+          <h1> <a href="#">Heading 1 link</a></h1>
+          <h2> <a href="#">Heading 2 link</a></h2>
+          <h3> <a href="#">Heading 3 link</a></h3>
+          <h4> <a href="#">Heading 4 link</a></h4>
+          <h5> <a href="#">Heading 5 link</a></h5>
+          <h6> <a href="#">Heading 6 link</a></h6>
+        </div>
+        <div class="one third padded">
+          <p> <a href="#">Paragraph link</a></p>
+          <p> <a href="#">Paragraph link with <sup>superscript</sup></a></p>
+          <p> <a href="#">
+               
+              Paragraph link with <sub>subscript</sub></a></p>
+          <p> <a href="#">
+               
+              Paragraph link with <small>small text</small></a></p>
+          <p> <a href="#">
+               
+              Paragraph link with 
+              <big>large text</big></a></p>
+          <p> <a href="#">
+               
+              Paragraph link with <em>emphasized text</em></a></p>
+          <p> <a href="#">
+               
+              Paragraph link with <b>bold text</b></a></p>
+        </div>
+        <div class="one third padded">
+          <ul>
+            <li><a href="#">Unstyled list link item 1</a></li>
+            <li><a href="#">Unstyled list link item 2</a></li>
+          </ul>
+          <ol>
+            <li><a href="#">Unstyled ordered list link item 1</a></li>
+            <li><a href="#">Unstyled ordered list link item 2</a></li>
+          </ol>
+          <ul class="list">
+            <li><a href="#">Styled list link item 1</a></li>
+            <li><a href="#">Styled list link item 2</a></li>
+          </ul>
+          <ol class="list">
+            <li><a href="#">Styled ordered link list item 1</a></li>
+            <li><a href="#">Styled ordered link list item 2</a></li>
+          </ol>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="one mobile half padded"><a href="#">Anchor link item</a></div>
+        <div class="one mobile half padded"><a href="#" class="disabled">Disabled link item</a></div>
+      </div>
+      <hr>
       <h2>Code blocks</h2>
       <pre><code>&lt;div <span style="color: lightblue;">class</span>="<span style="color: orange;">example</span>"&gt;This is a code snippet&lt;/div&gt;</code><br><code>&lt;div <span style="color: lightblue;">class</span>="<span style="color: orange;">example</span>"&gt;Line numbering increments with each contained &lt;pre&gt; element &lt;/div&gt;</code><br><br><br><br>a gap without number<br><br><br><code><span style="color: red;">end code in another color</span></code></pre><br>
       <p>This is some text with some<code>inline code</code>automatic</p>
@@ -437,13 +491,24 @@
               <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
             </ul>
           </nav>
+          <hr>
+          <h4>Vertical Navigation w/Single Item</h4>
+          <nav>
+            <ul>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="three fourths padded">
           <h4>Horizontal Navigation (grid)</h4>
           <nav class="small-tablet">
             <ul class="row">
-              <li class="one small-tablet fourth"><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-              <li class="menu one small-tablet fourth"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+              <li class="one fourth"><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li class="menu one fourth"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
                 <ul>
                   <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
                   <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
@@ -451,10 +516,22 @@
                   <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
                 </ul>
               </li>
-              <li class="one small-tablet fourth"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-              <li class="one small-tablet fourth"><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+              <li class="one fourth"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
+              <li class="one fourth"><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
             </ul>
           </nav>
+          <hr>
+          <h4>Horizontal Navigation (grid) w/Single Item</h4>
+          <nav class="small-tablet">
+            <ul class="row">
+              <li class="menu one whole"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <hr>
           <h4>Horizontal Navigation (inline)</h4>
           <nav class="inline">
             <ul>
@@ -471,6 +548,18 @@
               <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
             </ul>
           </nav>
+          <hr>
+          <h4>Horizontal Navigation (inline) w/Single Item</h4>
+          <nav class="inline">
+            <ul>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <hr>
           <h4>Pagination</h4><nav class="pagination">
   <ul>
     <li class="prev"><a href="#">&laquo;</a></li

@@ -33,11 +33,7 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
     color:$button-active-text;
   }
   &.disabled {
-    background:lighten(gray, 15%);
-    border-color:gray;
-    color:lighten(gray, 35%);
-    cursor:not-allowed;
-    text-decoration:none;
+    @include disabled;
   }
   &.small {
     font-size:0.8em;

@@ -70,12 +70,9 @@
             a, a:visited {
               @include rounded(0);
             }
-            &:first-child {
-              a, a:visited {
-                @include rounded(0);
-              }
-            }
-            &:last-child {
+            &:first-child,
+            &:last-child,
+            &:only-child {
               a, a:visited {
                 @include rounded(0);
               }
@@ -101,6 +98,11 @@
             }
           }
         }
+        &:only-child {
+          a, a:visited {
+            @include rounded($radius);
+          }
+        }
       }
     }
   }
@@ -115,6 +117,11 @@
         &:last-child {
           > a, > , > a:visited {
             @include rounded(0 0 $radius $radius);
+          }
+        }
+        &:only-child {
+          > a, > , > a:visited {
+            @include rounded($radius);
           }
         }
       }
