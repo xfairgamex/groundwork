@@ -4,7 +4,7 @@
   alt="GroundworkCSS">
 </a>
 
-GroundworkCSS Beta v1.3
+GroundworkCSS Beta v1.4
 =======================
 
 Say hello to responsive design made easy.
@@ -12,14 +12,15 @@ Say hello to responsive design made easy.
 http://groundwork.sidereel.com
 
 [GroundworkCSS](http://groundwork.sidereel.com) is a fully responsive HTML5, CSS and Javascript toolkit
-created by [Gary Hepting](http://twitter.com/ghepting).
+created by [@ghepting](http://twitter.com/ghepting).
 
-Using GroundworkCSS, you can quickly build web apps that work on virtually 
-any device. Key features that make GroundworkCSS stand out from other frameworks are:
+Using GroundworkCSS, you can quickly build accessible web apps that work on virtually 
+any device. Key features that make GroundworkCSS stand out are:
 
-* nestable, fractions-based fluid grid system
-* works on virtually any mobile, tablet, or large screen devices
-* modular SCSS and JS components
+* the nestable, fractions-based, fluid grid system
+* works on virtually anything: mobile, tablet, or large screen devices
+* built with modular SCSS and JS components
 * easy to customize
 * responsive text component
-* responsive tables
+* unique approach to responsive tables
+* uses Sass placeholder classes to support pure semantic implementations with @extend

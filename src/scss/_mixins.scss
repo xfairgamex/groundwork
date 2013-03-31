@@ -53,31 +53,8 @@
 }
 
 // ====================
-//   custom functions
+//      functions
 // ====================
-
-// convert x,y to approximate degrees
-@function degrees($x, $y) {
-  @if ($x gt 0) {
-    @if ($y gt 0) {
-      @return 45;
-    } @elseif ($y == 0) {
-      @return 90;
-    } @else {
-      @return 315;
-    }
-  } @elseif ($x lt 0) {
-    @if ($y gt 0) {
-      @return 135;
-    } @elseif ($y == 0) {
-      @return 270;
-    } @else {
-      @return 225;
-    }
-  } @else {
-    @return 0;
-  }
-}
 
 // strip unit of measurement from a value
 @function numericvalue($val){
@@ -156,6 +133,18 @@
   -moz-box-shadow:inset $x $y $blur $color; // Firefox
   -webkit-box-shadow:inset $x $y $blur $color; // Webkit (Safari, Chrome, other)
   box-shadow:inset $x $y $blur $color;
+}
+
+// disabled text or button/nav/tab
+@mixin disabled($textOnly:false) {
+  color:lighten(gray, 35%);
+  cursor:not-allowed;
+  text-decoration:none;
+  outline:none;
+  @if $textOnly != true {
+  background:lighten(gray, 15%);
+  border-color:lighten(gray, 25%);;
+  }
 }
 
 // transition

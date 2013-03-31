@@ -1,6 +1,6 @@
 /* =============================================
  *       GroundworkCSS by Gary Hepting
- *          Last Updated:2013-1-28
+ *          Last Updated:2013-3-30
  * ===========================================*/
 *, *:after, *:before {
   -ms-box-sizing: border-box;
@@ -1637,11 +1637,12 @@ button.active, button.active:hover, button.active:focus, .button.active, .button
   color: white;
 }
 button.disabled, .button.disabled, a.button.disabled, a.button:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled {
-  background: #a6a6a6;
-  border-color: gray;
   color: #d9d9d9;
   cursor: not-allowed;
   text-decoration: none;
+  outline: none;
+  background: #a6a6a6;
+  border-color: silver;
 }
 button.small, .button.small, a.button.small, a.button:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small {
   font-size: 0.8em;
@@ -2075,11 +2076,18 @@ nav ul li:last-child a, nav ul li:last-child a:visited {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul li:only-child a, nav ul li:only-child a:visited {
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
 nav ul ul {
   display: none;
   position: absolute;
   left: 100%;
-  top: -1px;
+  top: 0;
   width: auto;
   z-index: 101;
 }
@@ -2108,6 +2116,13 @@ nav ul ul li:last-child a, nav ul ul li:last-child a:visited {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav ul ul li:only-child a, nav ul ul li:only-child a:visited {
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
 nav ul.row li a, nav ul.row li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
@@ -2128,6 +2143,13 @@ nav ul.row li:last-child a, nav ul.row li:last-child a:visited {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+}
+nav ul.row li:only-child a, nav ul.row li:only-child a:visited {
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 nav ul.row ul {
   display: none;
@@ -2188,6 +2210,13 @@ nav.inline ul li:last-child a, nav.inline ul li:last-child a:visited {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+}
+nav.inline ul li:only-child a, nav.inline ul li:only-child a:visited {
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 nav.inline ul li ul {
   display: none;
@@ -2276,10 +2305,12 @@ nav.pagination ul li.prev a:hover, nav.pagination ul li.prev a:focus, nav.pagina
   background: #198d98;
 }
 nav.pagination ul li.disabled a {
-  background: #a6a6a6;
-  border-color: gray;
   color: #d9d9d9;
+  cursor: not-allowed;
   text-decoration: none;
+  outline: none;
+  background: #a6a6a6;
+  border-color: silver;
 }
 nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus {
   background: #a6a6a6;
@@ -2471,10 +2502,12 @@ ul.breadcrumbs li:first-child a:before {
   box-shadow: -2px 1px 0 #198d98;
 }
 .tabs > ul li a.disabled {
-  background: #a6a6a6;
   color: #d9d9d9;
   cursor: not-allowed;
-  border-color: #a6a6a6;
+  text-decoration: none;
+  outline: none;
+  background: #a6a6a6;
+  border-color: silver;
 }
 .tabs > ul li a.disabled:before {
   box-shadow: 2px 1px 0 #a6a6a6;
@@ -4350,8 +4383,8 @@ ul.icons li [class*=" icon-"] {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   -ms-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=45, Color='#26000000')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=45, Color='#26000000');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=degrees(3px, 3px), Color='#26000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=degrees(3px, 3px), Color='#26000000');
   -o-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
@@ -4418,8 +4451,8 @@ ul.icons li [class*=" icon-"] {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   -ms-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=45, Color='#26000000')";
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=45, Color='#26000000');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=degrees(3px, 3px), Color='#26000000')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=degrees(3px, 3px), Color='#26000000');
   -o-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
@@ -4632,10 +4665,10 @@ div.modal .fullscreen {
   left: 10px;
 }
 
-.clear, .row, .clearfix {
+.row, .clear, .clearfix {
   clear: both;
 }
-.clear:after, .row:after, .clearfix:after {
+.row:after, .clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
@@ -4746,30 +4779,42 @@ div.modal .fullscreen {
   z-index: 1;
 }
 .stick.top {
+  position: fixed;
+  z-index: 1;
   top: 0;
 }
 .stick.right {
+  position: fixed;
+  z-index: 1;
   right: 0;
 }
 .stick.bottom {
+  position: fixed;
+  z-index: 1;
   bottom: 0;
 }
 .stick.left {
+  position: fixed;
+  z-index: 1;
   left: 0;
 }
 .stick.middle {
+  position: fixed;
+  z-index: 1;
   top: 50%;
 }
 .center.stick {
+  position: fixed;
+  z-index: 1;
   left: 50%;
 }
 
-.rotate-90, .rotate-180, .rotate-270, .rotate-90-ctr, .rotate-180-ctr, .rotate-270-ctr, .inline {
+.inline {
   display: inline-block;
   width: auto;
 }
 
-.center, .stick.center, .block {
+.block {
   display: block;
 }
 
@@ -4828,13 +4873,14 @@ div.modal .fullscreen {
   text-align: justify;
 }
 
-.js .responsive:not(table) {
+.js .responsive:not(table), .truncate {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
 .center, .stick.center {
+  display: block;
   margin: 0 auto;
 }
 
@@ -4850,7 +4896,16 @@ div.modal .fullscreen {
   border-radius: 9999px;
 }
 
+.disabled {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
 .rotate-90 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -4859,6 +4914,8 @@ div.modal .fullscreen {
 }
 
 .rotate-180 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -4867,6 +4924,8 @@ div.modal .fullscreen {
 }
 
 .rotate-270 {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -4875,6 +4934,8 @@ div.modal .fullscreen {
 }
 
 .rotate-90-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -4883,6 +4944,8 @@ div.modal .fullscreen {
 }
 
 .rotate-180-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-180deg);
   -o-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
@@ -4891,6 +4954,8 @@ div.modal .fullscreen {
 }
 
 .rotate-270-ctr {
+  display: inline-block;
+  width: auto;
   -ms-transform: rotate(-270deg);
   -o-transform: rotate(-270deg);
   -moz-transform: rotate(-270deg);
@@ -4898,7 +4963,7 @@ div.modal .fullscreen {
   transform: rotate(-270deg);
 }
 
-.clear:after, .row:after, .clearfix:after {
+.clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
@@ -4958,14 +5023,7 @@ div.modal .fullscreen {
     -webkit-border-radius: 0;
     border-radius: 0;
   }
-  nav:not(.pagination) ul li ul li:first-child a, nav:not(.pagination) ul li ul li:first-child a:visited, nav:not(.pagination) ul.row li ul li:first-child a, nav:not(.pagination) ul.row li ul li:first-child a:visited, nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:visited, nav.inline ul.row li ul li:first-child a, nav.inline ul.row li ul li:first-child a:visited {
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-  }
-  nav:not(.pagination) ul li ul li:last-child a, nav:not(.pagination) ul li ul li:last-child a:visited, nav:not(.pagination) ul.row li ul li:last-child a, nav:not(.pagination) ul.row li ul li:last-child a:visited, nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited, nav.inline ul.row li ul li:last-child a, nav.inline ul.row li ul li:last-child a:visited {
+  nav:not(.pagination) ul li ul li:first-child a, nav:not(.pagination) ul li ul li:first-child a:visited, nav:not(.pagination) ul li ul li:last-child a, nav:not(.pagination) ul li ul li:last-child a:visited, nav:not(.pagination) ul li ul li:only-child a, nav:not(.pagination) ul li ul li:only-child a:visited, nav:not(.pagination) ul.row li ul li:first-child a, nav:not(.pagination) ul.row li ul li:first-child a:visited, nav:not(.pagination) ul.row li ul li:last-child a, nav:not(.pagination) ul.row li ul li:last-child a:visited, nav:not(.pagination) ul.row li ul li:only-child a, nav:not(.pagination) ul.row li ul li:only-child a:visited, nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:visited, nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited, nav.inline ul li ul li:only-child a, nav.inline ul li ul li:only-child a:visited, nav.inline ul.row li ul li:first-child a, nav.inline ul.row li ul li:first-child a:visited, nav.inline ul.row li ul li:last-child a, nav.inline ul.row li ul li:last-child a:visited, nav.inline ul.row li ul li:only-child a, nav.inline ul.row li ul li:only-child a:visited {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     -moz-border-radius: 0;
@@ -4993,6 +5051,13 @@ div.modal .fullscreen {
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
+  nav:not(.pagination) ul li:only-child a, nav:not(.pagination) ul li:only-child a:visited, nav:not(.pagination) ul.row li:only-child a, nav:not(.pagination) ul.row li:only-child a:visited, nav.inline ul li:only-child a, nav.inline ul li:only-child a:visited, nav.inline ul.row li:only-child a, nav.inline ul.row li:only-child a:visited {
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
 
   nav:not(.pagination) ul li:first-child > a, nav:not(.pagination) ul li:first-child >, nav:not(.pagination) ul li:first-child > a:visited, nav:not(.pagination) ul.row li:first-child > a, nav:not(.pagination) ul.row li:first-child >, nav:not(.pagination) ul.row li:first-child > a:visited, nav.inline ul li:first-child > a, nav.inline ul li:first-child >, nav.inline ul li:first-child > a:visited, nav.inline ul.row li:first-child > a, nav.inline ul.row li:first-child >, nav.inline ul.row li:first-child > a:visited {
     -ms-border-radius: 4px 4px 0 0;
@@ -5007,6 +5072,13 @@ div.modal .fullscreen {
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
+  }
+  nav:not(.pagination) ul li:only-child > a, nav:not(.pagination) ul li:only-child >, nav:not(.pagination) ul li:only-child > a:visited, nav:not(.pagination) ul.row li:only-child > a, nav:not(.pagination) ul.row li:only-child >, nav:not(.pagination) ul.row li:only-child > a:visited, nav.inline ul li:only-child > a, nav.inline ul li:only-child >, nav.inline ul li:only-child > a:visited, nav.inline ul.row li:only-child > a, nav.inline ul.row li:only-child >, nav.inline ul.row li:only-child > a:visited {
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
   }
   nav:not(.pagination) ul li ul li a, nav:not(.pagination) ul li ul li a:visited, nav:not(.pagination) ul.row li ul li a, nav:not(.pagination) ul.row li ul li a:visited, nav.inline ul li ul li a, nav.inline ul li ul li a:visited, nav.inline ul.row li ul li a, nav.inline ul.row li ul li a:visited {
     -ms-border-radius: 0;

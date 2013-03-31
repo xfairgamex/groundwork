@@ -1,7 +1,7 @@
 @import "../../../src/scss/groundwork";
 
 // This should sync with cases in test-helpers.jade
-$cases: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+$cases: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center disabled space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
 // End cases
 
 @each $item in $cases {
@@ -41,6 +41,7 @@ $cases: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right ga
 .include-justify            { @include _justify        ;}
 .include-truncate           { @include _truncate       ;}
 .include-center             { @include _center         ;}
+.include-disabled           { @include disabled(true)  ;} //different format from the rest?
 .include-space              { @include _space          ;}
 .include-round              { @include _round          ;}
 .include-rotate-90          { @include _rotate-90      ;}

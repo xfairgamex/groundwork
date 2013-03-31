@@ -134,6 +134,7 @@
 %center           { @include _center; }
 %space            { @include _space; }
 %round            { @include rounded(9999px); }
+%disabled         { @include disabled(true); } // This refers to a mixin in _mixins.scss.
 %rotate-90        { @include _rotate-90; } // As mentioned above, might be referring to redundant mixins.
 %rotate-180       { @include _rotate-180; }
 %rotate-270       { @include _rotate-270; }
@@ -147,7 +148,8 @@
 
 @if $classes {
 
-  $helpers: inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+  $helpers: inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center space round disabled rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+
   // function to generate the helpers
   @for $i from 1 through length($helpers) {
     .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }

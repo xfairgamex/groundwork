@@ -251,8 +251,7 @@
         return visibleItemsWidth += $(this).outerWidth();
       });
       _results = [];
-      while ((visibleItemsWidth + 29) < visibleSpace) {
-        console.log('keep going');
+      while ((visibleItemsWidth + 29) < visibleSpace && (visibleItemsWidth + 29) < totalItemsWidth) {
         pagination.children('li:visible').not('.next').last().next().show();
         visibleItemsWidth = 0;
         pagination.children('li:visible').each(function() {
