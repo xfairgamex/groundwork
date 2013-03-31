@@ -69,10 +69,6 @@ nav {
         }
       }
       &.on {
-        a {
-          border-bottom-right-radius:0 !important;
-          border-bottom-left-radius:0 !important;
-        }
         ul {
           display:block !important;
         }
@@ -97,7 +93,7 @@ nav {
       z-index:101;
       li {
         a, a:visited {
-          @include rounded(0 !important);
+          @include rounded(0);
           background:lighten($button-color, 5%);
           &:hover, &:active {
             background:lighten($button-active, 5%);
@@ -105,12 +101,12 @@ nav {
         }
         &:first-child {
           a, a:visited {
-            @include rounded(0 $radius 0 0 !important);
+            @include rounded(0 $radius 0 0);
           }
         }
         &:last-child {
           a, a:visited {
-            @include rounded(0 0 $radius $radius !important);
+            @include rounded(0 0 $radius $radius);
           }
         }
       }
@@ -141,11 +137,16 @@ nav {
         z-index:101;
         li {
           a, a:visited {
-            @include rounded(0 !important);
+            @include rounded(0);
+          }
+          &:first-child {
+            a, a:visited {
+              @include rounded(0);
+            }
           }
           &:last-child {
             a, a:visited {
-              @include rounded(0 0 $radius $radius !important);
+              @include rounded(0 0 $radius $radius);
             }
           }
         }
@@ -162,7 +163,6 @@ nav {
     width:auto;
     ul {
       font-size:0;
-      @include rounded($radius);
       li {
         font-size:$font-size;
         display:inline-block;
@@ -191,11 +191,16 @@ nav {
           li {
             display:block;
             a, a:visited {
-              @include rounded(0 !important);
+              @include rounded(0);
+            }
+            &:first-child {
+              a, a:visited {
+                @include rounded(0);
+              }
             }
             &:last-child {
               a, a:visited {
-                @include rounded(0 0 $radius $radius !important);
+                @include rounded(0 0 $radius $radius);
               }
             }
           }

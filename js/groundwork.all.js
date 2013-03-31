@@ -238,9 +238,13 @@
 
   limitPaginationItems = function() {
     return $('.pagination ul').each(function() {
-      var pagination, visibleItemsWidth, visibleSpace, _results;
+      var pagination, totalItemsWidth, visibleItemsWidth, visibleSpace, _results;
       pagination = $(this);
       visibleSpace = pagination.outerWidth() - pagination.children('li.prev').outerWidth() - pagination.children('li.next').outerWidth();
+      totalItemsWidth = 0;
+      pagination.children('li').each(function() {
+        return totalItemsWidth += $(this).outerWidth();
+      });
       pagination.children('li').not('.prev, .next, .active').hide();
       visibleItemsWidth = 0;
       pagination.children('li:visible').each(function() {
@@ -248,6 +252,7 @@
       });
       _results = [];
       while ((visibleItemsWidth + 29) < visibleSpace) {
+        console.log('keep going');
         pagination.children('li:visible').not('.next').last().next().show();
         visibleItemsWidth = 0;
         pagination.children('li:visible').each(function() {
@@ -276,7 +281,7 @@
       tallest = 0;
       collapsed = false;
       $(this).children('*').each(function(i) {
-        $(this).css('min-height', '0');
+        $(this).css('min-height', '1px');
         collapsed = $(this).outerWidth() === $row.outerWidth();
         if (!collapsed) {
           if (!$(this).hasClass('equal')) {
