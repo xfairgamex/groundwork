@@ -1,0 +1,19 @@
+@import "../../../src/scss/groundwork";
+
+// This should sync with cases in test-helpers.jade
+$cases: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify center space round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+// End cases
+
+@each $item in $cases {
+  .extend-#{$item} {@extend %#{$item};}
+}
+
+
+
+
+
+$specials: double;
+
+@each $item in $specials {
+  .extend-#{$item} {@extend %#{$item};}
+}
