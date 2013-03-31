@@ -4887,7 +4887,10 @@ div.modal .fullscreen {
   border-radius: 9999px;
 }
 
-.disabled {
+.disabled,
+.disabled:visited,
+.disabled:hover,
+.disabled:focus {
   color: #d9d9d9;
   cursor: not-allowed;
   text-decoration: none;

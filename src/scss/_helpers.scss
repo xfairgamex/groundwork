@@ -73,7 +73,10 @@
 %center           { @extend %block; margin:0 auto; }
 %space            { height:$gutter; }
 %round            { @include rounded(9999px); }
-%disabled         { @include disabled(true); }
+%disabled,
+%disabled:visited,
+%disabled:hover,
+%disabled:focus   { @include disabled(true); }
 %rotate-90        { @extend %inline; @include rotate(90deg); }
 %rotate-180       { @extend %inline; @include rotate(180deg); }
 %rotate-270       { @extend %inline; @include rotate(270deg); }
