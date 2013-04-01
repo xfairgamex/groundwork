@@ -1,8 +1,20 @@
+.desktop-only { display:block; }
+.hide-on-desktop {}
+
+.ipad-only { display:none; }
+.hide-on-ipad {}
+
+.small-tablet-only { display:none; }
+.hide-on-small-tablet {}
+
+.mobile-only { display:none; }
+.hide-on-mobile {}
+
 ///////////////////////
 //   large desktops  //
 ///////////////////////
 // @include large-desktop {
-
+//  
 // }
 
 
@@ -11,9 +23,9 @@
 ///////////////////////
 //      desktops     //
 ///////////////////////
-// @include desktop {
-
-// }
+@include desktop {
+  // do not remove -- required for desktop helpers
+}
 
 
 
@@ -21,9 +33,9 @@
 ///////////////////////
 //       ipads       //
 ///////////////////////
-// @include ipad {
-
-// }
+@include ipad {
+  // do not remove -- required for ipad helpers
+}
 
 
 
@@ -32,6 +44,7 @@
 //   small tablets   //
 ///////////////////////
 @include small-tablet {
+  // do not remove -- required for small-tablet helpers and adaptations
   @include grid-responsive();
   nav:not(.pagination), nav.inline {
     width:100%;
@@ -155,15 +168,6 @@
       }
     }
   }
-  .no-padding-small-tablet {
-    padding:0;
-  }
-  .no-margin-small-tablet {
-    margin:0;
-  }
-  .zero-small-tablet {
-    @extend %zero;
-  }
 }
 
 
@@ -173,6 +177,7 @@
 //     handhelds     //
 ///////////////////////
 @include mobile {
+  // do not remove -- required for mobile helpers and adaptations
   @include grid-responsive(false);
   .tabs:not(.mobile) {
     > ul {
@@ -188,15 +193,6 @@
         }
       }
     }
-  }
-  .no-padding-mobile {
-    padding:0;
-  }
-  .no-margin-mobile {
-    margin:0;
-  }
-  .zero-mobile {
-    @extend %zero;
   }
 }
 

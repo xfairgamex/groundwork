@@ -280,7 +280,7 @@ nav {
         }
         &.disabled {
           a {
-            @include disabled;
+            @include state(disabled);
             &:hover, &:focus {
               background:lighten(gray, 15%);
               border-color:gray;

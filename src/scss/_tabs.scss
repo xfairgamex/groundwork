@@ -118,7 +118,7 @@
           }
         }
         &.disabled {
-          @include disabled;
+          @include state(disabled);
           &:before {
             box-shadow:2px 1px 0 lighten(gray, 15%);
           }

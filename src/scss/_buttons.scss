@@ -33,7 +33,7 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
     color:$button-active-text;
   }
   &.disabled {
-    @include disabled;
+    @include state(disabled);
   }
   &.small {
     font-size:0.8em;
