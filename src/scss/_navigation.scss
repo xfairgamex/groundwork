@@ -26,7 +26,7 @@ nav {
         word-wrap:break-word;
         padding:0.25em 1em;
         background:$button-color;
-        border:1px solid $border-color;
+        border-top:1px solid $button-active;
         color:$button-text;
         font-weight:bold;
         font-size:1em;
@@ -37,13 +37,17 @@ nav {
         @include transition(background-color 0.25s ease-out);
         &:hover, &:focus {
           background:$button-active;
-          border:1px solid $border-color;
           text-decoration:none;
         }
         &.active {
           &:hover, &:focus {
             background:$button-active;
           }
+        }
+      }
+      &:first-child {
+        a, a:visited {
+          border-top:none;
         }
       }
       &.menu {
@@ -99,6 +103,8 @@ nav {
       li {
         a, a:visited {
           @include rounded(0);
+          border:none;
+          border-top:1px solid $button-color;
           background:lighten($button-color, 5%);
           &:hover, &:active {
             background:lighten($button-active, 5%);
@@ -106,6 +112,7 @@ nav {
         }
         &:first-child {
           a, a:visited {
+            border-top:none;
             @include rounded(0 $radius 0 0);
           }
         }
@@ -125,10 +132,13 @@ nav {
     &.row {
       li {
         a, a:visited {
+          border-left:1px solid $button-active;
+          border-top:none;
           @include rounded(0);
         }
         &:first-child {
           a, a:visited {
+            border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -153,6 +163,7 @@ nav {
         li {
           a, a:visited {
             @include rounded(0);
+            border-top:1px solid $button-active;
           }
           &:first-child {
             a, a:visited {
@@ -184,10 +195,12 @@ nav {
         white-space-collapse:discard;
         float:none;
         a, a:visited {
-
+          border-left:1px solid $button-active;
+          border-top:none;
         }
         &:first-child {
           a, a:visited {
+            border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -212,6 +225,7 @@ nav {
             display:block;
             a, a:visited {
               @include rounded(0);
+              border-top:1px solid $button-active;
             }
             &:first-child {
               a, a:visited {
@@ -228,6 +242,13 @@ nav {
       }
     }
   }
+  // hamburger menu
+  &.menu {
+    .menu-toggle {
+      @extend .button;
+      display:none !important;
+    }
+  }
   // pagination
   &.pagination {
     ul {
@@ -237,7 +258,7 @@ nav {
       text-align:center;
       li {
         display:inline-block;
-        @include rounded(4px);
+        @include rounded($radius);
         padding:0 3px 0 2px;
         min-width:29px;
         text-align:center;
@@ -248,6 +269,7 @@ nav {
           font-weight:bold;
           color:$button-text;
           text-decoration:none;
+          text-align:center;
           padding:0 3px;
           @include rounded(4px);
           &:hover, &:focus {

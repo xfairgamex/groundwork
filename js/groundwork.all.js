@@ -601,6 +601,17 @@
         return $('nav > ul > li').filter('.menu.on').removeClass('on');
       }
     });
+    $('nav.menu').each(function() {
+      if (!$(this).attr('data-label')) {
+        $(this).attr('data-label', 'Menu');
+      }
+      if (!($(this).find('.menu-toggle').length > 0)) {
+        return $(this).prepend('<a href="#" class="menu-toggle"><i class="icon-reorder"></i></a>');
+      }
+    });
+    $('body').on('click', '.menu-toggle', function() {
+      return $(this).parent('nav.menu').toggleClass('on');
+    });
   });
 
   /* --------------------------------------------

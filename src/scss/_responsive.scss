@@ -54,27 +54,27 @@
         width:100% !important;
         &.menu {
           > a {
-            &:after {
-              display:none !important;
-            }
-            &:before {
-              content:'\f0c9';
-              display: inline-block;
-              width: 1.1em;
-              margin-left:0.25em;
-              font-family: FontAwesome;
-              font-weight: normal;
-              font-style: normal;
-              font-size:1.1em;
-              text-decoration: inherit;
-              -webkit-font-smoothing: antialiased;
-              line-height: normal;
-              vertical-align: baseline;
-              background-image: none;
-              background-position: 0% 0%;
-              background-repeat: repeat;
-              margin-top: 0;
-            }
+            // &:after {
+            //   display:none !important;
+            // }
+            // &:before {
+            //   content:'\f0c9';
+            //   display: inline-block;
+            //   width: 1.1em;
+            //   margin-left:0.25em;
+            //   font-family: FontAwesome;
+            //   font-weight: normal;
+            //   font-style: normal;
+            //   font-size:1.1em;
+            //   text-decoration: inherit;
+            //   -webkit-font-smoothing: antialiased;
+            //   line-height: normal;
+            //   vertical-align: baseline;
+            //   background-image: none;
+            //   background-position: 0% 0%;
+            //   background-repeat: repeat;
+            //   margin-top: 0;
+            // }
           }
         }
         ul {
@@ -116,6 +116,47 @@
             @include rounded($radius);
           }
         }
+      }
+    }
+  }
+  // hamburger menu
+  nav.menu {
+    &:before {
+      content:attr(data-label);
+      float:left;
+      color:$button-text;
+      line-height:2.2;
+    }
+    text-align:right;
+    background-color:$button-color;
+    padding:$gutter;
+    @include rounded($radius);
+    .menu-toggle {
+      display:inline-block !important;
+    }
+    > ul {
+      overflow:hidden;
+      max-height:0;
+      clear:both;
+      @include transition(all 0.2s ease);
+      li {
+        a, a:visited {
+          border:none;
+          border-top:1px solid $button-active;
+          &:first-child, &:last-child {
+            @include rounded(0);
+          }
+          &:hover, &:focus {
+            border:none;
+            border-top:1px solid $button-active;
+          }
+        }
+      }
+    }
+    &.on {
+      > ul {
+        max-height:1000px;
+        margin-top:$gutter;
       }
     }
   }

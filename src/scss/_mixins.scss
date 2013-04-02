@@ -29,7 +29,7 @@
 
 @mixin ipad {
   @media only screen and (min-width:768px) and (max-width:1024px) {
-    .ipad-only { display:block; }
+    .ipad-only { display:inline-block; }
     .hide-on-ipad { display:none; }
     .desktop-only { display:none; }
     // helper overrides
@@ -42,7 +42,7 @@
 
 @mixin small-tablet {
   @media only screen and (max-width:767px) {
-    .small-tablet-only { display:block; }
+    .small-tablet-only { display:inline-block; }
     .hide-on-small-tablet { display:none; }
     .desktop-only { display:none; }
     // helper overrides
@@ -55,7 +55,7 @@
 
 @mixin mobile {
   @media only screen and (max-width:480px) {
-    .mobile-only { display:block; }
+    .mobile-only { display:inline-block; }
     .hide-on-mobile { display:none; }
     .desktop-only { display:none; }
     // helper overrides
