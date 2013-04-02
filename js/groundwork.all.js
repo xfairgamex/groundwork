@@ -609,8 +609,10 @@
         return $(this).prepend('<a href="#" class="menu-toggle"><i class="icon-reorder"></i></a>');
       }
     });
-    $('body').on('click', '.menu-toggle', function() {
-      return $(this).parent('nav.menu').toggleClass('on');
+    $('body').on('click', '.menu-toggle', function(e) {
+      $(this).parent('nav.menu').toggleClass('on');
+      e.preventDefault();
+      return false;
     });
   });
 

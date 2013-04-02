@@ -1999,6 +1999,9 @@ ul.radio-list {
   border-radius: 0 4px 4px 0;
 }
 
+nav:not(.inline) > ul:not(.row) {
+  display: inline-block;
+}
 nav ul {
   display: block;
   list-style: none;
@@ -5334,6 +5337,7 @@ div.modal .fullscreen {
     display: inline-block !important;
   }
   nav.menu > ul {
+    display: block !important;
     overflow: hidden;
     max-height: 0;
     clear: both;

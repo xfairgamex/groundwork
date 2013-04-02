@@ -47,7 +47,9 @@ $ ->
   $('nav.menu').each ->
     $(this).attr('data-label','Menu') unless $(this).attr('data-label')
     $(this).prepend('<a href="#" class="menu-toggle"><i class="icon-reorder"></i></a>') unless $(this).find('.menu-toggle').length > 0
-  $('body').on 'click', '.menu-toggle', ->
+  $('body').on 'click', '.menu-toggle', (e) ->
     $(this).parent('nav.menu').toggleClass('on')
+    e.preventDefault()
+    return false
 
   return

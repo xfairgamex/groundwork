@@ -6,6 +6,11 @@
 
 
 nav {
+  &:not(.inline) {
+    > ul:not(.row) {
+      display:inline-block;
+    }
+  }
   ul {
     display:block;
     list-style:none;
