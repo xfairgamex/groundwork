@@ -1999,6 +1999,20 @@ ul.radio-list {
   border-radius: 0 4px 4px 0;
 }
 
+nav ul ul, nav ul.row ul, nav.inline ul li ul {
+  overflow: hidden;
+  max-height: 0;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav ul li.menu.on > ul, .no-js nav ul li.menu ul {
+  max-height: 1000px;
+}
+
 nav:not(.inline) > ul:not(.row) {
   display: inline-block;
 }
@@ -2011,10 +2025,6 @@ nav ul {
 nav ul li {
   display: block;
   position: relative;
-}
-nav ul li.on > a, nav ul li.on > a:visited {
-  background: #198d98;
-  text-decoration: none;
 }
 nav ul li a, nav ul li a:visited {
   display: block;
@@ -2064,8 +2074,9 @@ nav ul li.menu > a:after {
   background-repeat: repeat;
   margin-top: 0;
 }
-nav ul li.on ul {
-  display: block !important;
+nav ul li.menu.on > a, nav ul li.menu.on > a:visited {
+  background: #198d98;
+  text-decoration: none;
 }
 nav ul li:first-child a, nav ul li:first-child a:visited {
   -ms-border-radius: 4px 4px 0 0;
@@ -2089,7 +2100,6 @@ nav ul li:only-child a, nav ul li:only-child a:visited {
   border-radius: 4px;
 }
 nav ul ul {
-  display: none;
   position: absolute;
   left: 100%;
   top: 0;
@@ -2163,7 +2173,6 @@ nav ul.row li:only-child a, nav ul.row li:only-child a:visited {
   border-radius: 4px;
 }
 nav ul.row ul {
-  display: none;
   position: absolute;
   left: auto;
   top: auto;
@@ -2236,7 +2245,6 @@ nav.inline ul li:only-child a, nav.inline ul li:only-child a:visited {
   border-radius: 4px;
 }
 nav.inline ul li ul {
-  display: none;
   position: absolute;
   left: auto;
   top: auto;
@@ -2357,6 +2365,9 @@ nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:visited {
   border-radius: 4px;
 }
 
+.no-js nav ul li.menu ul {
+  display: none;
+}
 .no-js nav ul li.menu:hover ul, .no-js nav ul li.menu:focus ul {
   display: block !important;
 }
@@ -5274,6 +5285,10 @@ div.modal .fullscreen {
     display: block;
     width: 100% !important;
   }
+  nav:not(.pagination) ul li a, nav:not(.pagination) ul li a:visited, nav:not(.pagination) ul.row li a, nav:not(.pagination) ul.row li a:visited, nav.inline ul li a, nav.inline ul li a:visited, nav.inline ul.row li a, nav.inline ul.row li a:visited {
+    border: none;
+    border-top: 1px solid #198d98;
+  }
   nav:not(.pagination) ul li ul, nav:not(.pagination) ul.row li ul, nav.inline ul li ul, nav.inline ul.row li ul {
     position: static;
   }
@@ -5339,7 +5354,7 @@ div.modal .fullscreen {
   nav.menu .menu-toggle {
     display: inline-block !important;
   }
-  nav.menu > ul {
+  nav.menu > ul, nav.menu > ul.row {
     display: block !important;
     overflow: hidden;
     max-height: 0;
@@ -5350,18 +5365,18 @@ div.modal .fullscreen {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
-  nav.menu > ul li a, nav.menu > ul li a:visited {
+  nav.menu > ul li a, nav.menu > ul li a:visited, nav.menu > ul.row li a, nav.menu > ul.row li a:visited {
     border: none;
     border-top: 1px solid #198d98;
   }
-  nav.menu > ul li a:first-child, nav.menu > ul li a:last-child, nav.menu > ul li a:visited:first-child, nav.menu > ul li a:visited:last-child {
+  nav.menu > ul li a:first-child, nav.menu > ul li a:last-child, nav.menu > ul li a:visited:first-child, nav.menu > ul li a:visited:last-child, nav.menu > ul.row li a:first-child, nav.menu > ul.row li a:last-child, nav.menu > ul.row li a:visited:first-child, nav.menu > ul.row li a:visited:last-child {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
   }
-  nav.menu > ul li a:hover, nav.menu > ul li a:focus, nav.menu > ul li a:visited:hover, nav.menu > ul li a:visited:focus {
+  nav.menu > ul li a:hover, nav.menu > ul li a:focus, nav.menu > ul li a:visited:hover, nav.menu > ul li a:visited:focus, nav.menu > ul.row li a:hover, nav.menu > ul.row li a:focus, nav.menu > ul.row li a:visited:hover, nav.menu > ul.row li a:visited:focus {
     border: none;
     border-top: 1px solid #198d98;
   }

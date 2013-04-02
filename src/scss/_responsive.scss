@@ -52,30 +52,9 @@
       li {
         display:block;
         width:100% !important;
-        &.menu {
-          > a {
-            // &:after {
-            //   display:none !important;
-            // }
-            // &:before {
-            //   content:'\f0c9';
-            //   display: inline-block;
-            //   width: 1.1em;
-            //   margin-left:0.25em;
-            //   font-family: FontAwesome;
-            //   font-weight: normal;
-            //   font-style: normal;
-            //   font-size:1.1em;
-            //   text-decoration: inherit;
-            //   -webkit-font-smoothing: antialiased;
-            //   line-height: normal;
-            //   vertical-align: baseline;
-            //   background-image: none;
-            //   background-position: 0% 0%;
-            //   background-repeat: repeat;
-            //   margin-top: 0;
-            // }
-          }
+        a, a:visited {
+          border:none;
+          border-top:1px solid $button-active;
         }
         ul {
           position:static;
@@ -134,7 +113,7 @@
     .menu-toggle {
       display:inline-block !important;
     }
-    > ul {
+    > ul, > ul.row {
       display:block !important;
       overflow:hidden;
       max-height:0;

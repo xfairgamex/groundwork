@@ -5,6 +5,19 @@
 
 
 
+%menu-closed {
+  overflow:hidden;
+  max-height:0;
+  // opacity:0;
+  @include transition(all 0.4s ease);
+  // display:none;
+}
+%menu-open {
+  max-height:1000px;
+  // opacity:1;
+  // display:block !important;
+}
+
 nav {
   &:not(.inline) {
     > ul:not(.row) {
@@ -19,12 +32,6 @@ nav {
     li {
       display:block;
       position:relative;
-      &.on {
-        > a, > a:visited {
-          background:$button-active;
-          text-decoration:none;
-        }
-      }
       a, a:visited {
         display:block;
         width:100%;
@@ -59,27 +66,31 @@ nav {
         > a {
           &:after {
             content:'\f0d7'; // \f0c9
-            display: inline-block;
-            width: 1.1em;
+            display:inline-block;
+            width:1.1em;
             margin-left:0.25em;
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
+            font-family:FontAwesome;
+            font-weight:normal;
+            font-style:normal;
             font-size:1.1em;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
-            line-height: normal;
-            vertical-align: baseline;
-            background-image: none;
-            background-position: 0% 0%;
-            background-repeat: repeat;
-            margin-top: 0;
+            text-decoration:inherit;
+            -webkit-font-smoothing:antialiased;
+            line-height:normal;
+            vertical-align:baseline;
+            background-image:none;
+            background-position:0% 0%;
+            background-repeat:repeat;
+            margin-top:0;
           }
         }
-      }
-      &.on {
-        ul {
-          display:block !important;
+        &.on {
+          > a, > a:visited {
+            background:$button-active;
+            text-decoration:none;
+          }
+          > ul {
+            @extend %menu-open;
+          }
         }
       }
       &:first-child {
@@ -99,7 +110,7 @@ nav {
       }
     }
     ul {
-      display:none;
+      @extend %menu-closed;
       position:absolute;
       left:100%;
       top:0;
@@ -159,7 +170,7 @@ nav {
         }
       }
       ul {
-        display:none;
+        @extend %menu-closed;
         position:absolute;
         left:auto;
         top:auto;
@@ -220,7 +231,8 @@ nav {
           }
         }
         ul {
-          display:none;
+          @extend %menu-closed;
+          // display:none;
           position:absolute;
           left:auto;
           top:auto;
@@ -338,6 +350,10 @@ nav {
   nav {
     ul {
       li.menu {
+        ul {
+          @extend %menu-open;
+          display:none;
+        }
         &:hover, &:focus {
           ul {
             display:block !important;
