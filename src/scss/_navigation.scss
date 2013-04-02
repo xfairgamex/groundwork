@@ -256,6 +256,11 @@ nav {
   }
   // pagination
   &.pagination {
+    &:not(.inline) {
+      > ul:not(.row) {
+        display:block;
+      }
+    }
     ul {
       margin:10px auto;
       display:block;

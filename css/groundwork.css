@@ -2271,6 +2271,9 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited
 nav.menu .menu-toggle {
   display: none !important;
 }
+nav.pagination:not(.inline) > ul:not(.row) {
+  display: block;
+}
 nav.pagination ul {
   margin: 10px auto;
   display: block;
