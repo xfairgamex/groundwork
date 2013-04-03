@@ -106,12 +106,14 @@
       color:$button-text;
       line-height:2.2;
     }
-    text-align:right;
     background-color:$button-color;
     padding:$gutter;
+    padding-bottom:0;
     @include rounded($radius);
     .menu-toggle {
       display:inline-block !important;
+      float:right;
+      margin-bottom:$gutter;
     }
     > ul, > ul.row {
       display:block !important;
@@ -143,7 +145,6 @@
     &.on {
       > ul {
         max-height:1000px;
-        margin-top:$gutter;
       }
     }
   }

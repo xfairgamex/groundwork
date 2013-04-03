@@ -127,7 +127,7 @@
 }
 
 // box shadow
-@mixin drop-shadow($color:rgba(0,0,0,0.2), $blur:0, $x:0, $y:0) { // color, blur, x, y
+@mixin drop-shadow($color:rgba(0,0,0,0.2), $blur:5px, $x:2px, $y:2px) { // color, blur, x, y
   -ms-box-shadow:$x $y $blur $color; // IE10+
   @if ($x == 0 and $y == 0) { // non directional glow
     filter: Glow(color=#{ie-hex-str($color)},strength=#{numericvalue($blur)});
@@ -162,26 +162,37 @@
 }
 
 // text/UI Element states
-@mixin state($state:'disabled',$mode:normal) {
-  $color: $font-color;
-  @if $state == 'disabled' {
-    $color: $disabled-color;
-  }@else if $state == 'success' {
-    $color: $success-color;
-  }@else if $state == 'warning' {
-    $color: $warning-color;
-  }@else if $state == 'error' {
-    $color: $error-color;
+@mixin state($state:'disabled',$mode:normal,$color:default) {
+  @if $color == 'default' {
+    @if $state == 'disabled' {
+      $color: $disabled-color;
+    }@else if $state == 'success' {
+      $color: $success-color;
+    }@else if $state == 'warning' {
+      $color: $warning-color;
+    }@else if $state == 'error' {
+      $color: $error-color;
+    }
   }
-  color:$color;
+  color:lighten($color, 35%);
   @if $mode != 'textOnly' {
   background:lighten($color, 15%);
-  border-color:lighten($color, 25%);
+  border-color:$color;
   }
   @if $state == 'disabled' {
   cursor:not-allowed;
   text-decoration:none;
   outline:none;
+    &:hover, &:focus, &:visited {
+      color:lighten($color, 35%);
+      @if $mode != 'textOnly' {
+      background:lighten($color, 15%);
+      border-color:$color;
+      }
+      cursor:not-allowed;
+      text-decoration:none;
+      outline:none;
+    }
   }
 }
 

@@ -6,16 +6,10 @@
 
 
 %menu-closed {
-  overflow:hidden;
-  max-height:0;
-  // opacity:0;
-  @include transition(all 0.4s ease);
-  // display:none;
+  display:none;
 }
 %menu-open {
-  max-height:1000px;
-  // opacity:1;
-  // display:block !important;
+  display:block;
 }
 
 nav {
@@ -43,18 +37,21 @@ nav {
         font-weight:bold;
         font-size:1em;
         text-decoration:none;
-        text-align:center;
         cursor:pointer;
         line-height:1.5;
         @include transition(background-color 0.25s ease-out);
         &:hover, &:focus {
           background:$button-active;
+          color:$button-text;
           text-decoration:none;
         }
         &.active {
           &:hover, &:focus {
             background:$button-active;
           }
+        }
+        &.disabled {
+          @include state(disabled,normal,desaturate($button-color,20%));
         }
       }
       &:first-child {
@@ -63,9 +60,14 @@ nav {
         }
       }
       &.menu {
-        > a {
+        &.disabled {
+          > a, > a:visited {
+            @include state(disabled,normal,desaturate($button-color,20%));
+          }
+        }
+        > a, > a:visited {
           &:after {
-            content:'\f0d7'; // \f0c9
+            content:'\f0d7';
             display:inline-block;
             width:1.1em;
             margin-left:0.25em;
@@ -87,9 +89,6 @@ nav {
           > a, > a:visited {
             background:$button-active;
             text-decoration:none;
-            // &:after {
-            //   content:'\f00d';
-            // }
           }
           > ul {
             @extend %menu-open;
@@ -127,6 +126,9 @@ nav {
           background:lighten($button-color, 5%);
           &:hover, &:active {
             background:lighten($button-active, 5%);
+          }
+          &.disabled {
+            @include state(disabled,normal,desaturate(lighten($button-color, 5%),20%));
           }
         }
         &:first-child {
@@ -182,6 +184,7 @@ nav {
         li {
           a, a:visited {
             @include rounded(0);
+            border-left:none;
             border-top:1px solid $button-active;
           }
           &:first-child {
@@ -245,6 +248,7 @@ nav {
             display:block;
             a, a:visited {
               @include rounded(0);
+              border-left:none;
               border-top:1px solid $button-active;
             }
             &:first-child {
@@ -280,13 +284,11 @@ nav {
       margin:10px auto;
       display:block;
       list-style-type:none;
-      text-align:center;
       li {
         display:inline-block;
         @include rounded($radius);
         padding:0 3px 0 2px;
         min-width:29px;
-        text-align:center;
         a {
           display:block;
           font-size:1em;
@@ -294,7 +296,6 @@ nav {
           font-weight:bold;
           color:$button-text;
           text-decoration:none;
-          text-align:center;
           padding:0 3px;
           @include rounded(4px);
           &:hover, &:focus {
@@ -304,15 +305,7 @@ nav {
         }
         &.active {
           a {
-            background:lighten(gray, 15%);
-            border-color:gray;
-            color:lighten(gray, 35%);
-            text-decoration:none;
-            &:hover, &:focus {
-              background:lighten(gray, 15%);
-              border-color:gray;
-              color:lighten(gray, 35%);
-            }
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &.prev, &.next {
@@ -327,12 +320,7 @@ nav {
         }
         &.disabled {
           a {
-            @include state(disabled);
-            &:hover, &:focus {
-              background:lighten(gray, 15%);
-              border-color:gray;
-              color:lighten(gray, 35%);
-            }
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &:first-child {

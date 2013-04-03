@@ -75,23 +75,13 @@
           }
         }
         &.disabled {
-          @include state(disabled);
+          @include state(disabled,normal,desaturate($button-color,20%));
+          border-bottom-color:lighten(desaturate($button-color,20%), 15%) !important;
           &:before {
-            box-shadow:2px 1px 0 lighten(gray, 15%);
+            box-shadow:2px 1px 0 lighten(desaturate($button-color,20%), 15%);
           }
           &:after {
-            box-shadow:-2px 1px 0 lighten(gray, 15%);
-          }
-          &:hover, &:focus {
-            background:lighten(gray, 15%);
-            border:1px solid lighten(gray, 15%);
-            color:lighten(gray, 35%);
-            &:before {
-              box-shadow:2px 1px 0 lighten(gray, 15%);
-            }
-            &:after {
-              box-shadow:-2px 1px 0 lighten(gray, 15%);
-            }
+            box-shadow:-2px 1px 0 lighten(desaturate($button-color,20%), 15%);
           }
         }
         &:before, &:after {

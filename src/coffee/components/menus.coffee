@@ -3,22 +3,20 @@ $ ->
   delay = ''
   # open submenu function
   openMenu = (target) ->
-    if Modernizr.touch
-      $(target).parent('li.menu').toggleClass('on')
-  # hover on
-  $('body').on 'mouseenter', 'nav > ul > li.menu', (e) ->
-    unless Modernizr.touch
+    $(target).parent('li.menu').toggleClass('on')
+  unless Modernizr.touch
+    # hover on
+    $('body').on 'mouseenter', 'nav > ul > li.menu:not(.disabled)', (e) ->
       clearTimeout(delay)
       $('nav > ul > li.menu.on').removeClass('on')
       $(this).addClass('on')
-  # hover off
-  $('body').on 'mouseleave', 'nav > ul > li.menu', (e) ->
-    unless Modernizr.touch
+    # hover off
+    $('body').on 'mouseleave', 'nav > ul > li.menu:not(.disabled)', (e) ->
       delay = setTimeout (->
         $('nav > ul > li.menu.on').removeClass('on')
       ), 350
   # click/touch
-  $('body').on 'click', 'nav > ul > li.menu > a', (e) =>
+  $('body').on 'click', 'nav > ul > li.menu:not(.disabled) > a', (e) =>
     unless Modernizr.touch
       $('nav > ul > li.menu.on').removeClass('on')
       $(e.target).parents('li.menu').addClass('on')
@@ -32,12 +30,9 @@ $ ->
     openMenu(e.target)
     e.preventDefault()
     return false
+
   
   # dropdown buttons
-  $('body').on 'focus', '.dropdown', (e) ->
-    $(this).addClass('on')
-  $('body').on 'blur', '.dropdown li:last-child a', (e) ->
-    $('.dropdown').filter('.on').removeClass('on')
   $('body').on 'click', (e) ->
     if $(e.target).hasClass('dropdown')
       $(e.target).toggleClass('on')
@@ -46,6 +41,12 @@ $ ->
         $('.dropdown').filter('.on').removeClass('on')
     if $('nav > ul > li').filter('.menu.on').length
       $('nav > ul > li').filter('.menu.on').removeClass('on')
+  # keyboard accessibility
+  $('body').on 'focus', '.dropdown', (e) ->
+    $(this).addClass('on')
+  $('body').on 'blur', '.dropdown li:last-child a', (e) ->
+    $('.dropdown').filter('.on').removeClass('on')
+
 
   # hamburger menus
   $('nav.menu').each ->
@@ -56,6 +57,10 @@ $ ->
     e.preventDefault()
     return false
   # keyboard accessibility
+  $('body').on 'focus', '.menu-toggle', (e) ->
+    $(e.target).parent('nav.menu').addClass('on')
+  $('body').on 'blur', 'nav.menu > ul > li:last-child a', (e) ->
+    $('nav.menu').filter('.on').removeClass('on')
 
 
   return

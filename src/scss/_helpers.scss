@@ -73,8 +73,7 @@
 %center           { @extend %block; margin:0 auto; }
 %spacer           { height:$gutter; }
 %round            { @include rounded(9999px); }
-%disabled,
-%disabled:visited { @include state(disabled); }
+%disabled         { @include state(disabled,textOnly); }
 %rotate-90        { @extend %inline; @include rotate(90deg); }
 %rotate-180       { @extend %inline; @include rotate(180deg); }
 %rotate-270       { @extend %inline; @include rotate(270deg); }
@@ -118,8 +117,7 @@
     &:after         { content:''; display:block; clear:both; }
   }
 
-  .disabled,
-  .disabled:visited { @include state(disabled,textOnly); }
+  .disabled         { @include state(disabled,textOnly); }
 
   .stick            { @extend %stick;
     &.top           { @extend %top; }
