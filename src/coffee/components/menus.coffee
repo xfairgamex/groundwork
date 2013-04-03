@@ -3,23 +3,23 @@ $ ->
   delay = ''
   # open submenu function
   openMenu = (target) ->
-    if $(window).width() < 1025 # need to replace this with hover support detection
+    if Modernizr.touch
       $(target).parent('li.menu').toggleClass('on')
   # hover on
   $('body').on 'mouseenter', 'nav > ul > li.menu', (e) ->
-    if $(window).width() > 1024 # need to replace this with hover support detection
+    unless Modernizr.touch
       clearTimeout(delay)
       $('nav > ul > li.menu.on').removeClass('on')
       $(this).addClass('on')
   # hover off
   $('body').on 'mouseleave', 'nav > ul > li.menu', (e) ->
-    if $(window).width() > 1024 # need to replace this with hover support detection
+    unless Modernizr.touch
       delay = setTimeout (->
         $('nav > ul > li.menu.on').removeClass('on')
       ), 350
   # click/touch
   $('body').on 'click', 'nav > ul > li.menu > a', (e) =>
-    unless $(window).width() < 1025 # need to replace this with hover support detection
+    unless Modernizr.touch
       $('nav > ul > li.menu.on').removeClass('on')
       $(e.target).parents('li.menu').addClass('on')
     openMenu(e.target)

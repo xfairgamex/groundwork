@@ -546,26 +546,26 @@
       _this = this;
     delay = '';
     openMenu = function(target) {
-      if ($(window).width() < 1025) {
+      if (Modernizr.touch) {
         return $(target).parent('li.menu').toggleClass('on');
       }
     };
     $('body').on('mouseenter', 'nav > ul > li.menu', function(e) {
-      if ($(window).width() > 1024) {
+      if (!Modernizr.touch) {
         clearTimeout(delay);
         $('nav > ul > li.menu.on').removeClass('on');
         return $(this).addClass('on');
       }
     });
     $('body').on('mouseleave', 'nav > ul > li.menu', function(e) {
-      if ($(window).width() > 1024) {
+      if (!Modernizr.touch) {
         return delay = setTimeout((function() {
           return $('nav > ul > li.menu.on').removeClass('on');
         }), 350);
       }
     });
     $('body').on('click', 'nav > ul > li.menu > a', function(e) {
-      if (!($(window).width() < 1025)) {
+      if (!Modernizr.touch) {
         $('nav > ul > li.menu.on').removeClass('on');
         $(e.target).parents('li.menu').addClass('on');
       }
@@ -632,7 +632,7 @@
 
 
   $(function() {
-    return $('div.modal').modal();
+    return $('div.modal, div[role=dialog]').modal();
   });
 
   /* --------------------------------------------
