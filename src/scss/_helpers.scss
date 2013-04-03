@@ -74,9 +74,7 @@
 %spacer           { height:$gutter; }
 %round            { @include rounded(9999px); }
 %disabled,
-%disabled:visited,
-%disabled:hover,
-%disabled:focus   { @include state(disabled); }
+%disabled:visited { @include state(disabled); }
 %rotate-90        { @extend %inline; @include rotate(90deg); }
 %rotate-180       { @extend %inline; @include rotate(180deg); }
 %rotate-270       { @extend %inline; @include rotate(270deg); }
@@ -121,9 +119,7 @@
   }
 
   .disabled,
-  .disabled:visited,
-  .disabled:hover,
-  .disabled:focus   { @include state(disabled,textOnly); }
+  .disabled:visited { @include state(disabled,textOnly); }
 
   .stick            { @extend %stick;
     &.top           { @extend %top; }
