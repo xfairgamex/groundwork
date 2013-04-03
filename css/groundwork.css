@@ -5358,6 +5358,8 @@ div.modal .fullscreen {
     display: block !important;
     overflow: hidden;
     max-height: 0;
+    width: auto;
+    margin: -10px;
     clear: both;
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
@@ -5379,6 +5381,13 @@ div.modal .fullscreen {
   nav.menu > ul li a:hover, nav.menu > ul li a:focus, nav.menu > ul li a:visited:hover, nav.menu > ul li a:visited:focus, nav.menu > ul.row li a:hover, nav.menu > ul.row li a:focus, nav.menu > ul.row li a:visited:hover, nav.menu > ul.row li a:visited:focus {
     border: none;
     border-top: 1px solid #198d98;
+  }
+  nav.menu > ul li:last-child a, nav.menu > ul li:last-child a:visited, nav.menu > ul.row li:last-child a, nav.menu > ul.row li:last-child a:visited {
+    -ms-border-radius: 0 0 4px 4px;
+    -o-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
   }
   nav.menu.on > ul {
     max-height: 1000px;

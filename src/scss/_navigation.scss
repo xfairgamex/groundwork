@@ -87,6 +87,9 @@ nav {
           > a, > a:visited {
             background:$button-active;
             text-decoration:none;
+            // &:after {
+            //   content:'\f00d';
+            // }
           }
           > ul {
             @extend %menu-open;
