@@ -1,6 +1,6 @@
 $ ->
   # select all text in invalid input field on focus
-  $('body').on 'focus', '
+  $('body').on 'click', '
     .error input, 
     .error textarea, 
     .invalid input, 
@@ -9,8 +9,7 @@ $ ->
     textarea.error, 
     input.invalid, 
     textarea.invalid', (e) ->
-    $(this).focus()
-    $(this).select()
+    $(this).focus().select()
 
   # polyfill select box placeholders
   $('span.select select').each ->

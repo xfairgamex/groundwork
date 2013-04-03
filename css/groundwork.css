@@ -4877,9 +4877,17 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   border-color: silver;
 }
 .tiles > .tile.disabled {
-  color: gray;
+  color: #d9d9d9;
   background: #a6a6a6;
-  border-color: silver;
+  border-color: gray;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.tiles > .tile.disabled:hover, .tiles > .tile.disabled:focus, .tiles > .tile.disabled:visited {
+  color: #d9d9d9;
+  background: #a6a6a6;
+  border-color: gray;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;

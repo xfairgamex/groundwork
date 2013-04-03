@@ -455,9 +455,10 @@
   $(function() {
     $('.disabled').each(function() {
       $(this).attr('tabindex', '-1');
-      return $(this).find('a').attr('tabindex', '-1');
+      $(this).find('a').attr('tabindex', '-1');
+      return $(this).find('input, select, textarea').addClass('disabled').attr('tabindex', '-1').attr('readonly', 'readyonly');
     });
-    $('body').on('click', '.disabled', function(e) {
+    $('body').on('click', '.disabled, .disabled *', function(e) {
       e.preventDefault();
       return false;
     });
@@ -508,7 +509,7 @@
 
 
   $(function() {
-    $('body').on('focus', '\
+    $('body').on('click', '\
     .error input, \
     .error textarea, \
     .invalid input, \
@@ -517,8 +518,7 @@
     textarea.error, \
     input.invalid, \
     textarea.invalid', function(e) {
-      $(this).focus();
-      return $(this).select();
+      return $(this).focus().select();
     });
     $('span.select select').each(function() {
       if ($(this).children('option').first().val() === '' && $(this).children('option').first().attr('selected')) {
@@ -825,26 +825,9 @@
   });
 
   /* --------------------------------------------
-       Begin tooltips.coffee
+       Begin tiles.coffee
   --------------------------------------------
   */
-
-
-  /*
-   * Requires jquery.tooltips.js
-  */
-
-
-  $(function() {
-    return $('.tooltip[title]').tooltip();
-  });
-
-}).call(this);
-
-  /* --------------------------------------------
-   Begin tiles.coffee
-   --------------------------------------------
-   */
 
 
   $(function() {
@@ -860,3 +843,20 @@
       return false;
     });
   });
+
+  /* --------------------------------------------
+       Begin tooltips.coffee
+  --------------------------------------------
+  */
+
+
+  /*
+   * Requires jquery.tooltips.js
+  */
+
+
+  $(function() {
+    return $('.tooltip[title]').tooltip();
+  });
+
+}).call(this);
