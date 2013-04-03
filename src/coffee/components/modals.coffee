@@ -3,4 +3,4 @@
 ###
 $ ->
   # init inline modals
-  $('div.modal').modal()
+  $('div.modal, div[role=dialog]').modal()
