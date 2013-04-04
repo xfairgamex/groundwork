@@ -48,16 +48,29 @@
 @mixin _justify                   { text-align:justify; }
 @mixin _truncate                  { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
 @mixin _center                    { @include _block; margin:0 auto; }
-@mixin _space                     { height:$gutter; }
+@mixin _spacer                    { height:$gutter; }
 @mixin _round                     { @include rounded(9999px); } // function is found in _mixins.scss
+@mixin _disabled                  { @include state(disabled,textOnly); }
 
-// Seems like redundant rotate mixins, but are there any side implications if we move "@include _inline;" into the rotate() mixin in _mixins.scss?
+// Seems like redundant rotate and spin mixins, but are there any side implications if we move "@include _inline;" into the rotate() and spin() mixin in _mixins.scss?
 @mixin _rotate-90                 { @include _inline; @include rotate(90deg); }
 @mixin _rotate-180                { @include _inline; @include rotate(180deg); }
 @mixin _rotate-270                { @include _inline; @include rotate(270deg); }
 @mixin _rotate-90-ctr             { @include _inline; @include rotate(-90deg); }
 @mixin _rotate-180-ctr            { @include _inline; @include rotate(-180deg); }
 @mixin _rotate-270-ctr            { @include _inline; @include rotate(-270deg); }
+@mixin _spin                      { @include _inline; @include spin; }
+@mixin _spin-once                 { @include _inline; @include spin(1); }
+@mixin _spin-twice                { @include _inline; @include spin(2); }
+@mixin _spin-thrice               { @include _inline; @include spin(3); }
+@mixin _spin-fast                 { @include _inline; @include spin(infinite,1s); }
+@mixin _spin-fast-once            { @include _inline; @include spin(1,1s); }
+@mixin _spin-fast-twice           { @include _inline; @include spin(2,1s); }
+@mixin _spin-fast-thrice          { @include _inline; @include spin(3,1s); }
+@mixin _spin-slow                 { @include _inline; @include spin(infinite,5s); }
+@mixin _spin-slow-once            { @include _inline; @include spin(1,5s); }
+@mixin _spin-slow-twice           { @include _inline; @include spin(2,5s); }
+@mixin _spin-slow-thrice          { @include _inline; @include spin(3,5s); }
 
 // ================================
 //    layout helpers: placeholders
@@ -132,15 +145,28 @@
 %justify          { @include _justify; }
 %truncate         { @include _truncate; }
 %center           { @include _center; }
-%space            { @include _space; }
-%round            { @include rounded(9999px); }
-%disabled         { @include disabled(true); } // This refers to a mixin in _mixins.scss.
+%spacer           { @include _spacer; }
+%round            { @include _round; }
+%disabled         { @include _disabled; }
 %rotate-90        { @include _rotate-90; } // As mentioned above, might be referring to redundant mixins.
 %rotate-180       { @include _rotate-180; }
 %rotate-270       { @include _rotate-270; }
 %rotate-90-ctr    { @include _rotate-90-ctr; }
 %rotate-180-ctr   { @include _rotate-180-ctr; }
 %rotate-270-ctr   { @include _rotate-270-ctr; }
+%spin             { @include _spin; }
+%spin-once        { @include _spin-once; }
+%spin-twice       { @include _spin-twice; }
+%spin-thrice      { @include _spin-thrice; }
+%spin-fast        { @include _spin-fast; }
+%spin-fast-once   { @include _spin-fast-once; }
+%spin-fast-twice  { @include _spin-fast-twice; }
+%spin-fast-thrice { @include _spin-fast-thrice; }
+%spin-slow        { @include _spin-slow; }
+%spin-slow-once   { @include _spin-slow-once; }
+%spin-slow-twice  { @include _spin-slow-twice; }
+%spin-slow-thrice { @include _spin-slow-thrice; }
+
 
 // ================================
 //    layout helpers: classes
@@ -148,7 +174,7 @@
 
 @if $classes {
 
-  $helpers: inline block zero pull-right pull-left border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center space round disabled rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr;
+  $helpers: inline block zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
 
   // function to generate the helpers
   @for $i from 1 through length($helpers) {
@@ -159,15 +185,19 @@
   $modifiers: double triple;
   // function to generate the spacers
   @for $i from 1 through length($spacers) {
-    .#{nth($spacers, $i)} { @extend %#{nth($spacers, $i)};
-      &.double        { @extend %double; }
-      &.triple        { @extend %triple; }
+    .#{nth($spacers, $i)} {
+      @extend %#{nth($spacers, $i)};
+      @for $i from 1 through length($modifiers) {
+        &.#{nth($modifiers, $i)} { @extend %#{nth($modifiers, $i)}; }
+      }
     }
   }
 
   .clear, .clearfix { @extend %clear;
     &:after         { content:''; display:block; clear:both; }
   }
+
+  .disabled         { @include state(disabled,textOnly); }
 
   .stick            { @extend %stick;
     &.top           { @extend %top; }

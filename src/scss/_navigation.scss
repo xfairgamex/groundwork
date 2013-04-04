@@ -5,7 +5,19 @@
 
 
 
+%menu-closed {
+  display:none;
+}
+%menu-open {
+  display:block;
+}
+
 nav {
+  &:not(.inline) {
+    > ul:not(.row) {
+      display:inline-block;
+    }
+  }
   ul {
     display:block;
     list-style:none;
@@ -14,30 +26,23 @@ nav {
     li {
       display:block;
       position:relative;
-      &.on {
-        > a, > a:visited {
-          background:$button-active;
-          text-decoration:none;
-        }
-      }
       a, a:visited {
         display:block;
         width:100%;
         word-wrap:break-word;
         padding:0.25em 1em;
         background:$button-color;
-        border:1px solid $border-color;
+        border-top:1px solid $button-active;
         color:$button-text;
         font-weight:bold;
         font-size:1em;
         text-decoration:none;
-        text-align:center;
         cursor:pointer;
         line-height:1.5;
         @include transition(background-color 0.25s ease-out);
         &:hover, &:focus {
           background:$button-active;
-          border:1px solid $border-color;
+          color:$button-text;
           text-decoration:none;
         }
         &.active {
@@ -45,32 +50,49 @@ nav {
             background:$button-active;
           }
         }
-      }
-      &.menu {
-        > a {
-          &:after {
-            content:'\f0d7'; // \f0c9
-            display: inline-block;
-            width: 1.1em;
-            margin-left:0.25em;
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            font-size:1.1em;
-            text-decoration: inherit;
-            -webkit-font-smoothing: antialiased;
-            line-height: normal;
-            vertical-align: baseline;
-            background-image: none;
-            background-position: 0% 0%;
-            background-repeat: repeat;
-            margin-top: 0;
-          }
+        &.disabled {
+          @include state(disabled,normal,desaturate($button-color,20%));
         }
       }
-      &.on {
-        ul {
-          display:block !important;
+      &:first-child {
+        a, a:visited {
+          border-top:none;
+        }
+      }
+      &.menu {
+        &.disabled {
+          > a, > a:visited {
+            @include state(disabled,normal,desaturate($button-color,20%));
+          }
+        }
+        > a, > a:visited {
+          &:after {
+            content:'\f0d7';
+            display:inline-block;
+            width:1.1em;
+            margin-left:0.25em;
+            font-family:FontAwesome;
+            font-weight:normal;
+            font-style:normal;
+            font-size:1.1em;
+            text-decoration:inherit;
+            -webkit-font-smoothing:antialiased;
+            line-height:normal;
+            vertical-align:baseline;
+            background-image:none;
+            background-position:0% 0%;
+            background-repeat:repeat;
+            margin-top:0;
+          }
+        }
+        &.on {
+          > a, > a:visited {
+            background:$button-active;
+            text-decoration:none;
+          }
+          > ul {
+            @extend %menu-open;
+          }
         }
       }
       &:first-child {
@@ -90,7 +112,7 @@ nav {
       }
     }
     ul {
-      display:none;
+      @extend %menu-closed;
       position:absolute;
       left:100%;
       top:0;
@@ -99,13 +121,19 @@ nav {
       li {
         a, a:visited {
           @include rounded(0);
+          border:none;
+          border-top:1px solid $button-color;
           background:lighten($button-color, 5%);
           &:hover, &:active {
             background:lighten($button-active, 5%);
           }
+          &.disabled {
+            @include state(disabled,normal,desaturate(lighten($button-color, 5%),20%));
+          }
         }
         &:first-child {
           a, a:visited {
+            border-top:none;
             @include rounded(0 $radius 0 0);
           }
         }
@@ -125,10 +153,13 @@ nav {
     &.row {
       li {
         a, a:visited {
+          border-left:1px solid $button-active;
+          border-top:none;
           @include rounded(0);
         }
         &:first-child {
           a, a:visited {
+            border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -144,7 +175,7 @@ nav {
         }
       }
       ul {
-        display:none;
+        @extend %menu-closed;
         position:absolute;
         left:auto;
         top:auto;
@@ -153,6 +184,8 @@ nav {
         li {
           a, a:visited {
             @include rounded(0);
+            border-left:none;
+            border-top:1px solid $button-active;
           }
           &:first-child {
             a, a:visited {
@@ -184,10 +217,12 @@ nav {
         white-space-collapse:discard;
         float:none;
         a, a:visited {
-
+          border-left:1px solid $button-active;
+          border-top:none;
         }
         &:first-child {
           a, a:visited {
+            border-left:none;
             @include rounded($radius 0 0 $radius);
           }
         }
@@ -202,7 +237,8 @@ nav {
           }
         }
         ul {
-          display:none;
+          @extend %menu-closed;
+          // display:none;
           position:absolute;
           left:auto;
           top:auto;
@@ -212,6 +248,8 @@ nav {
             display:block;
             a, a:visited {
               @include rounded(0);
+              border-left:none;
+              border-top:1px solid $button-active;
             }
             &:first-child {
               a, a:visited {
@@ -228,19 +266,29 @@ nav {
       }
     }
   }
+  // hamburger menu
+  &.menu {
+    .menu-toggle {
+      @extend .button;
+      display:none !important;
+    }
+  }
   // pagination
   &.pagination {
+    &:not(.inline) {
+      > ul:not(.row) {
+        display:block;
+      }
+    }
     ul {
       margin:10px auto;
       display:block;
       list-style-type:none;
-      text-align:center;
       li {
         display:inline-block;
-        @include rounded(4px);
+        @include rounded($radius);
         padding:0 3px 0 2px;
         min-width:29px;
-        text-align:center;
         a {
           display:block;
           font-size:1em;
@@ -257,15 +305,7 @@ nav {
         }
         &.active {
           a {
-            background:lighten(gray, 15%);
-            border-color:gray;
-            color:lighten(gray, 35%);
-            text-decoration:none;
-            &:hover, &:focus {
-              background:lighten(gray, 15%);
-              border-color:gray;
-              color:lighten(gray, 35%);
-            }
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &.prev, &.next {
@@ -280,12 +320,7 @@ nav {
         }
         &.disabled {
           a {
-            @include disabled;
-            &:hover, &:focus {
-              background:lighten(gray, 15%);
-              border-color:gray;
-              color:lighten(gray, 35%);
-            }
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &:first-child {
@@ -306,6 +341,10 @@ nav {
   nav {
     ul {
       li.menu {
+        ul {
+          @extend %menu-open;
+          display:none;
+        }
         &:hover, &:focus {
           ul {
             display:block !important;

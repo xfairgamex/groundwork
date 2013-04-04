@@ -1600,7 +1600,7 @@ pre code:before {
   transition: font 0.25s;
 }
 
-button, .button, a.button, a.button:visited, input[type=submit], input[type=button], input[type=reset] {
+button, .button, nav.menu .menu-toggle, a.button, nav.menu a.menu-toggle, a.button:visited, nav.menu a.menu-toggle:visited, input[type=submit], input[type=button], input[type=reset], [role=button] {
   display: inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -1627,85 +1627,141 @@ button, .button, a.button, a.button:visited, input[type=submit], input[type=butt
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-button.on, button:hover, button:focus, .button.on, .button:hover, .button:focus, a.button.on, a.button:hover, a.button:focus, a.button:visited.on, a.button:visited:hover, a.button:visited:focus, input[type=submit].on, input[type=submit]:hover, input[type=submit]:focus, input[type=button].on, input[type=button]:hover, input[type=button]:focus, input[type=reset].on, input[type=reset]:hover, input[type=reset]:focus {
+button.on, button:hover, button:focus, .button.on, nav.menu .on.menu-toggle, .button:hover, nav.menu .menu-toggle:hover, .button:focus, nav.menu .menu-toggle:focus, a.button.on, nav.menu a.on.menu-toggle, a.button:hover, nav.menu a.menu-toggle:hover, a.button:focus, nav.menu a.menu-toggle:focus, a.button:visited.on, nav.menu a.menu-toggle:visited.on, a.button:visited:hover, nav.menu a.menu-toggle:visited:hover, a.button:visited:focus, nav.menu a.menu-toggle:visited:focus, input[type=submit].on, input[type=submit]:hover, input[type=submit]:focus, input[type=button].on, input[type=button]:hover, input[type=button]:focus, input[type=reset].on, input[type=reset]:hover, input[type=reset]:focus, [role=button].on, [role=button]:hover, [role=button]:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
 }
-button.active, button.active:hover, button.active:focus, .button.active, .button.active:hover, .button.active:focus, a.button.active, a.button.active:hover, a.button.active:focus, a.button:visited.active, a.button:visited.active:hover, a.button:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus {
+button.active, button.active:hover, button.active:focus, .button.active, nav.menu .active.menu-toggle, .button.active:hover, nav.menu .active.menu-toggle:hover, .button.active:focus, nav.menu .active.menu-toggle:focus, a.button.active, nav.menu a.active.menu-toggle, a.button.active:hover, nav.menu a.active.menu-toggle:hover, a.button.active:focus, nav.menu a.active.menu-toggle:focus, a.button:visited.active, nav.menu a.menu-toggle:visited.active, a.button:visited.active:hover, nav.menu a.menu-toggle:visited.active:hover, a.button:visited.active:focus, nav.menu a.menu-toggle:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus, [role=button].active, [role=button].active:hover, [role=button].active:focus {
   background: #198d98;
   color: white;
 }
-button.disabled, .button.disabled, a.button.disabled, a.button:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled {
-  color: #d9d9d9;
+button.disabled, .button.disabled, nav.menu .disabled.menu-toggle, a.button.disabled, nav.menu a.disabled.menu-toggle, a.button:visited.disabled, nav.menu a.menu-toggle:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled, [role=button].disabled {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-  background: #a6a6a6;
-  border-color: silver;
 }
-button.small, .button.small, a.button.small, a.button:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small {
+button.disabled:hover, button.disabled:focus, button.disabled:visited, .button.disabled:hover, nav.menu .disabled.menu-toggle:hover, .button.disabled:focus, nav.menu .disabled.menu-toggle:focus, .button.disabled:visited, nav.menu .disabled.menu-toggle:visited, a.button.disabled:hover, nav.menu a.disabled.menu-toggle:hover, a.button.disabled:focus, nav.menu a.disabled.menu-toggle:focus, a.button.disabled:visited, nav.menu a.disabled.menu-toggle:visited, a.button:visited.disabled:hover, nav.menu a.menu-toggle:visited.disabled:hover, a.button:visited.disabled:focus, nav.menu a.menu-toggle:visited.disabled:focus, a.button:visited.disabled:visited, nav.menu a.menu-toggle:visited.disabled:visited, input[type=submit].disabled:hover, input[type=submit].disabled:focus, input[type=submit].disabled:visited, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:visited, input[type=reset].disabled:hover, input[type=reset].disabled:focus, input[type=reset].disabled:visited, [role=button].disabled:hover, [role=button].disabled:focus, [role=button].disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.small, .button.small, nav.menu .small.menu-toggle, a.button.small, nav.menu a.small.menu-toggle, a.button:visited.small, nav.menu a.menu-toggle:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small, [role=button].small {
   font-size: 0.8em;
 }
-button.large, .button.large, a.button.large, a.button:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large {
+button.large, .button.large, nav.menu .large.menu-toggle, a.button.large, nav.menu a.large.menu-toggle, a.button:visited.large, nav.menu a.menu-toggle:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large, [role=button].large {
   font-size: 1.5em;
 }
-button.error, .button.error, a.button.error, a.button:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error {
+button.error, .button.error, nav.menu .error.menu-toggle, a.button.error, nav.menu a.error.menu-toggle, a.button:visited.error, nav.menu a.menu-toggle:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error, [role=button].error {
   background: #a40400;
   border: 1px solid #710300;
   color: white;
 }
-button.error:hover, button.error:focus, .button.error:hover, .button.error:focus, a.button.error:hover, a.button.error:focus, a.button:visited.error:hover, a.button:visited.error:focus, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error:hover, input[type=reset].error:focus {
+button.error.active, button.error:hover, button.error:focus, .button.error.active, nav.menu .error.active.menu-toggle, .button.error:hover, nav.menu .error.menu-toggle:hover, .button.error:focus, nav.menu .error.menu-toggle:focus, a.button.error.active, nav.menu a.error.active.menu-toggle, a.button.error:hover, nav.menu a.error.menu-toggle:hover, a.button.error:focus, nav.menu a.error.menu-toggle:focus, a.button:visited.error.active, nav.menu a.menu-toggle:visited.error.active, a.button:visited.error:hover, nav.menu a.menu-toggle:visited.error:hover, a.button:visited.error:focus, nav.menu a.menu-toggle:visited.error:focus, input[type=submit].error.active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error.active, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error.active, input[type=reset].error:hover, input[type=reset].error:focus, [role=button].error.active, [role=button].error:hover, [role=button].error:focus {
   background: #710300;
 }
-button.warning, .button.warning, a.button.warning, a.button:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning {
+button.error.disabled, .button.error.disabled, nav.menu .error.disabled.menu-toggle, a.button.error.disabled, nav.menu a.error.disabled.menu-toggle, a.button:visited.error.disabled, nav.menu a.menu-toggle:visited.error.disabled, input[type=submit].error.disabled, input[type=button].error.disabled, input[type=reset].error.disabled, [role=button].error.disabled {
+  color: #ee6c68;
+  background: #d81d18;
+  border-color: #941410;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:visited, .button.error.disabled:hover, nav.menu .error.disabled.menu-toggle:hover, .button.error.disabled:focus, nav.menu .error.disabled.menu-toggle:focus, .button.error.disabled:visited, nav.menu .error.disabled.menu-toggle:visited, a.button.error.disabled:hover, nav.menu a.error.disabled.menu-toggle:hover, a.button.error.disabled:focus, nav.menu a.error.disabled.menu-toggle:focus, a.button.error.disabled:visited, nav.menu a.error.disabled.menu-toggle:visited, a.button:visited.error.disabled:hover, nav.menu a.menu-toggle:visited.error.disabled:hover, a.button:visited.error.disabled:focus, nav.menu a.menu-toggle:visited.error.disabled:focus, a.button:visited.error.disabled:visited, nav.menu a.menu-toggle:visited.error.disabled:visited, input[type=submit].error.disabled:hover, input[type=submit].error.disabled:focus, input[type=submit].error.disabled:visited, input[type=button].error.disabled:hover, input[type=button].error.disabled:focus, input[type=button].error.disabled:visited, input[type=reset].error.disabled:hover, input[type=reset].error.disabled:focus, input[type=reset].error.disabled:visited, [role=button].error.disabled:hover, [role=button].error.disabled:focus, [role=button].error.disabled:visited {
+  color: #ee6c68;
+  background: #d81d18;
+  border-color: #941410;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.warning, .button.warning, nav.menu .warning.menu-toggle, a.button.warning, nav.menu a.warning.menu-toggle, a.button:visited.warning, nav.menu a.menu-toggle:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning, [role=button].warning {
   background: #ff971e;
   border: 1px solid #ea7e00;
   color: white;
 }
-button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus, a.button.warning:hover, a.button.warning:focus, a.button:visited.warning:hover, a.button:visited.warning:focus, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning:hover, input[type=reset].warning:focus {
+button.warning.active, button.warning:hover, button.warning:focus, .button.warning.active, nav.menu .warning.active.menu-toggle, .button.warning:hover, nav.menu .warning.menu-toggle:hover, .button.warning:focus, nav.menu .warning.menu-toggle:focus, a.button.warning.active, nav.menu a.warning.active.menu-toggle, a.button.warning:hover, nav.menu a.warning.menu-toggle:hover, a.button.warning:focus, nav.menu a.warning.menu-toggle:focus, a.button:visited.warning.active, nav.menu a.menu-toggle:visited.warning.active, a.button:visited.warning:hover, nav.menu a.menu-toggle:visited.warning:hover, a.button:visited.warning:focus, nav.menu a.menu-toggle:visited.warning:focus, input[type=submit].warning.active, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning.active, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning.active, input[type=reset].warning:hover, input[type=reset].warning:focus, [role=button].warning.active, [role=button].warning:hover, [role=button].warning:focus {
   background: #ea7e00;
 }
-button.success, .button.success, a.button.success, a.button:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success {
+button.warning.disabled, .button.warning.disabled, nav.menu .warning.disabled.menu-toggle, a.button.warning.disabled, nav.menu a.warning.disabled.menu-toggle, a.button:visited.warning.disabled, nav.menu a.menu-toggle:visited.warning.disabled, input[type=submit].warning.disabled, input[type=button].warning.disabled, input[type=reset].warning.disabled, [role=button].warning.disabled {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.warning.disabled:hover, button.warning.disabled:focus, button.warning.disabled:visited, .button.warning.disabled:hover, nav.menu .warning.disabled.menu-toggle:hover, .button.warning.disabled:focus, nav.menu .warning.disabled.menu-toggle:focus, .button.warning.disabled:visited, nav.menu .warning.disabled.menu-toggle:visited, a.button.warning.disabled:hover, nav.menu a.warning.disabled.menu-toggle:hover, a.button.warning.disabled:focus, nav.menu a.warning.disabled.menu-toggle:focus, a.button.warning.disabled:visited, nav.menu a.warning.disabled.menu-toggle:visited, a.button:visited.warning.disabled:hover, nav.menu a.menu-toggle:visited.warning.disabled:hover, a.button:visited.warning.disabled:focus, nav.menu a.menu-toggle:visited.warning.disabled:focus, a.button:visited.warning.disabled:visited, nav.menu a.menu-toggle:visited.warning.disabled:visited, input[type=submit].warning.disabled:hover, input[type=submit].warning.disabled:focus, input[type=submit].warning.disabled:visited, input[type=button].warning.disabled:hover, input[type=button].warning.disabled:focus, input[type=button].warning.disabled:visited, input[type=reset].warning.disabled:hover, input[type=reset].warning.disabled:focus, input[type=reset].warning.disabled:visited, [role=button].warning.disabled:hover, [role=button].warning.disabled:focus, [role=button].warning.disabled:visited {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.success, .button.success, nav.menu .success.menu-toggle, a.button.success, nav.menu a.success.menu-toggle, a.button:visited.success, nav.menu a.menu-toggle:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success, [role=button].success {
   background: #5fb40e;
   border: 1px solid #46850a;
   color: white;
 }
-button.success:hover, button.success:focus, .button.success:hover, .button.success:focus, a.button.success:hover, a.button.success:focus, a.button:visited.success:hover, a.button:visited.success:focus, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success:hover, input[type=reset].success:focus {
+button.success.active, button.success:hover, button.success:focus, .button.success.active, nav.menu .success.active.menu-toggle, .button.success:hover, nav.menu .success.menu-toggle:hover, .button.success:focus, nav.menu .success.menu-toggle:focus, a.button.success.active, nav.menu a.success.active.menu-toggle, a.button.success:hover, nav.menu a.success.menu-toggle:hover, a.button.success:focus, nav.menu a.success.menu-toggle:focus, a.button:visited.success.active, nav.menu a.menu-toggle:visited.success.active, a.button:visited.success:hover, nav.menu a.menu-toggle:visited.success:hover, a.button:visited.success:focus, nav.menu a.menu-toggle:visited.success:focus, input[type=submit].success.active, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success.active, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success.active, input[type=reset].success:hover, input[type=reset].success:focus, [role=button].success.active, [role=button].success:hover, [role=button].success:focus {
   background: #46850a;
 }
-button.square, .button.square, a.button.square, a.button:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square {
+button.success.disabled, .button.success.disabled, nav.menu .success.disabled.menu-toggle, a.button.success.disabled, nav.menu a.success.disabled.menu-toggle, a.button:visited.success.disabled, nav.menu a.menu-toggle:visited.success.disabled, input[type=submit].success.disabled, input[type=button].success.disabled, input[type=reset].success.disabled, [role=button].success.disabled {
+  color: #b9e78d;
+  background: #85d639;
+  border-color: #5fa121;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.success.disabled:hover, button.success.disabled:focus, button.success.disabled:visited, .button.success.disabled:hover, nav.menu .success.disabled.menu-toggle:hover, .button.success.disabled:focus, nav.menu .success.disabled.menu-toggle:focus, .button.success.disabled:visited, nav.menu .success.disabled.menu-toggle:visited, a.button.success.disabled:hover, nav.menu a.success.disabled.menu-toggle:hover, a.button.success.disabled:focus, nav.menu a.success.disabled.menu-toggle:focus, a.button.success.disabled:visited, nav.menu a.success.disabled.menu-toggle:visited, a.button:visited.success.disabled:hover, nav.menu a.menu-toggle:visited.success.disabled:hover, a.button:visited.success.disabled:focus, nav.menu a.menu-toggle:visited.success.disabled:focus, a.button:visited.success.disabled:visited, nav.menu a.menu-toggle:visited.success.disabled:visited, input[type=submit].success.disabled:hover, input[type=submit].success.disabled:focus, input[type=submit].success.disabled:visited, input[type=button].success.disabled:hover, input[type=button].success.disabled:focus, input[type=button].success.disabled:visited, input[type=reset].success.disabled:hover, input[type=reset].success.disabled:focus, input[type=reset].success.disabled:visited, [role=button].success.disabled:hover, [role=button].success.disabled:focus, [role=button].success.disabled:visited {
+  color: #b9e78d;
+  background: #85d639;
+  border-color: #5fa121;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.square, .button.square, nav.menu .square.menu-toggle, a.button.square, nav.menu a.square.menu-toggle, a.button:visited.square, nav.menu a.menu-toggle:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square, [role=button].square {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-button.round, .button.round, a.button.round, a.button:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round {
+button.round, .button.round, nav.menu .round.menu-toggle, a.button.round, nav.menu a.round.menu-toggle, a.button:visited.round, nav.menu a.menu-toggle:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round, [role=button].round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
 }
-button.block, .button.block, a.button.block, a.button:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block {
+button.block, .button.block, nav.menu .block.menu-toggle, a.button.block, nav.menu a.block.menu-toggle, a.button:visited.block, nav.menu a.menu-toggle:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block, [role=button].block {
   display: block;
   width: 100%;
 }
-button.dropdown, .button.dropdown, a.button.dropdown, a.button:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown {
+button.dropdown, .button.dropdown, nav.menu .dropdown.menu-toggle, a.button.dropdown, nav.menu a.dropdown.menu-toggle, a.button:visited.dropdown, nav.menu a.menu-toggle:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown, [role=button].dropdown {
   position: relative;
   padding-right: 2em;
 }
-button.dropdown:after, .button.dropdown:after, a.button.dropdown:after, a.button:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after {
+button.dropdown:after, .button.dropdown:after, nav.menu .dropdown.menu-toggle:after, a.button.dropdown:after, nav.menu a.dropdown.menu-toggle:after, a.button:visited.dropdown:after, nav.menu a.menu-toggle:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after, [role=button].dropdown:after {
   content: '...';
   position: absolute;
   right: 1em;
   bottom: 0.25em;
 }
-button.dropdown.on ul, .button.dropdown.on ul, a.button.dropdown.on ul, a.button:visited.dropdown.on ul, input[type=submit].dropdown.on ul, input[type=button].dropdown.on ul, input[type=reset].dropdown.on ul {
+button.dropdown.on ul, .button.dropdown.on ul, nav.menu .dropdown.on.menu-toggle ul, a.button.dropdown.on ul, nav.menu a.dropdown.on.menu-toggle ul, a.button:visited.dropdown.on ul, nav.menu a.menu-toggle:visited.dropdown.on ul, input[type=submit].dropdown.on ul, input[type=button].dropdown.on ul, input[type=reset].dropdown.on ul, [role=button].dropdown.on ul {
   display: block;
 }
-button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul {
+button.dropdown ul, .button.dropdown ul, nav.menu .dropdown.menu-toggle ul, a.button.dropdown ul, nav.menu a.dropdown.menu-toggle ul, a.button:visited.dropdown ul, nav.menu a.menu-toggle:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul, [role=button].dropdown ul {
   text-align: left;
   margin: 0.3em 0 0;
   padding: 0;
@@ -1724,27 +1780,27 @@ button.dropdown ul, .button.dropdown ul, a.button.dropdown ul, a.button:visited.
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li, .button.dropdown ul li, a.button.dropdown ul li, a.button:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li {
+button.dropdown ul li, .button.dropdown ul li, nav.menu .dropdown.menu-toggle ul li, a.button.dropdown ul li, nav.menu a.dropdown.menu-toggle ul li, a.button:visited.dropdown ul li, nav.menu a.menu-toggle:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li, [role=button].dropdown ul li {
   display: block;
 }
-button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li a, .button.dropdown ul li a:visited, a.button.dropdown ul li a, a.button.dropdown ul li a:visited, a.button:visited.dropdown ul li a, a.button:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:visited {
+button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li a, nav.menu .dropdown.menu-toggle ul li a, .button.dropdown ul li a:visited, nav.menu .dropdown.menu-toggle ul li a:visited, a.button.dropdown ul li a, nav.menu a.dropdown.menu-toggle ul li a, a.button.dropdown ul li a:visited, nav.menu a.dropdown.menu-toggle ul li a:visited, a.button:visited.dropdown ul li a, nav.menu a.menu-toggle:visited.dropdown ul li a, a.button:visited.dropdown ul li a:visited, nav.menu a.menu-toggle:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:visited, [role=button].dropdown ul li a, [role=button].dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
   text-shadow: none;
   text-decoration: none;
 }
-button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, .button.dropdown ul li a:focus, .button.dropdown ul li a:visited:hover, .button.dropdown ul li a:visited:focus, a.button.dropdown ul li a:hover, a.button.dropdown ul li a:focus, a.button.dropdown ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus {
+button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, nav.menu .dropdown.menu-toggle ul li a:hover, .button.dropdown ul li a:focus, nav.menu .dropdown.menu-toggle ul li a:focus, .button.dropdown ul li a:visited:hover, nav.menu .dropdown.menu-toggle ul li a:visited:hover, .button.dropdown ul li a:visited:focus, nav.menu .dropdown.menu-toggle ul li a:visited:focus, a.button.dropdown ul li a:hover, nav.menu a.dropdown.menu-toggle ul li a:hover, a.button.dropdown ul li a:focus, nav.menu a.dropdown.menu-toggle ul li a:focus, a.button.dropdown ul li a:visited:hover, nav.menu a.dropdown.menu-toggle ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, nav.menu a.dropdown.menu-toggle ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, nav.menu a.menu-toggle:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, nav.menu a.menu-toggle:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:visited:hover, nav.menu a.menu-toggle:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, nav.menu a.menu-toggle:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus, [role=button].dropdown ul li a:hover, [role=button].dropdown ul li a:focus, [role=button].dropdown ul li a:visited:hover, [role=button].dropdown ul li a:visited:focus {
   background: #efefef;
 }
-button.dropdown ul li:last-child, .button.dropdown ul li:last-child, a.button.dropdown ul li:last-child, a.button:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child {
+button.dropdown ul li:last-child, .button.dropdown ul li:last-child, nav.menu .dropdown.menu-toggle ul li:last-child, a.button.dropdown ul li:last-child, nav.menu a.dropdown.menu-toggle ul li:last-child, a.button:visited.dropdown ul li:last-child, nav.menu a.menu-toggle:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child, [role=button].dropdown ul li:last-child {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li hr, .button.dropdown ul li hr, a.button.dropdown ul li hr, a.button:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr {
+button.dropdown ul li hr, .button.dropdown ul li hr, nav.menu .dropdown.menu-toggle ul li hr, a.button.dropdown ul li hr, nav.menu a.dropdown.menu-toggle ul li hr, a.button:visited.dropdown ul li hr, nav.menu a.menu-toggle:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr, [role=button].dropdown ul li hr {
   margin: 0;
   border-color: #ececec;
 }
@@ -1800,10 +1856,20 @@ ul.button-list li a.active, ul.button-list li a.active:hover, ul.button-list li 
   color: white;
 }
 ul.button-list li a.disabled, ol.button-list li a.disabled {
-  background: #a6a6a6;
-  border-color: gray;
-  color: #d9d9d9;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+ul.button-list li a.disabled:hover, ul.button-list li a.disabled:focus, ul.button-list li a.disabled:visited, ol.button-list li a.disabled:hover, ol.button-list li a.disabled:focus, ol.button-list li a.disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 
 fieldset {
@@ -1838,6 +1904,9 @@ input, select, textarea {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+}
+input[size], select[size], textarea[size] {
+  height: auto;
 }
 input[type=checkbox], input[type=radio], select[type=checkbox], select[type=radio], textarea[type=checkbox], textarea[type=radio] {
   display: inline-block;
@@ -1999,6 +2068,17 @@ ul.radio-list {
   border-radius: 0 4px 4px 0;
 }
 
+nav ul ul, nav ul.row ul, nav.inline ul li ul {
+  display: none;
+}
+
+nav ul li.menu.on > ul, .no-js nav ul li.menu ul {
+  display: block;
+}
+
+nav:not(.inline) > ul:not(.row) {
+  display: inline-block;
+}
 nav ul {
   display: block;
   list-style: none;
@@ -2009,22 +2089,17 @@ nav ul li {
   display: block;
   position: relative;
 }
-nav ul li.on > a, nav ul li.on > a:visited {
-  background: #198d98;
-  text-decoration: none;
-}
 nav ul li a, nav ul li a:visited {
   display: block;
   width: 100%;
   word-wrap: break-word;
   padding: 0.25em 1em;
   background: #1dabb8;
-  border: 1px solid #dddddd;
+  border-top: 1px solid #198d98;
   color: white;
   font-weight: bold;
   font-size: 1em;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
   line-height: 1.5;
   -ms-transition: background-color 0.25s ease-out;
@@ -2035,13 +2110,48 @@ nav ul li a, nav ul li a:visited {
 }
 nav ul li a:hover, nav ul li a:focus, nav ul li a:visited:hover, nav ul li a:visited:focus {
   background: #198d98;
-  border: 1px solid #dddddd;
+  color: white;
   text-decoration: none;
 }
 nav ul li a.active:hover, nav ul li a.active:focus, nav ul li a:visited.active:hover, nav ul li a:visited.active:focus {
   background: #198d98;
 }
-nav ul li.menu > a:after {
+nav ul li a.disabled, nav ul li a:visited.disabled {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+nav ul li a.disabled:hover, nav ul li a.disabled:focus, nav ul li a.disabled:visited, nav ul li a:visited.disabled:hover, nav ul li a:visited.disabled:focus, nav ul li a:visited.disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+nav ul li:first-child a, nav ul li:first-child a:visited {
+  border-top: none;
+}
+nav ul li.menu.disabled > a, nav ul li.menu.disabled > a:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+nav ul li.menu.disabled > a:hover, nav ul li.menu.disabled > a:focus, nav ul li.menu.disabled > a:visited, nav ul li.menu.disabled > a:visited:hover, nav ul li.menu.disabled > a:visited:focus, nav ul li.menu.disabled > a:visited:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+nav ul li.menu > a:after, nav ul li.menu > a:visited:after {
   content: '\f0d7';
   display: inline-block;
   width: 1.1em;
@@ -2059,8 +2169,9 @@ nav ul li.menu > a:after {
   background-repeat: repeat;
   margin-top: 0;
 }
-nav ul li.on ul {
-  display: block !important;
+nav ul li.menu.on > a, nav ul li.menu.on > a:visited {
+  background: #198d98;
+  text-decoration: none;
 }
 nav ul li:first-child a, nav ul li:first-child a:visited {
   -ms-border-radius: 4px 4px 0 0;
@@ -2084,7 +2195,6 @@ nav ul li:only-child a, nav ul li:only-child a:visited {
   border-radius: 4px;
 }
 nav ul ul {
-  display: none;
   position: absolute;
   left: 100%;
   top: 0;
@@ -2097,12 +2207,31 @@ nav ul ul li a, nav ul ul li a:visited {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+  border: none;
+  border-top: 1px solid #1dabb8;
   background: #20bfce;
 }
 nav ul ul li a:hover, nav ul ul li a:active, nav ul ul li a:visited:hover, nav ul ul li a:visited:active {
   background: #1da1ae;
 }
+nav ul ul li a.disabled, nav ul ul li a:visited.disabled {
+  color: #b8e5e9;
+  background: #6ac8d1;
+  border-color: #38acb6;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+nav ul ul li a.disabled:hover, nav ul ul li a.disabled:focus, nav ul ul li a.disabled:visited, nav ul ul li a:visited.disabled:hover, nav ul ul li a:visited.disabled:focus, nav ul ul li a:visited.disabled:visited {
+  color: #b8e5e9;
+  background: #6ac8d1;
+  border-color: #38acb6;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 nav ul ul li:first-child a, nav ul ul li:first-child a:visited {
+  border-top: none;
   -ms-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
   -moz-border-radius: 0 4px 0 0;
@@ -2124,6 +2253,8 @@ nav ul ul li:only-child a, nav ul ul li:only-child a:visited {
   border-radius: 0 4px 4px 0;
 }
 nav ul.row li a, nav ul.row li a:visited {
+  border-left: 1px solid #198d98;
+  border-top: none;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -2131,6 +2262,7 @@ nav ul.row li a, nav ul.row li a:visited {
   border-radius: 0;
 }
 nav ul.row li:first-child a, nav ul.row li:first-child a:visited {
+  border-left: none;
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
@@ -2152,7 +2284,6 @@ nav ul.row li:only-child a, nav ul.row li:only-child a:visited {
   border-radius: 4px;
 }
 nav ul.row ul {
-  display: none;
   position: absolute;
   left: auto;
   top: auto;
@@ -2165,6 +2296,8 @@ nav ul.row ul li a, nav ul.row ul li a:visited {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+  border-left: none;
+  border-top: 1px solid #198d98;
 }
 nav ul.row ul li:first-child a, nav ul.row ul li:first-child a:visited {
   -ms-border-radius: 0;
@@ -2197,7 +2330,12 @@ nav.inline ul li {
   white-space-collapse: discard;
   float: none;
 }
+nav.inline ul li a, nav.inline ul li a:visited {
+  border-left: 1px solid #198d98;
+  border-top: none;
+}
 nav.inline ul li:first-child a, nav.inline ul li:first-child a:visited {
+  border-left: none;
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
@@ -2219,7 +2357,6 @@ nav.inline ul li:only-child a, nav.inline ul li:only-child a:visited {
   border-radius: 4px;
 }
 nav.inline ul li ul {
-  display: none;
   position: absolute;
   left: auto;
   top: auto;
@@ -2235,6 +2372,8 @@ nav.inline ul li ul li a, nav.inline ul li ul li a:visited {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+  border-left: none;
+  border-top: 1px solid #198d98;
 }
 nav.inline ul li ul li:first-child a, nav.inline ul li ul li:first-child a:visited {
   -ms-border-radius: 0;
@@ -2250,11 +2389,16 @@ nav.inline ul li ul li:last-child a, nav.inline ul li ul li:last-child a:visited
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
+nav.menu .menu-toggle {
+  display: none !important;
+}
+nav.pagination:not(.inline) > ul:not(.row) {
+  display: block;
+}
 nav.pagination ul {
   margin: 10px auto;
   display: block;
   list-style-type: none;
-  text-align: center;
 }
 nav.pagination ul li {
   display: inline-block;
@@ -2265,7 +2409,6 @@ nav.pagination ul li {
   border-radius: 4px;
   padding: 0 3px 0 2px;
   min-width: 29px;
-  text-align: center;
 }
 nav.pagination ul li a {
   display: block;
@@ -2286,15 +2429,20 @@ nav.pagination ul li a:hover, nav.pagination ul li a:focus {
   color: white;
 }
 nav.pagination ul li.active a {
-  background: #a6a6a6;
-  border-color: gray;
-  color: #d9d9d9;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
   text-decoration: none;
+  outline: none;
 }
-nav.pagination ul li.active a:hover, nav.pagination ul li.active a:focus {
-  background: #a6a6a6;
-  border-color: gray;
-  color: #d9d9d9;
+nav.pagination ul li.active a:hover, nav.pagination ul li.active a:focus, nav.pagination ul li.active a:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 nav.pagination ul li.prev a, nav.pagination ul li.next a {
   padding: 0 4px;
@@ -2305,17 +2453,20 @@ nav.pagination ul li.prev a:hover, nav.pagination ul li.prev a:focus, nav.pagina
   background: #198d98;
 }
 nav.pagination ul li.disabled a {
-  color: #d9d9d9;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-  background: #a6a6a6;
-  border-color: silver;
 }
-nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus {
-  background: #a6a6a6;
-  border-color: gray;
-  color: #d9d9d9;
+nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus, nav.pagination ul li.disabled a:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 nav.pagination ul li:first-child a, nav.pagination ul li:first-child a:visited {
   -ms-border-radius: 4px;
@@ -2332,6 +2483,9 @@ nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:visited {
   border-radius: 4px;
 }
 
+.no-js nav ul li.menu ul {
+  display: none;
+}
 .no-js nav ul li.menu:hover ul, .no-js nav ul li.menu:focus ul {
   display: block !important;
 }
@@ -2363,94 +2517,39 @@ ul.breadcrumbs li:first-child a:before {
   display: none;
 }
 
-.tabs {
+.tabs, [role=tabpanel] {
   position: relative;
 }
-.tabs.vertical > ul {
-  height: 100%;
-  position: absolute;
-  width: 20%;
-  background: #198d98;
-  border-bottom: 1px solid #198d98;
-  -ms-border-radius: 4px 0 0 4px;
-  -o-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
-}
-.tabs.vertical > ul li {
-  float: none;
-  margin: 0 -1px 0 0;
-}
-.tabs.vertical > ul li:first-child a, .tabs.vertical > ul li:first-child a:visited {
-  -ms-border-radius: 4px 0 0 0;
-  -o-border-radius: 4px 0 0 0;
-  -moz-border-radius: 4px 0 0 0;
-  -webkit-border-radius: 4px 0 0 0;
-  border-radius: 4px 0 0 0;
-}
-.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited {
-  height: auto;
-  border-bottom: 1px solid #198d98;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-.tabs.vertical > ul li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ul li a:visited:before, .tabs.vertical > ul li a:visited:after {
-  display: none !important;
-}
-.tabs.vertical > ul li a.active, .tabs.vertical > ul li a:visited.active {
-  border-right: none;
-  color: #2b2b2d;
-  background: white;
-}
-.tabs.vertical > ul li a.active:hover, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ul li a:visited.active:hover, .tabs.vertical > ul li a:visited.active:focus {
-  border-right: none;
-  color: #2b2b2d;
-  background: white;
-}
-.tabs.vertical > div {
-  position: relative;
-  left: 20%;
-  width: 80%;
-  -ms-border-radius: 0 4px 4px 0;
-  -o-border-radius: 0 4px 4px 0;
-  -moz-border-radius: 0 4px 4px 0;
-  -webkit-border-radius: 0 4px 4px 0;
-  border-radius: 0 4px 4px 0;
-}
-.tabs > ul {
+.tabs > ul, .tabs > ol, .tabs [role=tablist], [role=tabpanel] > ul, [role=tabpanel] > ol, [role=tabpanel] [role=tablist] {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.tabs > ul:after {
+.tabs > ul:after, .tabs > ol:after, .tabs [role=tablist]:after, [role=tabpanel] > ul:after, [role=tabpanel] > ol:after, [role=tabpanel] [role=tablist]:after {
   content: '';
   display: block;
   clear: both;
 }
-.tabs > ul li {
+.tabs > ul li, .tabs > ul [role=tab], .tabs > ol li, .tabs > ol [role=tab], .tabs [role=tablist] li, .tabs [role=tablist] [role=tab], [role=tabpanel] > ul li, [role=tabpanel] > ul [role=tab], [role=tabpanel] > ol li, [role=tabpanel] > ol [role=tab], [role=tabpanel] [role=tablist] li, [role=tabpanel] [role=tablist] [role=tab] {
   display: block;
   float: left;
   margin: 0 2px;
 }
-.tabs > ul li.pull-right {
+.tabs > ul li.pull-right, .tabs > ul [role=tab].pull-right, .tabs > ol li.pull-right, .tabs > ol [role=tab].pull-right, .tabs [role=tablist] li.pull-right, .tabs [role=tablist] [role=tab].pull-right, [role=tabpanel] > ul li.pull-right, [role=tabpanel] > ul [role=tab].pull-right, [role=tabpanel] > ol li.pull-right, [role=tabpanel] > ol [role=tab].pull-right, [role=tabpanel] [role=tablist] li.pull-right, [role=tabpanel] [role=tablist] [role=tab].pull-right {
   float: right;
 }
-.tabs > ul li.pull-left {
+.tabs > ul li.pull-left, .tabs > ul [role=tab].pull-left, .tabs > ol li.pull-left, .tabs > ol [role=tab].pull-left, .tabs [role=tablist] li.pull-left, .tabs [role=tablist] [role=tab].pull-left, [role=tabpanel] > ul li.pull-left, [role=tabpanel] > ul [role=tab].pull-left, [role=tabpanel] > ol li.pull-left, [role=tabpanel] > ol [role=tab].pull-left, [role=tabpanel] [role=tablist] li.pull-left, [role=tabpanel] [role=tablist] [role=tab].pull-left {
   float: left;
 }
-.tabs > ul li:first-child {
+.tabs > ul li:first-child, .tabs > ul [role=tab]:first-child, .tabs > ol li:first-child, .tabs > ol [role=tab]:first-child, .tabs [role=tablist] li:first-child, .tabs [role=tablist] [role=tab]:first-child, [role=tabpanel] > ul li:first-child, [role=tabpanel] > ul [role=tab]:first-child, [role=tabpanel] > ol li:first-child, [role=tabpanel] > ol [role=tab]:first-child, [role=tabpanel] [role=tablist] li:first-child, [role=tabpanel] [role=tablist] [role=tab]:first-child {
   margin-left: 0;
 }
-.tabs > ul li:first-child a:before {
+.tabs > ul li:first-child a:before, .tabs > ul li:first-child a:visited:before, .tabs > ul [role=tab]:first-child a:before, .tabs > ul [role=tab]:first-child a:visited:before, .tabs > ol li:first-child a:before, .tabs > ol li:first-child a:visited:before, .tabs > ol [role=tab]:first-child a:before, .tabs > ol [role=tab]:first-child a:visited:before, .tabs [role=tablist] li:first-child a:before, .tabs [role=tablist] li:first-child a:visited:before, .tabs [role=tablist] [role=tab]:first-child a:before, .tabs [role=tablist] [role=tab]:first-child a:visited:before, [role=tabpanel] > ul li:first-child a:before, [role=tabpanel] > ul li:first-child a:visited:before, [role=tabpanel] > ul [role=tab]:first-child a:before, [role=tabpanel] > ul [role=tab]:first-child a:visited:before, [role=tabpanel] > ol li:first-child a:before, [role=tabpanel] > ol li:first-child a:visited:before, [role=tabpanel] > ol [role=tab]:first-child a:before, [role=tabpanel] > ol [role=tab]:first-child a:visited:before, [role=tabpanel] [role=tablist] li:first-child a:before, [role=tabpanel] [role=tablist] li:first-child a:visited:before, [role=tabpanel] [role=tablist] [role=tab]:first-child a:before, [role=tabpanel] [role=tablist] [role=tab]:first-child a:visited:before {
   display: none;
 }
-.tabs > ul li a {
+.tabs > ul li a, .tabs > ul li a:visited, .tabs > ul [role=tab] a, .tabs > ul [role=tab] a:visited, .tabs > ol li a, .tabs > ol li a:visited, .tabs > ol [role=tab] a, .tabs > ol [role=tab] a:visited, .tabs [role=tablist] li a, .tabs [role=tablist] li a:visited, .tabs [role=tablist] [role=tab] a, .tabs [role=tablist] [role=tab] a:visited, [role=tabpanel] > ul li a, [role=tabpanel] > ul li a:visited, [role=tabpanel] > ul [role=tab] a, [role=tabpanel] > ul [role=tab] a:visited, [role=tabpanel] > ol li a, [role=tabpanel] > ol li a:visited, [role=tabpanel] > ol [role=tab] a, [role=tabpanel] > ol [role=tab] a:visited, [role=tabpanel] [role=tablist] li a, [role=tabpanel] [role=tablist] li a:visited, [role=tabpanel] [role=tablist] [role=tab] a, [role=tabpanel] [role=tablist] [role=tab] a:visited {
   display: block;
   position: relative;
   width: 100%;
@@ -2477,75 +2576,76 @@ ul.breadcrumbs li:first-child a:before {
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs > ul li a:hover, .tabs > ul li a:focus {
+.tabs > ul li a:hover, .tabs > ul li a:focus, .tabs > ul li a:visited:hover, .tabs > ul li a:visited:focus, .tabs > ul [role=tab] a:hover, .tabs > ul [role=tab] a:focus, .tabs > ul [role=tab] a:visited:hover, .tabs > ul [role=tab] a:visited:focus, .tabs > ol li a:hover, .tabs > ol li a:focus, .tabs > ol li a:visited:hover, .tabs > ol li a:visited:focus, .tabs > ol [role=tab] a:hover, .tabs > ol [role=tab] a:focus, .tabs > ol [role=tab] a:visited:hover, .tabs > ol [role=tab] a:visited:focus, .tabs [role=tablist] li a:hover, .tabs [role=tablist] li a:focus, .tabs [role=tablist] li a:visited:hover, .tabs [role=tablist] li a:visited:focus, .tabs [role=tablist] [role=tab] a:hover, .tabs [role=tablist] [role=tab] a:focus, .tabs [role=tablist] [role=tab] a:visited:hover, .tabs [role=tablist] [role=tab] a:visited:focus, [role=tabpanel] > ul li a:hover, [role=tabpanel] > ul li a:focus, [role=tabpanel] > ul li a:visited:hover, [role=tabpanel] > ul li a:visited:focus, [role=tabpanel] > ul [role=tab] a:hover, [role=tabpanel] > ul [role=tab] a:focus, [role=tabpanel] > ul [role=tab] a:visited:hover, [role=tabpanel] > ul [role=tab] a:visited:focus, [role=tabpanel] > ol li a:hover, [role=tabpanel] > ol li a:focus, [role=tabpanel] > ol li a:visited:hover, [role=tabpanel] > ol li a:visited:focus, [role=tabpanel] > ol [role=tab] a:hover, [role=tabpanel] > ol [role=tab] a:focus, [role=tabpanel] > ol [role=tab] a:visited:hover, [role=tabpanel] > ol [role=tab] a:visited:focus, [role=tabpanel] [role=tablist] li a:hover, [role=tabpanel] [role=tablist] li a:focus, [role=tabpanel] [role=tablist] li a:visited:hover, [role=tabpanel] [role=tablist] li a:visited:focus, [role=tabpanel] [role=tablist] [role=tab] a:hover, [role=tabpanel] [role=tablist] [role=tab] a:focus, [role=tabpanel] [role=tablist] [role=tab] a:visited:hover, [role=tabpanel] [role=tablist] [role=tab] a:visited:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   text-decoration: none;
 }
-.tabs > ul li a:hover:before, .tabs > ul li a:focus:before {
+.tabs > ul li a:hover:before, .tabs > ul li a:focus:before, .tabs > ul li a:visited:hover:before, .tabs > ul li a:visited:focus:before, .tabs > ul [role=tab] a:hover:before, .tabs > ul [role=tab] a:focus:before, .tabs > ul [role=tab] a:visited:hover:before, .tabs > ul [role=tab] a:visited:focus:before, .tabs > ol li a:hover:before, .tabs > ol li a:focus:before, .tabs > ol li a:visited:hover:before, .tabs > ol li a:visited:focus:before, .tabs > ol [role=tab] a:hover:before, .tabs > ol [role=tab] a:focus:before, .tabs > ol [role=tab] a:visited:hover:before, .tabs > ol [role=tab] a:visited:focus:before, .tabs [role=tablist] li a:hover:before, .tabs [role=tablist] li a:focus:before, .tabs [role=tablist] li a:visited:hover:before, .tabs [role=tablist] li a:visited:focus:before, .tabs [role=tablist] [role=tab] a:hover:before, .tabs [role=tablist] [role=tab] a:focus:before, .tabs [role=tablist] [role=tab] a:visited:hover:before, .tabs [role=tablist] [role=tab] a:visited:focus:before, [role=tabpanel] > ul li a:hover:before, [role=tabpanel] > ul li a:focus:before, [role=tabpanel] > ul li a:visited:hover:before, [role=tabpanel] > ul li a:visited:focus:before, [role=tabpanel] > ul [role=tab] a:hover:before, [role=tabpanel] > ul [role=tab] a:focus:before, [role=tabpanel] > ul [role=tab] a:visited:hover:before, [role=tabpanel] > ul [role=tab] a:visited:focus:before, [role=tabpanel] > ol li a:hover:before, [role=tabpanel] > ol li a:focus:before, [role=tabpanel] > ol li a:visited:hover:before, [role=tabpanel] > ol li a:visited:focus:before, [role=tabpanel] > ol [role=tab] a:hover:before, [role=tabpanel] > ol [role=tab] a:focus:before, [role=tabpanel] > ol [role=tab] a:visited:hover:before, [role=tabpanel] > ol [role=tab] a:visited:focus:before, [role=tabpanel] [role=tablist] li a:hover:before, [role=tabpanel] [role=tablist] li a:focus:before, [role=tabpanel] [role=tablist] li a:visited:hover:before, [role=tabpanel] [role=tablist] li a:visited:focus:before, [role=tabpanel] [role=tablist] [role=tab] a:hover:before, [role=tabpanel] [role=tablist] [role=tab] a:focus:before, [role=tabpanel] [role=tablist] [role=tab] a:visited:hover:before, [role=tabpanel] [role=tablist] [role=tab] a:visited:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a:hover:after, .tabs > ul li a:focus:after {
+.tabs > ul li a:hover:after, .tabs > ul li a:focus:after, .tabs > ul li a:visited:hover:after, .tabs > ul li a:visited:focus:after, .tabs > ul [role=tab] a:hover:after, .tabs > ul [role=tab] a:focus:after, .tabs > ul [role=tab] a:visited:hover:after, .tabs > ul [role=tab] a:visited:focus:after, .tabs > ol li a:hover:after, .tabs > ol li a:focus:after, .tabs > ol li a:visited:hover:after, .tabs > ol li a:visited:focus:after, .tabs > ol [role=tab] a:hover:after, .tabs > ol [role=tab] a:focus:after, .tabs > ol [role=tab] a:visited:hover:after, .tabs > ol [role=tab] a:visited:focus:after, .tabs [role=tablist] li a:hover:after, .tabs [role=tablist] li a:focus:after, .tabs [role=tablist] li a:visited:hover:after, .tabs [role=tablist] li a:visited:focus:after, .tabs [role=tablist] [role=tab] a:hover:after, .tabs [role=tablist] [role=tab] a:focus:after, .tabs [role=tablist] [role=tab] a:visited:hover:after, .tabs [role=tablist] [role=tab] a:visited:focus:after, [role=tabpanel] > ul li a:hover:after, [role=tabpanel] > ul li a:focus:after, [role=tabpanel] > ul li a:visited:hover:after, [role=tabpanel] > ul li a:visited:focus:after, [role=tabpanel] > ul [role=tab] a:hover:after, [role=tabpanel] > ul [role=tab] a:focus:after, [role=tabpanel] > ul [role=tab] a:visited:hover:after, [role=tabpanel] > ul [role=tab] a:visited:focus:after, [role=tabpanel] > ol li a:hover:after, [role=tabpanel] > ol li a:focus:after, [role=tabpanel] > ol li a:visited:hover:after, [role=tabpanel] > ol li a:visited:focus:after, [role=tabpanel] > ol [role=tab] a:hover:after, [role=tabpanel] > ol [role=tab] a:focus:after, [role=tabpanel] > ol [role=tab] a:visited:hover:after, [role=tabpanel] > ol [role=tab] a:visited:focus:after, [role=tabpanel] [role=tablist] li a:hover:after, [role=tabpanel] [role=tablist] li a:focus:after, [role=tabpanel] [role=tablist] li a:visited:hover:after, [role=tabpanel] [role=tablist] li a:visited:focus:after, [role=tabpanel] [role=tablist] [role=tab] a:hover:after, [role=tabpanel] [role=tablist] [role=tab] a:focus:after, [role=tabpanel] [role=tablist] [role=tab] a:visited:hover:after, [role=tabpanel] [role=tablist] [role=tab] a:visited:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.active, .tabs > ul li a.active:hover, .tabs > ul li a.active:focus {
+.tabs > ul li a.active, .tabs > ul li a.active:hover, .tabs > ul li a.active:focus, .tabs > ul li a:visited.active, .tabs > ul li a:visited.active:hover, .tabs > ul li a:visited.active:focus, .tabs > ul [role=tab] a.active, .tabs > ul [role=tab] a.active:hover, .tabs > ul [role=tab] a.active:focus, .tabs > ul [role=tab] a:visited.active, .tabs > ul [role=tab] a:visited.active:hover, .tabs > ul [role=tab] a:visited.active:focus, .tabs > ol li a.active, .tabs > ol li a.active:hover, .tabs > ol li a.active:focus, .tabs > ol li a:visited.active, .tabs > ol li a:visited.active:hover, .tabs > ol li a:visited.active:focus, .tabs > ol [role=tab] a.active, .tabs > ol [role=tab] a.active:hover, .tabs > ol [role=tab] a.active:focus, .tabs > ol [role=tab] a:visited.active, .tabs > ol [role=tab] a:visited.active:hover, .tabs > ol [role=tab] a:visited.active:focus, .tabs [role=tablist] li a.active, .tabs [role=tablist] li a.active:hover, .tabs [role=tablist] li a.active:focus, .tabs [role=tablist] li a:visited.active, .tabs [role=tablist] li a:visited.active:hover, .tabs [role=tablist] li a:visited.active:focus, .tabs [role=tablist] [role=tab] a.active, .tabs [role=tablist] [role=tab] a.active:hover, .tabs [role=tablist] [role=tab] a.active:focus, .tabs [role=tablist] [role=tab] a:visited.active, .tabs [role=tablist] [role=tab] a:visited.active:hover, .tabs [role=tablist] [role=tab] a:visited.active:focus, [role=tabpanel] > ul li a.active, [role=tabpanel] > ul li a.active:hover, [role=tabpanel] > ul li a.active:focus, [role=tabpanel] > ul li a:visited.active, [role=tabpanel] > ul li a:visited.active:hover, [role=tabpanel] > ul li a:visited.active:focus, [role=tabpanel] > ul [role=tab] a.active, [role=tabpanel] > ul [role=tab] a.active:hover, [role=tabpanel] > ul [role=tab] a.active:focus, [role=tabpanel] > ul [role=tab] a:visited.active, [role=tabpanel] > ul [role=tab] a:visited.active:hover, [role=tabpanel] > ul [role=tab] a:visited.active:focus, [role=tabpanel] > ol li a.active, [role=tabpanel] > ol li a.active:hover, [role=tabpanel] > ol li a.active:focus, [role=tabpanel] > ol li a:visited.active, [role=tabpanel] > ol li a:visited.active:hover, [role=tabpanel] > ol li a:visited.active:focus, [role=tabpanel] > ol [role=tab] a.active, [role=tabpanel] > ol [role=tab] a.active:hover, [role=tabpanel] > ol [role=tab] a.active:focus, [role=tabpanel] > ol [role=tab] a:visited.active, [role=tabpanel] > ol [role=tab] a:visited.active:hover, [role=tabpanel] > ol [role=tab] a:visited.active:focus, [role=tabpanel] [role=tablist] li a.active, [role=tabpanel] [role=tablist] li a.active:hover, [role=tabpanel] [role=tablist] li a.active:focus, [role=tabpanel] [role=tablist] li a:visited.active, [role=tabpanel] [role=tablist] li a:visited.active:hover, [role=tabpanel] [role=tablist] li a:visited.active:focus, [role=tabpanel] [role=tablist] [role=tab] a.active, [role=tabpanel] [role=tablist] [role=tab] a.active:hover, [role=tabpanel] [role=tablist] [role=tab] a.active:focus, [role=tabpanel] [role=tablist] [role=tab] a:visited.active, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:hover, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   z-index: 2;
 }
-.tabs > ul li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ul li a.active:focus:before {
+.tabs > ul li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ul li a:visited.active:before, .tabs > ul li a:visited.active:hover:before, .tabs > ul li a:visited.active:focus:before, .tabs > ul [role=tab] a.active:before, .tabs > ul [role=tab] a.active:hover:before, .tabs > ul [role=tab] a.active:focus:before, .tabs > ul [role=tab] a:visited.active:before, .tabs > ul [role=tab] a:visited.active:hover:before, .tabs > ul [role=tab] a:visited.active:focus:before, .tabs > ol li a.active:before, .tabs > ol li a.active:hover:before, .tabs > ol li a.active:focus:before, .tabs > ol li a:visited.active:before, .tabs > ol li a:visited.active:hover:before, .tabs > ol li a:visited.active:focus:before, .tabs > ol [role=tab] a.active:before, .tabs > ol [role=tab] a.active:hover:before, .tabs > ol [role=tab] a.active:focus:before, .tabs > ol [role=tab] a:visited.active:before, .tabs > ol [role=tab] a:visited.active:hover:before, .tabs > ol [role=tab] a:visited.active:focus:before, .tabs [role=tablist] li a.active:before, .tabs [role=tablist] li a.active:hover:before, .tabs [role=tablist] li a.active:focus:before, .tabs [role=tablist] li a:visited.active:before, .tabs [role=tablist] li a:visited.active:hover:before, .tabs [role=tablist] li a:visited.active:focus:before, .tabs [role=tablist] [role=tab] a.active:before, .tabs [role=tablist] [role=tab] a.active:hover:before, .tabs [role=tablist] [role=tab] a.active:focus:before, .tabs [role=tablist] [role=tab] a:visited.active:before, .tabs [role=tablist] [role=tab] a:visited.active:hover:before, .tabs [role=tablist] [role=tab] a:visited.active:focus:before, [role=tabpanel] > ul li a.active:before, [role=tabpanel] > ul li a.active:hover:before, [role=tabpanel] > ul li a.active:focus:before, [role=tabpanel] > ul li a:visited.active:before, [role=tabpanel] > ul li a:visited.active:hover:before, [role=tabpanel] > ul li a:visited.active:focus:before, [role=tabpanel] > ul [role=tab] a.active:before, [role=tabpanel] > ul [role=tab] a.active:hover:before, [role=tabpanel] > ul [role=tab] a.active:focus:before, [role=tabpanel] > ul [role=tab] a:visited.active:before, [role=tabpanel] > ul [role=tab] a:visited.active:hover:before, [role=tabpanel] > ul [role=tab] a:visited.active:focus:before, [role=tabpanel] > ol li a.active:before, [role=tabpanel] > ol li a.active:hover:before, [role=tabpanel] > ol li a.active:focus:before, [role=tabpanel] > ol li a:visited.active:before, [role=tabpanel] > ol li a:visited.active:hover:before, [role=tabpanel] > ol li a:visited.active:focus:before, [role=tabpanel] > ol [role=tab] a.active:before, [role=tabpanel] > ol [role=tab] a.active:hover:before, [role=tabpanel] > ol [role=tab] a.active:focus:before, [role=tabpanel] > ol [role=tab] a:visited.active:before, [role=tabpanel] > ol [role=tab] a:visited.active:hover:before, [role=tabpanel] > ol [role=tab] a:visited.active:focus:before, [role=tabpanel] [role=tablist] li a.active:before, [role=tabpanel] [role=tablist] li a.active:hover:before, [role=tabpanel] [role=tablist] li a.active:focus:before, [role=tabpanel] [role=tablist] li a:visited.active:before, [role=tabpanel] [role=tablist] li a:visited.active:hover:before, [role=tabpanel] [role=tablist] li a:visited.active:focus:before, [role=tabpanel] [role=tablist] [role=tab] a.active:before, [role=tabpanel] [role=tablist] [role=tab] a.active:hover:before, [role=tabpanel] [role=tablist] [role=tab] a.active:focus:before, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:before, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:hover:before, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ul li a.active:focus:after {
+.tabs > ul li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ul li a:visited.active:after, .tabs > ul li a:visited.active:hover:after, .tabs > ul li a:visited.active:focus:after, .tabs > ul [role=tab] a.active:after, .tabs > ul [role=tab] a.active:hover:after, .tabs > ul [role=tab] a.active:focus:after, .tabs > ul [role=tab] a:visited.active:after, .tabs > ul [role=tab] a:visited.active:hover:after, .tabs > ul [role=tab] a:visited.active:focus:after, .tabs > ol li a.active:after, .tabs > ol li a.active:hover:after, .tabs > ol li a.active:focus:after, .tabs > ol li a:visited.active:after, .tabs > ol li a:visited.active:hover:after, .tabs > ol li a:visited.active:focus:after, .tabs > ol [role=tab] a.active:after, .tabs > ol [role=tab] a.active:hover:after, .tabs > ol [role=tab] a.active:focus:after, .tabs > ol [role=tab] a:visited.active:after, .tabs > ol [role=tab] a:visited.active:hover:after, .tabs > ol [role=tab] a:visited.active:focus:after, .tabs [role=tablist] li a.active:after, .tabs [role=tablist] li a.active:hover:after, .tabs [role=tablist] li a.active:focus:after, .tabs [role=tablist] li a:visited.active:after, .tabs [role=tablist] li a:visited.active:hover:after, .tabs [role=tablist] li a:visited.active:focus:after, .tabs [role=tablist] [role=tab] a.active:after, .tabs [role=tablist] [role=tab] a.active:hover:after, .tabs [role=tablist] [role=tab] a.active:focus:after, .tabs [role=tablist] [role=tab] a:visited.active:after, .tabs [role=tablist] [role=tab] a:visited.active:hover:after, .tabs [role=tablist] [role=tab] a:visited.active:focus:after, [role=tabpanel] > ul li a.active:after, [role=tabpanel] > ul li a.active:hover:after, [role=tabpanel] > ul li a.active:focus:after, [role=tabpanel] > ul li a:visited.active:after, [role=tabpanel] > ul li a:visited.active:hover:after, [role=tabpanel] > ul li a:visited.active:focus:after, [role=tabpanel] > ul [role=tab] a.active:after, [role=tabpanel] > ul [role=tab] a.active:hover:after, [role=tabpanel] > ul [role=tab] a.active:focus:after, [role=tabpanel] > ul [role=tab] a:visited.active:after, [role=tabpanel] > ul [role=tab] a:visited.active:hover:after, [role=tabpanel] > ul [role=tab] a:visited.active:focus:after, [role=tabpanel] > ol li a.active:after, [role=tabpanel] > ol li a.active:hover:after, [role=tabpanel] > ol li a.active:focus:after, [role=tabpanel] > ol li a:visited.active:after, [role=tabpanel] > ol li a:visited.active:hover:after, [role=tabpanel] > ol li a:visited.active:focus:after, [role=tabpanel] > ol [role=tab] a.active:after, [role=tabpanel] > ol [role=tab] a.active:hover:after, [role=tabpanel] > ol [role=tab] a.active:focus:after, [role=tabpanel] > ol [role=tab] a:visited.active:after, [role=tabpanel] > ol [role=tab] a:visited.active:hover:after, [role=tabpanel] > ol [role=tab] a:visited.active:focus:after, [role=tabpanel] [role=tablist] li a.active:after, [role=tabpanel] [role=tablist] li a.active:hover:after, [role=tabpanel] [role=tablist] li a.active:focus:after, [role=tabpanel] [role=tablist] li a:visited.active:after, [role=tabpanel] [role=tablist] li a:visited.active:hover:after, [role=tabpanel] [role=tablist] li a:visited.active:focus:after, [role=tabpanel] [role=tablist] [role=tab] a.active:after, [role=tabpanel] [role=tablist] [role=tab] a.active:hover:after, [role=tabpanel] [role=tablist] [role=tab] a.active:focus:after, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:after, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:hover:after, [role=tabpanel] [role=tablist] [role=tab] a:visited.active:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.disabled {
-  color: #d9d9d9;
+.tabs > ul li a.disabled, .tabs > ul li a:visited.disabled, .tabs > ul [role=tab] a.disabled, .tabs > ul [role=tab] a:visited.disabled, .tabs > ol li a.disabled, .tabs > ol li a:visited.disabled, .tabs > ol [role=tab] a.disabled, .tabs > ol [role=tab] a:visited.disabled, .tabs [role=tablist] li a.disabled, .tabs [role=tablist] li a:visited.disabled, .tabs [role=tablist] [role=tab] a.disabled, .tabs [role=tablist] [role=tab] a:visited.disabled, [role=tabpanel] > ul li a.disabled, [role=tabpanel] > ul li a:visited.disabled, [role=tabpanel] > ul [role=tab] a.disabled, [role=tabpanel] > ul [role=tab] a:visited.disabled, [role=tabpanel] > ol li a.disabled, [role=tabpanel] > ol li a:visited.disabled, [role=tabpanel] > ol [role=tab] a.disabled, [role=tabpanel] > ol [role=tab] a:visited.disabled, [role=tabpanel] [role=tablist] li a.disabled, [role=tabpanel] [role=tablist] li a:visited.disabled, [role=tabpanel] [role=tablist] [role=tab] a.disabled, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
-  background: #a6a6a6;
-  border-color: silver;
+  border-bottom-color: #57c1cb !important;
 }
-.tabs > ul li a.disabled:before {
-  box-shadow: 2px 1px 0 #a6a6a6;
+.tabs > ul li a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ul li a:visited.disabled:hover, .tabs > ul li a:visited.disabled:focus, .tabs > ul li a:visited.disabled:visited, .tabs > ul [role=tab] a.disabled:hover, .tabs > ul [role=tab] a.disabled:focus, .tabs > ul [role=tab] a.disabled:visited, .tabs > ul [role=tab] a:visited.disabled:hover, .tabs > ul [role=tab] a:visited.disabled:focus, .tabs > ul [role=tab] a:visited.disabled:visited, .tabs > ol li a.disabled:hover, .tabs > ol li a.disabled:focus, .tabs > ol li a.disabled:visited, .tabs > ol li a:visited.disabled:hover, .tabs > ol li a:visited.disabled:focus, .tabs > ol li a:visited.disabled:visited, .tabs > ol [role=tab] a.disabled:hover, .tabs > ol [role=tab] a.disabled:focus, .tabs > ol [role=tab] a.disabled:visited, .tabs > ol [role=tab] a:visited.disabled:hover, .tabs > ol [role=tab] a:visited.disabled:focus, .tabs > ol [role=tab] a:visited.disabled:visited, .tabs [role=tablist] li a.disabled:hover, .tabs [role=tablist] li a.disabled:focus, .tabs [role=tablist] li a.disabled:visited, .tabs [role=tablist] li a:visited.disabled:hover, .tabs [role=tablist] li a:visited.disabled:focus, .tabs [role=tablist] li a:visited.disabled:visited, .tabs [role=tablist] [role=tab] a.disabled:hover, .tabs [role=tablist] [role=tab] a.disabled:focus, .tabs [role=tablist] [role=tab] a.disabled:visited, .tabs [role=tablist] [role=tab] a:visited.disabled:hover, .tabs [role=tablist] [role=tab] a:visited.disabled:focus, .tabs [role=tablist] [role=tab] a:visited.disabled:visited, [role=tabpanel] > ul li a.disabled:hover, [role=tabpanel] > ul li a.disabled:focus, [role=tabpanel] > ul li a.disabled:visited, [role=tabpanel] > ul li a:visited.disabled:hover, [role=tabpanel] > ul li a:visited.disabled:focus, [role=tabpanel] > ul li a:visited.disabled:visited, [role=tabpanel] > ul [role=tab] a.disabled:hover, [role=tabpanel] > ul [role=tab] a.disabled:focus, [role=tabpanel] > ul [role=tab] a.disabled:visited, [role=tabpanel] > ul [role=tab] a:visited.disabled:hover, [role=tabpanel] > ul [role=tab] a:visited.disabled:focus, [role=tabpanel] > ul [role=tab] a:visited.disabled:visited, [role=tabpanel] > ol li a.disabled:hover, [role=tabpanel] > ol li a.disabled:focus, [role=tabpanel] > ol li a.disabled:visited, [role=tabpanel] > ol li a:visited.disabled:hover, [role=tabpanel] > ol li a:visited.disabled:focus, [role=tabpanel] > ol li a:visited.disabled:visited, [role=tabpanel] > ol [role=tab] a.disabled:hover, [role=tabpanel] > ol [role=tab] a.disabled:focus, [role=tabpanel] > ol [role=tab] a.disabled:visited, [role=tabpanel] > ol [role=tab] a:visited.disabled:hover, [role=tabpanel] > ol [role=tab] a:visited.disabled:focus, [role=tabpanel] > ol [role=tab] a:visited.disabled:visited, [role=tabpanel] [role=tablist] li a.disabled:hover, [role=tabpanel] [role=tablist] li a.disabled:focus, [role=tabpanel] [role=tablist] li a.disabled:visited, [role=tabpanel] [role=tablist] li a:visited.disabled:hover, [role=tabpanel] [role=tablist] li a:visited.disabled:focus, [role=tabpanel] [role=tablist] li a:visited.disabled:visited, [role=tabpanel] [role=tablist] [role=tab] a.disabled:hover, [role=tabpanel] [role=tablist] [role=tab] a.disabled:focus, [role=tabpanel] [role=tablist] [role=tab] a.disabled:visited, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled:hover, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled:focus, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled:visited {
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
-.tabs > ul li a.disabled:after {
-  box-shadow: -2px 1px 0 #a6a6a6;
+.tabs > ul li a.disabled:before, .tabs > ul li a:visited.disabled:before, .tabs > ul [role=tab] a.disabled:before, .tabs > ul [role=tab] a:visited.disabled:before, .tabs > ol li a.disabled:before, .tabs > ol li a:visited.disabled:before, .tabs > ol [role=tab] a.disabled:before, .tabs > ol [role=tab] a:visited.disabled:before, .tabs [role=tablist] li a.disabled:before, .tabs [role=tablist] li a:visited.disabled:before, .tabs [role=tablist] [role=tab] a.disabled:before, .tabs [role=tablist] [role=tab] a:visited.disabled:before, [role=tabpanel] > ul li a.disabled:before, [role=tabpanel] > ul li a:visited.disabled:before, [role=tabpanel] > ul [role=tab] a.disabled:before, [role=tabpanel] > ul [role=tab] a:visited.disabled:before, [role=tabpanel] > ol li a.disabled:before, [role=tabpanel] > ol li a:visited.disabled:before, [role=tabpanel] > ol [role=tab] a.disabled:before, [role=tabpanel] > ol [role=tab] a:visited.disabled:before, [role=tabpanel] [role=tablist] li a.disabled:before, [role=tabpanel] [role=tablist] li a:visited.disabled:before, [role=tabpanel] [role=tablist] [role=tab] a.disabled:before, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled:before {
+  box-shadow: 2px 1px 0 #57c1cb;
 }
-.tabs > ul li a.disabled:hover, .tabs > ul li a.disabled:focus {
-  background: #a6a6a6;
-  border: 1px solid #a6a6a6;
-  color: #d9d9d9;
+.tabs > ul li a.disabled:after, .tabs > ul li a:visited.disabled:after, .tabs > ul [role=tab] a.disabled:after, .tabs > ul [role=tab] a:visited.disabled:after, .tabs > ol li a.disabled:after, .tabs > ol li a:visited.disabled:after, .tabs > ol [role=tab] a.disabled:after, .tabs > ol [role=tab] a:visited.disabled:after, .tabs [role=tablist] li a.disabled:after, .tabs [role=tablist] li a:visited.disabled:after, .tabs [role=tablist] [role=tab] a.disabled:after, .tabs [role=tablist] [role=tab] a:visited.disabled:after, [role=tabpanel] > ul li a.disabled:after, [role=tabpanel] > ul li a:visited.disabled:after, [role=tabpanel] > ul [role=tab] a.disabled:after, [role=tabpanel] > ul [role=tab] a:visited.disabled:after, [role=tabpanel] > ol li a.disabled:after, [role=tabpanel] > ol li a:visited.disabled:after, [role=tabpanel] > ol [role=tab] a.disabled:after, [role=tabpanel] > ol [role=tab] a:visited.disabled:after, [role=tabpanel] [role=tablist] li a.disabled:after, [role=tabpanel] [role=tablist] li a:visited.disabled:after, [role=tabpanel] [role=tablist] [role=tab] a.disabled:after, [role=tabpanel] [role=tablist] [role=tab] a:visited.disabled:after {
+  box-shadow: -2px 1px 0 #57c1cb;
 }
-.tabs > ul li a.disabled:hover:before, .tabs > ul li a.disabled:focus:before {
-  box-shadow: 2px 1px 0 #a6a6a6;
-}
-.tabs > ul li a.disabled:hover:after, .tabs > ul li a.disabled:focus:after {
-  box-shadow: -2px 1px 0 #a6a6a6;
-}
-.tabs > ul li a:before, .tabs > ul li a:after {
+.tabs > ul li a:before, .tabs > ul li a:after, .tabs > ul li a:visited:before, .tabs > ul li a:visited:after, .tabs > ul [role=tab] a:before, .tabs > ul [role=tab] a:after, .tabs > ul [role=tab] a:visited:before, .tabs > ul [role=tab] a:visited:after, .tabs > ol li a:before, .tabs > ol li a:after, .tabs > ol li a:visited:before, .tabs > ol li a:visited:after, .tabs > ol [role=tab] a:before, .tabs > ol [role=tab] a:after, .tabs > ol [role=tab] a:visited:before, .tabs > ol [role=tab] a:visited:after, .tabs [role=tablist] li a:before, .tabs [role=tablist] li a:after, .tabs [role=tablist] li a:visited:before, .tabs [role=tablist] li a:visited:after, .tabs [role=tablist] [role=tab] a:before, .tabs [role=tablist] [role=tab] a:after, .tabs [role=tablist] [role=tab] a:visited:before, .tabs [role=tablist] [role=tab] a:visited:after, [role=tabpanel] > ul li a:before, [role=tabpanel] > ul li a:after, [role=tabpanel] > ul li a:visited:before, [role=tabpanel] > ul li a:visited:after, [role=tabpanel] > ul [role=tab] a:before, [role=tabpanel] > ul [role=tab] a:after, [role=tabpanel] > ul [role=tab] a:visited:before, [role=tabpanel] > ul [role=tab] a:visited:after, [role=tabpanel] > ol li a:before, [role=tabpanel] > ol li a:after, [role=tabpanel] > ol li a:visited:before, [role=tabpanel] > ol li a:visited:after, [role=tabpanel] > ol [role=tab] a:before, [role=tabpanel] > ol [role=tab] a:after, [role=tabpanel] > ol [role=tab] a:visited:before, [role=tabpanel] > ol [role=tab] a:visited:after, [role=tabpanel] [role=tablist] li a:before, [role=tabpanel] [role=tablist] li a:after, [role=tabpanel] [role=tablist] li a:visited:before, [role=tabpanel] [role=tablist] li a:visited:after, [role=tabpanel] [role=tablist] [role=tab] a:before, [role=tabpanel] [role=tablist] [role=tab] a:after, [role=tabpanel] [role=tablist] [role=tab] a:visited:before, [role=tabpanel] [role=tablist] [role=tab] a:visited:after {
   position: absolute;
   bottom: -1px;
   width: 6px;
   height: 6px;
   content: '';
 }
-.tabs > ul li a:before {
+.tabs > ul li a:before, .tabs > ul li a:visited:before, .tabs > ul [role=tab] a:before, .tabs > ul [role=tab] a:visited:before, .tabs > ol li a:before, .tabs > ol li a:visited:before, .tabs > ol [role=tab] a:before, .tabs > ol [role=tab] a:visited:before, .tabs [role=tablist] li a:before, .tabs [role=tablist] li a:visited:before, .tabs [role=tablist] [role=tab] a:before, .tabs [role=tablist] [role=tab] a:visited:before, [role=tabpanel] > ul li a:before, [role=tabpanel] > ul li a:visited:before, [role=tabpanel] > ul [role=tab] a:before, [role=tabpanel] > ul [role=tab] a:visited:before, [role=tabpanel] > ol li a:before, [role=tabpanel] > ol li a:visited:before, [role=tabpanel] > ol [role=tab] a:before, [role=tabpanel] > ol [role=tab] a:visited:before, [role=tabpanel] [role=tablist] li a:before, [role=tabpanel] [role=tablist] li a:visited:before, [role=tabpanel] [role=tablist] [role=tab] a:before, [role=tabpanel] [role=tablist] [role=tab] a:visited:before {
   left: -6px;
   border-bottom-right-radius: 6px;
   border-width: 0 1px 1px 0;
   box-shadow: 2px 1px 0 #1dabb8;
 }
-.tabs > ul li a:after {
+.tabs > ul li a:after, .tabs > ul li a:visited:after, .tabs > ul [role=tab] a:after, .tabs > ul [role=tab] a:visited:after, .tabs > ol li a:after, .tabs > ol li a:visited:after, .tabs > ol [role=tab] a:after, .tabs > ol [role=tab] a:visited:after, .tabs [role=tablist] li a:after, .tabs [role=tablist] li a:visited:after, .tabs [role=tablist] [role=tab] a:after, .tabs [role=tablist] [role=tab] a:visited:after, [role=tabpanel] > ul li a:after, [role=tabpanel] > ul li a:visited:after, [role=tabpanel] > ul [role=tab] a:after, [role=tabpanel] > ul [role=tab] a:visited:after, [role=tabpanel] > ol li a:after, [role=tabpanel] > ol li a:visited:after, [role=tabpanel] > ol [role=tab] a:after, [role=tabpanel] > ol [role=tab] a:visited:after, [role=tabpanel] [role=tablist] li a:after, [role=tabpanel] [role=tablist] li a:visited:after, [role=tabpanel] [role=tablist] [role=tab] a:after, [role=tabpanel] [role=tablist] [role=tab] a:visited:after {
   right: -6px;
   border-bottom-left-radius: 6px;
   border-width: 0 0 1px 1px;
   box-shadow: -2px 1px 0 #1dabb8;
 }
-.tabs > div {
+.tabs [role=tablist], [role=tabpanel] [role=tablist] {
+  background: none;
+}
+.tabs > div, .tabs [role=tabpanel], [role=tabpanel] > div, [role=tabpanel] [role=tabpanel] {
   display: none;
   padding: 20px;
   background: white;
@@ -2555,15 +2655,70 @@ ul.breadcrumbs li:first-child a:before {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-.tabs > div *:first-child {
+.tabs > div *:first-child, .tabs [role=tabpanel] *:first-child, [role=tabpanel] > div *:first-child, [role=tabpanel] [role=tabpanel] *:first-child {
   margin-top: 0;
 }
-.tabs > div *:last-child {
+.tabs > div *:last-child, .tabs [role=tabpanel] *:last-child, [role=tabpanel] > div *:last-child, [role=tabpanel] [role=tabpanel] *:last-child {
   margin-bottom: 0;
 }
-.tabs > div.active {
+.tabs > div.active, .tabs [role=tabpanel].active, [role=tabpanel] > div.active, [role=tabpanel] [role=tabpanel].active {
   display: block;
   border: 1px solid #198d98;
+}
+.tabs.vertical > ul, .tabs.vertical > ol, .tabs.vertical [role=tablist], [role=tabpanel].vertical > ul, [role=tabpanel].vertical > ol, [role=tabpanel].vertical [role=tablist] {
+  height: 100%;
+  position: absolute;
+  width: 20%;
+  background: #198d98;
+  border-bottom: 1px solid #198d98;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+.tabs.vertical > ul li, .tabs.vertical > ul [role=tab], .tabs.vertical > ol li, .tabs.vertical > ol [role=tab], .tabs.vertical [role=tablist] li, .tabs.vertical [role=tablist] [role=tab], [role=tabpanel].vertical > ul li, [role=tabpanel].vertical > ul [role=tab], [role=tabpanel].vertical > ol li, [role=tabpanel].vertical > ol [role=tab], [role=tabpanel].vertical [role=tablist] li, [role=tabpanel].vertical [role=tablist] [role=tab] {
+  float: none;
+  margin: 0 -1px 0 0;
+}
+.tabs.vertical > ul li:first-child a, .tabs.vertical > ul li:first-child a:visited, .tabs.vertical > ul [role=tab]:first-child a, .tabs.vertical > ul [role=tab]:first-child a:visited, .tabs.vertical > ol li:first-child a, .tabs.vertical > ol li:first-child a:visited, .tabs.vertical > ol [role=tab]:first-child a, .tabs.vertical > ol [role=tab]:first-child a:visited, .tabs.vertical [role=tablist] li:first-child a, .tabs.vertical [role=tablist] li:first-child a:visited, .tabs.vertical [role=tablist] [role=tab]:first-child a, .tabs.vertical [role=tablist] [role=tab]:first-child a:visited, [role=tabpanel].vertical > ul li:first-child a, [role=tabpanel].vertical > ul li:first-child a:visited, [role=tabpanel].vertical > ul [role=tab]:first-child a, [role=tabpanel].vertical > ul [role=tab]:first-child a:visited, [role=tabpanel].vertical > ol li:first-child a, [role=tabpanel].vertical > ol li:first-child a:visited, [role=tabpanel].vertical > ol [role=tab]:first-child a, [role=tabpanel].vertical > ol [role=tab]:first-child a:visited, [role=tabpanel].vertical [role=tablist] li:first-child a, [role=tabpanel].vertical [role=tablist] li:first-child a:visited, [role=tabpanel].vertical [role=tablist] [role=tab]:first-child a, [role=tabpanel].vertical [role=tablist] [role=tab]:first-child a:visited {
+  -ms-border-radius: 4px 0 0 0;
+  -o-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ul [role=tab] a, .tabs.vertical > ul [role=tab] a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited, .tabs.vertical > ol [role=tab] a, .tabs.vertical > ol [role=tab] a:visited, .tabs.vertical [role=tablist] li a, .tabs.vertical [role=tablist] li a:visited, .tabs.vertical [role=tablist] [role=tab] a, .tabs.vertical [role=tablist] [role=tab] a:visited, [role=tabpanel].vertical > ul li a, [role=tabpanel].vertical > ul li a:visited, [role=tabpanel].vertical > ul [role=tab] a, [role=tabpanel].vertical > ul [role=tab] a:visited, [role=tabpanel].vertical > ol li a, [role=tabpanel].vertical > ol li a:visited, [role=tabpanel].vertical > ol [role=tab] a, [role=tabpanel].vertical > ol [role=tab] a:visited, [role=tabpanel].vertical [role=tablist] li a, [role=tabpanel].vertical [role=tablist] li a:visited, [role=tabpanel].vertical [role=tablist] [role=tab] a, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited {
+  height: auto;
+  border-bottom: 1px solid #198d98;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.tabs.vertical > ul li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ul li a:visited:before, .tabs.vertical > ul li a:visited:after, .tabs.vertical > ul [role=tab] a:before, .tabs.vertical > ul [role=tab] a:after, .tabs.vertical > ul [role=tab] a:visited:before, .tabs.vertical > ul [role=tab] a:visited:after, .tabs.vertical > ol li a:before, .tabs.vertical > ol li a:after, .tabs.vertical > ol li a:visited:before, .tabs.vertical > ol li a:visited:after, .tabs.vertical > ol [role=tab] a:before, .tabs.vertical > ol [role=tab] a:after, .tabs.vertical > ol [role=tab] a:visited:before, .tabs.vertical > ol [role=tab] a:visited:after, .tabs.vertical [role=tablist] li a:before, .tabs.vertical [role=tablist] li a:after, .tabs.vertical [role=tablist] li a:visited:before, .tabs.vertical [role=tablist] li a:visited:after, .tabs.vertical [role=tablist] [role=tab] a:before, .tabs.vertical [role=tablist] [role=tab] a:after, .tabs.vertical [role=tablist] [role=tab] a:visited:before, .tabs.vertical [role=tablist] [role=tab] a:visited:after, [role=tabpanel].vertical > ul li a:before, [role=tabpanel].vertical > ul li a:after, [role=tabpanel].vertical > ul li a:visited:before, [role=tabpanel].vertical > ul li a:visited:after, [role=tabpanel].vertical > ul [role=tab] a:before, [role=tabpanel].vertical > ul [role=tab] a:after, [role=tabpanel].vertical > ul [role=tab] a:visited:before, [role=tabpanel].vertical > ul [role=tab] a:visited:after, [role=tabpanel].vertical > ol li a:before, [role=tabpanel].vertical > ol li a:after, [role=tabpanel].vertical > ol li a:visited:before, [role=tabpanel].vertical > ol li a:visited:after, [role=tabpanel].vertical > ol [role=tab] a:before, [role=tabpanel].vertical > ol [role=tab] a:after, [role=tabpanel].vertical > ol [role=tab] a:visited:before, [role=tabpanel].vertical > ol [role=tab] a:visited:after, [role=tabpanel].vertical [role=tablist] li a:before, [role=tabpanel].vertical [role=tablist] li a:after, [role=tabpanel].vertical [role=tablist] li a:visited:before, [role=tabpanel].vertical [role=tablist] li a:visited:after, [role=tabpanel].vertical [role=tablist] [role=tab] a:before, [role=tabpanel].vertical [role=tablist] [role=tab] a:after, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited:before, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited:after {
+  display: none !important;
+}
+.tabs.vertical > ul li a.active, .tabs.vertical > ul li a:visited.active, .tabs.vertical > ul [role=tab] a.active, .tabs.vertical > ul [role=tab] a:visited.active, .tabs.vertical > ol li a.active, .tabs.vertical > ol li a:visited.active, .tabs.vertical > ol [role=tab] a.active, .tabs.vertical > ol [role=tab] a:visited.active, .tabs.vertical [role=tablist] li a.active, .tabs.vertical [role=tablist] li a:visited.active, .tabs.vertical [role=tablist] [role=tab] a.active, .tabs.vertical [role=tablist] [role=tab] a:visited.active, [role=tabpanel].vertical > ul li a.active, [role=tabpanel].vertical > ul li a:visited.active, [role=tabpanel].vertical > ul [role=tab] a.active, [role=tabpanel].vertical > ul [role=tab] a:visited.active, [role=tabpanel].vertical > ol li a.active, [role=tabpanel].vertical > ol li a:visited.active, [role=tabpanel].vertical > ol [role=tab] a.active, [role=tabpanel].vertical > ol [role=tab] a:visited.active, [role=tabpanel].vertical [role=tablist] li a.active, [role=tabpanel].vertical [role=tablist] li a:visited.active, [role=tabpanel].vertical [role=tablist] [role=tab] a.active, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited.active {
+  border-right: none;
+  color: #2b2b2d;
+  background: white;
+}
+.tabs.vertical > ul li a.active:hover, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ul li a:visited.active:hover, .tabs.vertical > ul li a:visited.active:focus, .tabs.vertical > ul [role=tab] a.active:hover, .tabs.vertical > ul [role=tab] a.active:focus, .tabs.vertical > ul [role=tab] a:visited.active:hover, .tabs.vertical > ul [role=tab] a:visited.active:focus, .tabs.vertical > ol li a.active:hover, .tabs.vertical > ol li a.active:focus, .tabs.vertical > ol li a:visited.active:hover, .tabs.vertical > ol li a:visited.active:focus, .tabs.vertical > ol [role=tab] a.active:hover, .tabs.vertical > ol [role=tab] a.active:focus, .tabs.vertical > ol [role=tab] a:visited.active:hover, .tabs.vertical > ol [role=tab] a:visited.active:focus, .tabs.vertical [role=tablist] li a.active:hover, .tabs.vertical [role=tablist] li a.active:focus, .tabs.vertical [role=tablist] li a:visited.active:hover, .tabs.vertical [role=tablist] li a:visited.active:focus, .tabs.vertical [role=tablist] [role=tab] a.active:hover, .tabs.vertical [role=tablist] [role=tab] a.active:focus, .tabs.vertical [role=tablist] [role=tab] a:visited.active:hover, .tabs.vertical [role=tablist] [role=tab] a:visited.active:focus, [role=tabpanel].vertical > ul li a.active:hover, [role=tabpanel].vertical > ul li a.active:focus, [role=tabpanel].vertical > ul li a:visited.active:hover, [role=tabpanel].vertical > ul li a:visited.active:focus, [role=tabpanel].vertical > ul [role=tab] a.active:hover, [role=tabpanel].vertical > ul [role=tab] a.active:focus, [role=tabpanel].vertical > ul [role=tab] a:visited.active:hover, [role=tabpanel].vertical > ul [role=tab] a:visited.active:focus, [role=tabpanel].vertical > ol li a.active:hover, [role=tabpanel].vertical > ol li a.active:focus, [role=tabpanel].vertical > ol li a:visited.active:hover, [role=tabpanel].vertical > ol li a:visited.active:focus, [role=tabpanel].vertical > ol [role=tab] a.active:hover, [role=tabpanel].vertical > ol [role=tab] a.active:focus, [role=tabpanel].vertical > ol [role=tab] a:visited.active:hover, [role=tabpanel].vertical > ol [role=tab] a:visited.active:focus, [role=tabpanel].vertical [role=tablist] li a.active:hover, [role=tabpanel].vertical [role=tablist] li a.active:focus, [role=tabpanel].vertical [role=tablist] li a:visited.active:hover, [role=tabpanel].vertical [role=tablist] li a:visited.active:focus, [role=tabpanel].vertical [role=tablist] [role=tab] a.active:hover, [role=tabpanel].vertical [role=tablist] [role=tab] a.active:focus, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited.active:hover, [role=tabpanel].vertical [role=tablist] [role=tab] a:visited.active:focus {
+  border-right: none;
+  color: #2b2b2d;
+  background: white;
+}
+.tabs.vertical > div, .tabs.vertical [role=tabpanel], [role=tabpanel].vertical > div, [role=tabpanel].vertical [role=tabpanel] {
+  position: relative;
+  left: 20%;
+  width: 80%;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .message {
@@ -2679,6 +2834,22 @@ ul.breadcrumbs li:first-child a:before {
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
+}
+.callout.disabled {
+  color: #d9d9d9;
+  background: #a6a6a6;
+  border-color: gray;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.disabled:hover, .callout.disabled:focus, .callout.disabled:visited {
+  color: #d9d9d9;
+  background: #a6a6a6;
+  border-color: gray;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 .callout h1, .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
   color: white;
@@ -2883,7 +3054,7 @@ ul.icons li [class*=" icon-"] {
 
 .icon-border {
   border: solid 1px #eeeeee;
-  padding: 0.2em 0.25em 0.15em;
+  padding: .2em .25em .15em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4562,7 +4733,7 @@ ul.icons li [class*=" icon-"] {
   visibility: visible;
   opacity: 1;
 }
-.modal-active div.modal.active {
+.modal-active div.modal.active, .modal-active div[role=dialog].active {
   visibility: visible;
   opacity: 1;
   z-index: 999;
@@ -4596,7 +4767,7 @@ ul.icons li [class*=" icon-"] {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.9) 100%);
 }
 
-div.modal {
+div.modal, div[role=dialog] {
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -4622,12 +4793,12 @@ div.modal {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-div.modal.iframe {
+div.modal.iframe, div[role=dialog].iframe {
   overflow: hidden;
   width: 80%;
   height: 80%;
 }
-div.modal .modal-content {
+div.modal .modal-content, div[role=dialog] .modal-content {
   position: relative;
   overflow: auto;
   width: 100%;
@@ -4635,7 +4806,7 @@ div.modal .modal-content {
   background: #fff;
   padding: 25px;
 }
-div.modal .close, div.modal .fullscreen {
+div.modal .close, div.modal .fullscreen, div[role=dialog] .close, div[role=dialog] .fullscreen {
   position: absolute;
   z-index: 1000;
   font-size: 1.25em;
@@ -4652,10 +4823,10 @@ div.modal .close, div.modal .fullscreen {
   -webkit-border-radius: 0 0 0 4px;
   border-radius: 0 0 0 4px;
 }
-div.modal .close:hover, div.modal .close:focus, div.modal .fullscreen:hover, div.modal .fullscreen:focus {
+div.modal .close:hover, div.modal .close:focus, div.modal .fullscreen:hover, div.modal .fullscreen:focus, div[role=dialog] .close:hover, div[role=dialog] .close:focus, div[role=dialog] .fullscreen:hover, div[role=dialog] .fullscreen:focus {
   color: #fff;
 }
-div.modal .fullscreen {
+div.modal .fullscreen, div[role=dialog] .fullscreen {
   -ms-border-radius: 0 0 4px 0;
   -o-border-radius: 0 0 4px 0;
   -moz-border-radius: 0 0 4px 0;
@@ -4663,6 +4834,248 @@ div.modal .fullscreen {
   border-radius: 0 0 4px 0;
   right: auto;
   left: 10px;
+}
+
+.tiles {
+  position: relative;
+}
+.tiles .tile {
+  display: inline-block;
+  background-color: #cccccc;
+  border: 6px solid #dddddd;
+  color: #2b2b2d;
+  display: inline-block;
+  word-wrap: break-word;
+  padding: 0.25em;
+  margin-bottom: 0.25em;
+  text-align: center;
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -ms-transition: background-color 0.25s ease-out;
+  -o-transition: background-color 0.25s ease-out;
+  -moz-transition: background-color 0.25s ease-out;
+  -webkit-transition: background-color 0.25s ease-out;
+  transition: background-color 0.25s ease-out;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tiles .tile i {
+  font-size: 2em;
+  display: block;
+  margin: 0.15em 1em;
+}
+.tiles .tile.on, .tiles .tile:hover, .tiles .tile:focus {
+  text-decoration: none;
+  background-color: #bfbfbf;
+  color: #121213;
+  border-color: #d0d0d0;
+}
+.tiles .tile.active, .tiles .tile.active:hover, .tiles .tile.active:focus {
+  background-color: #b3b3b3;
+  color: black;
+  border-color: #aaaaaa;
+}
+.tiles .tile.disabled {
+  color: #d9d9d9;
+  background: #a6a6a6;
+  border-color: gray;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.tiles .tile.disabled:hover, .tiles .tile.disabled:focus, .tiles .tile.disabled:visited {
+  color: #d9d9d9;
+  background: #a6a6a6;
+  border-color: gray;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.tiles .tile.small {
+  font-size: 0.75em;
+}
+.tiles .tile.large {
+  font-size: 1.5em;
+}
+.tiles .tile.square {
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.tiles .tile.green {
+  color: #2ecc71;
+}
+.tiles .tile.green.on, .tiles .tile.green:hover, .tiles .tile.green:focus {
+  background-color: #54d98c;
+  border-color: #2ecc71;
+  color: white;
+}
+.tiles .tile.green.active, .tiles .tile.green.active:hover, .tiles .tile.green.active:focus {
+  background-color: #2ecc71;
+  color: white;
+  border-color: #25a25a;
+}
+.tiles .tile.blue {
+  color: #3498db;
+}
+.tiles .tile.blue.on, .tiles .tile.blue:hover, .tiles .tile.blue:focus {
+  background-color: #5faee3;
+  border-color: #3498db;
+  color: white;
+}
+.tiles .tile.blue.active, .tiles .tile.blue.active:hover, .tiles .tile.blue.active:focus {
+  background-color: #3498db;
+  color: white;
+  border-color: #217dbb;
+}
+.tiles .tile.purple {
+  color: #9b59b6;
+}
+.tiles .tile.purple.on, .tiles .tile.purple:hover, .tiles .tile.purple:focus {
+  background-color: #b07cc6;
+  border-color: #9b59b6;
+  color: white;
+}
+.tiles .tile.purple.active, .tiles .tile.purple.active:hover, .tiles .tile.purple.active:focus {
+  background-color: #9b59b6;
+  color: white;
+  border-color: #804399;
+}
+.tiles .tile.yellow {
+  color: #f1c40f;
+}
+.tiles .tile.yellow.on, .tiles .tile.yellow:hover, .tiles .tile.yellow:focus {
+  background-color: #f4d03f;
+  border-color: #f1c40f;
+  color: white;
+}
+.tiles .tile.yellow.active, .tiles .tile.yellow.active:hover, .tiles .tile.yellow.active:focus {
+  background-color: #f1c40f;
+  color: white;
+  border-color: #c29d0b;
+}
+.tiles .tile.orange {
+  color: #e67e22;
+}
+.tiles .tile.orange.on, .tiles .tile.orange:hover, .tiles .tile.orange:focus {
+  background-color: #eb9950;
+  border-color: #e67e22;
+  color: white;
+}
+.tiles .tile.orange.active, .tiles .tile.orange.active:hover, .tiles .tile.orange.active:focus {
+  background-color: #e67e22;
+  color: white;
+  border-color: #bf6516;
+}
+.tiles .tile.red {
+  color: #e74c3c;
+}
+.tiles .tile.red.on, .tiles .tile.red:hover, .tiles .tile.red:focus {
+  background-color: #ed7669;
+  border-color: #e74c3c;
+  color: white;
+}
+.tiles .tile.red.active, .tiles .tile.red.active:hover, .tiles .tile.red.active:focus {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #d62c1a;
+}
+.tiles .tile.pink {
+  color: #f02475;
+}
+.tiles .tile.pink.on, .tiles .tile.pink:hover, .tiles .tile.pink:focus {
+  background-color: #f35493;
+  border-color: #f02475;
+  color: white;
+}
+.tiles .tile.pink.active, .tiles .tile.pink.active:hover, .tiles .tile.pink.active:focus {
+  background-color: #f02475;
+  color: white;
+  border-color: #d30e5c;
+}
+.tiles .tile.turquoise {
+  color: #1abc9c;
+}
+.tiles .tile.turquoise.on, .tiles .tile.turquoise:hover, .tiles .tile.turquoise:focus {
+  background-color: #28e1bd;
+  border-color: #1abc9c;
+  color: white;
+}
+.tiles .tile.turquoise.active, .tiles .tile.turquoise.active:hover, .tiles .tile.turquoise.active:focus {
+  background-color: #1abc9c;
+  color: white;
+  border-color: #148f77;
+}
+.tiles .tile.asphalt {
+  color: #34495e;
+}
+.tiles .tile.asphalt.on, .tiles .tile.asphalt:hover, .tiles .tile.asphalt:focus {
+  background-color: #46627f;
+  border-color: #34495e;
+  color: white;
+}
+.tiles .tile.asphalt.active, .tiles .tile.asphalt.active:hover, .tiles .tile.asphalt.active:focus {
+  background-color: #34495e;
+  color: white;
+  border-color: #222f3d;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
 }
 
 .row, .clear, .clearfix {
@@ -4831,6 +5244,10 @@ div.modal .fullscreen {
   float: left;
 }
 
+.bordered {
+  border: 1px solid #dddddd;
+}
+
 .border-top {
   border-top: 1px solid #dddddd;
 }
@@ -4884,7 +5301,7 @@ div.modal .fullscreen {
   margin: 0 auto;
 }
 
-.space {
+.spacer {
   height: 10px;
 }
 
@@ -4894,13 +5311,6 @@ div.modal .fullscreen {
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
-}
-
-.disabled {
-  color: #d9d9d9;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
 }
 
 .rotate-90 {
@@ -4963,13 +5373,267 @@ div.modal .fullscreen {
   transform: rotate(-270deg);
 }
 
+.spin {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 2s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 2s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 2s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 2s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 2s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 2s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 2s linear;
+  animation-iteration-count: 3;
+}
+
+.spin-fast {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 1s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-fast-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 1s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-fast-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 1s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-fast-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 1s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 1s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 1s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 1s linear;
+  animation-iteration-count: 3;
+}
+
+.spin-slow {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation: spin 5s linear;
+  animation-iteration-count: infinite;
+}
+
+.spin-slow-once {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 1;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 1;
+  animation: spin 5s linear;
+  animation-iteration-count: 1;
+}
+
+.spin-slow-twice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 2;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 2;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 2;
+  animation: spin 5s linear;
+  animation-iteration-count: 2;
+}
+
+.spin-slow-thrice {
+  display: inline-block;
+  width: auto;
+  -moz-animation: spin 5s linear;
+  -moz-animation-iteration-count: 3;
+  -o-animation: spin 5s linear;
+  -o-animation-iteration-count: 3;
+  -webkit-animation: spin 5s linear;
+  -webkit-animation-iteration-count: 3;
+  animation: spin 5s linear;
+  animation-iteration-count: 3;
+}
+
 .clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
 
+.disabled {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.disabled:hover, .disabled:focus, .disabled:visited {
+  color: #d9d9d9;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.ipad-only {
+  display: none;
+}
+
+.small-tablet-only {
+  display: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+  .hide-on-desktop {
+    display: none;
+  }
+
+  .no-padding-desktop {
+    padding: 0;
+  }
+
+  .no-margin-desktop {
+    margin: 0;
+  }
+
+  .zero-desktop {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ipad-only {
+    display: inline-block;
+  }
+
+  .hide-on-ipad {
+    display: none;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .no-padding-ipad {
+    padding: 0;
+  }
+
+  .no-margin-ipad {
+    margin: 0;
+  }
+
+  .zero-ipad {
+    margin: 0;
+    padding: 0;
+  }
+}
 @media only screen and (max-width: 767px) {
+  .small-tablet-only {
+    display: inline-block;
+  }
+
+  .hide-on-small-tablet {
+    display: none;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .no-padding-small-tablet {
+    padding: 0;
+  }
+
+  .no-margin-small-tablet {
+    margin: 0;
+  }
+
+  .zero-small-tablet {
+    margin: 0;
+    padding: 0;
+  }
+
   .half:not(.small-tablet):not(.mobile), .halves:not(.small-tablet):not(.mobile), .third:not(.small-tablet):not(.mobile), .thirds:not(.small-tablet):not(.mobile), .fourth:not(.small-tablet):not(.mobile), .fourths:not(.small-tablet):not(.mobile), .fifth:not(.small-tablet):not(.mobile), .fifths:not(.small-tablet):not(.mobile), .sixth:not(.small-tablet):not(.mobile), .sixths:not(.small-tablet):not(.mobile), .seventh:not(.small-tablet):not(.mobile), .sevenths:not(.small-tablet):not(.mobile), .eighth:not(.small-tablet):not(.mobile), .eighths:not(.small-tablet):not(.mobile), .ninth:not(.small-tablet):not(.mobile), .ninths:not(.small-tablet):not(.mobile), .tenth:not(.small-tablet):not(.mobile), .tenths:not(.small-tablet):not(.mobile), .eleventh:not(.small-tablet):not(.mobile), .elevenths:not(.small-tablet):not(.mobile), .twelfth:not(.small-tablet):not(.mobile), .twelfths:not(.small-tablet):not(.mobile) {
     width: 100% !important;
     float: none;
@@ -4992,26 +5656,9 @@ div.modal .fullscreen {
     display: block;
     width: 100% !important;
   }
-  nav:not(.pagination) ul li.menu > a:after, nav:not(.pagination) ul.row li.menu > a:after, nav.inline ul li.menu > a:after, nav.inline ul.row li.menu > a:after {
-    display: none !important;
-  }
-  nav:not(.pagination) ul li.menu > a:before, nav:not(.pagination) ul.row li.menu > a:before, nav.inline ul li.menu > a:before, nav.inline ul.row li.menu > a:before {
-    content: '\f0c9';
-    display: inline-block;
-    width: 1.1em;
-    margin-left: 0.25em;
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1.1em;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-    line-height: normal;
-    vertical-align: baseline;
-    background-image: none;
-    background-position: 0% 0%;
-    background-repeat: repeat;
-    margin-top: 0;
+  nav:not(.pagination) ul li a, nav:not(.pagination) ul li a:visited, nav:not(.pagination) ul.row li a, nav:not(.pagination) ul.row li a:visited, nav.inline ul li a, nav.inline ul li a:visited, nav.inline ul.row li a, nav.inline ul.row li a:visited {
+    border: none;
+    border-top: 1px solid #198d98;
   }
   nav:not(.pagination) ul li ul, nav:not(.pagination) ul.row li ul, nav.inline ul li ul, nav.inline ul.row li ul {
     position: static;
@@ -5057,6 +5704,66 @@ div.modal .fullscreen {
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
+  }
+
+  nav.menu {
+    background-color: #1dabb8;
+    padding: 10px;
+    padding-bottom: 0;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+  }
+  nav.menu:before {
+    content: attr(data-label);
+    float: left;
+    color: white;
+    line-height: 2.2;
+  }
+  nav.menu .menu-toggle {
+    display: inline-block !important;
+    float: right;
+    margin-bottom: 10px;
+  }
+  nav.menu > ul, nav.menu > ul.row {
+    display: block !important;
+    overflow: hidden;
+    max-height: 0;
+    width: auto;
+    margin: 0 -10px;
+    clear: both;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  nav.menu > ul li a, nav.menu > ul li a:visited, nav.menu > ul.row li a, nav.menu > ul.row li a:visited {
+    border: none;
+    border-top: 1px solid #198d98;
+  }
+  nav.menu > ul li a:first-child, nav.menu > ul li a:last-child, nav.menu > ul li a:visited:first-child, nav.menu > ul li a:visited:last-child, nav.menu > ul.row li a:first-child, nav.menu > ul.row li a:last-child, nav.menu > ul.row li a:visited:first-child, nav.menu > ul.row li a:visited:last-child {
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  nav.menu > ul li a:hover, nav.menu > ul li a:focus, nav.menu > ul li a:visited:hover, nav.menu > ul li a:visited:focus, nav.menu > ul.row li a:hover, nav.menu > ul.row li a:focus, nav.menu > ul.row li a:visited:hover, nav.menu > ul.row li a:visited:focus {
+    border: none;
+    border-top: 1px solid #198d98;
+  }
+  nav.menu > ul li:last-child a, nav.menu > ul li:last-child a:visited, nav.menu > ul.row li:last-child a, nav.menu > ul.row li:last-child a:visited {
+    -ms-border-radius: 0 0 4px 4px;
+    -o-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
+  nav.menu.on > ul {
+    max-height: 1000px;
   }
 
   nav:not(.pagination) ul li:first-child > a, nav:not(.pagination) ul li:first-child >, nav:not(.pagination) ul li:first-child > a:visited, nav:not(.pagination) ul.row li:first-child > a, nav:not(.pagination) ul.row li:first-child >, nav:not(.pagination) ul.row li:first-child > a:visited, nav.inline ul li:first-child > a, nav.inline ul li:first-child >, nav.inline ul li:first-child > a:visited, nav.inline ul.row li:first-child > a, nav.inline ul.row li:first-child >, nav.inline ul.row li:first-child > a:visited {
@@ -5111,16 +5818,33 @@ div.modal .fullscreen {
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
   }
+}
+@media only screen and (max-width: 480px) {
+  .mobile-only {
+    display: inline-block;
+  }
 
-  .no-padding-small-tablet {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .no-padding-mobile {
     padding: 0;
   }
 
-  .no-margin-small-tablet {
+  .no-margin-mobile {
     margin: 0;
   }
-}
-@media only screen and (max-width: 480px) {
+
+  .zero-mobile {
+    margin: 0;
+    padding: 0;
+  }
+
   .half:not(.mobile), .halves:not(.mobile), .third:not(.mobile), .thirds:not(.mobile), .fourth:not(.mobile), .fourths:not(.mobile), .fifth:not(.mobile), .fifths:not(.mobile), .sixth:not(.mobile), .sixths:not(.mobile), .seventh:not(.mobile), .sevenths:not(.mobile), .eighth:not(.mobile), .eighths:not(.mobile), .ninth:not(.mobile), .ninths:not(.mobile), .tenth:not(.mobile), .tenths:not(.mobile), .eleventh:not(.mobile), .elevenths:not(.mobile), .twelfth:not(.mobile), .twelfths:not(.mobile) {
     width: 100% !important;
     float: none;
@@ -5154,13 +5878,5 @@ div.modal .fullscreen {
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
-  }
-
-  .no-padding-mobile {
-    padding: 0;
-  }
-
-  .no-margin-mobile {
-    margin: 0;
   }
 }

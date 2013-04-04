@@ -3,8 +3,6 @@
  *  jQuery Modals by Gary Hepting
  *   https://github.com/ghepting/modal  
  *
- *  Based on Avgrund by Hakim El Hattab <3
- *
 ###
 
 (($) ->
