@@ -5078,10 +5078,10 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   }
 }
 
-.clear, .row, .clearfix {
+.row, .clear, .clearfix {
   clear: both;
 }
-.clear:after, .row:after, .clearfix:after {
+.row:after, .clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
@@ -5480,7 +5480,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   animation-iteration-count: 3;
 }
 
-.clear:after, .row:after, .clearfix:after {
+.clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
@@ -5683,7 +5683,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
     overflow: hidden;
     max-height: 0;
     width: auto;
-    margin: -10px;
+    margin: 0 -10px;
     clear: both;
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;

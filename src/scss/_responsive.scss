@@ -120,7 +120,7 @@
       overflow:hidden;
       max-height:0;
       width:auto;
-      margin:-10px;
+      margin:0 (-$gutter);
       clear:both;
       @include transition(all 0.2s ease);
       li {
