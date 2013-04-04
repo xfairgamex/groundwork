@@ -4882,17 +4882,17 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   border-color: #aaaaaa;
 }
 .tiles .tile.disabled {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: white;
+  background: #d9d9d9;
+  border-color: #b3b3b3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 .tiles .tile.disabled:hover, .tiles .tile.disabled:focus, .tiles .tile.disabled:visited {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: white;
+  background: #d9d9d9;
+  border-color: #b3b3b3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
@@ -4909,6 +4909,13 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+.tiles .tile.round {
+  -ms-border-radius: 9999px;
+  -o-border-radius: 9999px;
+  -moz-border-radius: 9999px;
+  -webkit-border-radius: 9999px;
+  border-radius: 9999px;
 }
 .tiles .tile.green {
   color: #2ecc71;

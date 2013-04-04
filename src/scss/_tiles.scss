@@ -54,7 +54,7 @@ $asphalt:   #34495e;
       border-color:darken($border-color,20%);
     }
     &.disabled {
-      @include state(disabled);
+      @include state(disabled,normal,lighten(gray,20%));
     }
     &.small {
       font-size:0.75em;
@@ -64,6 +64,9 @@ $asphalt:   #34495e;
     }
     &.square {
       @include rounded(0);
+    }
+    &.round {
+      @include rounded(9999px);
     }
 
     &.green {
