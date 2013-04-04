@@ -22,7 +22,7 @@ $asphalt:   #34495e;
 
   .tile {
     display:inline-block;
-    background-color:darken($background-color,10%);
+    background-color:darken($background-color,20%);
     border:6px solid $border-color;
     color:$font-color;
     display:inline-block;
@@ -44,9 +44,9 @@ $asphalt:   #34495e;
     }
     &.on, &:hover, &:focus {
       text-decoration:none;
-      background-color:darken($background-color,20%);
+      background-color:darken($background-color,25%);
       color:darken($font-color,10%);
-      border-color:darken($border-color,10%);
+      border-color:darken($border-color,5%);
     }
     &.active, &.active:hover, &.active:focus {
       background-color:darken($background-color,30%);

@@ -4841,7 +4841,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 .tiles .tile {
   display: inline-block;
-  background-color: #e6e6e6;
+  background-color: #cccccc;
   border: 6px solid #dddddd;
   color: #2b2b2d;
   display: inline-block;
@@ -4872,9 +4872,9 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
 }
 .tiles .tile.on, .tiles .tile:hover, .tiles .tile:focus {
   text-decoration: none;
-  background-color: #cccccc;
+  background-color: #bfbfbf;
   color: #121213;
-  border-color: #c4c4c4;
+  border-color: #d0d0d0;
 }
 .tiles .tile.active, .tiles .tile.active:hover, .tiles .tile.active:focus {
   background-color: #b3b3b3;
