@@ -1644,58 +1644,112 @@ include includes/header
             a.large.button(href='#') Click Me
       h2 Tiles
       .tiles
-        input(type='submit', value='single')
-        .tile(data-value='single')
-          i.icon-user
-          | Single user
-        .tile(data-value='group')
-          i.icon-group
-          | Small group
-        .tile(data-value='corp')
-          i.icon-building
-          | Corporation
+        .row
+          .one.mobile.fifth.pad-right
+            select.value
+              option(value='single', selected) Single
+              option(value='group') Group
+              option(value='corp') Corp
+          .four.mobile.fifths
+            .tile(data-value='single')
+              i.icon-user
+              | Single user
+            .tile(data-value='group')
+              i.icon-group
+              | Small group
+            .tile(data-value='corp')
+              i.icon-building
+              | Corporation
       hr
-      h4 All variations
+      h4 Tile Colors
       .tiles
-        input(type='submit', value='')
-        .tile(data-value='default')
-          i.icon-leaf
-          | default
-        .tile(data-value='disabled')
-          i.icon-leaf
-          | disabled
-        .tile(data-value='small')
-          i.icon-leaf
-          | small
-        .tile(data-value='large')
-          i.icon-leaf
-          | large
-        .tile(data-value='square')
-          i.icon-leaf
-          | square
-        .tile(data-value='green')
-          i.icon-leaf
-          | green
-        .tile(data-value='blue')
-          i.icon-leaf
-          | blue
-        .tile(data-value='purple')
-          i.icon-leaf
-          | purple
-        .tile(data-value='yellow')
-          i.icon-leaf
-          | yellow
-        .tile(data-value='orange')
-          i.icon-leaf
-          | orange
-        .tile(data-value='red')
-          i.icon-leaf
-          | red
-        .tile(data-value='turquoise')
-          i.icon-leaf
-          | turquoise
-        .tile(data-value='asphalt')
-          i.icon-leaf
-          | asphalt
+        .row
+          .one.mobile.fifth.pad-right
+            select.value(size='5')
+              option(value='default', selected) Default
+              option(value='green') Green
+              option(value='blue') Blue
+              option(value='purple') Purple
+              option(value='yellow') Yellow
+              option(value='orange') Orange
+              option(value='red') Red
+              option(value='turquoise') Turquoise
+              option(value='asphalt') Asphalt
+          .four.mobile.fifths
+            .tile(data-value='default')
+              i.icon-leaf
+              | default
+            .tile.green(data-value='green')
+              i.icon-leaf
+              | green
+            .tile.blue(data-value='blue')
+              i.icon-leaf
+              | blue
+            .tile.purple(data-value='purple')
+              i.icon-leaf
+              | purple
+            .tile.yellow(data-value='yellow')
+              i.icon-leaf
+              | yellow
+            .tile.orange(data-value='orange')
+              i.icon-leaf
+              | orange
+            .tile.red(data-value='red')
+              i.icon-leaf
+              | red
+            .tile.turquoise(data-value='turquoise')
+              i.icon-leaf
+              | turquoise
+            .tile.asphalt(data-value='asphalt')
+              i.icon-leaf
+              | asphalt
+      hr
+      h4 Tile States
+      .tiles
+        .row
+          .one.mobile.fifth.pad-right
+            input.value.disabled(type='text', value='active', readonly)
+          .four.mobile.fifths
+            .tile.disabled(data-value='disabled')
+              i.icon-leaf
+              | disabled
+            .tile.active(data-value='active')
+              i.icon-leaf
+              | active
+      hr
+      h4 Tile Sizes
+      .tiles
+        .row
+          .one.mobile.fifth.pad-right
+            input.value(type='text', value='small')
+          .four.mobile.fifths
+            .tile.small(data-value='small')
+              i.icon-leaf
+              | small
+            .tile.large(data-value='large')
+              i.icon-leaf
+              | large
+            .tile.square(data-value='square')
+              i.icon-leaf
+              | square
+      hr
+      h4 Hidden Field &amp; Custom Callback Function
+      .tiles
+        input.value(type='hidden', value='', id='yepNope')
+        script(type='text/javascript')
+          $(document).ready(function() {
+            $('input#yepNope').on('change', function() {
+              if($(this).val() == 'yep')
+                alert("Right on!");
+              else
+                alert("Aww, how come?");
+            });
+          });
+        .tile(data-value='yep')
+          i.icon-thumbs-up
+          | thumbs up
+        .tile(data-value='nope')
+          i.icon-thumbs-down
+          | thumbs down
   include includes/foot
   include includes/scripts

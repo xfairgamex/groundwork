@@ -17,6 +17,7 @@ $selection-color:     $font-color;
 $selection-text:      #ffffff;
 $border-color:        #dddddd;
 $button-color:        #1DABB8;
+$button-border-color: darken($button-color,10%);
 $button-active:       #198D98;
 $button-text:         #ffffff;
 $button-active-text:  #ffffff;

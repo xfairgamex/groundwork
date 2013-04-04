@@ -33,6 +33,9 @@ input, select, textarea {
   background:white;
   border:1px solid $border-color;
   @include rounded($radius);
+  &[size] {
+    height:auto;
+  }
   &[type=checkbox], &[type=radio] {
     display:inline-block;
     width:1em;

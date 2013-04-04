@@ -1220,28 +1220,94 @@
       </div>
       <h2>Tiles</h2>
       <div class="tiles">
-        <input type="submit" value="single">
-        <div data-value="single" class="tile"><i class="icon-user"></i>Single user</div>
-        <div data-value="group" class="tile"><i class="icon-group"></i>Small group</div>
-        <div data-value="corp" class="tile"><i class="icon-building"></i>Corporation</div>
+        <div class="row">
+          <div class="one mobile fifth pad-right">
+            <select class="value">
+              <option value="single" selected>Single</option>
+              <option value="group">Group</option>
+              <option value="corp">Corp</option>
+            </select>
+          </div>
+          <div class="four mobile fifths">
+            <div data-value="single" class="tile"><i class="icon-user"></i>Single user</div>
+            <div data-value="group" class="tile"><i class="icon-group"></i>Small group</div>
+            <div data-value="corp" class="tile"><i class="icon-building"></i>Corporation</div>
+          </div>
+        </div>
       </div>
       <hr>
-      <h4>All variations</h4>
+      <h4>Tile Colors</h4>
       <div class="tiles">
-        <input type="submit" value="">
-        <div data-value="default" class="tile"><i class="icon-leaf"></i>default</div>
-        <div data-value="disabled" class="tile"><i class="icon-leaf"></i>disabled</div>
-        <div data-value="small" class="tile"><i class="icon-leaf"></i>small</div>
-        <div data-value="large" class="tile"><i class="icon-leaf"></i>large</div>
-        <div data-value="square" class="tile"><i class="icon-leaf"></i>square</div>
-        <div data-value="green" class="tile"><i class="icon-leaf"></i>green</div>
-        <div data-value="blue" class="tile"><i class="icon-leaf"></i>blue</div>
-        <div data-value="purple" class="tile"><i class="icon-leaf"></i>purple</div>
-        <div data-value="yellow" class="tile"><i class="icon-leaf"></i>yellow</div>
-        <div data-value="orange" class="tile"><i class="icon-leaf"></i>orange</div>
-        <div data-value="red" class="tile"><i class="icon-leaf"></i>red</div>
-        <div data-value="turquoise" class="tile"><i class="icon-leaf"></i>turquoise</div>
-        <div data-value="asphalt" class="tile"><i class="icon-leaf"></i>asphalt</div>
+        <div class="row">
+          <div class="one mobile fifth pad-right">
+            <select size="5" class="value">
+              <option value="default" selected>Default</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="purple">Purple</option>
+              <option value="yellow">Yellow</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+              <option value="turquoise">Turquoise</option>
+              <option value="asphalt">Asphalt</option>
+            </select>
+          </div>
+          <div class="four mobile fifths">
+            <div data-value="default" class="tile"><i class="icon-leaf"></i>default</div>
+            <div data-value="green" class="tile green"><i class="icon-leaf"></i>green</div>
+            <div data-value="blue" class="tile blue"><i class="icon-leaf"></i>blue</div>
+            <div data-value="purple" class="tile purple"><i class="icon-leaf"></i>purple</div>
+            <div data-value="yellow" class="tile yellow"><i class="icon-leaf"></i>yellow</div>
+            <div data-value="orange" class="tile orange"><i class="icon-leaf"></i>orange</div>
+            <div data-value="red" class="tile red"><i class="icon-leaf"></i>red</div>
+            <div data-value="turquoise" class="tile turquoise"><i class="icon-leaf"></i>turquoise</div>
+            <div data-value="asphalt" class="tile asphalt"><i class="icon-leaf"></i>asphalt</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h4>Tile States</h4>
+      <div class="tiles">
+        <div class="row">
+          <div class="one mobile fifth pad-right">
+            <input type="text" value="active" readonly class="value disabled">
+          </div>
+          <div class="four mobile fifths">
+            <div data-value="disabled" class="tile disabled"><i class="icon-leaf"></i>disabled</div>
+            <div data-value="active" class="tile active"><i class="icon-leaf"></i>active</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h4>Tile Sizes</h4>
+      <div class="tiles">
+        <div class="row">
+          <div class="one mobile fifth pad-right">
+            <input type="text" value="small" class="value">
+          </div>
+          <div class="four mobile fifths">
+            <div data-value="small" class="tile small"><i class="icon-leaf"></i>small</div>
+            <div data-value="large" class="tile large"><i class="icon-leaf"></i>large</div>
+            <div data-value="square" class="tile square"><i class="icon-leaf"></i>square</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h4>Hidden Field &amp; Custom Callback Function</h4>
+      <div class="tiles">
+        <input type="hidden" value="" id="yepNope" class="value">
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $('input#yepNope').on('change', function() {
+              if($(this).val() == 'yep')
+                alert("Right on!");
+              else
+                alert("Aww, how come?");
+            });
+          });
+        </script>
+        <div data-value="yep" class="tile"><i class="icon-thumbs-up"></i>thumbs up</div>
+        <div data-value="nope" class="tile"><i class="icon-thumbs-down"></i>thumbs down</div>
       </div>
     </div>
   </div>
