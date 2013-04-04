@@ -4,23 +4,25 @@ $ ->
   # open submenu function
   openMenu = (target) ->
     $(target).parent('li.menu').toggleClass('on')
-  unless Modernizr.touch
-    # hover on
-    $('body').on 'mouseenter', 'nav > ul > li.menu:not(.disabled)', (e) ->
+  # hover on
+  $('body').on 'mouseenter', 'nav > ul > li.menu:not(.disabled)', (e) ->
+    if $(window).width() >= 768
       clearTimeout(delay)
       $('nav > ul > li.menu.on').removeClass('on')
       $(this).addClass('on')
-    # hover off
-    $('body').on 'mouseleave', 'nav > ul > li.menu:not(.disabled)', (e) ->
+  # hover off
+  $('body').on 'mouseleave', 'nav > ul > li.menu:not(.disabled)', (e) ->
+    if $(window).width() >= 768
       delay = setTimeout (->
         $('nav > ul > li.menu.on').removeClass('on')
       ), 350
   # click/touch
   $('body').on 'click', 'nav > ul > li.menu:not(.disabled) > a', (e) =>
-    unless Modernizr.touch
+    if Modernizr.touch || $(window).width() < 768
+      openMenu(e.target)
+    else
       $('nav > ul > li.menu.on').removeClass('on')
       $(e.target).parents('li.menu').addClass('on')
-    openMenu(e.target)
     e.preventDefault()
     return false
   # keyboard accessibility

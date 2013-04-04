@@ -7,24 +7,27 @@ $(function() {
   openMenu = function(target) {
     return $(target).parent('li.menu').toggleClass('on');
   };
-  if (!Modernizr.touch) {
-    $('body').on('mouseenter', 'nav > ul > li.menu:not(.disabled)', function(e) {
+  $('body').on('mouseenter', 'nav > ul > li.menu:not(.disabled)', function(e) {
+    if ($(window).width() >= 768) {
       clearTimeout(delay);
       $('nav > ul > li.menu.on').removeClass('on');
       return $(this).addClass('on');
-    });
-    $('body').on('mouseleave', 'nav > ul > li.menu:not(.disabled)', function(e) {
+    }
+  });
+  $('body').on('mouseleave', 'nav > ul > li.menu:not(.disabled)', function(e) {
+    if ($(window).width() >= 768) {
       return delay = setTimeout((function() {
         return $('nav > ul > li.menu.on').removeClass('on');
       }), 350);
-    });
-  }
+    }
+  });
   $('body').on('click', 'nav > ul > li.menu:not(.disabled) > a', function(e) {
-    if (!Modernizr.touch) {
+    if (Modernizr.touch || $(window).width() < 768) {
+      openMenu(e.target);
+    } else {
       $('nav > ul > li.menu.on').removeClass('on');
       $(e.target).parents('li.menu').addClass('on');
     }
-    openMenu(e.target);
     e.preventDefault();
     return false;
   });
