@@ -43,7 +43,7 @@
   -moz-box-sizing:border-box;             // Firefox
   -webkit-box-sizing:border-box;          // Webkit (Safari, Chrome, etc)
   box-sizing:border-box;                  // IE 8-9 & Other
-  *behavior: url(js/libs/boxsizing.htc);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+  *behavior: url($boxsizing_path);        // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
 }
 
 

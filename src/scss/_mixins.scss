@@ -95,9 +95,9 @@
 
 // inline image with fallback support for IE 7-
 @mixin data-image($file) {
-  background-image:url('../images/#{$file}');       // fallback
+  background-image:url("#{$root_path}#{$images_path}#{$file}");       // fallback
   background-image:inline-image($file);             // data URI
-  *background-image:url('../images/#{$file}');      // IE7- hack
+  *background-image:url("#{$root_path}#{$images_path}#{$file}");      // IE7- hack
 }
 
 // // vertical gradient with support for IE 6-8 & 10
