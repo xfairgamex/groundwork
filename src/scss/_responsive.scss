@@ -46,12 +46,27 @@
 @include small-tablet {
   // do not remove -- required for small-tablet helpers and adaptations
   @include grid-responsive();
-  nav:not(.pagination), nav.inline {
+  nav.nav {
     width:100%;
     ul, ul.row {
       li {
         display:block;
         width:100% !important;
+        &:first-child {
+          > a, > , > a:visited {
+            @include rounded($radius $radius 0 0);
+          }
+        }
+        &:last-child {
+          > a, > , > a:visited {
+            @include rounded(0 0 $radius $radius);
+          }
+        }
+        &:only-child {
+          > a, > , > a:visited {
+            @include rounded($radius);
+          }
+        }
         a, a:visited {
           border:none;
           border-top:1px solid $button-active;
@@ -145,36 +160,6 @@
     &.on {
       > ul {
         max-height:1000px;
-      }
-    }
-  }
-  nav:not(.pagination), nav.inline {
-    ul, ul.row {
-      li {
-        &:first-child {
-          > a, > , > a:visited {
-            @include rounded($radius $radius 0 0);
-          }
-        }
-        &:last-child {
-          > a, > , > a:visited {
-            @include rounded(0 0 $radius $radius);
-          }
-        }
-        &:only-child {
-          > a, > , > a:visited {
-            @include rounded($radius);
-          }
-        }
-      }
-      li {
-        ul {
-          li {
-            a, a:visited {
-              @include rounded(0);
-            }
-          }
-        }
       }
     }
   }

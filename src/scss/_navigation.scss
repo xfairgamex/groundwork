@@ -13,159 +13,97 @@
 }
 
 nav {
-  &:not(.inline) {
-    > ul:not(.row) {
-      display:inline-block;
-    }
-  }
-  ul {
-    display:block;
-    list-style:none;
-    margin:0;
-    padding:0;
-    li {
-      display:block;
-      position:relative;
-      a, a:visited {
-        display:block;
-        width:100%;
-        word-wrap:break-word;
-        padding:0.25em 1em;
-        background:$button-color;
-        border-top:1px solid $button-active;
-        color:$button-text;
-        font-weight:bold;
-        font-size:1em;
-        text-decoration:none;
-        cursor:pointer;
-        line-height:1.5;
-        @include transition(background-color 0.25s ease-out);
-        &:hover, &:focus {
-          background:$button-active;
-          color:$button-text;
-          text-decoration:none;
-        }
-        &.active {
-          &:hover, &:focus {
-            background:$button-active;
-          }
-        }
-        &.disabled {
-          @include state(disabled,normal,desaturate($button-color,20%));
-        }
-      }
-      &:first-child {
-        a, a:visited {
-          border-top:none;
-        }
-      }
-      &.menu {
-        &.disabled {
-          > a, > a:visited {
-            @include state(disabled,normal,desaturate($button-color,20%));
-          }
-        }
-        > a, > a:visited {
-          &:after {
-            content:'\f0d7';
-            display:inline-block;
-            width:1.1em;
-            margin-left:0.25em;
-            font-family:FontAwesome;
-            font-weight:normal;
-            font-style:normal;
-            font-size:1.1em;
-            text-decoration:inherit;
-            -webkit-font-smoothing:antialiased;
-            line-height:normal;
-            vertical-align:baseline;
-            background-image:none;
-            background-position:0% 0%;
-            background-repeat:repeat;
-            margin-top:0;
-          }
-        }
-        &.on {
-          > a, > a:visited {
-            background:$button-active;
-            text-decoration:none;
-          }
-          > ul {
-            @extend %menu-open;
-          }
-        }
-      }
-      &:first-child {
-        a, a:visited {
-          @include rounded($radius $radius 0 0);
-        }
-      }
-      &:last-child {
-        a, a:visited {
-          @include rounded(0 0 $radius $radius);
-        }
-      }
-      &:only-child {
-        a, a:visited {
-          @include rounded($radius);
-        }
+  &.nav {
+    &:not(.inline) {
+      > ul:not(.row) {
+        display:inline-block;
       }
     }
     ul {
-      @extend %menu-closed;
-      position:absolute;
-      left:100%;
-      top:0;
-      width:auto;
-      z-index:101;
+      display:block;
+      list-style:none;
+      margin:0;
+      padding:0;
       li {
+        display:block;
+        position:relative;
         a, a:visited {
-          @include rounded(0);
-          border:none;
-          border-top:1px solid $button-color;
-          background:lighten($button-color, 5%);
-          &:hover, &:active {
-            background:lighten($button-active, 5%);
+          display:block;
+          width:100%;
+          word-wrap:break-word;
+          padding:0.25em 1em;
+          background:$button-color;
+          border-top:1px solid $button-active;
+          color:$button-text;
+          font-weight:bold;
+          font-size:1em;
+          text-decoration:none;
+          cursor:pointer;
+          line-height:1.5;
+          @include transition(background-color 0.25s ease-out);
+          &:hover, &:focus {
+            background:$button-active;
+            color:$button-text;
+            text-decoration:none;
+          }
+          &.active {
+            &:hover, &:focus {
+              background:$button-active;
+            }
           }
           &.disabled {
-            @include state(disabled,normal,desaturate(lighten($button-color, 5%),20%));
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &:first-child {
           a, a:visited {
             border-top:none;
-            @include rounded(0 $radius 0 0);
+          }
+        }
+        &.menu {
+          &.disabled {
+            > a, > a:visited {
+              @include state(disabled,normal,desaturate($button-color,20%));
+            }
+          }
+          > a, > a:visited {
+            &:after {
+              content:'\f0d7';
+              display:inline-block;
+              width:1.1em;
+              margin-left:0.25em;
+              font-family:FontAwesome;
+              font-weight:normal;
+              font-style:normal;
+              font-size:1.1em;
+              text-decoration:inherit;
+              -webkit-font-smoothing:antialiased;
+              line-height:normal;
+              vertical-align:baseline;
+              background-image:none;
+              background-position:0% 0%;
+              background-repeat:repeat;
+              margin-top:0;
+            }
+          }
+          &.on {
+            > a, > a:visited {
+              background:$button-active;
+              text-decoration:none;
+            }
+            > ul {
+              @extend %menu-open;
+            }
+          }
+        }
+        &:first-child {
+          a, a:visited {
+            @include rounded($radius $radius 0 0);
           }
         }
         &:last-child {
           a, a:visited {
             @include rounded(0 0 $radius $radius);
-          }
-        }
-        &:only-child {
-          a, a:visited {
-            @include rounded(0 $radius $radius 0);
-          }
-        }
-      }
-    }
-    // horizontal grid navigation
-    &.row {
-      li {
-        a, a:visited {
-          border-left:1px solid $button-active;
-          border-top:none;
-          @include rounded(0);
-        }
-        &:first-child {
-          a, a:visited {
-            border-left:none;
-            @include rounded($radius 0 0 $radius);
-          }
-        }
-        &:last-child {
-          a, a:visited {
-            @include rounded(0 $radius $radius 0);
           }
         }
         &:only-child {
@@ -177,19 +115,27 @@ nav {
       ul {
         @extend %menu-closed;
         position:absolute;
-        left:auto;
-        top:auto;
-        min-width:100%;
+        left:100%;
+        top:0;
+        width:auto;
         z-index:101;
         li {
           a, a:visited {
             @include rounded(0);
-            border-left:none;
-            border-top:1px solid $button-active;
+            border:none;
+            border-top:1px solid $button-color;
+            background:lighten($button-color, 5%);
+            &:hover, &:active {
+              background:lighten($button-active, 5%);
+            }
+            &.disabled {
+              @include state(disabled,normal,desaturate(lighten($button-color, 5%),20%));
+            }
           }
           &:first-child {
             a, a:visited {
-              @include rounded(0);
+              border-top:none;
+              @include rounded(0 $radius 0 0);
             }
           }
           &:last-child {
@@ -197,55 +143,46 @@ nav {
               @include rounded(0 0 $radius $radius);
             }
           }
+          &:only-child {
+            a, a:visited {
+              @include rounded(0 $radius $radius 0);
+            }
+          }
         }
       }
-    }
-  }
-  &:after {
-    content:'';
-    display:block;
-    clear:both;
-  }
-  // horizontal inline navigation
-  &.inline {
-    width:auto;
-    ul {
-      font-size:0;
-      li {
-        font-size:$font-size;
-        display:inline-block;
-        white-space-collapse:discard;
-        float:none;
-        a, a:visited {
-          border-left:1px solid $button-active;
-          border-top:none;
-        }
-        &:first-child {
+      // horizontal grid navigation
+      &.row {
+        li {
           a, a:visited {
-            border-left:none;
-            @include rounded($radius 0 0 $radius);
+            border-left:1px solid $button-active;
+            border-top:none;
+            @include rounded(0);
           }
-        }
-        &:last-child {
-          a, a:visited {
-            @include rounded(0 $radius $radius 0);
+          &:first-child {
+            a, a:visited {
+              border-left:none;
+              @include rounded($radius 0 0 $radius);
+            }
           }
-        }
-        &:only-child {
-          a, a:visited {
-            @include rounded($radius);
+          &:last-child {
+            a, a:visited {
+              @include rounded(0 $radius $radius 0);
+            }
+          }
+          &:only-child {
+            a, a:visited {
+              @include rounded($radius);
+            }
           }
         }
         ul {
           @extend %menu-closed;
-          // display:none;
           position:absolute;
           left:auto;
           top:auto;
           min-width:100%;
           z-index:101;
           li {
-            display:block;
             a, a:visited {
               @include rounded(0);
               border-left:none;
@@ -265,21 +202,81 @@ nav {
         }
       }
     }
-  }
-  // hamburger menu
-  &.menu {
-    .menu-toggle {
-      @extend .button;
-      display:none !important;
+    &:after {
+      content:'';
+      display:block;
+      clear:both;
+    }
+    // horizontal inline navigation
+    &.inline {
+      width:auto;
+      ul {
+        font-size:0;
+        li {
+          font-size:$font-size;
+          display:inline-block;
+          white-space-collapse:discard;
+          float:none;
+          a, a:visited {
+            border-left:1px solid $button-active;
+            border-top:none;
+          }
+          &:first-child {
+            a, a:visited {
+              border-left:none;
+              @include rounded($radius 0 0 $radius);
+            }
+          }
+          &:last-child {
+            a, a:visited {
+              @include rounded(0 $radius $radius 0);
+            }
+          }
+          &:only-child {
+            a, a:visited {
+              @include rounded($radius);
+            }
+          }
+          ul {
+            @extend %menu-closed;
+            // display:none;
+            position:absolute;
+            left:auto;
+            top:auto;
+            min-width:100%;
+            z-index:101;
+            li {
+              display:block;
+              a, a:visited {
+                @include rounded(0);
+                border-left:none;
+                border-top:1px solid $button-active;
+              }
+              &:first-child {
+                a, a:visited {
+                  @include rounded(0);
+                }
+              }
+              &:last-child {
+                a, a:visited {
+                  @include rounded(0 0 $radius $radius);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // hamburger menu
+    &.menu {
+      .menu-toggle {
+        @extend .button;
+        display:none !important;
+      }
     }
   }
   // pagination
   &.pagination {
-    &:not(.inline) {
-      > ul:not(.row) {
-        display:block;
-      }
-    }
     ul {
       margin:10px auto;
       display:block;
@@ -291,16 +288,21 @@ nav {
         min-width:29px;
         a {
           display:block;
+          background:$button-color;
           font-size:1em;
           line-height:1.5;
           font-weight:bold;
           color:$button-text;
           text-decoration:none;
+          text-align:center;
           padding:0 3px;
           @include rounded(4px);
           &:hover, &:focus {
             background:$button-active;
             color:$button-text;
+          }
+          &.disabled {
+            @include state(disabled,normal,desaturate($button-color,20%));
           }
         }
         &.active {
@@ -338,7 +340,7 @@ nav {
   }
 }
 .no-js {
-  nav {
+  nav.nav {
     ul {
       li.menu {
         ul {
