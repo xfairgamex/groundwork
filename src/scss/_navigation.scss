@@ -264,10 +264,9 @@
   }
   // hamburger menu
   &.menu {
-    display:block !important;
     .menu-toggle {
       @extend .button;
-      display:none;
+      display:none !important;
     }
   }
 }

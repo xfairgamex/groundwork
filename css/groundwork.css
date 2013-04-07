@@ -2384,11 +2384,8 @@ ul.radio-list {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-.nav.menu {
-  display: block !important;
-}
 .nav.menu .menu-toggle {
-  display: none;
+  display: none !important;
 }
 
 .pagination ul {
