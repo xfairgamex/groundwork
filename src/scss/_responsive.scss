@@ -116,6 +116,7 @@
   // hamburger menu
   .nav {
     &.menu {
+      display:block;
       &:before {
         content:attr(data-label);
         float:left;
@@ -155,6 +156,9 @@
             a, a:visited {
               @include rounded(0 0 $radius $radius);
             }
+          }
+          ul {
+            position:static;
           }
         }
       }
