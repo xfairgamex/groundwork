@@ -5746,7 +5746,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   }
 
   .nav.menu {
-    display: block;
+    display: block !important;
     background-color: #1dabb8;
     padding: 10px;
     padding-bottom: 0;

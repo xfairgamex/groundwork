@@ -116,7 +116,7 @@
   // hamburger menu
   .nav {
     &.menu {
-      display:block;
+      display:block !important;
       &:before {
         content:attr(data-label);
         float:left;
