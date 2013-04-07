@@ -1600,7 +1600,7 @@ pre code:before {
   transition: font 0.25s;
 }
 
-button, .button, nav.nav.menu .menu-toggle, a.button, nav.nav.menu a.menu-toggle, a.button:visited, nav.nav.menu a.menu-toggle:visited, input[type=submit], input[type=button], input[type=reset], [role=button] {
+button, .button, .nav.menu .menu-toggle, a.button, .nav.menu a.menu-toggle, a.button:visited, .nav.menu a.menu-toggle:visited, input[type=submit], input[type=button], input[type=reset], [role=button] {
   display: inline-block;
   word-wrap: break-word;
   padding: 0.25em 1em;
@@ -1627,16 +1627,16 @@ button, .button, nav.nav.menu .menu-toggle, a.button, nav.nav.menu a.menu-toggle
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-button.on, button:hover, button:focus, .button.on, nav.nav.menu .on.menu-toggle, .button:hover, nav.nav.menu .menu-toggle:hover, .button:focus, nav.nav.menu .menu-toggle:focus, a.button.on, nav.nav.menu a.on.menu-toggle, a.button:hover, nav.nav.menu a.menu-toggle:hover, a.button:focus, nav.nav.menu a.menu-toggle:focus, a.button:visited.on, nav.nav.menu a.menu-toggle:visited.on, a.button:visited:hover, nav.nav.menu a.menu-toggle:visited:hover, a.button:visited:focus, nav.nav.menu a.menu-toggle:visited:focus, input[type=submit].on, input[type=submit]:hover, input[type=submit]:focus, input[type=button].on, input[type=button]:hover, input[type=button]:focus, input[type=reset].on, input[type=reset]:hover, input[type=reset]:focus, [role=button].on, [role=button]:hover, [role=button]:focus {
+button.on, button:hover, button:focus, .button.on, .nav.menu .on.menu-toggle, .button:hover, .nav.menu .menu-toggle:hover, .button:focus, .nav.menu .menu-toggle:focus, a.button.on, .nav.menu a.on.menu-toggle, a.button:hover, .nav.menu a.menu-toggle:hover, a.button:focus, .nav.menu a.menu-toggle:focus, a.button:visited.on, .nav.menu a.menu-toggle:visited.on, a.button:visited:hover, .nav.menu a.menu-toggle:visited:hover, a.button:visited:focus, .nav.menu a.menu-toggle:visited:focus, input[type=submit].on, input[type=submit]:hover, input[type=submit]:focus, input[type=button].on, input[type=button]:hover, input[type=button]:focus, input[type=reset].on, input[type=reset]:hover, input[type=reset]:focus, [role=button].on, [role=button]:hover, [role=button]:focus {
   background: #198d98;
   text-decoration: none;
   color: white;
 }
-button.active, button.active:hover, button.active:focus, .button.active, nav.nav.menu .active.menu-toggle, .button.active:hover, nav.nav.menu .active.menu-toggle:hover, .button.active:focus, nav.nav.menu .active.menu-toggle:focus, a.button.active, nav.nav.menu a.active.menu-toggle, a.button.active:hover, nav.nav.menu a.active.menu-toggle:hover, a.button.active:focus, nav.nav.menu a.active.menu-toggle:focus, a.button:visited.active, nav.nav.menu a.menu-toggle:visited.active, a.button:visited.active:hover, nav.nav.menu a.menu-toggle:visited.active:hover, a.button:visited.active:focus, nav.nav.menu a.menu-toggle:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus, [role=button].active, [role=button].active:hover, [role=button].active:focus {
+button.active, button.active:hover, button.active:focus, .button.active, .nav.menu .active.menu-toggle, .button.active:hover, .nav.menu .active.menu-toggle:hover, .button.active:focus, .nav.menu .active.menu-toggle:focus, a.button.active, .nav.menu a.active.menu-toggle, a.button.active:hover, .nav.menu a.active.menu-toggle:hover, a.button.active:focus, .nav.menu a.active.menu-toggle:focus, a.button:visited.active, .nav.menu a.menu-toggle:visited.active, a.button:visited.active:hover, .nav.menu a.menu-toggle:visited.active:hover, a.button:visited.active:focus, .nav.menu a.menu-toggle:visited.active:focus, input[type=submit].active, input[type=submit].active:hover, input[type=submit].active:focus, input[type=button].active, input[type=button].active:hover, input[type=button].active:focus, input[type=reset].active, input[type=reset].active:hover, input[type=reset].active:focus, [role=button].active, [role=button].active:hover, [role=button].active:focus {
   background: #198d98;
   color: white;
 }
-button.disabled, .button.disabled, nav.nav.menu .disabled.menu-toggle, a.button.disabled, nav.nav.menu a.disabled.menu-toggle, a.button:visited.disabled, nav.nav.menu a.menu-toggle:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled, [role=button].disabled {
+button.disabled, .button.disabled, .nav.menu .disabled.menu-toggle, a.button.disabled, .nav.menu a.disabled.menu-toggle, a.button:visited.disabled, .nav.menu a.menu-toggle:visited.disabled, input[type=submit].disabled, input[type=button].disabled, input[type=reset].disabled, [role=button].disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -1644,7 +1644,7 @@ button.disabled, .button.disabled, nav.nav.menu .disabled.menu-toggle, a.button.
   text-decoration: none;
   outline: none;
 }
-button.disabled:hover, button.disabled:focus, button.disabled:visited, .button.disabled:hover, nav.nav.menu .disabled.menu-toggle:hover, .button.disabled:focus, nav.nav.menu .disabled.menu-toggle:focus, .button.disabled:visited, nav.nav.menu .disabled.menu-toggle:visited, a.button.disabled:hover, nav.nav.menu a.disabled.menu-toggle:hover, a.button.disabled:focus, nav.nav.menu a.disabled.menu-toggle:focus, a.button.disabled:visited, nav.nav.menu a.disabled.menu-toggle:visited, a.button:visited.disabled:hover, nav.nav.menu a.menu-toggle:visited.disabled:hover, a.button:visited.disabled:focus, nav.nav.menu a.menu-toggle:visited.disabled:focus, a.button:visited.disabled:visited, nav.nav.menu a.menu-toggle:visited.disabled:visited, input[type=submit].disabled:hover, input[type=submit].disabled:focus, input[type=submit].disabled:visited, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:visited, input[type=reset].disabled:hover, input[type=reset].disabled:focus, input[type=reset].disabled:visited, [role=button].disabled:hover, [role=button].disabled:focus, [role=button].disabled:visited {
+button.disabled:hover, button.disabled:focus, button.disabled:visited, .button.disabled:hover, .nav.menu .disabled.menu-toggle:hover, .button.disabled:focus, .nav.menu .disabled.menu-toggle:focus, .button.disabled:visited, .nav.menu .disabled.menu-toggle:visited, a.button.disabled:hover, .nav.menu a.disabled.menu-toggle:hover, a.button.disabled:focus, .nav.menu a.disabled.menu-toggle:focus, a.button.disabled:visited, .nav.menu a.disabled.menu-toggle:visited, a.button:visited.disabled:hover, .nav.menu a.menu-toggle:visited.disabled:hover, a.button:visited.disabled:focus, .nav.menu a.menu-toggle:visited.disabled:focus, a.button:visited.disabled:visited, .nav.menu a.menu-toggle:visited.disabled:visited, input[type=submit].disabled:hover, input[type=submit].disabled:focus, input[type=submit].disabled:visited, input[type=button].disabled:hover, input[type=button].disabled:focus, input[type=button].disabled:visited, input[type=reset].disabled:hover, input[type=reset].disabled:focus, input[type=reset].disabled:visited, [role=button].disabled:hover, [role=button].disabled:focus, [role=button].disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -1652,21 +1652,21 @@ button.disabled:hover, button.disabled:focus, button.disabled:visited, .button.d
   text-decoration: none;
   outline: none;
 }
-button.small, .button.small, nav.nav.menu .small.menu-toggle, a.button.small, nav.nav.menu a.small.menu-toggle, a.button:visited.small, nav.nav.menu a.menu-toggle:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small, [role=button].small {
+button.small, .button.small, .nav.menu .small.menu-toggle, a.button.small, .nav.menu a.small.menu-toggle, a.button:visited.small, .nav.menu a.menu-toggle:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small, [role=button].small {
   font-size: 0.8em;
 }
-button.large, .button.large, nav.nav.menu .large.menu-toggle, a.button.large, nav.nav.menu a.large.menu-toggle, a.button:visited.large, nav.nav.menu a.menu-toggle:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large, [role=button].large {
+button.large, .button.large, .nav.menu .large.menu-toggle, a.button.large, .nav.menu a.large.menu-toggle, a.button:visited.large, .nav.menu a.menu-toggle:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large, [role=button].large {
   font-size: 1.5em;
 }
-button.error, .button.error, nav.nav.menu .error.menu-toggle, a.button.error, nav.nav.menu a.error.menu-toggle, a.button:visited.error, nav.nav.menu a.menu-toggle:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error, [role=button].error {
+button.error, .button.error, .nav.menu .error.menu-toggle, a.button.error, .nav.menu a.error.menu-toggle, a.button:visited.error, .nav.menu a.menu-toggle:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error, [role=button].error {
   background: #a40400;
   border: 1px solid #710300;
   color: white;
 }
-button.error.active, button.error:hover, button.error:focus, .button.error.active, nav.nav.menu .error.active.menu-toggle, .button.error:hover, nav.nav.menu .error.menu-toggle:hover, .button.error:focus, nav.nav.menu .error.menu-toggle:focus, a.button.error.active, nav.nav.menu a.error.active.menu-toggle, a.button.error:hover, nav.nav.menu a.error.menu-toggle:hover, a.button.error:focus, nav.nav.menu a.error.menu-toggle:focus, a.button:visited.error.active, nav.nav.menu a.menu-toggle:visited.error.active, a.button:visited.error:hover, nav.nav.menu a.menu-toggle:visited.error:hover, a.button:visited.error:focus, nav.nav.menu a.menu-toggle:visited.error:focus, input[type=submit].error.active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error.active, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error.active, input[type=reset].error:hover, input[type=reset].error:focus, [role=button].error.active, [role=button].error:hover, [role=button].error:focus {
+button.error.active, button.error:hover, button.error:focus, .button.error.active, .nav.menu .error.active.menu-toggle, .button.error:hover, .nav.menu .error.menu-toggle:hover, .button.error:focus, .nav.menu .error.menu-toggle:focus, a.button.error.active, .nav.menu a.error.active.menu-toggle, a.button.error:hover, .nav.menu a.error.menu-toggle:hover, a.button.error:focus, .nav.menu a.error.menu-toggle:focus, a.button:visited.error.active, .nav.menu a.menu-toggle:visited.error.active, a.button:visited.error:hover, .nav.menu a.menu-toggle:visited.error:hover, a.button:visited.error:focus, .nav.menu a.menu-toggle:visited.error:focus, input[type=submit].error.active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error.active, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error.active, input[type=reset].error:hover, input[type=reset].error:focus, [role=button].error.active, [role=button].error:hover, [role=button].error:focus {
   background: #710300;
 }
-button.error.disabled, .button.error.disabled, nav.nav.menu .error.disabled.menu-toggle, a.button.error.disabled, nav.nav.menu a.error.disabled.menu-toggle, a.button:visited.error.disabled, nav.nav.menu a.menu-toggle:visited.error.disabled, input[type=submit].error.disabled, input[type=button].error.disabled, input[type=reset].error.disabled, [role=button].error.disabled {
+button.error.disabled, .button.error.disabled, .nav.menu .error.disabled.menu-toggle, a.button.error.disabled, .nav.menu a.error.disabled.menu-toggle, a.button:visited.error.disabled, .nav.menu a.menu-toggle:visited.error.disabled, input[type=submit].error.disabled, input[type=button].error.disabled, input[type=reset].error.disabled, [role=button].error.disabled {
   color: #ee6c68;
   background: #d81d18;
   border-color: #941410;
@@ -1674,7 +1674,7 @@ button.error.disabled, .button.error.disabled, nav.nav.menu .error.disabled.menu
   text-decoration: none;
   outline: none;
 }
-button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:visited, .button.error.disabled:hover, nav.nav.menu .error.disabled.menu-toggle:hover, .button.error.disabled:focus, nav.nav.menu .error.disabled.menu-toggle:focus, .button.error.disabled:visited, nav.nav.menu .error.disabled.menu-toggle:visited, a.button.error.disabled:hover, nav.nav.menu a.error.disabled.menu-toggle:hover, a.button.error.disabled:focus, nav.nav.menu a.error.disabled.menu-toggle:focus, a.button.error.disabled:visited, nav.nav.menu a.error.disabled.menu-toggle:visited, a.button:visited.error.disabled:hover, nav.nav.menu a.menu-toggle:visited.error.disabled:hover, a.button:visited.error.disabled:focus, nav.nav.menu a.menu-toggle:visited.error.disabled:focus, a.button:visited.error.disabled:visited, nav.nav.menu a.menu-toggle:visited.error.disabled:visited, input[type=submit].error.disabled:hover, input[type=submit].error.disabled:focus, input[type=submit].error.disabled:visited, input[type=button].error.disabled:hover, input[type=button].error.disabled:focus, input[type=button].error.disabled:visited, input[type=reset].error.disabled:hover, input[type=reset].error.disabled:focus, input[type=reset].error.disabled:visited, [role=button].error.disabled:hover, [role=button].error.disabled:focus, [role=button].error.disabled:visited {
+button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:visited, .button.error.disabled:hover, .nav.menu .error.disabled.menu-toggle:hover, .button.error.disabled:focus, .nav.menu .error.disabled.menu-toggle:focus, .button.error.disabled:visited, .nav.menu .error.disabled.menu-toggle:visited, a.button.error.disabled:hover, .nav.menu a.error.disabled.menu-toggle:hover, a.button.error.disabled:focus, .nav.menu a.error.disabled.menu-toggle:focus, a.button.error.disabled:visited, .nav.menu a.error.disabled.menu-toggle:visited, a.button:visited.error.disabled:hover, .nav.menu a.menu-toggle:visited.error.disabled:hover, a.button:visited.error.disabled:focus, .nav.menu a.menu-toggle:visited.error.disabled:focus, a.button:visited.error.disabled:visited, .nav.menu a.menu-toggle:visited.error.disabled:visited, input[type=submit].error.disabled:hover, input[type=submit].error.disabled:focus, input[type=submit].error.disabled:visited, input[type=button].error.disabled:hover, input[type=button].error.disabled:focus, input[type=button].error.disabled:visited, input[type=reset].error.disabled:hover, input[type=reset].error.disabled:focus, input[type=reset].error.disabled:visited, [role=button].error.disabled:hover, [role=button].error.disabled:focus, [role=button].error.disabled:visited {
   color: #ee6c68;
   background: #d81d18;
   border-color: #941410;
@@ -1682,15 +1682,15 @@ button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:
   text-decoration: none;
   outline: none;
 }
-button.warning, .button.warning, nav.nav.menu .warning.menu-toggle, a.button.warning, nav.nav.menu a.warning.menu-toggle, a.button:visited.warning, nav.nav.menu a.menu-toggle:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning, [role=button].warning {
+button.warning, .button.warning, .nav.menu .warning.menu-toggle, a.button.warning, .nav.menu a.warning.menu-toggle, a.button:visited.warning, .nav.menu a.menu-toggle:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning, [role=button].warning {
   background: #ff971e;
   border: 1px solid #ea7e00;
   color: white;
 }
-button.warning.active, button.warning:hover, button.warning:focus, .button.warning.active, nav.nav.menu .warning.active.menu-toggle, .button.warning:hover, nav.nav.menu .warning.menu-toggle:hover, .button.warning:focus, nav.nav.menu .warning.menu-toggle:focus, a.button.warning.active, nav.nav.menu a.warning.active.menu-toggle, a.button.warning:hover, nav.nav.menu a.warning.menu-toggle:hover, a.button.warning:focus, nav.nav.menu a.warning.menu-toggle:focus, a.button:visited.warning.active, nav.nav.menu a.menu-toggle:visited.warning.active, a.button:visited.warning:hover, nav.nav.menu a.menu-toggle:visited.warning:hover, a.button:visited.warning:focus, nav.nav.menu a.menu-toggle:visited.warning:focus, input[type=submit].warning.active, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning.active, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning.active, input[type=reset].warning:hover, input[type=reset].warning:focus, [role=button].warning.active, [role=button].warning:hover, [role=button].warning:focus {
+button.warning.active, button.warning:hover, button.warning:focus, .button.warning.active, .nav.menu .warning.active.menu-toggle, .button.warning:hover, .nav.menu .warning.menu-toggle:hover, .button.warning:focus, .nav.menu .warning.menu-toggle:focus, a.button.warning.active, .nav.menu a.warning.active.menu-toggle, a.button.warning:hover, .nav.menu a.warning.menu-toggle:hover, a.button.warning:focus, .nav.menu a.warning.menu-toggle:focus, a.button:visited.warning.active, .nav.menu a.menu-toggle:visited.warning.active, a.button:visited.warning:hover, .nav.menu a.menu-toggle:visited.warning:hover, a.button:visited.warning:focus, .nav.menu a.menu-toggle:visited.warning:focus, input[type=submit].warning.active, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning.active, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning.active, input[type=reset].warning:hover, input[type=reset].warning:focus, [role=button].warning.active, [role=button].warning:hover, [role=button].warning:focus {
   background: #ea7e00;
 }
-button.warning.disabled, .button.warning.disabled, nav.nav.menu .warning.disabled.menu-toggle, a.button.warning.disabled, nav.nav.menu a.warning.disabled.menu-toggle, a.button:visited.warning.disabled, nav.nav.menu a.menu-toggle:visited.warning.disabled, input[type=submit].warning.disabled, input[type=button].warning.disabled, input[type=reset].warning.disabled, [role=button].warning.disabled {
+button.warning.disabled, .button.warning.disabled, .nav.menu .warning.disabled.menu-toggle, a.button.warning.disabled, .nav.menu a.warning.disabled.menu-toggle, a.button:visited.warning.disabled, .nav.menu a.menu-toggle:visited.warning.disabled, input[type=submit].warning.disabled, input[type=button].warning.disabled, input[type=reset].warning.disabled, [role=button].warning.disabled {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -1698,7 +1698,7 @@ button.warning.disabled, .button.warning.disabled, nav.nav.menu .warning.disable
   text-decoration: none;
   outline: none;
 }
-button.warning.disabled:hover, button.warning.disabled:focus, button.warning.disabled:visited, .button.warning.disabled:hover, nav.nav.menu .warning.disabled.menu-toggle:hover, .button.warning.disabled:focus, nav.nav.menu .warning.disabled.menu-toggle:focus, .button.warning.disabled:visited, nav.nav.menu .warning.disabled.menu-toggle:visited, a.button.warning.disabled:hover, nav.nav.menu a.warning.disabled.menu-toggle:hover, a.button.warning.disabled:focus, nav.nav.menu a.warning.disabled.menu-toggle:focus, a.button.warning.disabled:visited, nav.nav.menu a.warning.disabled.menu-toggle:visited, a.button:visited.warning.disabled:hover, nav.nav.menu a.menu-toggle:visited.warning.disabled:hover, a.button:visited.warning.disabled:focus, nav.nav.menu a.menu-toggle:visited.warning.disabled:focus, a.button:visited.warning.disabled:visited, nav.nav.menu a.menu-toggle:visited.warning.disabled:visited, input[type=submit].warning.disabled:hover, input[type=submit].warning.disabled:focus, input[type=submit].warning.disabled:visited, input[type=button].warning.disabled:hover, input[type=button].warning.disabled:focus, input[type=button].warning.disabled:visited, input[type=reset].warning.disabled:hover, input[type=reset].warning.disabled:focus, input[type=reset].warning.disabled:visited, [role=button].warning.disabled:hover, [role=button].warning.disabled:focus, [role=button].warning.disabled:visited {
+button.warning.disabled:hover, button.warning.disabled:focus, button.warning.disabled:visited, .button.warning.disabled:hover, .nav.menu .warning.disabled.menu-toggle:hover, .button.warning.disabled:focus, .nav.menu .warning.disabled.menu-toggle:focus, .button.warning.disabled:visited, .nav.menu .warning.disabled.menu-toggle:visited, a.button.warning.disabled:hover, .nav.menu a.warning.disabled.menu-toggle:hover, a.button.warning.disabled:focus, .nav.menu a.warning.disabled.menu-toggle:focus, a.button.warning.disabled:visited, .nav.menu a.warning.disabled.menu-toggle:visited, a.button:visited.warning.disabled:hover, .nav.menu a.menu-toggle:visited.warning.disabled:hover, a.button:visited.warning.disabled:focus, .nav.menu a.menu-toggle:visited.warning.disabled:focus, a.button:visited.warning.disabled:visited, .nav.menu a.menu-toggle:visited.warning.disabled:visited, input[type=submit].warning.disabled:hover, input[type=submit].warning.disabled:focus, input[type=submit].warning.disabled:visited, input[type=button].warning.disabled:hover, input[type=button].warning.disabled:focus, input[type=button].warning.disabled:visited, input[type=reset].warning.disabled:hover, input[type=reset].warning.disabled:focus, input[type=reset].warning.disabled:visited, [role=button].warning.disabled:hover, [role=button].warning.disabled:focus, [role=button].warning.disabled:visited {
   color: #fae9d5;
   background: #f0b979;
   border-color: #e99534;
@@ -1706,15 +1706,15 @@ button.warning.disabled:hover, button.warning.disabled:focus, button.warning.dis
   text-decoration: none;
   outline: none;
 }
-button.success, .button.success, nav.nav.menu .success.menu-toggle, a.button.success, nav.nav.menu a.success.menu-toggle, a.button:visited.success, nav.nav.menu a.menu-toggle:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success, [role=button].success {
+button.success, .button.success, .nav.menu .success.menu-toggle, a.button.success, .nav.menu a.success.menu-toggle, a.button:visited.success, .nav.menu a.menu-toggle:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success, [role=button].success {
   background: #5fb40e;
   border: 1px solid #46850a;
   color: white;
 }
-button.success.active, button.success:hover, button.success:focus, .button.success.active, nav.nav.menu .success.active.menu-toggle, .button.success:hover, nav.nav.menu .success.menu-toggle:hover, .button.success:focus, nav.nav.menu .success.menu-toggle:focus, a.button.success.active, nav.nav.menu a.success.active.menu-toggle, a.button.success:hover, nav.nav.menu a.success.menu-toggle:hover, a.button.success:focus, nav.nav.menu a.success.menu-toggle:focus, a.button:visited.success.active, nav.nav.menu a.menu-toggle:visited.success.active, a.button:visited.success:hover, nav.nav.menu a.menu-toggle:visited.success:hover, a.button:visited.success:focus, nav.nav.menu a.menu-toggle:visited.success:focus, input[type=submit].success.active, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success.active, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success.active, input[type=reset].success:hover, input[type=reset].success:focus, [role=button].success.active, [role=button].success:hover, [role=button].success:focus {
+button.success.active, button.success:hover, button.success:focus, .button.success.active, .nav.menu .success.active.menu-toggle, .button.success:hover, .nav.menu .success.menu-toggle:hover, .button.success:focus, .nav.menu .success.menu-toggle:focus, a.button.success.active, .nav.menu a.success.active.menu-toggle, a.button.success:hover, .nav.menu a.success.menu-toggle:hover, a.button.success:focus, .nav.menu a.success.menu-toggle:focus, a.button:visited.success.active, .nav.menu a.menu-toggle:visited.success.active, a.button:visited.success:hover, .nav.menu a.menu-toggle:visited.success:hover, a.button:visited.success:focus, .nav.menu a.menu-toggle:visited.success:focus, input[type=submit].success.active, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success.active, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success.active, input[type=reset].success:hover, input[type=reset].success:focus, [role=button].success.active, [role=button].success:hover, [role=button].success:focus {
   background: #46850a;
 }
-button.success.disabled, .button.success.disabled, nav.nav.menu .success.disabled.menu-toggle, a.button.success.disabled, nav.nav.menu a.success.disabled.menu-toggle, a.button:visited.success.disabled, nav.nav.menu a.menu-toggle:visited.success.disabled, input[type=submit].success.disabled, input[type=button].success.disabled, input[type=reset].success.disabled, [role=button].success.disabled {
+button.success.disabled, .button.success.disabled, .nav.menu .success.disabled.menu-toggle, a.button.success.disabled, .nav.menu a.success.disabled.menu-toggle, a.button:visited.success.disabled, .nav.menu a.menu-toggle:visited.success.disabled, input[type=submit].success.disabled, input[type=button].success.disabled, input[type=reset].success.disabled, [role=button].success.disabled {
   color: #b9e78d;
   background: #85d639;
   border-color: #5fa121;
@@ -1722,7 +1722,7 @@ button.success.disabled, .button.success.disabled, nav.nav.menu .success.disable
   text-decoration: none;
   outline: none;
 }
-button.success.disabled:hover, button.success.disabled:focus, button.success.disabled:visited, .button.success.disabled:hover, nav.nav.menu .success.disabled.menu-toggle:hover, .button.success.disabled:focus, nav.nav.menu .success.disabled.menu-toggle:focus, .button.success.disabled:visited, nav.nav.menu .success.disabled.menu-toggle:visited, a.button.success.disabled:hover, nav.nav.menu a.success.disabled.menu-toggle:hover, a.button.success.disabled:focus, nav.nav.menu a.success.disabled.menu-toggle:focus, a.button.success.disabled:visited, nav.nav.menu a.success.disabled.menu-toggle:visited, a.button:visited.success.disabled:hover, nav.nav.menu a.menu-toggle:visited.success.disabled:hover, a.button:visited.success.disabled:focus, nav.nav.menu a.menu-toggle:visited.success.disabled:focus, a.button:visited.success.disabled:visited, nav.nav.menu a.menu-toggle:visited.success.disabled:visited, input[type=submit].success.disabled:hover, input[type=submit].success.disabled:focus, input[type=submit].success.disabled:visited, input[type=button].success.disabled:hover, input[type=button].success.disabled:focus, input[type=button].success.disabled:visited, input[type=reset].success.disabled:hover, input[type=reset].success.disabled:focus, input[type=reset].success.disabled:visited, [role=button].success.disabled:hover, [role=button].success.disabled:focus, [role=button].success.disabled:visited {
+button.success.disabled:hover, button.success.disabled:focus, button.success.disabled:visited, .button.success.disabled:hover, .nav.menu .success.disabled.menu-toggle:hover, .button.success.disabled:focus, .nav.menu .success.disabled.menu-toggle:focus, .button.success.disabled:visited, .nav.menu .success.disabled.menu-toggle:visited, a.button.success.disabled:hover, .nav.menu a.success.disabled.menu-toggle:hover, a.button.success.disabled:focus, .nav.menu a.success.disabled.menu-toggle:focus, a.button.success.disabled:visited, .nav.menu a.success.disabled.menu-toggle:visited, a.button:visited.success.disabled:hover, .nav.menu a.menu-toggle:visited.success.disabled:hover, a.button:visited.success.disabled:focus, .nav.menu a.menu-toggle:visited.success.disabled:focus, a.button:visited.success.disabled:visited, .nav.menu a.menu-toggle:visited.success.disabled:visited, input[type=submit].success.disabled:hover, input[type=submit].success.disabled:focus, input[type=submit].success.disabled:visited, input[type=button].success.disabled:hover, input[type=button].success.disabled:focus, input[type=button].success.disabled:visited, input[type=reset].success.disabled:hover, input[type=reset].success.disabled:focus, input[type=reset].success.disabled:visited, [role=button].success.disabled:hover, [role=button].success.disabled:focus, [role=button].success.disabled:visited {
   color: #b9e78d;
   background: #85d639;
   border-color: #5fa121;
@@ -1730,38 +1730,38 @@ button.success.disabled:hover, button.success.disabled:focus, button.success.dis
   text-decoration: none;
   outline: none;
 }
-button.square, .button.square, nav.nav.menu .square.menu-toggle, a.button.square, nav.nav.menu a.square.menu-toggle, a.button:visited.square, nav.nav.menu a.menu-toggle:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square, [role=button].square {
+button.square, .button.square, .nav.menu .square.menu-toggle, a.button.square, .nav.menu a.square.menu-toggle, a.button:visited.square, .nav.menu a.menu-toggle:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square, [role=button].square {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-button.round, .button.round, nav.nav.menu .round.menu-toggle, a.button.round, nav.nav.menu a.round.menu-toggle, a.button:visited.round, nav.nav.menu a.menu-toggle:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round, [role=button].round {
+button.round, .button.round, .nav.menu .round.menu-toggle, a.button.round, .nav.menu a.round.menu-toggle, a.button:visited.round, .nav.menu a.menu-toggle:visited.round, input[type=submit].round, input[type=button].round, input[type=reset].round, [role=button].round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
 }
-button.block, .button.block, nav.nav.menu .block.menu-toggle, a.button.block, nav.nav.menu a.block.menu-toggle, a.button:visited.block, nav.nav.menu a.menu-toggle:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block, [role=button].block {
+button.block, .button.block, .nav.menu .block.menu-toggle, a.button.block, .nav.menu a.block.menu-toggle, a.button:visited.block, .nav.menu a.menu-toggle:visited.block, input[type=submit].block, input[type=button].block, input[type=reset].block, [role=button].block {
   display: block;
   width: 100%;
 }
-button.dropdown, .button.dropdown, nav.nav.menu .dropdown.menu-toggle, a.button.dropdown, nav.nav.menu a.dropdown.menu-toggle, a.button:visited.dropdown, nav.nav.menu a.menu-toggle:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown, [role=button].dropdown {
+button.dropdown, .button.dropdown, .nav.menu .dropdown.menu-toggle, a.button.dropdown, .nav.menu a.dropdown.menu-toggle, a.button:visited.dropdown, .nav.menu a.menu-toggle:visited.dropdown, input[type=submit].dropdown, input[type=button].dropdown, input[type=reset].dropdown, [role=button].dropdown {
   position: relative;
   padding-right: 2em;
 }
-button.dropdown:after, .button.dropdown:after, nav.nav.menu .dropdown.menu-toggle:after, a.button.dropdown:after, nav.nav.menu a.dropdown.menu-toggle:after, a.button:visited.dropdown:after, nav.nav.menu a.menu-toggle:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after, [role=button].dropdown:after {
+button.dropdown:after, .button.dropdown:after, .nav.menu .dropdown.menu-toggle:after, a.button.dropdown:after, .nav.menu a.dropdown.menu-toggle:after, a.button:visited.dropdown:after, .nav.menu a.menu-toggle:visited.dropdown:after, input[type=submit].dropdown:after, input[type=button].dropdown:after, input[type=reset].dropdown:after, [role=button].dropdown:after {
   content: '...';
   position: absolute;
   right: 1em;
   bottom: 0.25em;
 }
-button.dropdown.on ul, .button.dropdown.on ul, nav.nav.menu .dropdown.on.menu-toggle ul, a.button.dropdown.on ul, nav.nav.menu a.dropdown.on.menu-toggle ul, a.button:visited.dropdown.on ul, nav.nav.menu a.menu-toggle:visited.dropdown.on ul, input[type=submit].dropdown.on ul, input[type=button].dropdown.on ul, input[type=reset].dropdown.on ul, [role=button].dropdown.on ul {
+button.dropdown.on ul, .button.dropdown.on ul, .nav.menu .dropdown.on.menu-toggle ul, a.button.dropdown.on ul, .nav.menu a.dropdown.on.menu-toggle ul, a.button:visited.dropdown.on ul, .nav.menu a.menu-toggle:visited.dropdown.on ul, input[type=submit].dropdown.on ul, input[type=button].dropdown.on ul, input[type=reset].dropdown.on ul, [role=button].dropdown.on ul {
   display: block;
 }
-button.dropdown ul, .button.dropdown ul, nav.nav.menu .dropdown.menu-toggle ul, a.button.dropdown ul, nav.nav.menu a.dropdown.menu-toggle ul, a.button:visited.dropdown ul, nav.nav.menu a.menu-toggle:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul, [role=button].dropdown ul {
+button.dropdown ul, .button.dropdown ul, .nav.menu .dropdown.menu-toggle ul, a.button.dropdown ul, .nav.menu a.dropdown.menu-toggle ul, a.button:visited.dropdown ul, .nav.menu a.menu-toggle:visited.dropdown ul, input[type=submit].dropdown ul, input[type=button].dropdown ul, input[type=reset].dropdown ul, [role=button].dropdown ul {
   text-align: left;
   margin: 0.3em 0 0;
   padding: 0;
@@ -1780,27 +1780,27 @@ button.dropdown ul, .button.dropdown ul, nav.nav.menu .dropdown.menu-toggle ul, 
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li, .button.dropdown ul li, nav.nav.menu .dropdown.menu-toggle ul li, a.button.dropdown ul li, nav.nav.menu a.dropdown.menu-toggle ul li, a.button:visited.dropdown ul li, nav.nav.menu a.menu-toggle:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li, [role=button].dropdown ul li {
+button.dropdown ul li, .button.dropdown ul li, .nav.menu .dropdown.menu-toggle ul li, a.button.dropdown ul li, .nav.menu a.dropdown.menu-toggle ul li, a.button:visited.dropdown ul li, .nav.menu a.menu-toggle:visited.dropdown ul li, input[type=submit].dropdown ul li, input[type=button].dropdown ul li, input[type=reset].dropdown ul li, [role=button].dropdown ul li {
   display: block;
 }
-button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li a, nav.nav.menu .dropdown.menu-toggle ul li a, .button.dropdown ul li a:visited, nav.nav.menu .dropdown.menu-toggle ul li a:visited, a.button.dropdown ul li a, nav.nav.menu a.dropdown.menu-toggle ul li a, a.button.dropdown ul li a:visited, nav.nav.menu a.dropdown.menu-toggle ul li a:visited, a.button:visited.dropdown ul li a, nav.nav.menu a.menu-toggle:visited.dropdown ul li a, a.button:visited.dropdown ul li a:visited, nav.nav.menu a.menu-toggle:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:visited, [role=button].dropdown ul li a, [role=button].dropdown ul li a:visited {
+button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li a, .nav.menu .dropdown.menu-toggle ul li a, .button.dropdown ul li a:visited, .nav.menu .dropdown.menu-toggle ul li a:visited, a.button.dropdown ul li a, .nav.menu a.dropdown.menu-toggle ul li a, a.button.dropdown ul li a:visited, .nav.menu a.dropdown.menu-toggle ul li a:visited, a.button:visited.dropdown ul li a, .nav.menu a.menu-toggle:visited.dropdown ul li a, a.button:visited.dropdown ul li a:visited, .nav.menu a.menu-toggle:visited.dropdown ul li a:visited, input[type=submit].dropdown ul li a, input[type=submit].dropdown ul li a:visited, input[type=button].dropdown ul li a, input[type=button].dropdown ul li a:visited, input[type=reset].dropdown ul li a, input[type=reset].dropdown ul li a:visited, [role=button].dropdown ul li a, [role=button].dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
   text-shadow: none;
   text-decoration: none;
 }
-button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, nav.nav.menu .dropdown.menu-toggle ul li a:hover, .button.dropdown ul li a:focus, nav.nav.menu .dropdown.menu-toggle ul li a:focus, .button.dropdown ul li a:visited:hover, nav.nav.menu .dropdown.menu-toggle ul li a:visited:hover, .button.dropdown ul li a:visited:focus, nav.nav.menu .dropdown.menu-toggle ul li a:visited:focus, a.button.dropdown ul li a:hover, nav.nav.menu a.dropdown.menu-toggle ul li a:hover, a.button.dropdown ul li a:focus, nav.nav.menu a.dropdown.menu-toggle ul li a:focus, a.button.dropdown ul li a:visited:hover, nav.nav.menu a.dropdown.menu-toggle ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, nav.nav.menu a.dropdown.menu-toggle ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, nav.nav.menu a.menu-toggle:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, nav.nav.menu a.menu-toggle:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:visited:hover, nav.nav.menu a.menu-toggle:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, nav.nav.menu a.menu-toggle:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus, [role=button].dropdown ul li a:hover, [role=button].dropdown ul li a:focus, [role=button].dropdown ul li a:visited:hover, [role=button].dropdown ul li a:visited:focus {
+button.dropdown ul li a:hover, button.dropdown ul li a:focus, button.dropdown ul li a:visited:hover, button.dropdown ul li a:visited:focus, .button.dropdown ul li a:hover, .nav.menu .dropdown.menu-toggle ul li a:hover, .button.dropdown ul li a:focus, .nav.menu .dropdown.menu-toggle ul li a:focus, .button.dropdown ul li a:visited:hover, .nav.menu .dropdown.menu-toggle ul li a:visited:hover, .button.dropdown ul li a:visited:focus, .nav.menu .dropdown.menu-toggle ul li a:visited:focus, a.button.dropdown ul li a:hover, .nav.menu a.dropdown.menu-toggle ul li a:hover, a.button.dropdown ul li a:focus, .nav.menu a.dropdown.menu-toggle ul li a:focus, a.button.dropdown ul li a:visited:hover, .nav.menu a.dropdown.menu-toggle ul li a:visited:hover, a.button.dropdown ul li a:visited:focus, .nav.menu a.dropdown.menu-toggle ul li a:visited:focus, a.button:visited.dropdown ul li a:hover, .nav.menu a.menu-toggle:visited.dropdown ul li a:hover, a.button:visited.dropdown ul li a:focus, .nav.menu a.menu-toggle:visited.dropdown ul li a:focus, a.button:visited.dropdown ul li a:visited:hover, .nav.menu a.menu-toggle:visited.dropdown ul li a:visited:hover, a.button:visited.dropdown ul li a:visited:focus, .nav.menu a.menu-toggle:visited.dropdown ul li a:visited:focus, input[type=submit].dropdown ul li a:hover, input[type=submit].dropdown ul li a:focus, input[type=submit].dropdown ul li a:visited:hover, input[type=submit].dropdown ul li a:visited:focus, input[type=button].dropdown ul li a:hover, input[type=button].dropdown ul li a:focus, input[type=button].dropdown ul li a:visited:hover, input[type=button].dropdown ul li a:visited:focus, input[type=reset].dropdown ul li a:hover, input[type=reset].dropdown ul li a:focus, input[type=reset].dropdown ul li a:visited:hover, input[type=reset].dropdown ul li a:visited:focus, [role=button].dropdown ul li a:hover, [role=button].dropdown ul li a:focus, [role=button].dropdown ul li a:visited:hover, [role=button].dropdown ul li a:visited:focus {
   background: #efefef;
 }
-button.dropdown ul li:last-child, .button.dropdown ul li:last-child, nav.nav.menu .dropdown.menu-toggle ul li:last-child, a.button.dropdown ul li:last-child, nav.nav.menu a.dropdown.menu-toggle ul li:last-child, a.button:visited.dropdown ul li:last-child, nav.nav.menu a.menu-toggle:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child, [role=button].dropdown ul li:last-child {
+button.dropdown ul li:last-child, .button.dropdown ul li:last-child, .nav.menu .dropdown.menu-toggle ul li:last-child, a.button.dropdown ul li:last-child, .nav.menu a.dropdown.menu-toggle ul li:last-child, a.button:visited.dropdown ul li:last-child, .nav.menu a.menu-toggle:visited.dropdown ul li:last-child, input[type=submit].dropdown ul li:last-child, input[type=button].dropdown ul li:last-child, input[type=reset].dropdown ul li:last-child, [role=button].dropdown ul li:last-child {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-button.dropdown ul li hr, .button.dropdown ul li hr, nav.nav.menu .dropdown.menu-toggle ul li hr, a.button.dropdown ul li hr, nav.nav.menu a.dropdown.menu-toggle ul li hr, a.button:visited.dropdown ul li hr, nav.nav.menu a.menu-toggle:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr, [role=button].dropdown ul li hr {
+button.dropdown ul li hr, .button.dropdown ul li hr, .nav.menu .dropdown.menu-toggle ul li hr, a.button.dropdown ul li hr, .nav.menu a.dropdown.menu-toggle ul li hr, a.button:visited.dropdown ul li hr, .nav.menu a.menu-toggle:visited.dropdown ul li hr, input[type=submit].dropdown ul li hr, input[type=button].dropdown ul li hr, input[type=reset].dropdown ul li hr, [role=button].dropdown ul li hr {
   margin: 0;
   border-color: #ececec;
 }
@@ -2068,28 +2068,28 @@ ul.radio-list {
   border-radius: 0 4px 4px 0;
 }
 
-nav.nav ul ul, nav.nav ul.row ul, nav.nav.inline ul li ul {
+.nav ul ul, .nav ul.row ul, .nav.inline ul li ul {
   display: none;
 }
 
-nav.nav ul li.menu.on > ul, .no-js nav.nav ul li.menu ul {
+.nav ul li.menu.on > ul, .no-js .nav ul li.menu ul {
   display: block;
 }
 
-nav.nav:not(.inline) > ul:not(.row) {
+.nav:not(.inline) > ul:not(.row) {
   display: inline-block;
 }
-nav.nav ul {
+.nav ul {
   display: block;
   list-style: none;
   margin: 0;
   padding: 0;
 }
-nav.nav ul li {
+.nav ul li {
   display: block;
   position: relative;
 }
-nav.nav ul li a, nav.nav ul li a:visited {
+.nav ul li a, .nav ul li a:visited {
   display: block;
   width: 100%;
   word-wrap: break-word;
@@ -2108,15 +2108,15 @@ nav.nav ul li a, nav.nav ul li a:visited {
   -webkit-transition: background-color 0.25s ease-out;
   transition: background-color 0.25s ease-out;
 }
-nav.nav ul li a:hover, nav.nav ul li a:focus, nav.nav ul li a:visited:hover, nav.nav ul li a:visited:focus {
+.nav ul li a:hover, .nav ul li a:focus, .nav ul li a:visited:hover, .nav ul li a:visited:focus {
   background: #198d98;
   color: white;
   text-decoration: none;
 }
-nav.nav ul li a.active:hover, nav.nav ul li a.active:focus, nav.nav ul li a:visited.active:hover, nav.nav ul li a:visited.active:focus {
+.nav ul li a.active:hover, .nav ul li a.active:focus, .nav ul li a:visited.active:hover, .nav ul li a:visited.active:focus {
   background: #198d98;
 }
-nav.nav ul li a.disabled, nav.nav ul li a:visited.disabled {
+.nav ul li a.disabled, .nav ul li a:visited.disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2124,7 +2124,7 @@ nav.nav ul li a.disabled, nav.nav ul li a:visited.disabled {
   text-decoration: none;
   outline: none;
 }
-nav.nav ul li a.disabled:hover, nav.nav ul li a.disabled:focus, nav.nav ul li a.disabled:visited, nav.nav ul li a:visited.disabled:hover, nav.nav ul li a:visited.disabled:focus, nav.nav ul li a:visited.disabled:visited {
+.nav ul li a.disabled:hover, .nav ul li a.disabled:focus, .nav ul li a.disabled:visited, .nav ul li a:visited.disabled:hover, .nav ul li a:visited.disabled:focus, .nav ul li a:visited.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2132,10 +2132,10 @@ nav.nav ul li a.disabled:hover, nav.nav ul li a.disabled:focus, nav.nav ul li a.
   text-decoration: none;
   outline: none;
 }
-nav.nav ul li:first-child a, nav.nav ul li:first-child a:visited {
+.nav ul li:first-child a, .nav ul li:first-child a:visited {
   border-top: none;
 }
-nav.nav ul li.menu.disabled > a, nav.nav ul li.menu.disabled > a:visited {
+.nav ul li.menu.disabled > a, .nav ul li.menu.disabled > a:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2143,7 +2143,7 @@ nav.nav ul li.menu.disabled > a, nav.nav ul li.menu.disabled > a:visited {
   text-decoration: none;
   outline: none;
 }
-nav.nav ul li.menu.disabled > a:hover, nav.nav ul li.menu.disabled > a:focus, nav.nav ul li.menu.disabled > a:visited, nav.nav ul li.menu.disabled > a:visited:hover, nav.nav ul li.menu.disabled > a:visited:focus, nav.nav ul li.menu.disabled > a:visited:visited {
+.nav ul li.menu.disabled > a:hover, .nav ul li.menu.disabled > a:focus, .nav ul li.menu.disabled > a:visited, .nav ul li.menu.disabled > a:visited:hover, .nav ul li.menu.disabled > a:visited:focus, .nav ul li.menu.disabled > a:visited:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2151,7 +2151,7 @@ nav.nav ul li.menu.disabled > a:hover, nav.nav ul li.menu.disabled > a:focus, na
   text-decoration: none;
   outline: none;
 }
-nav.nav ul li.menu > a:after, nav.nav ul li.menu > a:visited:after {
+.nav ul li.menu > a:after, .nav ul li.menu > a:visited:after {
   content: '\f0d7';
   display: inline-block;
   width: 1.1em;
@@ -2169,39 +2169,39 @@ nav.nav ul li.menu > a:after, nav.nav ul li.menu > a:visited:after {
   background-repeat: repeat;
   margin-top: 0;
 }
-nav.nav ul li.menu.on > a, nav.nav ul li.menu.on > a:visited {
+.nav ul li.menu.on > a, .nav ul li.menu.on > a:visited {
   background: #198d98;
   text-decoration: none;
 }
-nav.nav ul li:first-child a, nav.nav ul li:first-child a:visited {
+.nav ul li:first-child a, .nav ul li:first-child a:visited {
   -ms-border-radius: 4px 4px 0 0;
   -o-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-nav.nav ul li:last-child a, nav.nav ul li:last-child a:visited {
+.nav ul li:last-child a, .nav ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-nav.nav ul li:only-child a, nav.nav ul li:only-child a:visited {
+.nav ul li:only-child a, .nav ul li:only-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.nav ul ul {
+.nav ul ul {
   position: absolute;
   left: 100%;
   top: 0;
   width: auto;
   z-index: 101;
 }
-nav.nav ul ul li a, nav.nav ul ul li a:visited {
+.nav ul ul li a, .nav ul ul li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -2211,10 +2211,10 @@ nav.nav ul ul li a, nav.nav ul ul li a:visited {
   border-top: 1px solid #1dabb8;
   background: #20bfce;
 }
-nav.nav ul ul li a:hover, nav.nav ul ul li a:active, nav.nav ul ul li a:visited:hover, nav.nav ul ul li a:visited:active {
+.nav ul ul li a:hover, .nav ul ul li a:active, .nav ul ul li a:visited:hover, .nav ul ul li a:visited:active {
   background: #1da1ae;
 }
-nav.nav ul ul li a.disabled, nav.nav ul ul li a:visited.disabled {
+.nav ul ul li a.disabled, .nav ul ul li a:visited.disabled {
   color: #b8e5e9;
   background: #6ac8d1;
   border-color: #38acb6;
@@ -2222,7 +2222,7 @@ nav.nav ul ul li a.disabled, nav.nav ul ul li a:visited.disabled {
   text-decoration: none;
   outline: none;
 }
-nav.nav ul ul li a.disabled:hover, nav.nav ul ul li a.disabled:focus, nav.nav ul ul li a.disabled:visited, nav.nav ul ul li a:visited.disabled:hover, nav.nav ul ul li a:visited.disabled:focus, nav.nav ul ul li a:visited.disabled:visited {
+.nav ul ul li a.disabled:hover, .nav ul ul li a.disabled:focus, .nav ul ul li a.disabled:visited, .nav ul ul li a:visited.disabled:hover, .nav ul ul li a:visited.disabled:focus, .nav ul ul li a:visited.disabled:visited {
   color: #b8e5e9;
   background: #6ac8d1;
   border-color: #38acb6;
@@ -2230,7 +2230,7 @@ nav.nav ul ul li a.disabled:hover, nav.nav ul ul li a.disabled:focus, nav.nav ul
   text-decoration: none;
   outline: none;
 }
-nav.nav ul ul li:first-child a, nav.nav ul ul li:first-child a:visited {
+.nav ul ul li:first-child a, .nav ul ul li:first-child a:visited {
   border-top: none;
   -ms-border-radius: 0 4px 0 0;
   -o-border-radius: 0 4px 0 0;
@@ -2238,21 +2238,21 @@ nav.nav ul ul li:first-child a, nav.nav ul ul li:first-child a:visited {
   -webkit-border-radius: 0 4px 0 0;
   border-radius: 0 4px 0 0;
 }
-nav.nav ul ul li:last-child a, nav.nav ul ul li:last-child a:visited {
+.nav ul ul li:last-child a, .nav ul ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-nav.nav ul ul li:only-child a, nav.nav ul ul li:only-child a:visited {
+.nav ul ul li:only-child a, .nav ul ul li:only-child a:visited {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
-nav.nav ul.row li a, nav.nav ul.row li a:visited {
+.nav ul.row li a, .nav ul.row li a:visited {
   border-left: 1px solid #198d98;
   border-top: none;
   -ms-border-radius: 0;
@@ -2261,7 +2261,7 @@ nav.nav ul.row li a, nav.nav ul.row li a:visited {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-nav.nav ul.row li:first-child a, nav.nav ul.row li:first-child a:visited {
+.nav ul.row li:first-child a, .nav ul.row li:first-child a:visited {
   border-left: none;
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
@@ -2269,28 +2269,28 @@ nav.nav ul.row li:first-child a, nav.nav ul.row li:first-child a:visited {
   -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
-nav.nav ul.row li:last-child a, nav.nav ul.row li:last-child a:visited {
+.nav ul.row li:last-child a, .nav ul.row li:last-child a:visited {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
-nav.nav ul.row li:only-child a, nav.nav ul.row li:only-child a:visited {
+.nav ul.row li:only-child a, .nav ul.row li:only-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.nav ul.row ul {
+.nav ul.row ul {
   position: absolute;
   left: auto;
   top: auto;
   min-width: 100%;
   z-index: 101;
 }
-nav.nav ul.row ul li a, nav.nav ul.row ul li a:visited {
+.nav ul.row ul li a, .nav ul.row ul li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -2299,42 +2299,37 @@ nav.nav ul.row ul li a, nav.nav ul.row ul li a:visited {
   border-left: none;
   border-top: 1px solid #198d98;
 }
-nav.nav ul.row ul li:first-child a, nav.nav ul.row ul li:first-child a:visited {
+.nav ul.row ul li:first-child a, .nav ul.row ul li:first-child a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-nav.nav ul.row ul li:last-child a, nav.nav ul.row ul li:last-child a:visited {
+.nav ul.row ul li:last-child a, .nav ul.row ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-nav.nav:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-nav.nav.inline {
+.nav.inline {
   width: auto;
 }
-nav.nav.inline ul {
+.nav.inline ul {
   font-size: 0;
 }
-nav.nav.inline ul li {
+.nav.inline ul li {
   font-size: 14px;
   display: inline-block;
   white-space-collapse: discard;
   float: none;
 }
-nav.nav.inline ul li a, nav.nav.inline ul li a:visited {
+.nav.inline ul li a, .nav.inline ul li a:visited {
   border-left: 1px solid #198d98;
   border-top: none;
 }
-nav.nav.inline ul li:first-child a, nav.nav.inline ul li:first-child a:visited {
+.nav.inline ul li:first-child a, .nav.inline ul li:first-child a:visited {
   border-left: none;
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
@@ -2342,31 +2337,31 @@ nav.nav.inline ul li:first-child a, nav.nav.inline ul li:first-child a:visited {
   -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
-nav.nav.inline ul li:last-child a, nav.nav.inline ul li:last-child a:visited {
+.nav.inline ul li:last-child a, .nav.inline ul li:last-child a:visited {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
-nav.nav.inline ul li:only-child a, nav.nav.inline ul li:only-child a:visited {
+.nav.inline ul li:only-child a, .nav.inline ul li:only-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.nav.inline ul li ul {
+.nav.inline ul li ul {
   position: absolute;
   left: auto;
   top: auto;
   min-width: 100%;
   z-index: 101;
 }
-nav.nav.inline ul li ul li {
+.nav.inline ul li ul li {
   display: block;
 }
-nav.nav.inline ul li ul li a, nav.nav.inline ul li ul li a:visited {
+.nav.inline ul li ul li a, .nav.inline ul li ul li a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
@@ -2375,29 +2370,33 @@ nav.nav.inline ul li ul li a, nav.nav.inline ul li ul li a:visited {
   border-left: none;
   border-top: 1px solid #198d98;
 }
-nav.nav.inline ul li ul li:first-child a, nav.nav.inline ul li ul li:first-child a:visited {
+.nav.inline ul li ul li:first-child a, .nav.inline ul li ul li:first-child a:visited {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-nav.nav.inline ul li ul li:last-child a, nav.nav.inline ul li ul li:last-child a:visited {
+.nav.inline ul li ul li:last-child a, .nav.inline ul li ul li:last-child a:visited {
   -ms-border-radius: 0 0 4px 4px;
   -o-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-nav.nav.menu .menu-toggle {
-  display: none !important;
+.nav.menu {
+  display: block !important;
 }
-nav.pagination ul {
+.nav.menu .menu-toggle {
+  display: none;
+}
+
+.pagination ul {
   margin: 10px auto;
   display: block;
   list-style-type: none;
 }
-nav.pagination ul li {
+.pagination ul li {
   display: inline-block;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
@@ -2407,7 +2406,7 @@ nav.pagination ul li {
   padding: 0 3px 0 2px;
   min-width: 29px;
 }
-nav.pagination ul li a {
+.pagination ul li a {
   display: block;
   background: #1dabb8;
   font-size: 1em;
@@ -2423,11 +2422,11 @@ nav.pagination ul li a {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.pagination ul li a:hover, nav.pagination ul li a:focus {
+.pagination ul li a:hover, .pagination ul li a:focus {
   background: #198d98;
   color: white;
 }
-nav.pagination ul li a.disabled {
+.pagination ul li a.disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2435,7 +2434,7 @@ nav.pagination ul li a.disabled {
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li a.disabled:hover, nav.pagination ul li a.disabled:focus, nav.pagination ul li a.disabled:visited {
+.pagination ul li a.disabled:hover, .pagination ul li a.disabled:focus, .pagination ul li a.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2443,7 +2442,7 @@ nav.pagination ul li a.disabled:hover, nav.pagination ul li a.disabled:focus, na
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li.active a {
+.pagination ul li.active a {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2451,7 +2450,7 @@ nav.pagination ul li.active a {
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li.active a:hover, nav.pagination ul li.active a:focus, nav.pagination ul li.active a:visited {
+.pagination ul li.active a:hover, .pagination ul li.active a:focus, .pagination ul li.active a:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2459,15 +2458,15 @@ nav.pagination ul li.active a:hover, nav.pagination ul li.active a:focus, nav.pa
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li.prev a, nav.pagination ul li.next a {
+.pagination ul li.prev a, .pagination ul li.next a {
   padding: 0 4px;
   background: #1dabb8;
   color: #fff;
 }
-nav.pagination ul li.prev a:hover, nav.pagination ul li.prev a:focus, nav.pagination ul li.next a:hover, nav.pagination ul li.next a:focus {
+.pagination ul li.prev a:hover, .pagination ul li.prev a:focus, .pagination ul li.next a:hover, .pagination ul li.next a:focus {
   background: #198d98;
 }
-nav.pagination ul li.disabled a {
+.pagination ul li.disabled a {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2475,7 +2474,7 @@ nav.pagination ul li.disabled a {
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus, nav.pagination ul li.disabled a:visited {
+.pagination ul li.disabled a:hover, .pagination ul li.disabled a:focus, .pagination ul li.disabled a:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -2483,14 +2482,14 @@ nav.pagination ul li.disabled a:hover, nav.pagination ul li.disabled a:focus, na
   text-decoration: none;
   outline: none;
 }
-nav.pagination ul li:first-child a, nav.pagination ul li:first-child a:visited {
+.pagination ul li:first-child a, .pagination ul li:first-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:visited {
+.pagination ul li:last-child a, .pagination ul li:last-child a:visited {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -2498,10 +2497,10 @@ nav.pagination ul li:last-child a, nav.pagination ul li:last-child a:visited {
   border-radius: 4px;
 }
 
-.no-js nav.nav ul li.menu ul {
+.no-js .nav ul li.menu ul {
   display: none;
 }
-.no-js nav.nav ul li.menu:hover ul, .no-js nav.nav ul li.menu:focus ul {
+.no-js .nav ul li.menu:hover ul, .no-js .nav ul li.menu:focus ul {
   display: block !important;
 }
 
@@ -5100,10 +5099,10 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
   }
 }
 
-.row, .clear, .clearfix {
+.row, .nav, .clear, .clearfix {
   clear: both;
 }
-.row:after, .clear:after, .clearfix:after {
+.row:after, .nav:after, .clear:after, .clearfix:after {
   content: '';
   display: block;
   clear: both;
@@ -5671,77 +5670,77 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
     margin-left: 0;
   }
 
-  nav.nav {
+  .nav {
     width: 100%;
   }
-  nav.nav ul li, nav.nav ul.row li {
+  .nav ul li, .nav ul.row li {
     display: block;
     width: 100% !important;
   }
-  nav.nav ul li:first-child > a, nav.nav ul li:first-child >, nav.nav ul li:first-child > a:visited, nav.nav ul.row li:first-child > a, nav.nav ul.row li:first-child >, nav.nav ul.row li:first-child > a:visited {
+  .nav ul li:first-child > a, .nav ul li:first-child >, .nav ul li:first-child > a:visited, .nav ul.row li:first-child > a, .nav ul.row li:first-child >, .nav ul.row li:first-child > a:visited {
     -ms-border-radius: 4px 4px 0 0;
     -o-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
   }
-  nav.nav ul li:last-child > a, nav.nav ul li:last-child >, nav.nav ul li:last-child > a:visited, nav.nav ul.row li:last-child > a, nav.nav ul.row li:last-child >, nav.nav ul.row li:last-child > a:visited {
+  .nav ul li:last-child > a, .nav ul li:last-child >, .nav ul li:last-child > a:visited, .nav ul.row li:last-child > a, .nav ul.row li:last-child >, .nav ul.row li:last-child > a:visited {
     -ms-border-radius: 0 0 4px 4px;
     -o-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
-  nav.nav ul li:only-child > a, nav.nav ul li:only-child >, nav.nav ul li:only-child > a:visited, nav.nav ul.row li:only-child > a, nav.nav ul.row li:only-child >, nav.nav ul.row li:only-child > a:visited {
+  .nav ul li:only-child > a, .nav ul li:only-child >, .nav ul li:only-child > a:visited, .nav ul.row li:only-child > a, .nav ul.row li:only-child >, .nav ul.row li:only-child > a:visited {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
   }
-  nav.nav ul li a, nav.nav ul li a:visited, nav.nav ul.row li a, nav.nav ul.row li a:visited {
+  .nav ul li a, .nav ul li a:visited, .nav ul.row li a, .nav ul.row li a:visited {
     border: none;
     border-top: 1px solid #198d98;
   }
-  nav.nav ul li ul, nav.nav ul.row li ul {
+  .nav ul li ul, .nav ul.row li ul {
     position: static;
   }
-  nav.nav ul li ul li a, nav.nav ul li ul li a:visited, nav.nav ul.row li ul li a, nav.nav ul.row li ul li a:visited {
+  .nav ul li ul li a, .nav ul li ul li a:visited, .nav ul.row li ul li a, .nav ul.row li ul li a:visited {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
   }
-  nav.nav ul li ul li:first-child a, nav.nav ul li ul li:first-child a:visited, nav.nav ul li ul li:last-child a, nav.nav ul li ul li:last-child a:visited, nav.nav ul li ul li:only-child a, nav.nav ul li ul li:only-child a:visited, nav.nav ul.row li ul li:first-child a, nav.nav ul.row li ul li:first-child a:visited, nav.nav ul.row li ul li:last-child a, nav.nav ul.row li ul li:last-child a:visited, nav.nav ul.row li ul li:only-child a, nav.nav ul.row li ul li:only-child a:visited {
+  .nav ul li ul li:first-child a, .nav ul li ul li:first-child a:visited, .nav ul li ul li:last-child a, .nav ul li ul li:last-child a:visited, .nav ul li ul li:only-child a, .nav ul li ul li:only-child a:visited, .nav ul.row li ul li:first-child a, .nav ul.row li ul li:first-child a:visited, .nav ul.row li ul li:last-child a, .nav ul.row li ul li:last-child a:visited, .nav ul.row li ul li:only-child a, .nav ul.row li ul li:only-child a:visited {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
   }
-  nav.nav ul li:first-child a, nav.nav ul li:first-child a:visited, nav.nav ul.row li:first-child a, nav.nav ul.row li:first-child a:visited {
+  .nav ul li:first-child a, .nav ul li:first-child a:visited, .nav ul.row li:first-child a, .nav ul.row li:first-child a:visited {
     -ms-border-radius: 4px 4px 0 0;
     -o-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
   }
-  nav.nav ul li:last-child a, nav.nav ul li:last-child a:visited, nav.nav ul.row li:last-child a, nav.nav ul.row li:last-child a:visited {
+  .nav ul li:last-child a, .nav ul li:last-child a:visited, .nav ul.row li:last-child a, .nav ul.row li:last-child a:visited {
     -ms-border-radius: 0 0 4px 4px;
     -o-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
-  nav.nav ul li:last-child ul li:last-child a, nav.nav ul li:last-child ul li:last-child a:visited, nav.nav ul.row li:last-child ul li:last-child a, nav.nav ul.row li:last-child ul li:last-child a:visited {
+  .nav ul li:last-child ul li:last-child a, .nav ul li:last-child ul li:last-child a:visited, .nav ul.row li:last-child ul li:last-child a, .nav ul.row li:last-child ul li:last-child a:visited {
     -ms-border-radius: 0 0 4px 4px;
     -o-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
-  nav.nav ul li:only-child a, nav.nav ul li:only-child a:visited, nav.nav ul.row li:only-child a, nav.nav ul.row li:only-child a:visited {
+  .nav ul li:only-child a, .nav ul li:only-child a:visited, .nav ul.row li:only-child a, .nav ul.row li:only-child a:visited {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -5749,7 +5748,7 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
     border-radius: 4px;
   }
 
-  nav.menu {
+  .nav.menu {
     background-color: #1dabb8;
     padding: 10px;
     padding-bottom: 0;
@@ -5759,18 +5758,18 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
     -webkit-border-radius: 4px;
     border-radius: 4px;
   }
-  nav.menu:before {
+  .nav.menu:before {
     content: attr(data-label);
     float: left;
     color: white;
     line-height: 2.2;
   }
-  nav.menu .menu-toggle {
+  .nav.menu .menu-toggle {
     display: inline-block !important;
     float: right;
     margin-bottom: 10px;
   }
-  nav.menu > ul, nav.menu > ul.row {
+  .nav.menu > ul, .nav.menu > ul.row {
     display: block !important;
     overflow: hidden;
     max-height: 0;
@@ -5783,29 +5782,29 @@ div.modal .fullscreen, div[role=dialog] .fullscreen {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
-  nav.menu > ul li a, nav.menu > ul li a:visited, nav.menu > ul.row li a, nav.menu > ul.row li a:visited {
+  .nav.menu > ul li a, .nav.menu > ul li a:visited, .nav.menu > ul.row li a, .nav.menu > ul.row li a:visited {
     border: none;
     border-top: 1px solid #198d98;
   }
-  nav.menu > ul li a:first-child, nav.menu > ul li a:last-child, nav.menu > ul li a:visited:first-child, nav.menu > ul li a:visited:last-child, nav.menu > ul.row li a:first-child, nav.menu > ul.row li a:last-child, nav.menu > ul.row li a:visited:first-child, nav.menu > ul.row li a:visited:last-child {
+  .nav.menu > ul li a:first-child, .nav.menu > ul li a:last-child, .nav.menu > ul li a:visited:first-child, .nav.menu > ul li a:visited:last-child, .nav.menu > ul.row li a:first-child, .nav.menu > ul.row li a:last-child, .nav.menu > ul.row li a:visited:first-child, .nav.menu > ul.row li a:visited:last-child {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
   }
-  nav.menu > ul li a:hover, nav.menu > ul li a:focus, nav.menu > ul li a:visited:hover, nav.menu > ul li a:visited:focus, nav.menu > ul.row li a:hover, nav.menu > ul.row li a:focus, nav.menu > ul.row li a:visited:hover, nav.menu > ul.row li a:visited:focus {
+  .nav.menu > ul li a:hover, .nav.menu > ul li a:focus, .nav.menu > ul li a:visited:hover, .nav.menu > ul li a:visited:focus, .nav.menu > ul.row li a:hover, .nav.menu > ul.row li a:focus, .nav.menu > ul.row li a:visited:hover, .nav.menu > ul.row li a:visited:focus {
     border: none;
     border-top: 1px solid #198d98;
   }
-  nav.menu > ul li:last-child a, nav.menu > ul li:last-child a:visited, nav.menu > ul.row li:last-child a, nav.menu > ul.row li:last-child a:visited {
+  .nav.menu > ul li:last-child a, .nav.menu > ul li:last-child a:visited, .nav.menu > ul.row li:last-child a, .nav.menu > ul.row li:last-child a:visited {
     -ms-border-radius: 0 0 4px 4px;
     -o-border-radius: 0 0 4px 4px;
     -moz-border-radius: 0 0 4px 4px;
     -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
-  nav.menu.on > ul {
+  .nav.menu.on > ul {
     max-height: 1000px;
   }
 
