@@ -1344,12 +1344,12 @@ body {
 }
 
 ::selection {
-  background: #2b2b2d;
+  background: #489ac1;
   color: white;
 }
 
 ::-moz-selection {
-  background: #2b2b2d;
+  background: #489ac1;
   color: white;
 }
 
@@ -1362,6 +1362,7 @@ a, a:visited {
   transition: color 0.25s;
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #198d98;
   text-decoration: underline;
 }
 
@@ -1582,11 +1583,11 @@ pre code:before {
 }
 
 .error, .invalid {
-  color: #a40400;
+  color: #b94a48;
 }
 
 .success, .valid {
-  color: #5fb40e;
+  color: #468847;
 }
 
 .warning {
@@ -1653,43 +1654,61 @@ button.disabled:hover, button.disabled:focus, button.disabled:visited, .button.d
   text-decoration: none;
   outline: none;
 }
-button.small, .button.small, .nav.menu .small.menu-toggle, a.button.small, .nav.menu a.small.menu-toggle, a.button:visited.small, .nav.menu a.menu-toggle:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small, [role=button].small {
-  font-size: 0.8em;
-}
-button.large, .button.large, .nav.menu .large.menu-toggle, a.button.large, .nav.menu a.large.menu-toggle, a.button:visited.large, .nav.menu a.menu-toggle:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large, [role=button].large {
-  font-size: 1.5em;
-}
-button.error, .button.error, .nav.menu .error.menu-toggle, a.button.error, .nav.menu a.error.menu-toggle, a.button:visited.error, .nav.menu a.menu-toggle:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error, [role=button].error {
-  background: #a40400;
-  border: 1px solid #710300;
+button.info, .button.info, .nav.menu .info.menu-toggle, a.button.info, .nav.menu a.info.menu-toggle, a.button:visited.info, .nav.menu a.menu-toggle:visited.info, input[type=submit].info, input[type=button].info, input[type=reset].info, [role=button].info {
+  background-color: #309dd4;
   color: white;
+  border-color: #27a1ba;
 }
-button.error.active, button.error:hover, button.error:focus, .button.error.active, .nav.menu .error.active.menu-toggle, .button.error:hover, .nav.menu .error.menu-toggle:hover, .button.error:focus, .nav.menu .error.menu-toggle:focus, a.button.error.active, .nav.menu a.error.active.menu-toggle, a.button.error:hover, .nav.menu a.error.menu-toggle:hover, a.button.error:focus, .nav.menu a.error.menu-toggle:focus, a.button:visited.error.active, .nav.menu a.menu-toggle:visited.error.active, a.button:visited.error:hover, .nav.menu a.menu-toggle:visited.error:hover, a.button:visited.error:focus, .nav.menu a.menu-toggle:visited.error:focus, input[type=submit].error.active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error.active, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error.active, input[type=reset].error:hover, input[type=reset].error:focus, [role=button].error.active, [role=button].error:hover, [role=button].error:focus {
-  background: #710300;
+button.info.active, button.info:hover, button.info:focus, .button.info.active, .nav.menu .info.active.menu-toggle, .button.info:hover, .nav.menu .info.menu-toggle:hover, .button.info:focus, .nav.menu .info.menu-toggle:focus, a.button.info.active, .nav.menu a.info.active.menu-toggle, a.button.info:hover, .nav.menu a.info.menu-toggle:hover, a.button.info:focus, .nav.menu a.info.menu-toggle:focus, a.button:visited.info.active, .nav.menu a.menu-toggle:visited.info.active, a.button:visited.info:hover, .nav.menu a.menu-toggle:visited.info:hover, a.button:visited.info:focus, .nav.menu a.menu-toggle:visited.info:focus, input[type=submit].info.active, input[type=submit].info:hover, input[type=submit].info:focus, input[type=button].info.active, input[type=button].info:hover, input[type=button].info:focus, input[type=reset].info.active, input[type=reset].info:hover, input[type=reset].info:focus, [role=button].info.active, [role=button].info:hover, [role=button].info:focus {
+  background: #2582b1;
 }
-button.error.disabled, .button.error.disabled, .nav.menu .error.disabled.menu-toggle, a.button.error.disabled, .nav.menu a.error.disabled.menu-toggle, a.button:visited.error.disabled, .nav.menu a.menu-toggle:visited.error.disabled, input[type=submit].error.disabled, input[type=button].error.disabled, input[type=reset].error.disabled, [role=button].error.disabled {
-  color: #ee6c68;
-  background: #d81d18;
-  border-color: #941410;
+button.info.disabled, .button.info.disabled, .nav.menu .info.disabled.menu-toggle, a.button.info.disabled, .nav.menu a.info.disabled.menu-toggle, a.button:visited.info.disabled, .nav.menu a.menu-toggle:visited.info.disabled, input[type=submit].info.disabled, input[type=button].info.disabled, input[type=reset].info.disabled, [role=button].info.disabled {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
-button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:visited, .button.error.disabled:hover, .nav.menu .error.disabled.menu-toggle:hover, .button.error.disabled:focus, .nav.menu .error.disabled.menu-toggle:focus, .button.error.disabled:visited, .nav.menu .error.disabled.menu-toggle:visited, a.button.error.disabled:hover, .nav.menu a.error.disabled.menu-toggle:hover, a.button.error.disabled:focus, .nav.menu a.error.disabled.menu-toggle:focus, a.button.error.disabled:visited, .nav.menu a.error.disabled.menu-toggle:visited, a.button:visited.error.disabled:hover, .nav.menu a.menu-toggle:visited.error.disabled:hover, a.button:visited.error.disabled:focus, .nav.menu a.menu-toggle:visited.error.disabled:focus, a.button:visited.error.disabled:visited, .nav.menu a.menu-toggle:visited.error.disabled:visited, input[type=submit].error.disabled:hover, input[type=submit].error.disabled:focus, input[type=submit].error.disabled:visited, input[type=button].error.disabled:hover, input[type=button].error.disabled:focus, input[type=button].error.disabled:visited, input[type=reset].error.disabled:hover, input[type=reset].error.disabled:focus, input[type=reset].error.disabled:visited, [role=button].error.disabled:hover, [role=button].error.disabled:focus, [role=button].error.disabled:visited {
-  color: #ee6c68;
-  background: #d81d18;
-  border-color: #941410;
+button.info.disabled:hover, button.info.disabled:focus, button.info.disabled:visited, .button.info.disabled:hover, .nav.menu .info.disabled.menu-toggle:hover, .button.info.disabled:focus, .nav.menu .info.disabled.menu-toggle:focus, .button.info.disabled:visited, .nav.menu .info.disabled.menu-toggle:visited, a.button.info.disabled:hover, .nav.menu a.info.disabled.menu-toggle:hover, a.button.info.disabled:focus, .nav.menu a.info.disabled.menu-toggle:focus, a.button.info.disabled:visited, .nav.menu a.info.disabled.menu-toggle:visited, a.button:visited.info.disabled:hover, .nav.menu a.menu-toggle:visited.info.disabled:hover, a.button:visited.info.disabled:focus, .nav.menu a.menu-toggle:visited.info.disabled:focus, a.button:visited.info.disabled:visited, .nav.menu a.menu-toggle:visited.info.disabled:visited, input[type=submit].info.disabled:hover, input[type=submit].info.disabled:focus, input[type=submit].info.disabled:visited, input[type=button].info.disabled:hover, input[type=button].info.disabled:focus, input[type=button].info.disabled:visited, input[type=reset].info.disabled:hover, input[type=reset].info.disabled:focus, input[type=reset].info.disabled:visited, [role=button].info.disabled:hover, [role=button].info.disabled:focus, [role=button].info.disabled:visited {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.alert, .button.alert, .nav.menu .alert.menu-toggle, a.button.alert, .nav.menu a.alert.menu-toggle, a.button:visited.alert, .nav.menu a.menu-toggle:visited.alert, input[type=submit].alert, input[type=button].alert, input[type=reset].alert, [role=button].alert {
+  background-color: #e8ca2b;
+  color: white;
+  border-color: #ecb06f;
+}
+button.alert.active, button.alert:hover, button.alert:focus, .button.alert.active, .nav.menu .alert.active.menu-toggle, .button.alert:hover, .nav.menu .alert.menu-toggle:hover, .button.alert:focus, .nav.menu .alert.menu-toggle:focus, a.button.alert.active, .nav.menu a.alert.active.menu-toggle, a.button.alert:hover, .nav.menu a.alert.menu-toggle:hover, a.button.alert:focus, .nav.menu a.alert.menu-toggle:focus, a.button:visited.alert.active, .nav.menu a.menu-toggle:visited.alert.active, a.button:visited.alert:hover, .nav.menu a.menu-toggle:visited.alert:hover, a.button:visited.alert:focus, .nav.menu a.menu-toggle:visited.alert:focus, input[type=submit].alert.active, input[type=submit].alert:hover, input[type=submit].alert:focus, input[type=button].alert.active, input[type=button].alert:hover, input[type=button].alert:focus, input[type=reset].alert.active, input[type=reset].alert:hover, input[type=reset].alert:focus, [role=button].alert.active, [role=button].alert:hover, [role=button].alert:focus {
+  background: #e1c118;
+}
+button.alert.disabled, .button.alert.disabled, .nav.menu .alert.disabled.menu-toggle, a.button.alert.disabled, .nav.menu a.alert.disabled.menu-toggle, a.button:visited.alert.disabled, .nav.menu a.menu-toggle:visited.alert.disabled, input[type=submit].alert.disabled, input[type=button].alert.disabled, input[type=reset].alert.disabled, [role=button].alert.disabled {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.alert.disabled:hover, button.alert.disabled:focus, button.alert.disabled:visited, .button.alert.disabled:hover, .nav.menu .alert.disabled.menu-toggle:hover, .button.alert.disabled:focus, .nav.menu .alert.disabled.menu-toggle:focus, .button.alert.disabled:visited, .nav.menu .alert.disabled.menu-toggle:visited, a.button.alert.disabled:hover, .nav.menu a.alert.disabled.menu-toggle:hover, a.button.alert.disabled:focus, .nav.menu a.alert.disabled.menu-toggle:focus, a.button.alert.disabled:visited, .nav.menu a.alert.disabled.menu-toggle:visited, a.button:visited.alert.disabled:hover, .nav.menu a.menu-toggle:visited.alert.disabled:hover, a.button:visited.alert.disabled:focus, .nav.menu a.menu-toggle:visited.alert.disabled:focus, a.button:visited.alert.disabled:visited, .nav.menu a.menu-toggle:visited.alert.disabled:visited, input[type=submit].alert.disabled:hover, input[type=submit].alert.disabled:focus, input[type=submit].alert.disabled:visited, input[type=button].alert.disabled:hover, input[type=button].alert.disabled:focus, input[type=button].alert.disabled:visited, input[type=reset].alert.disabled:hover, input[type=reset].alert.disabled:focus, input[type=reset].alert.disabled:visited, [role=button].alert.disabled:hover, [role=button].alert.disabled:focus, [role=button].alert.disabled:visited {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 button.warning, .button.warning, .nav.menu .warning.menu-toggle, a.button.warning, .nav.menu a.warning.menu-toggle, a.button:visited.warning, .nav.menu a.menu-toggle:visited.warning, input[type=submit].warning, input[type=button].warning, input[type=reset].warning, [role=button].warning {
-  background: #ff971e;
-  border: 1px solid #ea7e00;
+  background-color: #fa8600;
   color: white;
+  border-color: #e67900;
 }
 button.warning.active, button.warning:hover, button.warning:focus, .button.warning.active, .nav.menu .warning.active.menu-toggle, .button.warning:hover, .nav.menu .warning.menu-toggle:hover, .button.warning:focus, .nav.menu .warning.menu-toggle:focus, a.button.warning.active, .nav.menu a.warning.active.menu-toggle, a.button.warning:hover, .nav.menu a.warning.menu-toggle:hover, a.button.warning:focus, .nav.menu a.warning.menu-toggle:focus, a.button:visited.warning.active, .nav.menu a.menu-toggle:visited.warning.active, a.button:visited.warning:hover, .nav.menu a.menu-toggle:visited.warning:hover, a.button:visited.warning:focus, .nav.menu a.menu-toggle:visited.warning:focus, input[type=submit].warning.active, input[type=submit].warning:hover, input[type=submit].warning:focus, input[type=button].warning.active, input[type=button].warning:hover, input[type=button].warning:focus, input[type=reset].warning.active, input[type=reset].warning:hover, input[type=reset].warning:focus, [role=button].warning.active, [role=button].warning:hover, [role=button].warning:focus {
-  background: #ea7e00;
+  background: #e07800;
 }
 button.warning.disabled, .button.warning.disabled, .nav.menu .warning.disabled.menu-toggle, a.button.warning.disabled, .nav.menu a.warning.disabled.menu-toggle, a.button:visited.warning.disabled, .nav.menu a.menu-toggle:visited.warning.disabled, input[type=submit].warning.disabled, input[type=button].warning.disabled, input[type=reset].warning.disabled, [role=button].warning.disabled {
   color: #fae9d5;
@@ -1707,29 +1726,59 @@ button.warning.disabled:hover, button.warning.disabled:focus, button.warning.dis
   text-decoration: none;
   outline: none;
 }
-button.success, .button.success, .nav.menu .success.menu-toggle, a.button.success, .nav.menu a.success.menu-toggle, a.button:visited.success, .nav.menu a.menu-toggle:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success, [role=button].success {
-  background: #5fb40e;
-  border: 1px solid #46850a;
+button.error, .button.error, .nav.menu .error.menu-toggle, a.button.error, .nav.menu a.error.menu-toggle, a.button:visited.error, .nav.menu a.menu-toggle:visited.error, input[type=submit].error, input[type=button].error, input[type=reset].error, [role=button].error {
+  background-color: #b84c4c;
   color: white;
+  border-color: #b14454;
+}
+button.error.active, button.error:hover, button.error:focus, .button.error.active, .nav.menu .error.active.menu-toggle, .button.error:hover, .nav.menu .error.menu-toggle:hover, .button.error:focus, .nav.menu .error.menu-toggle:focus, a.button.error.active, .nav.menu a.error.active.menu-toggle, a.button.error:hover, .nav.menu a.error.menu-toggle:hover, a.button.error:focus, .nav.menu a.error.menu-toggle:focus, a.button:visited.error.active, .nav.menu a.menu-toggle:visited.error.active, a.button:visited.error:hover, .nav.menu a.menu-toggle:visited.error:hover, a.button:visited.error:focus, .nav.menu a.menu-toggle:visited.error:focus, input[type=submit].error.active, input[type=submit].error:hover, input[type=submit].error:focus, input[type=button].error.active, input[type=button].error:hover, input[type=button].error:focus, input[type=reset].error.active, input[type=reset].error:hover, input[type=reset].error:focus, [role=button].error.active, [role=button].error:hover, [role=button].error:focus {
+  background: #9a3d3d;
+}
+button.error.disabled, .button.error.disabled, .nav.menu .error.disabled.menu-toggle, a.button.error.disabled, .nav.menu a.error.disabled.menu-toggle, a.button:visited.error.disabled, .nav.menu a.menu-toggle:visited.error.disabled, input[type=submit].error.disabled, input[type=button].error.disabled, input[type=reset].error.disabled, [role=button].error.disabled {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.error.disabled:hover, button.error.disabled:focus, button.error.disabled:visited, .button.error.disabled:hover, .nav.menu .error.disabled.menu-toggle:hover, .button.error.disabled:focus, .nav.menu .error.disabled.menu-toggle:focus, .button.error.disabled:visited, .nav.menu .error.disabled.menu-toggle:visited, a.button.error.disabled:hover, .nav.menu a.error.disabled.menu-toggle:hover, a.button.error.disabled:focus, .nav.menu a.error.disabled.menu-toggle:focus, a.button.error.disabled:visited, .nav.menu a.error.disabled.menu-toggle:visited, a.button:visited.error.disabled:hover, .nav.menu a.menu-toggle:visited.error.disabled:hover, a.button:visited.error.disabled:focus, .nav.menu a.menu-toggle:visited.error.disabled:focus, a.button:visited.error.disabled:visited, .nav.menu a.menu-toggle:visited.error.disabled:visited, input[type=submit].error.disabled:hover, input[type=submit].error.disabled:focus, input[type=submit].error.disabled:visited, input[type=button].error.disabled:hover, input[type=button].error.disabled:focus, input[type=button].error.disabled:visited, input[type=reset].error.disabled:hover, input[type=reset].error.disabled:focus, input[type=reset].error.disabled:visited, [role=button].error.disabled:hover, [role=button].error.disabled:focus, [role=button].error.disabled:visited {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+button.success, .button.success, .nav.menu .success.menu-toggle, a.button.success, .nav.menu a.success.menu-toggle, a.button:visited.success, .nav.menu a.menu-toggle:visited.success, input[type=submit].success, input[type=button].success, input[type=reset].success, [role=button].success {
+  background-color: #67b646;
+  color: white;
+  border-color: #6da43f;
 }
 button.success.active, button.success:hover, button.success:focus, .button.success.active, .nav.menu .success.active.menu-toggle, .button.success:hover, .nav.menu .success.menu-toggle:hover, .button.success:focus, .nav.menu .success.menu-toggle:focus, a.button.success.active, .nav.menu a.success.active.menu-toggle, a.button.success:hover, .nav.menu a.success.menu-toggle:hover, a.button.success:focus, .nav.menu a.success.menu-toggle:focus, a.button:visited.success.active, .nav.menu a.menu-toggle:visited.success.active, a.button:visited.success:hover, .nav.menu a.menu-toggle:visited.success:hover, a.button:visited.success:focus, .nav.menu a.menu-toggle:visited.success:focus, input[type=submit].success.active, input[type=submit].success:hover, input[type=submit].success:focus, input[type=button].success.active, input[type=button].success:hover, input[type=button].success:focus, input[type=reset].success.active, input[type=reset].success:hover, input[type=reset].success:focus, [role=button].success.active, [role=button].success:hover, [role=button].success:focus {
-  background: #46850a;
+  background: #549539;
 }
 button.success.disabled, .button.success.disabled, .nav.menu .success.disabled.menu-toggle, a.button.success.disabled, .nav.menu a.success.disabled.menu-toggle, a.button:visited.success.disabled, .nav.menu a.menu-toggle:visited.success.disabled, input[type=submit].success.disabled, input[type=button].success.disabled, input[type=reset].success.disabled, [role=button].success.disabled {
-  color: #b9e78d;
-  background: #85d639;
-  border-color: #5fa121;
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 button.success.disabled:hover, button.success.disabled:focus, button.success.disabled:visited, .button.success.disabled:hover, .nav.menu .success.disabled.menu-toggle:hover, .button.success.disabled:focus, .nav.menu .success.disabled.menu-toggle:focus, .button.success.disabled:visited, .nav.menu .success.disabled.menu-toggle:visited, a.button.success.disabled:hover, .nav.menu a.success.disabled.menu-toggle:hover, a.button.success.disabled:focus, .nav.menu a.success.disabled.menu-toggle:focus, a.button.success.disabled:visited, .nav.menu a.success.disabled.menu-toggle:visited, a.button:visited.success.disabled:hover, .nav.menu a.menu-toggle:visited.success.disabled:hover, a.button:visited.success.disabled:focus, .nav.menu a.menu-toggle:visited.success.disabled:focus, a.button:visited.success.disabled:visited, .nav.menu a.menu-toggle:visited.success.disabled:visited, input[type=submit].success.disabled:hover, input[type=submit].success.disabled:focus, input[type=submit].success.disabled:visited, input[type=button].success.disabled:hover, input[type=button].success.disabled:focus, input[type=button].success.disabled:visited, input[type=reset].success.disabled:hover, input[type=reset].success.disabled:focus, input[type=reset].success.disabled:visited, [role=button].success.disabled:hover, [role=button].success.disabled:focus, [role=button].success.disabled:visited {
-  color: #b9e78d;
-  background: #85d639;
-  border-color: #5fa121;
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
+}
+button.small, .button.small, .nav.menu .small.menu-toggle, a.button.small, .nav.menu a.small.menu-toggle, a.button:visited.small, .nav.menu a.menu-toggle:visited.small, input[type=submit].small, input[type=button].small, input[type=reset].small, [role=button].small {
+  font-size: 0.8em;
+}
+button.large, .button.large, .nav.menu .large.menu-toggle, a.button.large, .nav.menu a.large.menu-toggle, a.button:visited.large, .nav.menu a.menu-toggle:visited.large, input[type=submit].large, input[type=button].large, input[type=reset].large, [role=button].large {
+  font-size: 1.5em;
 }
 button.square, .button.square, .nav.menu .square.menu-toggle, a.button.square, .nav.menu a.square.menu-toggle, a.button:visited.square, .nav.menu a.menu-toggle:visited.square, input[type=submit].square, input[type=button].square, input[type=reset].square, [role=button].square {
   -ms-border-radius: 0;
@@ -1788,6 +1837,7 @@ button.dropdown ul li a, button.dropdown ul li a:visited, .button.dropdown ul li
   display: block;
   padding: 0.5em 1em;
   border: none;
+  color: #2b2b2d;
   text-shadow: none;
   text-decoration: none;
 }
@@ -1923,36 +1973,36 @@ input[type=checkbox], input[type=radio], select[type=checkbox], select[type=radi
   border-radius: 4px;
 }
 input.error, input.invalid, select.error, select.invalid, textarea.error, textarea.invalid {
-  color: #a40400;
-  background: #ffe2e1;
-  border-color: #a40400;
+  color: #b94a48;
+  background: white;
+  border-color: #b94a48;
 }
 input.success, input.valid, select.success, select.valid, textarea.success, textarea.valid {
-  color: #5fb40e;
+  color: #468847;
   background: white;
-  border-color: #5fb40e;
+  border-color: #468847;
 }
 
 .error input, .error select, .error textarea, .invalid input, .invalid select, .invalid textarea {
-  color: #a40400;
-  background: #ffe2e1;
-  border-color: #a40400;
+  background: #f2dede;
+  color: #b94a48;
+  border-color: #eed3d7;
 }
 .error .prefix, .error .suffix, .invalid .prefix, .invalid .suffix {
-  color: #ffe2e1;
-  background: #a40400;
-  border-color: #a40400;
+  color: white;
+  background: #b94a48;
+  border-color: #b94a48;
 }
 
 .success input, .success select, .success textarea, .valid input, .valid select, .valid textarea {
-  color: #5fb40e;
-  background: #effde3;
-  border-color: #5fb40e;
+  background: #dff0d8;
+  color: #468847;
+  border-color: #d6e9c6;
 }
 .success .prefix, .success .suffix, .valid .prefix, .valid .suffix {
   color: white;
-  background: #5fb40e;
-  border-color: #5fb40e;
+  background: #468847;
+  border-color: #468847;
 }
 
 textarea {
@@ -2754,20 +2804,30 @@ ul.breadcrumbs li:first-child a:before {
 .message.large {
   font-size: 1.5em;
 }
-.message.error {
-  background: #a40400;
-  border: 1px solid #710300;
-  color: white;
+.message.info {
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border-color: #bce8f1;
+}
+.message.alert {
+  background-color: #fcf8e3;
+  color: #c09853;
+  border-color: #fbeee0;
 }
 .message.warning {
-  background: #ff971e;
-  border: 1px solid #ea7e00;
-  color: white;
+  background: #ffe5c7;
+  color: #ff971e;
+  border-color: #ffdbb3;
+}
+.message.error {
+  background: #f2dede;
+  color: #b94a48;
+  border-color: #eed3d7;
 }
 .message.success {
-  background: #5fb40e;
-  border: 1px solid #46850a;
-  color: white;
+  background: #dff0d8;
+  color: #468847;
+  border-color: #d6e9c6;
 }
 .message.square {
   -ms-border-radius: 0;
@@ -2818,20 +2878,30 @@ ul.breadcrumbs li:first-child a:before {
 .callout.large {
   font-size: 1.5em;
 }
-.callout.error {
-  background: #a40400;
-  border: 1px solid #710300;
-  color: white;
+.callout.info {
+  background-color: #d9edf7;
+  color: #3a87ad;
+  border-color: #bce8f1;
+}
+.callout.alert {
+  background-color: #fcf8e3;
+  color: #c09853;
+  border-color: #fbeee0;
 }
 .callout.warning {
-  background: #ff971e;
-  border: 1px solid #ea7e00;
-  color: white;
+  background: #ffe5c7;
+  color: #ff971e;
+  border-color: #ffdbb3;
+}
+.callout.error {
+  background: #f2dede;
+  color: #b94a48;
+  border-color: #eed3d7;
 }
 .callout.success {
-  background: #5fb40e;
-  border: 1px solid #46850a;
-  color: white;
+  background: #dff0d8;
+  color: #468847;
+  border-color: #d6e9c6;
 }
 .callout.square {
   -ms-border-radius: 0;
@@ -2864,7 +2934,7 @@ ul.breadcrumbs li:first-child a:before {
   outline: none;
 }
 .callout h1, .callout h2, .callout h3, .callout h4, .callout h5, .callout h6 {
-  color: white;
+  color: inherit;
 }
 .callout *:last-child {
   margin-bottom: 0;

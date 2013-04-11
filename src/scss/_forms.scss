@@ -58,9 +58,9 @@ input, select, textarea {
 }
 .error, .invalid {
   input, select, textarea {
+    background:$error-background;
     color:$error-color;
-    background:lighten($error-color, 62%);
-    border-color:$error-color;
+    border-color:$error-border;
   }
   .prefix, .suffix {
     color:lighten($error-color, 62%);;
@@ -70,9 +70,9 @@ input, select, textarea {
 }
 .success, .valid {
   input, select, textarea {
+    background:$success-background;
     color:$success-color;
-    background:lighten($success-color, 56%);
-    border-color:$success-color;
+    border-color:$success-border;
   }
   .prefix, .suffix {
     color:lighten($success-color, 62%);;

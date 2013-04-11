@@ -4,7 +4,7 @@
   alt="GroundworkCSS">
 </a>
 
-GroundworkCSS Beta v1.5
+GroundworkCSS Beta v1.6
 =======================
 
 Say hello to responsive design made easy.

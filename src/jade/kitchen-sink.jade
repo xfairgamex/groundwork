@@ -153,12 +153,70 @@ block content
         h2 Buttons
         .row
           .one.third.padded
+            h3 Button Sizes
             p
               button.small Small Button
             p
               button Medium Button
             p
               button.large Large Button
+          .one.third.padded
+            h3 Button Types
+            p
+              button Normal Button
+            p
+              button.info Info Button
+            p
+              button.success Success Button
+            p
+              button.alert Alert Button
+            p
+              button.warning Warning Button
+            p
+              button.error Error Button
+          .one.third.padded
+            h3 Button Styles
+            p
+              button Normal Button
+            p
+              button.square Square Button
+            p
+              button.round Round Button
+            p
+              button.block Block Button
+        h2 Button States
+        .row
+          .one.third.padded
+            h3 Disabled
+            p
+              button.disabled(tabindex='-1') Disabled Button
+            p
+              button.info.disabled Disabled Info
+            p
+              button.success.disabled Disabled Success
+            p
+              button.alert.disabled Disabled Alert
+            p
+              button.warning.disabled Disabled Warning
+            p
+              button.error.disabled Disabled Error
+          .one.third.padded
+            h3 Active
+            p
+              button.active Active Button
+            p
+              button.info.active Active Info
+            p
+              button.success.active Active Success
+            p
+              button.alert.active Active Alert
+            p
+              button.warning.active Active Warning
+            p
+              button.error.active Active Error
+        .row
+          .one.whole.padded
+            h2 Button Lists
             ul.button-list
               li
                 a(href='#') Button 1
@@ -187,43 +245,27 @@ block content
                 a(href='#')
                   i.icon-pinterest
             br
+        .row
+          .one.whole.padded
+            h2 Menu Buttons
             .dropdown.button
               | Dropdown Menu Button
               ul
                 li
                   a(href='#')
                     i.icon-home
-                    | Example Menu Item 1
+                    |  Example Menu Item 1
                 li
                   a(href='#')
                     i.icon-envelope-alt
-                    | Example Menu Item 2
+                    |  Example Menu Item 2
                 li
                   hr
                 li
                   a(href='#')
                     i.icon-heart
-                    | Seperated Menu Item
-          .one.third.padded
-            p
-              button Normal Button
-            p
-              button.error Error Button
-            p
-              button.warning Warning Button
-            p
-              button.success Success Button
-            p
-              button.disabled(tabindex='-1') Disabled Button
-          .one.third.padded
-            p
-              button Normal Button
-            p
-              button.square Square Button
-            p
-              button.round Round Button
-            p
-              button.block Block Button
+                    |  Seperated Menu Item
+              br
         hr
         h2 Forms
         .row
@@ -574,15 +616,29 @@ block content
         hr
         h2 UI Components
         p.message This is an important message.
+        p.info.message This is an info message.
         p.success.message This is a success message.
+        p.alert.message This is an alert message.
         p.warning.message This is a warning message.
         p.error.message This is an error message.
         .callout
           h4 This is a normal callout box
           p Use these to contain or call attention to special content.
+        .info.callout
+          h4 This is an info callout box
+          p Use these to contain or call attention to special content.
         .success.callout
           h4 This is a success callout box
           p Use these to communicate multi-element success messages as a block.
+        .alert.callout
+          h4 This is an alert callout box
+          p Use these to contain or call attention to special content.
+        .warning.callout
+          h4 This is a warning callout box
+          p Use these to contain or call attention to special content.
+        .error.callout
+          h4 This is an error callout box
+          p Use these to contain or call attention to special content.
         hr
         h2 Tables
         table.responsive
@@ -1581,8 +1637,9 @@ block content
                     | icon-user-md
         hr
         h2 Responsive Headings
-        h1.responsive(data-compression='10.2') A Responsive Heading
+        h1.responsive(data-compression='10.3') A Responsive Heading
         h1.responsive(data-compression='13.85', data-min='20', data-max='170') A Longer Responsive Heading
+        h1.responsive(data-compression='7.5') A Scrolling Responsive Heading
         hr
         h2 Modals
         p

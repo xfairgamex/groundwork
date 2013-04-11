@@ -35,44 +35,94 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
   &.disabled {
     @include state(disabled,normal,desaturate($button-color,20%));
   }
-  &.small {
-    font-size:0.8em;
-  }
-  &.large {
-    font-size:1.5em;
-  }
-  &.error {
-    background:$error-color;
-    border:1px solid darken($error-color, 10%);
+  &.info {
+    background-color:darken($info-background, 40%);
     color:$button-text;
+    border-color:darken($info-border, 40%);
     &.active, &:hover, &:focus {
-      background:darken($error-color, 10%);
+      background:darken($info-background, 49%);
     }
     &.disabled {
-      @include state(disabled,normal,desaturate($error-color,20%));
+      @include state(disabled,normal,desaturate($info-color,20%));
+    }
+  }
+  &.alert {
+    background-color:darken($alert-background, 40%);
+    color:$button-text;
+    border-color:darken($alert-border, 25%);
+    &.active, &:hover, &:focus {
+      background:darken($alert-background, 45%);
+    }
+    &.disabled {
+      @include state(disabled,normal,desaturate($alert-color,20%));
     }
   }
   &.warning {
-    background:$warning-color;
-    border:1px solid darken($warning-color, 10%);
+    background-color:darken($warning-background, 40%);
     color:$button-text;
+    border-color:darken($warning-border, 40%);
     &.active, &:hover, &:focus {
-      background:darken($warning-color, 10%);
+      background:darken($warning-background, 45%);
     }
     &.disabled {
       @include state(disabled,normal,desaturate($warning-color,20%));
     }
   }
-  &.success {
-    background:$success-color;
-    border:1px solid darken($success-color, 10%);
+  &.error {
+    background-color:darken($error-background, 40%);
     color:$button-text;
+    border-color:darken($error-border, 40%);
     &.active, &:hover, &:focus {
-      background:darken($success-color, 10%);
+      background:darken($error-background, 49%);
+    }
+    &.disabled {
+      @include state(disabled,normal,desaturate($error-color,20%));
+    }
+  }
+  &.success {
+    background-color:darken($success-background, 40%);
+    color:$button-text;
+    border-color:darken($success-border, 40%);
+    &.active, &:hover, &:focus {
+      background:darken($success-background, 49%);
     }
     &.disabled {
       @include state(disabled,normal,desaturate($success-color,20%));
     }
+  }
+  // &.error {
+  //   background:$error-color;
+  //   border:1px solid darken($error-color, 10%);
+  //   color:$button-text;
+  
+  // }
+  // &.warning {
+  //   background:$warning-color;
+  //   border:1px solid darken($warning-color, 10%);
+  //   color:$button-text;
+  //   &.active, &:hover, &:focus {
+  //     background:darken($warning-color, 10%);
+  //   }
+  //   &.disabled {
+  //     @include state(disabled,normal,desaturate($warning-color,20%));
+  //   }
+  // }
+  // &.success {
+  //   background:$success-color;
+  //   border:1px solid darken($success-color, 10%);
+  //   color:$button-text;
+  //   &.active, &:hover, &:focus {
+  //     background:darken($success-color, 10%);
+  //   }
+  //   &.disabled {
+  //     @include state(disabled,normal,desaturate($success-color,20%));
+  //   }
+  // }
+  &.small {
+    font-size:0.8em;
+  }
+  &.large {
+    font-size:1.5em;
   }
   &.square {
     @include rounded(0);
@@ -116,6 +166,7 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
           display:block;
           padding:0.5em 1em;
           border:none;
+          color:$font-color;
           text-shadow:none;
           text-decoration:none;
           &:hover, &:focus {
