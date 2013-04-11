@@ -1566,6 +1566,7 @@ pre {
   counter-reset: linenumber;
 }
 pre code {
+  display: block;
   background: inherit;
   margin: 0;
   padding: 0;
