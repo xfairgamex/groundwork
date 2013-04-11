@@ -1639,11 +1639,15 @@ block content
         h2 Responsive Headings
         h1.responsive(data-compression='10.3') A Responsive Heading
         h1.responsive(data-compression='13.85', data-min='20', data-max='170') A Longer Responsive Heading
-        h1.responsive(data-compression='7.5') A Scrolling Responsive Heading
+        h1.responsive A Scrolling Responsive Heading
         hr
         h2 Modals
         p
           a.button(href='#example-modal') Inline Content
+        p
+          a.fullscreen.button(href='#example-modal') 
+            i.icon-fullscreen
+            |  Fullscreen
         #example-modal.modal
           img.pull-right.gap-left.gap-bottom(src='http://placekitten.com/g/200/300', alt='')
           h1 HTML Ipsum Presents
@@ -1661,10 +1665,20 @@ block content
             | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
         p
           a.modal.button(href='http://placekitten.com/')
-            | External Content
+            | External Content 
             i.icon-external-link
         p
-          a.modal.button(href='http://www.youtube.com/embed/eDO23-eLoGA') YouTube Video
+          a.modal.fullscreen.button(href='http://placekitten.com/')
+            | Fullscreen External Content 
+            i.icon-external-link
+        p
+          a.modal.button(href='http://www.youtube.com/embed/eDO23-eLoGA') 
+            | YouTube Video 
+            i.icon-play-circle
+        p
+          a.modal.fullscreen.button(href='http://www.youtube.com/embed/eDO23-eLoGA') 
+            | Fullscreen YouTube Video 
+            i.icon-play-circle
         hr
         h2 Tooltips
         .row

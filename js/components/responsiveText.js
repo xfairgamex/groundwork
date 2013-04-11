@@ -5,10 +5,12 @@
 
 $(function() {
   return $('.responsive').not('table').each(function(index, object) {
-    var compression, max, min;
+    var $this, compression, max, min, scrollReset, scrollTime;
     compression = 10;
     min = 10;
     max = 200;
+    scrollTime = 650;
+    scrollReset = 200;
     compression = parseFloat($(this).attr('data-compression') || compression);
     min = parseFloat($(this).attr('data-min') || min);
     max = parseFloat($(this).attr('data-max') || max);
@@ -17,19 +19,20 @@ $(function() {
       minSize: min,
       maxSize: max
     });
+    $this = $(this);
     return $(this).hover((function() {
       var difference;
-      console.log($(this));
       difference = $this.get(0).scrollWidth - $this.width();
+      console.log(difference);
       if (difference > 0) {
         return $this.stop().animate({
           "text-indent": -difference
-        }, settings.scrollTime);
+        }, scrollTime);
       }
     }), function() {
       return $this.stop().animate({
         "text-indent": 0
-      }, settings.scrollBackTime);
+      }, scrollReset);
     });
   });
 });
