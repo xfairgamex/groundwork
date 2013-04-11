@@ -12,10 +12,24 @@ $(function() {
     compression = parseFloat($(this).attr('data-compression') || compression);
     min = parseFloat($(this).attr('data-min') || min);
     max = parseFloat($(this).attr('data-max') || max);
-    return $(object).responsiveText({
+    $(object).responsiveText({
       compressor: compression,
       minSize: min,
       maxSize: max
+    });
+    return $(this).hover((function() {
+      var difference;
+      console.log($(this));
+      difference = $this.get(0).scrollWidth - $this.width();
+      if (difference > 0) {
+        return $this.stop().animate({
+          "text-indent": -difference
+        }, settings.scrollTime);
+      }
+    }), function() {
+      return $this.stop().animate({
+        "text-indent": 0
+      }, settings.scrollBackTime);
     });
   });
 });
