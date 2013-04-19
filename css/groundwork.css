@@ -2008,25 +2008,6 @@ input.success, input.valid, select.success, select.valid, textarea.success, text
 textarea {
   height: 10em;
 }
-textarea:focus {
-  -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-  filter: Glow(color=#20000000, strength=15);
-  -ms-filter: glow(color=#20000000, strength=15);
-  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.125);
-}
-
-span.select select:focus {
-  -ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  filter: Glow(color=#59000000, strength=15);
-  -ms-filter: glow(color=#59000000, strength=15);
-  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
-}
 
 span.select {
   display: block;

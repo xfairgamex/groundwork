@@ -1,16 +1,4 @@
-html.lt-ie9 {
-  min-width: 1200px !important;
-}
-html.lt-ie9 body {
-  width: auto !important;
-}
-html.lt-ie9 .container {
-  width: auto !important;
-}
-html.lt-ie9 input:focus, html.lt-ie9 select:focus, html.lt-ie9 textarea:focus {
-  border-color: #198d98;
-}
-html.lt-ie9 input[type=checkbox], html.lt-ie9 input[type=radio], html.lt-ie9 select[type=checkbox], html.lt-ie9 select[type=radio], html.lt-ie9 textarea[type=checkbox], html.lt-ie9 textarea[type=radio] {
+input[type=checkbox], input[type=radio] {
   padding: 0;
   background: none;
   border: none;
@@ -23,6 +11,19 @@ html.lt-ie9 input[type=checkbox], html.lt-ie9 input[type=radio], html.lt-ie9 sel
   -webkit-border-radius: 0;
   border-radius: 0;
 }
+
+html.lt-ie9 {
+  min-width: 1200px !important;
+}
+html.lt-ie9 body {
+  width: auto !important;
+}
+html.lt-ie9 .container {
+  width: auto !important;
+}
+html.lt-ie9 input:focus, html.lt-ie9 select:focus, html.lt-ie9 textarea:focus {
+  border-color: #198d98;
+}
 html.lt-ie9 span.select:after {
   display: none;
 }
@@ -33,13 +34,6 @@ html.lt-ie9 span.select select {
 }
 html.lt-ie9 span.select select:focus {
   border: 1px solid #198d98;
-  -ms-box-shadow: 0 0 0 white;
-  filter: Glow(color=#FFFFFFFF, strength=0);
-  -ms-filter: glow(color=#FFFFFFFF, strength=0);
-  -o-box-shadow: 0 0 0 white;
-  -moz-box-shadow: 0 0 0 white;
-  -webkit-box-shadow: 0 0 0 white;
-  box-shadow: 0 0 0 white;
 }
 html.lt-ie9 .social-icon {
   filter: none;

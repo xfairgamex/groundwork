@@ -10,6 +10,18 @@
 
 
 
+input {
+  &[type=checkbox], &[type=radio] {
+    padding:0;
+    background:none;
+    border:none;
+    display:inline-block;
+    width:auto !important;
+    height:auto !important;
+    @include rounded(0);
+  }
+}
+
 html {
   &.lt-ie9 {
     min-width:$max-width !important;
@@ -24,15 +36,6 @@ html {
       &:focus {
         border-color:$button-active;
       }
-      &[type=checkbox], &[type=radio] {
-        padding:0;
-        background:none;
-        border:none;
-        display:inline-block;
-        width:auto !important;
-        height:auto !important;
-        @include rounded(0);
-      }
     }
     // custom select box
     span.select {
@@ -45,7 +48,6 @@ html {
         vertical-align:top;
         &:focus {
           border:1px solid $button-active;
-          @include drop-shadow(#fff, 0, 0, 0);
         }
       }
     }

@@ -82,14 +82,6 @@ input, select, textarea {
 }
 textarea {
   height:10em;
-  &:focus {
-    @include drop-shadow(rgba(0,0,0,0.125), 15px, 0, 0);
-  }
-}
-span.select select {
-  &:focus {
-    @include drop-shadow(rgba(0,0,0,0.35), 15px, 0, 0);
-  }
 }
 span.select {
   display:block;
