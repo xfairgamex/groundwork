@@ -1697,9 +1697,8 @@ block content
           img(src='http://placehold.it/1200x400/198d98/ffffff/&text=Slide+4', alt='')
         hr
         h4 Non-image Slideshow
-        .cycle-slideshow(data-cycle-slides='data-cycle-slides')
-          | div" data-cycle-timeout="2000" data-cycle-pause-on-hover="true"
-          .row.callout
+        .cycle-slideshow(data-cycle-slides='> div', data-cycle-timeout="2000", data-cycle-pause-on-hover="true")
+          .row.success.callout
             h1 Content Slide
             p
               | This slide has HTML content instead of an image and has also had
@@ -1707,14 +1706,14 @@ block content
               | applied to it.
             p
               a.success.button(href='#') Click Me
-          .row.warning.callout
+          .row.info.callout
             h1 Another Content Slide
             p
               | This slide has HTML content instead of an image and has also had
               code.inline .warning.callout
               | applied to it.
             p
-              a.large.button(href='#') Click Me
+              a.large.info.button(href='#') Click Me
         h2 Tiles
         .tiles
           .row
