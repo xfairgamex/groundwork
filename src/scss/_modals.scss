@@ -29,7 +29,7 @@
     visibility:visible;
     opacity:1;
   }
-  div.modal.active, div[role=dialog].active {
+  div.modal.active, div[role~=dialog].active {
     visibility:visible;
     opacity:1;
     z-index:999;
@@ -51,7 +51,7 @@
   @include gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.9));
 }
 
-div.modal, div[role=dialog] {
+div%modal {
   visibility:hidden;
   opacity:0;
   position:fixed;
@@ -99,5 +99,15 @@ div.modal, div[role=dialog] {
     @include rounded(0 0 $radius 0);
     right:auto;
     left:10px;
+  }
+}
+@if $classes {
+  div.modal {
+    @extend div%modal;
+  }
+}
+@if $aria {
+  div[role~=dialog] {
+    @extend div%modal;
   }
 }

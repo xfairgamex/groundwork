@@ -300,7 +300,7 @@
           <div class="row">
             <div class="one whole padded">
               <h2>Menu Buttons</h2>
-              <div class="dropdown button">Dropdown Menu Button
+              <button class="dropdown">Dropdown Menu Button
                 <ul>
                   <li><a href="#"><i class="icon-home"></i> Example Menu Item 1</a></li>
                   <li><a href="#"><i class="icon-envelope-alt"></i> Example Menu Item 2</a></li>
@@ -308,8 +308,8 @@
                     <hr>
                   </li>
                   <li><a href="#"><i class="icon-heart"></i> Seperated Menu Item</a></li>
-                </ul><br>
-              </div>
+                </ul>
+              </button><br>
             </div>
           </div>
           <hr>
@@ -341,7 +341,7 @@
                     <div class="one half padded">
                       <input type="text" placeholder="City">
                     </div>
-                    <div class="one fourth padded"><span class="select">
+                    <div class="one fourth padded"><span class="select-wrap">
                         <select class="unselected">
                           <option value="" disabled="" selected="">State</option>
                           <option value="AL">Alabama</option>
@@ -538,140 +538,169 @@
             </div>
           </div>
           <h2>Navigation Components</h2>
-          <div class="row">
-            <div class="one fourth padded">
-              <h4>Vertical Navigation</h4>
-              <nav class="nav">
+          <h4>Horizontal Grid Navigation (grid)</h4>
+          <nav class="small-tablet nav">
+            <ul class="row">
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li class="menu one small-tablet fourth"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
                 <ul>
-                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                  <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                      <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                      <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                      <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                    </ul>
-                  </li>
                   <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                </ul>
-              </nav>
-              <hr>
-              <h4>Vertical Navigation w/Single Item</h4>
-              <nav class="nav">
-                <ul>
-                  <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="three fourths padded">
-              <h4>Horizontal Navigation (grid)</h4>
-              <nav class="nav small-tablet">
-                <ul class="row">
-                  <li class="one fourth"><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                  <li class="menu one fourth"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                      <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                      <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                      <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                    </ul>
-                  </li>
-                  <li class="one fourth"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a></li>
-                  <li class="one fourth"><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                </ul>
-              </nav>
-              <hr>
-              <h4>Horizontal Navigation (grid) w/Single Item</h4>
-              <nav class="nav small-tablet">
-                <ul class="row">
-                  <li class="menu one whole"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <hr>
-              <h4>Horizontal Navigation (inline)</h4>
-              <nav class="nav inline">
-                <ul>
-                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
                   <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                  <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                      <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
-                      <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
-                      <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
                   <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
                 </ul>
-              </nav>
-              <hr>
-              <h4>Horizontal Navigation (inline) w/Single Item</h4>
-              <nav class="nav inline">
+              </li>
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus" class="disabled">Praesent</a></li>
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Horizontal "Hamburger" Grid Navigation (menu + grid)</h4>
+          <nav class="small-tablet menu nav">
+            <ul class="row">
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li class="menu one small-tablet fourth"><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
                 <ul>
-                  <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-                    <ul>
-                      <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
+                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
                 </ul>
-              </nav>
+              </li>
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus" class="disabled">Praesent</a></li>
+              <li class="one small-tablet fourth"><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Horizontal Navigation (inline)</h4>
+          <nav class="inline nav">
+            <ul>
+              <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus" class="disabled">Aliquam</a></li>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
+                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+                </ul>
+              </li>
+              <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Horizontal "Hamburger" Navigation (inline + menu)</h4>
+          <nav class="inline menu nav">
+            <ul>
+              <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus" class="disabled">Aliquam</a></li>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
+                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+                </ul>
+              </li>
+              <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Vertical Navigation</h4>
+          <p></p>
+          <nav class="nav">
+            <ul>
+              <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus" class="disabled">Aliquam</a></li>
+              <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
+                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+                </ul>
+              </li>
+              <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Vertical "Hamburger" Navigation (menu)</h4>
+          <p></p>
+          <nav class="menu nav">
+            <ul>
+              <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a></li>
+              <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus" class="disabled">Aliquam</a></li>
+              <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+              <li class="menu"><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                <ul>
+                  <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+                  <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a></li>
+                  <li><a href="#nowhere" title="Lorum ipsum dolor sit amet" class="disabled">Lorem</a></li>
+                  <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a></li>
+                </ul>
+              </li>
+              <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a></li>
+            </ul>
+          </nav>
+          <hr>
+          <h4>Dropdown Button</h4>
+          <button class="dropdown button">Dropdown Menu Button
+            <ul>
+              <li><a href="#"><i class="icon-home"></i> Example Menu Item 1</a></li>
+              <li><a href="#" class="disabled"><i class="icon-envelope-alt"></i> Example Menu Item 2</a></li>
               <hr>
-              <h4>Pagination</h4><nav class="pagination">
-  <ul>
-    <li class="prev"><a href="#">&laquo;</a></li
-    ><li class="first"><a href="#">1</a></li
-    ><li><a href="#">2</a></li
-    ><li><a href="#">3</a></li
-    ><li><a href="#">4</a></li
-    ><li><a href="#">5</a></li
-    ><li><a href="#">6</a></li
-    ><li><a href="#">7</a></li
-    ><li><a href="#">8</a></li
-    ><li><a href="#">9</a></li
-    ><li><a href="#">10</a></li
-    ><li><a href="#">11</a></li
-    ><li><a href="#">12</a></li
-    ><li><a href="#">13</a></li
-    ><li><a href="#">14</a></li
-    ><li><a href="#">15</a></li
-    ><li><a href="#">16</a></li
-    ><li><a href="#">17</a></li
-    ><li><a href="#">18</a></li
-    ><li class="active"><a href="#">19</a></li
-    ><li><a href="#">20</a></li
-    ><li><a href="#">21</a></li
-    ><li><a href="#">22</a></li
-    ><li><a href="#">23</a></li
-    ><li><a href="#">24</a></li
-    ><li><a href="#">25</a></li
-    ><li><a href="#">26</a></li
-    ><li><a href="#">27</a></li
-    ><li><a href="#">28</a></li
-    ><li><a href="#">29</a></li
-    ><li><a href="#">30</a></li
-    ><li><a href="#">31</a></li
-    ><li><a href="#">32</a></li
-    ><li><a href="#">33</a></li
-    ><li><a href="#">34</a></li
-    ><li><a href="#">35</a></li
-    ><li><a href="#">36</a></li
-    ><li><a href="#">37</a></li
-    ><li><a href="#">38</a></li
-    ><li class="last"><a href="#">39</a></li
-    ><li class="next"><a href="#">&raquo;</a></li>
-  </ul>
-            </div>
-          </div>
+              <li><a href="#"><i class="icon-heart"></i> Seperated Menu Item</a></li>
+            </ul>
+          </button>
+          <hr>
+          <h4>Responsive Pagination</h4>
+          <p></p>
+          <nav class="pagination align-center">
+            <ul>
+              <li class="prev"><a href="#">&laquo;</a></li
+              ><li class="first"><a href="#">1</a></li
+              ><li><a href="#">2</a></li
+              ><li><a href="#">3</a></li
+              ><li><a href="#">4</a></li
+              ><li><a href="#">5</a></li
+              ><li><a href="#">6</a></li
+              ><li><a href="#">7</a></li
+              ><li><a href="#">8</a></li
+              ><li><a href="#">9</a></li
+              ><li><a href="#">10</a></li
+              ><li><a href="#">11</a></li
+              ><li><a href="#">12</a></li
+              ><li><a href="#">13</a></li
+              ><li><a href="#">14</a></li
+              ><li><a href="#">15</a></li
+              ><li><a href="#">16</a></li
+              ><li><a href="#">17</a></li
+              ><li><a href="#">18</a></li
+              ><li class="active"><a href="#">19</a></li
+              ><li><a href="#">20</a></li
+              ><li><a href="#">21</a></li
+              ><li><a href="#">22</a></li
+              ><li><a href="#">23</a></li
+              ><li><a href="#">24</a></li
+              ><li><a href="#">25</a></li
+              ><li><a href="#">26</a></li
+              ><li><a href="#">27</a></li
+              ><li><a href="#">28</a></li
+              ><li><a href="#">29</a></li
+              ><li><a href="#">30</a></li
+              ><li><a href="#">31</a></li
+              ><li><a href="#">32</a></li
+              ><li><a href="#">33</a></li
+              ><li><a href="#">34</a></li
+              ><li><a href="#">35</a></li
+              ><li><a href="#">36</a></li
+              ><li><a href="#">37</a></li
+              ><li><a href="#">38</a></li
+              ><li class="last"><a href="#">39</a></li
+              ><li class="next"><a href="#">&raquo;</a></li>
+            </ul>
+          </nav>
           <hr>
           <h2>Tabs</h2>
           <div class="tabs">

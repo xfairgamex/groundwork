@@ -4,24 +4,21 @@
 
 
 
-form {
-
-}
-fieldset {
+%fieldset {
   border:1px solid $border-color;
   padding:$gutter;
-  legend {
-    font-weight:900;
-    font-size:0.8em;
-    color:darken($background-color, 35%);
-    margin-bottom:0;
-  }
 }
-label {
+%legend {
+  font-weight:900;
+  font-size:0.8em;
+  color:darken($background-color, 35%);
+  margin-bottom:0;
+}
+%label {
   display:block;
   padding:0.4em 0.2em;
 }
-input, select, textarea {
+%field {
   display:block;
   width:100%;
   margin:0;
@@ -33,6 +30,19 @@ input, select, textarea {
   background:white;
   border:1px solid $border-color;
   @include rounded($radius);
+  &%error, &%invalid {
+    color:$error-color;
+    background:lighten($error-color, 62%);
+    border-color:$error-color;
+  }
+  &%success, &%valid {
+    color:$success-color;
+    background:lighten($success-color, 62%);
+    border-color:$success-color;
+  }
+}
+%input {
+  @extend %field;
   &[size] {
     height:auto;
   }
@@ -45,45 +55,35 @@ input, select, textarea {
     border:1px solid $border-color;
     @include rounded($radius);
   }
-  &.error, &.invalid {
-    color:$error-color;
-    background:lighten($error-color, 62%);
-    border-color:$error-color;
-  }
-  &.success, &.valid {
-    color:$success-color;
-    background:lighten($success-color, 62%);
-    border-color:$success-color;
-  }
 }
-.error, .invalid {
-  input, select, textarea {
+%textarea {
+  height:10em;
+}
+%error {
+  %field {
     background:$error-background;
     color:$error-color;
     border-color:$error-border;
   }
-  .prefix, .suffix {
+  %prefix, %suffix {
     color:lighten($error-color, 62%);;
     background:$error-color;
     border-color:$error-color;
   }
 }
-.success, .valid {
-  input, select, textarea {
+%success {
+  %field {
     background:$success-background;
     color:$success-color;
     border-color:$success-border;
   }
-  .prefix, .suffix {
+  %prefix, %suffix {
     color:lighten($success-color, 62%);;
     background:$success-color;
     border-color:$success-color;
   }
 }
-textarea {
-  height:10em;
-}
-span.select {
+%select-wrap {
   display:block;
   color:gray;
   background:white;
@@ -104,7 +104,7 @@ span.select {
     right:0;
     background:darken(white, 12.5%);
   }
-  select {
+  %select {
     -ms-appearance:none;
     -o-appearance:none;
     -moz-appearance:none;
@@ -125,12 +125,12 @@ span.select {
     }
   }
 }
-ul.radio-list {
+%radio-list {
   list-style:none;
   margin:0;
   padding:0;
 }
-.prefix, .suffix {
+%prefix, %suffix {
   display:block;
   position:relative;
   z-index:1;
@@ -149,11 +149,80 @@ ul.radio-list {
   background:darken(white, 12.5%);
   border:1px solid darken(white, 17.5%);
 }
-.prefix {
+%prefix {
   left:2px;
   @include rounded($radius 0 0 $radius);
 }
-.suffix {
+%suffix {
   left:-2px;
   @include rounded(0 $radius $radius 0);
+}
+@if $tags {
+  fieldset {
+    @extend %fieldset;
+  }
+  legend {
+    @extend %legend;
+  }
+  label {
+    @extend %label;
+  }
+  input, select, textarea {
+    @extend %field;
+  }
+  input {
+    @extend %input;
+  }
+  textarea {
+    @extend %textarea;
+  }
+  @if $classes {
+    .select-wrap {
+      @extend %select-wrap;
+      select {
+        @extend %select;
+      }
+    }
+  }
+}
+@if $classes {
+  .fieldset {
+    @extend %fieldset;
+  }
+  .legend {
+    @extend %legend;
+  }
+  .label {
+    @extend %label;
+  }
+  .input, .select, .textarea {
+    @extend %field;
+  }
+  .input {
+    @extend %input;
+  }
+  .textarea {
+    @extend %textarea;
+  }
+  .select-wrap {
+    @extend %select-wrap;
+    .select {
+      @extend %select;
+    }
+  }
+  .radio-list {
+    @extend %radio-list;
+  }
+  .error, .invalid {
+    @extend %error;
+  }
+  .success, .valid {
+    @extend %success;
+  }
+  .prefix {
+    @extend %prefix;
+  }
+  .suffix {
+    @extend %suffix;
+  }
 }

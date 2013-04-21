@@ -5,7 +5,7 @@
 
 
 
-button, .button, a.button, a.button:visited, input[type=submit],  input[type=button], input[type=reset], [role=button] {
+%button {
   display:inline-block;
   word-wrap:break-word;
   padding:0.25em 1em;
@@ -90,34 +90,6 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
       @include state(disabled,normal,desaturate($success-color,20%));
     }
   }
-  // &.error {
-  //   background:$error-color;
-  //   border:1px solid darken($error-color, 10%);
-  //   color:$button-text;
-  
-  // }
-  // &.warning {
-  //   background:$warning-color;
-  //   border:1px solid darken($warning-color, 10%);
-  //   color:$button-text;
-  //   &.active, &:hover, &:focus {
-  //     background:darken($warning-color, 10%);
-  //   }
-  //   &.disabled {
-  //     @include state(disabled,normal,desaturate($warning-color,20%));
-  //   }
-  // }
-  // &.success {
-  //   background:$success-color;
-  //   border:1px solid darken($success-color, 10%);
-  //   color:$button-text;
-  //   &.active, &:hover, &:focus {
-  //     background:darken($success-color, 10%);
-  //   }
-  //   &.disabled {
-  //     @include state(disabled,normal,desaturate($success-color,20%));
-  //   }
-  // }
   &.small {
     font-size:0.8em;
   }
@@ -184,7 +156,7 @@ button, .button, a.button, a.button:visited, input[type=submit],  input[type=but
     }
   }
 }
-ul.button-list, ol.button-list {
+%button-list {
   list-style:none;
   margin:0;
   padding:0;
@@ -231,5 +203,29 @@ ul.button-list, ol.button-list {
         @include state(disabled,normal,desaturate($button-color,20%));
       }
     }
+  }
+}
+@if $classes {
+  .button,
+  a.button,
+  a.button:visited {
+    @extend %button;
+  }
+  ul.button-list,
+  ol.button-list {
+    @extend %button-list;
+  }
+}
+@if $tags {
+  button,
+  input[type=submit],
+  input[type=button],
+  input[type=reset] {
+    @extend %button;
+  }
+}
+@if $aria {
+  [role~=button] {
+    @extend %button;
   }
 }

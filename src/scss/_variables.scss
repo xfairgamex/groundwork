@@ -3,7 +3,9 @@
 ///////////////////////
 $max-width:           1200px;     // max container width (i.e. - 960px)
 $gutter:              10px;       // gutter spacing
-$classes:             true;       // enable CSS classes
+$classes:             true;       // enable CSS class selectors     (WIP)
+$tags:                true;       // enable semantic tag selectors  (WIP)
+$aria:                true;       // enable Aria role selectors     (WIP)
 
 
 // file paths
