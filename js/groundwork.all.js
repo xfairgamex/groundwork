@@ -465,7 +465,7 @@ $(function() {
 */
 
 
-$(function() {
+$(window).load(function() {
   return equalizeColumns();
 });
 

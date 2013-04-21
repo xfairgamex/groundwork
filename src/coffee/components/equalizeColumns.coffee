@@ -1,6 +1,6 @@
-$ ->
-  # initialize
-  equalizeColumns()
+$(window).load ->
+  # initialize after page load
+  equalizeColumns();
 
 $(window).resize ->
   # adjust on resize
