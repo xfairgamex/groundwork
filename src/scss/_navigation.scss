@@ -12,7 +12,7 @@
   display:block;
 }
 
-.nav {
+%nav {
   @extend %clear;
   &:not(.inline) {
     > ul:not(.row) {
@@ -271,7 +271,7 @@
   }
 }
 // pagination
-.pagination {
+%pagination {
   ul {
     margin:10px auto;
     display:block;
@@ -334,7 +334,7 @@
   }
 }
 .no-js {
-  .nav {
+  %nav {
     ul {
       li.menu {
         ul {
@@ -350,7 +350,7 @@
     }
   }
 }
-ul.breadcrumbs {
+%breadcrumbs {
   list-style:none;
   margin:0;
   padding:0;
@@ -376,5 +376,21 @@ ul.breadcrumbs {
         display:none;
       }
     }
+  }
+}
+@if $tags {
+  nav {
+    @extend %nav;
+  }
+}
+@if $classes {
+  .nav {
+    @extend %nav;
+  }
+  .pagination {
+    @extend %pagination;
+  }
+  .breadcrumbs {
+    @extend %breadcrumbs;
   }
 }
