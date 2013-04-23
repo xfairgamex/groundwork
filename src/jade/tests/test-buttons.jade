@@ -1,0 +1,74 @@
+!!! 5
+html
+  head
+    meta(charset="utf-8")
+    title Groundwork Tests: Buttons
+    link(rel="stylesheet", href="../css/tests/test-buttons.css")
+  
+    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
+  
+  body
+    .container
+      .padded.align-center
+        h1 Groundwork Test: Buttons
+        p This page generates button elements using classes and extends. Things are good when:
+        ul.list
+          li Elements appear as they should regardless of whether classes or extends are used.
+
+      .row.headings(style="text-align: center; background-color: #444; color: white;")
+        .one.third
+          h2 Tag
+          p &lt;foo&gt;
+        .one.third
+          h2 Classes
+          p .foo
+        .one.third
+          h2 Placeholders
+          p @extend %foo;
+      
+      - var element = "button"
+      
+      - var types = ["info", "alert", "warning", "error", "success"]
+
+      each type in types
+        .row
+          .one.third: #{element}(class="#{type}")
+            | &lt;#{element} class="#{type}"&gt;
+          .one.third: a(href="#", class="#{element} #{type}")
+            | .#{element}.#{type}
+          .one.third: a(href="#", class="extend-#{element} extend-#{type}")
+            | .extend-#{element}.#{type}
+      
+        - var states = ["active", "disabled"]
+
+        each state in states
+          .row
+            .one.third: #{element}(class="#{type} #{state}")
+              | &lt;#{element} class="#{type} #{state}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{state}")
+              | .#{element}.#{type}.#{state}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{state}")
+              | .extend-#{element}.#{type}.#{state}
+        
+        - var sizes = ["small", "large"]
+
+        each size in sizes
+          .row
+            .one.third: #{element}(class="#{type} #{size}")
+              | &lt;#{element} class="#{type} #{size}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{size}")
+              | .#{element}.#{type}.#{size}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{size}")
+              | .extend-#{element}.#{type}.#{size}
+        
+        - var styles = ["square", "round", "block"]
+
+        each style in styles
+          .row
+            .one.third: #{element}(class="#{type} #{style}")
+              | &lt;#{element} class="#{type} #{style}"&gt;
+            .one.third: a(href="#", class="#{element} #{type} #{style}")
+              | .#{element}.#{type}.#{style}
+            .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{style}")
+              | .extend-#{element}.#{type}.#{style}
+

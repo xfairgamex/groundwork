@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groundwork Tests: Buttons</title>
+    <link rel="stylesheet" href="../css/tests/test-buttons.css">
+    <style>div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="padded align-center">
+        <h1>Groundwork Test: Buttons</h1>
+        <p>This page generates button elements using classes and extends. Things are good when:</p>
+        <ul class="list">
+          <li>Elements appear as they should regardless of whether classes or extends are used.</li>
+        </ul>
+      </div>
+      <div style="text-align: center; background-color: #444; color: white;" class="row headings">
+        <div class="one third">
+          <h2>Tag</h2>
+          <p>&lt;foo&gt;</p>
+        </div>
+        <div class="one third">
+          <h2>Classes</h2>
+          <p>.foo</p>
+        </div>
+        <div class="one third">
+          <h2>Placeholders</h2>
+          <p>@extend %foo;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info">&lt;button class="info"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info">.button.info</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info">.extend-button.info</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info active">&lt;button class="info active"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info active">.button.info.active</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-active">.extend-button.info.active</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info disabled">&lt;button class="info disabled"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info disabled">.button.info.disabled</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-disabled">.extend-button.info.disabled</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info small">&lt;button class="info small"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info small">.button.info.small</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-small">.extend-button.info.small</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info large">&lt;button class="info large"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info large">.button.info.large</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-large">.extend-button.info.large</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info square">&lt;button class="info square"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info square">.button.info.square</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-square">.extend-button.info.square</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info round">&lt;button class="info round"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info round">.button.info.round</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-round">.extend-button.info.round</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="info block">&lt;button class="info block"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button info block">.button.info.block</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-info extend-block">.extend-button.info.block</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert">&lt;button class="alert"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert">.button.alert</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert">.extend-button.alert</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert active">&lt;button class="alert active"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert active">.button.alert.active</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-active">.extend-button.alert.active</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert disabled">&lt;button class="alert disabled"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert disabled">.button.alert.disabled</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-disabled">.extend-button.alert.disabled</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert small">&lt;button class="alert small"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert small">.button.alert.small</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-small">.extend-button.alert.small</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert large">&lt;button class="alert large"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert large">.button.alert.large</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-large">.extend-button.alert.large</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert square">&lt;button class="alert square"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert square">.button.alert.square</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-square">.extend-button.alert.square</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert round">&lt;button class="alert round"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert round">.button.alert.round</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-round">.extend-button.alert.round</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="alert block">&lt;button class="alert block"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button alert block">.button.alert.block</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-alert extend-block">.extend-button.alert.block</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning">&lt;button class="warning"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning">.button.warning</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning">.extend-button.warning</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning active">&lt;button class="warning active"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning active">.button.warning.active</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-active">.extend-button.warning.active</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning disabled">&lt;button class="warning disabled"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning disabled">.button.warning.disabled</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-disabled">.extend-button.warning.disabled</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning small">&lt;button class="warning small"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning small">.button.warning.small</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-small">.extend-button.warning.small</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning large">&lt;button class="warning large"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning large">.button.warning.large</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-large">.extend-button.warning.large</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning square">&lt;button class="warning square"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning square">.button.warning.square</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-square">.extend-button.warning.square</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning round">&lt;button class="warning round"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning round">.button.warning.round</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-round">.extend-button.warning.round</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="warning block">&lt;button class="warning block"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button warning block">.button.warning.block</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-warning extend-block">.extend-button.warning.block</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error">&lt;button class="error"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error">.button.error</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error">.extend-button.error</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error active">&lt;button class="error active"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error active">.button.error.active</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-active">.extend-button.error.active</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error disabled">&lt;button class="error disabled"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error disabled">.button.error.disabled</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-disabled">.extend-button.error.disabled</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error small">&lt;button class="error small"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error small">.button.error.small</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-small">.extend-button.error.small</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error large">&lt;button class="error large"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error large">.button.error.large</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-large">.extend-button.error.large</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error square">&lt;button class="error square"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error square">.button.error.square</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-square">.extend-button.error.square</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error round">&lt;button class="error round"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error round">.button.error.round</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-round">.extend-button.error.round</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="error block">&lt;button class="error block"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button error block">.button.error.block</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-error extend-block">.extend-button.error.block</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success">&lt;button class="success"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success">.button.success</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success">.extend-button.success</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success active">&lt;button class="success active"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success active">.button.success.active</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-active">.extend-button.success.active</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success disabled">&lt;button class="success disabled"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success disabled">.button.success.disabled</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-disabled">.extend-button.success.disabled</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success small">&lt;button class="success small"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success small">.button.success.small</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-small">.extend-button.success.small</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success large">&lt;button class="success large"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success large">.button.success.large</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-large">.extend-button.success.large</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success square">&lt;button class="success square"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success square">.button.success.square</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-square">.extend-button.success.square</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success round">&lt;button class="success round"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success round">.button.success.round</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-round">.extend-button.success.round</a></div>
+      </div>
+      <div class="row">
+        <div class="one third">
+          <button class="success block">&lt;button class="success block"&gt;</button>
+        </div>
+        <div class="one third"><a href="#" class="button success block">.button.success.block</a></div>
+        <div class="one third"><a href="#" class="extend-button extend-success extend-block">.extend-button.success.block</a></div>
+      </div>
+    </div>
+  </body>
+</html>

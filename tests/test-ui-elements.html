@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groundwork Tests: UI Elements</title>
+    <link rel="stylesheet" href="../css/tests/test-ui-elements.css">
+    <style>div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="padded align-center">
+        <h1>Groundwork Test: UI Elements</h1>
+        <p>This page generates UI elements using classes and extends. Things are good when:</p>
+        <ul class="list">
+          <li>Elements appear as they should regardless of whether classes or extends are used.</li>
+        </ul>
+      </div>
+      <div style="text-align: center; background-color: #444; color: white;" class="row headings">
+        <div class="one third">
+          <h2>Tag</h2>
+          <p>&lt;foo&gt;</p>
+        </div>
+        <div class="one third">
+          <h2>Classes</h2>
+          <p>.foo</p>
+        </div>
+        <div class="one third">
+          <h2>Placeholders</h2>
+          <p>@extend %foo;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout ">.callout.</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-">.extend-callout.</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  active">.callout..active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-active">.extend-callout..active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  disabled">.callout..disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-disabled">.extend-callout..disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  small">.callout..small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-small">.extend-callout..small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  large">.callout..large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-large">.extend-callout..large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  square">.callout..square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-square">.extend-callout..square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  round">.callout..round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-round">.extend-callout..round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout  block">.callout..block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend- extend-block">.extend-callout..block</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info">.callout.info</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info">.extend-callout.info</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info active">.callout.info.active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-active">.extend-callout.info.active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info disabled">.callout.info.disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-disabled">.extend-callout.info.disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info small">.callout.info.small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-small">.extend-callout.info.small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info large">.callout.info.large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-large">.extend-callout.info.large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info square">.callout.info.square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-square">.extend-callout.info.square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info round">.callout.info.round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-round">.extend-callout.info.round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout info block">.callout.info.block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-info extend-block">.extend-callout.info.block</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert">.callout.alert</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert">.extend-callout.alert</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert active">.callout.alert.active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-active">.extend-callout.alert.active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert disabled">.callout.alert.disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-disabled">.extend-callout.alert.disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert small">.callout.alert.small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-small">.extend-callout.alert.small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert large">.callout.alert.large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-large">.extend-callout.alert.large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert square">.callout.alert.square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-square">.extend-callout.alert.square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert round">.callout.alert.round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-round">.extend-callout.alert.round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout alert block">.callout.alert.block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-alert extend-block">.extend-callout.alert.block</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning">.callout.warning</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning">.extend-callout.warning</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning active">.callout.warning.active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-active">.extend-callout.warning.active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning disabled">.callout.warning.disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-disabled">.extend-callout.warning.disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning small">.callout.warning.small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-small">.extend-callout.warning.small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning large">.callout.warning.large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-large">.extend-callout.warning.large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning square">.callout.warning.square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-square">.extend-callout.warning.square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning round">.callout.warning.round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-round">.extend-callout.warning.round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout warning block">.callout.warning.block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-warning extend-block">.extend-callout.warning.block</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error">.callout.error</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error">.extend-callout.error</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error active">.callout.error.active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-active">.extend-callout.error.active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error disabled">.callout.error.disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-disabled">.extend-callout.error.disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error small">.callout.error.small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-small">.extend-callout.error.small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error large">.callout.error.large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-large">.extend-callout.error.large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error square">.callout.error.square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-square">.extend-callout.error.square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error round">.callout.error.round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-round">.extend-callout.error.round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout error block">.callout.error.block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-error extend-block">.extend-callout.error.block</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success">.callout.success</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success">.extend-callout.success</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success active">.callout.success.active</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-active">.extend-callout.success.active</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success disabled">.callout.success.disabled</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-disabled">.extend-callout.success.disabled</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success small">.callout.success.small</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-small">.extend-callout.success.small</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success large">.callout.success.large</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-large">.extend-callout.success.large</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success square">.callout.success.square</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-square">.extend-callout.success.square</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success round">.callout.success.round</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-round">.extend-callout.success.round</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one half">
+          <div class="callout success block">.callout.success.block</div>
+        </div>
+        <div class="one half">
+          <div class="extend-callout extend-success extend-block">.extend-callout.success.block</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
