@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Groundwork Tests: Grids</title>
-    <link rel="stylesheet" href="test-grid.css">
+    <link rel="stylesheet" href="../css/test-grid.css">
+    <script type="text/javascript" src="../js/libs/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../js/components/equalizeColumns.js"></script>
     <style>div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}</style>
   </head>
   <body>   
@@ -181,5 +183,22 @@
       </div>
     </div>
     <h2>#6 Equal Height Columns (To be created)</h2>
+    <div class="container">
+      <div class="row equalize">
+        <div style="background:#999;" class="one third "><img src="http://placehold.it/100x100&amp;text=Short"></div>
+        <div style="background:#777;" class="one third "><img src="http://placehold.it/200x200&amp;text=Medium"></div>
+        <div style="background:#555;" class="one third "><img src="http://placehold.it/300x300&amp;text=Tall"></div>
+      </div><br>
+      <div class="row equalize">
+        <div style="background:#999;" class="one third small-tablet"><img src="http://placehold.it/100x100&amp;text=Short"></div>
+        <div style="background:#777;" class="one third small-tablet"><img src="http://placehold.it/200x200&amp;text=Medium"></div>
+        <div style="background:#555;" class="one third small-tablet"><img src="http://placehold.it/300x300&amp;text=Tall"></div>
+      </div><br>
+      <div class="row equalize">
+        <div style="background:#999;" class="one third mobile"><img src="http://placehold.it/100x100&amp;text=Short"></div>
+        <div style="background:#777;" class="one third mobile"><img src="http://placehold.it/200x200&amp;text=Medium"></div>
+        <div style="background:#555;" class="one third mobile"><img src="http://placehold.it/300x300&amp;text=Tall"></div>
+      </div><br>
+    </div>
   </body>
 </html>
