@@ -82,7 +82,6 @@
         tooltip.css({"opacity": 0, "display": "block"}).text(trigger.attr('data-title'))
         setPosition(trigger)
         trigger.addClass('on')
-        console.log(tooltip.css('display'))
         tooltip.animate
           top: "+=10"
           opacity: 1

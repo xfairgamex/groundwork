@@ -22,7 +22,6 @@ $ ->
     $this = $(this)
     $(this).hover (->
       difference = $this.get(0).scrollWidth - $this.width()
-      console.log difference
       if difference > 0
         $this.stop().animate
           "text-indent": -difference
