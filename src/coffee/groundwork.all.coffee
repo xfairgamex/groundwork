@@ -14,10 +14,10 @@
 
 # Plugins:
 
-# @codekit-append "plugins/jquery.modals.coffee"
-# @codekit-append "plugins/jquery.responsiveTables.coffee"
-# @codekit-append "plugins/jquery.responsiveText.coffee"
-# @codekit-append "plugins/jquery.tooltip.coffee"
+# @codekit-append "plugins/jquery-modals.coffee"
+# @codekit-append "plugins/jquery-responsiveTables.coffee"
+# @codekit-append "plugins/jquery-responsiveText.coffee"
+# @codekit-append "plugins/jquery-tooltip.coffee"
 
 # Components:
 
