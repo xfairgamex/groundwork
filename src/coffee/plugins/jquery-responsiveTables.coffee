@@ -2,7 +2,7 @@
  *
  *  jQuery ResponsiveTables by Gary Hepting - https://github.com/ghepting/responsiveTables
  *  
- *  Open source under the BSD License. 
+ *  Open source under the MIT License. 
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *

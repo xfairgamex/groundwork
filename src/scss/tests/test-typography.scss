@@ -20,8 +20,8 @@ $root_path: '../../';   // path to HTML document root (relative from $css_path)
 @import "responsive";
 
 
-$list: container row one third two three fifths right-one left-one right-two left-three centered skip-two mobile small-tablet;
+$elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big large em italic b bold strong sup sub code pre error invalid success valid warning;
 
-@each $item in $list {
-  .extend-#{$item} {@extend %#{$item};}
+@for $i from 1 through length($elements) {
+  .extend-#{nth($elements, $i)} { @extend %#{nth($elements, $i)}; }
 }

@@ -2655,43 +2655,43 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, .extend-h1, h2, .h2, .extend-h2, h3, .h3, .extend-h3, h4, .h4, .extend-h4, h5, .h5, .extend-h5, h6, .h6, .extend-h6 {
   line-height: 1.3;
   margin-bottom: 15px;
 }
 
-h1, .h1 {
+h1, .h1, .extend-h1 {
   font-weight: 200;
   font-size: 32.66667px;
 }
 
-h2, .h2 {
+h2, .h2, .extend-h2 {
   font-weight: 200;
   font-size: 28px;
 }
 
-h3, .h3 {
+h3, .h3, .extend-h3 {
   font-weight: 500;
   font-size: 21px;
 }
 
-h4, .h4 {
+h4, .h4, .extend-h4 {
   font-weight: 500;
   font-size: 18.66667px;
 }
 
-h5, .h5 {
+h5, .h5, .extend-h5 {
   font-weight: 900;
   font-size: 16.33333px;
 }
 
-h6, .h6 {
+h6, .h6, .extend-h6 {
   font-weight: 900;
   font-size: 16.33333px;
   text-transform: uppercase;
 }
 
-p, .p, ul, ol, dl {
+p, .p, .extend-p, ul, .extend-ul, ol, .extend-ol, dl, .extend-dl {
   margin-bottom: 10px;
   font-weight: normal;
   font-size: 1em;
@@ -2767,7 +2767,7 @@ ol.list li:before {
   border-radius: 4px;
 }
 
-blockquote, .blockquote {
+blockquote, .blockquote, .extend-blockquote {
   padding: 1.3em 4em 1em;
   color: #2b2b2d;
   font-size: 16.1px;
@@ -2776,7 +2776,7 @@ blockquote, .blockquote {
   position: relative;
   z-index: 0;
 }
-blockquote:before, .blockquote:before {
+blockquote:before, .blockquote:before, .extend-blockquote:before {
   content: '\201C';
   color: #cccccc;
   font-size: 6em;
@@ -2786,7 +2786,7 @@ blockquote:before, .blockquote:before {
   left: 0.1em;
   z-index: -1;
 }
-blockquote:after, .blockquote:after {
+blockquote:after, .blockquote:after, .extend-blockquote:after {
   content: '\201D';
   color: #cccccc;
   font-size: 6em;
@@ -2797,7 +2797,7 @@ blockquote:after, .blockquote:after {
   z-index: -1;
 }
 
-cite, .cite {
+cite, .cite, .extend-cite {
   display: block;
   position: relative;
   left: -1em;
@@ -2807,45 +2807,35 @@ cite, .cite {
   font-style: normal;
   color: #505054;
 }
-cite:before, .cite:before {
+cite:before, .cite:before, .extend-cite:before {
   content: '\2014';
 }
 
-small, .small, button.small,
-input[type=submit].small,
-input[type=button].small,
-input[type=reset].small, .button.small,
-a.button.small,
-a.button.small:visited, [role~=button].small, .extend-button.extend-small {
+small, .small, .extend-small {
   font-size: 0.8em;
 }
 
-big, .big, .large, button.large,
-input[type=submit].large,
-input[type=button].large,
-input[type=reset].large, .button.large,
-a.button.large,
-a.button.large:visited, [role~=button].large, .extend-button.extend-large {
+big, .big, .extend-big, .large, .extend-large {
   font-size: 1.5em;
 }
 
-em, .em, .italic {
+em, .em, .extend-em, .italic, .extend-italic {
   font-style: italic;
 }
 
-b, .b, .bold, strong, .strong {
+b, .b, .extend-b, .bold, .extend-bold, strong, .strong, .extend-strong {
   font-weight: 900;
 }
 
-sup, .sup {
+sup, .sup, .extend-sup {
   font-size: 0.8em;
 }
 
-sub, .sub {
+sub, .sub, .extend-sub {
   font-size: 0.8em;
 }
 
-code, .code {
+code, .code, .extend-code {
   white-space: pre-wrap;
   word-wrap: break-word;
   min-height: 1em;
@@ -2858,7 +2848,7 @@ code, .code {
   line-height: inherit;
 }
 
-pre, .pre {
+pre, .pre, .extend-pre {
   color: white;
   background: #050505;
   font-size: 0.9em;
@@ -2867,13 +2857,13 @@ pre, .pre {
   border-left: 2.6em solid gray;
   counter-reset: linenumber;
 }
-pre code, .pre code {
+pre code, .pre code, .extend-pre code {
   display: block;
   background: inherit;
   margin: 0;
   padding: 0;
 }
-pre code:before, .pre code:before {
+pre code:before, .pre code:before, .extend-pre code:before {
   text-align: right;
   color: white;
   counter-increment: linenumber;
@@ -2883,48 +2873,23 @@ pre code:before, .pre code:before {
   width: 2.6em;
 }
 
-.info, button.info,
-input[type=submit].info,
-input[type=button].info,
-input[type=reset].info, .button.info,
-a.button.info,
-a.button.info:visited, [role~=button].info, .extend-button.extend-info {
+.info {
   color: #3a87ad;
 }
 
-.alert, button.alert,
-input[type=submit].alert,
-input[type=button].alert,
-input[type=reset].alert, .button.alert,
-a.button.alert,
-a.button.alert:visited, [role~=button].alert, .extend-button.extend-alert {
+.alert {
   color: #c09853;
 }
 
-.warning, button.warning,
-input[type=submit].warning,
-input[type=button].warning,
-input[type=reset].warning, .button.warning,
-a.button.warning,
-a.button.warning:visited, [role~=button].warning, .extend-button.extend-warning {
+.warning, .extend-warning {
   color: #ff971e;
 }
 
-.error, button.error,
-input[type=submit].error,
-input[type=button].error,
-input[type=reset].error, .button.error,
-a.button.error,
-a.button.error:visited, [role~=button].error, .extend-button.extend-error, .invalid {
+.error, .extend-error, .invalid, .extend-invalid {
   color: #b94a48;
 }
 
-.success, button.success,
-input[type=submit].success,
-input[type=button].success,
-input[type=reset].success, .button.success,
-a.button.success,
-a.button.success:visited, [role~=button].success, .extend-button.extend-success, .valid {
+.success, .extend-success, .valid, .extend-valid {
   color: #468847;
 }
 
@@ -2934,606 +2899,6 @@ a.button.success:visited, [role~=button].success, .extend-button.extend-success,
   -moz-transition: font 0.25s;
   -webkit-transition: font 0.25s;
   transition: font 0.25s;
-}
-
-button,
-input[type=submit],
-input[type=button],
-input[type=reset], .button,
-a.button,
-a.button:visited, [role~=button], .extend-button {
-  display: inline-block;
-  word-wrap: break-word;
-  padding: 0.25em 1em;
-  background: #1dabb8;
-  border: 1px solid #198d98;
-  color: white;
-  font-family: Helvetica, Arial, Geneva, sans-serif;
-  font-weight: bold;
-  font-size: 1em;
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 1.5;
-  width: auto;
-  height: auto;
-  text-align: center;
-  -ms-transition: background-color 0.25s ease-out;
-  -o-transition: background-color 0.25s ease-out;
-  -moz-transition: background-color 0.25s ease-out;
-  -webkit-transition: background-color 0.25s ease-out;
-  transition: background-color 0.25s ease-out;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-button.on,
-input[type=submit].on,
-input[type=button].on,
-input[type=reset].on, .button.on, [role~=button].on, button:hover,
-input[type=submit]:hover,
-input[type=button]:hover,
-input[type=reset]:hover, .button:hover, [role~=button]:hover, .extend-button:hover, button:focus,
-input[type=submit]:focus,
-input[type=button]:focus,
-input[type=reset]:focus, .button:focus, [role~=button]:focus, .extend-button:focus {
-  background: #198d98;
-  text-decoration: none;
-  color: white;
-}
-button.active,
-input[type=submit].active,
-input[type=button].active,
-input[type=reset].active, .button.active, [role~=button].active, .extend-button.extend-active, button.active:hover,
-input[type=submit].active:hover,
-input[type=button].active:hover,
-input[type=reset].active:hover, .button.active:hover, [role~=button].active:hover, .extend-button.extend-active:hover, button.active:focus,
-input[type=submit].active:focus,
-input[type=button].active:focus,
-input[type=reset].active:focus, .button.active:focus, [role~=button].active:focus, .extend-button.extend-active:focus {
-  background: #198d98;
-  color: white;
-}
-button.disabled,
-input[type=submit].disabled,
-input[type=button].disabled,
-input[type=reset].disabled, .button.disabled, [role~=button].disabled, .extend-button.extend-disabled {
-  color: #a4dee3;
-  background: #57c1cb;
-  border-color: #3299a3;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.disabled:hover,
-input[type=submit].disabled:hover,
-input[type=button].disabled:hover,
-input[type=reset].disabled:hover, .button.disabled:hover, [role~=button].disabled:hover, .extend-button.extend-disabled:hover, button.disabled:focus,
-input[type=submit].disabled:focus,
-input[type=button].disabled:focus,
-input[type=reset].disabled:focus, .button.disabled:focus, [role~=button].disabled:focus, .extend-button.extend-disabled:focus, button.disabled:visited,
-input[type=submit].disabled:visited,
-input[type=button].disabled:visited,
-input[type=reset].disabled:visited, .button.disabled:visited, [role~=button].disabled:visited, .extend-button.extend-disabled:visited {
-  color: #a4dee3;
-  background: #57c1cb;
-  border-color: #3299a3;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.info,
-input.info[type=submit],
-input.info[type=button],
-input.info[type=reset], .info.button, .info[role~=button], .info.extend-button, .extend-button.extend-info {
-  background-color: #309dd4;
-  color: white;
-  border-color: #27a1ba;
-}
-button.info.active,
-input.info[type=submit].active,
-input.info[type=button].active,
-input.info[type=reset].active, .info.button.active, .info[role~=button].active, .info.extend-button.extend-active, button.active.extend-button.extend-info,
-input[type=submit].active.extend-button.extend-info,
-input[type=button].active.extend-button.extend-info,
-input[type=reset].active.extend-button.extend-info, .button.active.extend-button.extend-info, [role~=button].active.extend-button.extend-info, .extend-button.extend-info.extend-active, button.info:hover,
-input.info[type=submit]:hover,
-input.info[type=button]:hover,
-input.info[type=reset]:hover, .info.button:hover, .info[role~=button]:hover, .info.extend-button:hover, .extend-button.extend-info:hover, button.info:focus,
-input.info[type=submit]:focus,
-input.info[type=button]:focus,
-input.info[type=reset]:focus, .info.button:focus, .info[role~=button]:focus, .info.extend-button:focus, .extend-button.extend-info:focus {
-  background: #2582b1;
-}
-button.info.disabled,
-input.info[type=submit].disabled,
-input.info[type=button].disabled,
-input.info[type=reset].disabled, .info.button.disabled, .info[role~=button].disabled, .info.extend-button.extend-disabled, button.disabled.extend-button.extend-info,
-input[type=submit].disabled.extend-button.extend-info,
-input[type=button].disabled.extend-button.extend-info,
-input[type=reset].disabled.extend-button.extend-info, .button.disabled.extend-button.extend-info, [role~=button].disabled.extend-button.extend-info, .extend-button.extend-info.extend-disabled {
-  color: #bed2dc;
-  background: #7ca4b8;
-  border-color: #517f96;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.info.disabled:hover,
-input.info[type=submit].disabled:hover,
-input.info[type=button].disabled:hover,
-input.info[type=reset].disabled:hover, .info.button.disabled:hover, .info[role~=button].disabled:hover, .info.extend-button.extend-disabled:hover, button.disabled.extend-button.extend-info:hover,
-input[type=submit].disabled.extend-button.extend-info:hover,
-input[type=button].disabled.extend-button.extend-info:hover,
-input[type=reset].disabled.extend-button.extend-info:hover, .button.disabled.extend-button.extend-info:hover, [role~=button].disabled.extend-button.extend-info:hover, .extend-button.extend-info.extend-disabled:hover, button.info.disabled:focus,
-input.info[type=submit].disabled:focus,
-input.info[type=button].disabled:focus,
-input.info[type=reset].disabled:focus, .info.button.disabled:focus, .info[role~=button].disabled:focus, .info.extend-button.extend-disabled:focus, button.disabled.extend-button.extend-info:focus,
-input[type=submit].disabled.extend-button.extend-info:focus,
-input[type=button].disabled.extend-button.extend-info:focus,
-input[type=reset].disabled.extend-button.extend-info:focus, .button.disabled.extend-button.extend-info:focus, [role~=button].disabled.extend-button.extend-info:focus, .extend-button.extend-info.extend-disabled:focus, button.info.disabled:visited,
-input.info[type=submit].disabled:visited,
-input.info[type=button].disabled:visited,
-input.info[type=reset].disabled:visited, .info.button.disabled:visited, .info[role~=button].disabled:visited, .info.extend-button.extend-disabled:visited, button.disabled.extend-button.extend-info:visited,
-input[type=submit].disabled.extend-button.extend-info:visited,
-input[type=button].disabled.extend-button.extend-info:visited,
-input[type=reset].disabled.extend-button.extend-info:visited, .button.disabled.extend-button.extend-info:visited, [role~=button].disabled.extend-button.extend-info:visited, .extend-button.extend-info.extend-disabled:visited {
-  color: #bed2dc;
-  background: #7ca4b8;
-  border-color: #517f96;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.alert,
-input.alert[type=submit],
-input.alert[type=button],
-input.alert[type=reset], .alert.button, .alert[role~=button], .alert.extend-button, .extend-button.extend-alert {
-  background-color: #e8ca2b;
-  color: white;
-  border-color: #ecb06f;
-}
-button.alert.active,
-input.alert[type=submit].active,
-input.alert[type=button].active,
-input.alert[type=reset].active, .alert.button.active, .alert[role~=button].active, .alert.extend-button.extend-active, button.active.extend-button.extend-alert,
-input[type=submit].active.extend-button.extend-alert,
-input[type=button].active.extend-button.extend-alert,
-input[type=reset].active.extend-button.extend-alert, .button.active.extend-button.extend-alert, [role~=button].active.extend-button.extend-alert, .extend-button.extend-alert.extend-active, button.alert:hover,
-input.alert[type=submit]:hover,
-input.alert[type=button]:hover,
-input.alert[type=reset]:hover, .alert.button:hover, .alert[role~=button]:hover, .alert.extend-button:hover, .extend-button.extend-alert:hover, button.alert:focus,
-input.alert[type=submit]:focus,
-input.alert[type=button]:focus,
-input.alert[type=reset]:focus, .alert.button:focus, .alert[role~=button]:focus, .alert.extend-button:focus, .extend-button.extend-alert:focus {
-  background: #e1c118;
-}
-button.alert.disabled,
-input.alert[type=submit].disabled,
-input.alert[type=button].disabled,
-input.alert[type=reset].disabled, .alert.button.disabled, .alert[role~=button].disabled, .alert.extend-button.extend-disabled, button.disabled.extend-button.extend-alert,
-input[type=submit].disabled.extend-button.extend-alert,
-input[type=button].disabled.extend-button.extend-alert,
-input[type=reset].disabled.extend-button.extend-alert, .button.disabled.extend-button.extend-alert, [role~=button].disabled.extend-button.extend-alert, .extend-button.extend-alert.extend-disabled {
-  color: #eae5db;
-  background: #c5b59b;
-  border-color: #a9926a;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.alert.disabled:hover,
-input.alert[type=submit].disabled:hover,
-input.alert[type=button].disabled:hover,
-input.alert[type=reset].disabled:hover, .alert.button.disabled:hover, .alert[role~=button].disabled:hover, .alert.extend-button.extend-disabled:hover, button.disabled.extend-button.extend-alert:hover,
-input[type=submit].disabled.extend-button.extend-alert:hover,
-input[type=button].disabled.extend-button.extend-alert:hover,
-input[type=reset].disabled.extend-button.extend-alert:hover, .button.disabled.extend-button.extend-alert:hover, [role~=button].disabled.extend-button.extend-alert:hover, .extend-button.extend-alert.extend-disabled:hover, button.alert.disabled:focus,
-input.alert[type=submit].disabled:focus,
-input.alert[type=button].disabled:focus,
-input.alert[type=reset].disabled:focus, .alert.button.disabled:focus, .alert[role~=button].disabled:focus, .alert.extend-button.extend-disabled:focus, button.disabled.extend-button.extend-alert:focus,
-input[type=submit].disabled.extend-button.extend-alert:focus,
-input[type=button].disabled.extend-button.extend-alert:focus,
-input[type=reset].disabled.extend-button.extend-alert:focus, .button.disabled.extend-button.extend-alert:focus, [role~=button].disabled.extend-button.extend-alert:focus, .extend-button.extend-alert.extend-disabled:focus, button.alert.disabled:visited,
-input.alert[type=submit].disabled:visited,
-input.alert[type=button].disabled:visited,
-input.alert[type=reset].disabled:visited, .alert.button.disabled:visited, .alert[role~=button].disabled:visited, .alert.extend-button.extend-disabled:visited, button.disabled.extend-button.extend-alert:visited,
-input[type=submit].disabled.extend-button.extend-alert:visited,
-input[type=button].disabled.extend-button.extend-alert:visited,
-input[type=reset].disabled.extend-button.extend-alert:visited, .button.disabled.extend-button.extend-alert:visited, [role~=button].disabled.extend-button.extend-alert:visited, .extend-button.extend-alert.extend-disabled:visited {
-  color: #eae5db;
-  background: #c5b59b;
-  border-color: #a9926a;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.warning,
-input.warning[type=submit],
-input.warning[type=button],
-input.warning[type=reset], .warning.button, .warning[role~=button], .warning.extend-button, .extend-button.extend-warning {
-  background-color: #fa8600;
-  color: white;
-  border-color: #e67900;
-}
-button.warning.active,
-input.warning[type=submit].active,
-input.warning[type=button].active,
-input.warning[type=reset].active, .warning.button.active, .warning[role~=button].active, .warning.extend-button.extend-active, button.active.extend-button.extend-warning,
-input[type=submit].active.extend-button.extend-warning,
-input[type=button].active.extend-button.extend-warning,
-input[type=reset].active.extend-button.extend-warning, .button.active.extend-button.extend-warning, [role~=button].active.extend-button.extend-warning, .extend-button.extend-warning.extend-active, button.warning:hover,
-input.warning[type=submit]:hover,
-input.warning[type=button]:hover,
-input.warning[type=reset]:hover, .warning.button:hover, .warning[role~=button]:hover, .warning.extend-button:hover, .extend-button.extend-warning:hover, button.warning:focus,
-input.warning[type=submit]:focus,
-input.warning[type=button]:focus,
-input.warning[type=reset]:focus, .warning.button:focus, .warning[role~=button]:focus, .warning.extend-button:focus, .extend-button.extend-warning:focus {
-  background: #e07800;
-}
-button.warning.disabled,
-input.warning[type=submit].disabled,
-input.warning[type=button].disabled,
-input.warning[type=reset].disabled, .warning.button.disabled, .warning[role~=button].disabled, .warning.extend-button.extend-disabled, button.disabled.extend-button.extend-warning,
-input[type=submit].disabled.extend-button.extend-warning,
-input[type=button].disabled.extend-button.extend-warning,
-input[type=reset].disabled.extend-button.extend-warning, .button.disabled.extend-button.extend-warning, [role~=button].disabled.extend-button.extend-warning, .extend-button.extend-warning.extend-disabled {
-  color: #fae9d5;
-  background: #f0b979;
-  border-color: #e99534;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.warning.disabled:hover,
-input.warning[type=submit].disabled:hover,
-input.warning[type=button].disabled:hover,
-input.warning[type=reset].disabled:hover, .warning.button.disabled:hover, .warning[role~=button].disabled:hover, .warning.extend-button.extend-disabled:hover, button.disabled.extend-button.extend-warning:hover,
-input[type=submit].disabled.extend-button.extend-warning:hover,
-input[type=button].disabled.extend-button.extend-warning:hover,
-input[type=reset].disabled.extend-button.extend-warning:hover, .button.disabled.extend-button.extend-warning:hover, [role~=button].disabled.extend-button.extend-warning:hover, .extend-button.extend-warning.extend-disabled:hover, button.warning.disabled:focus,
-input.warning[type=submit].disabled:focus,
-input.warning[type=button].disabled:focus,
-input.warning[type=reset].disabled:focus, .warning.button.disabled:focus, .warning[role~=button].disabled:focus, .warning.extend-button.extend-disabled:focus, button.disabled.extend-button.extend-warning:focus,
-input[type=submit].disabled.extend-button.extend-warning:focus,
-input[type=button].disabled.extend-button.extend-warning:focus,
-input[type=reset].disabled.extend-button.extend-warning:focus, .button.disabled.extend-button.extend-warning:focus, [role~=button].disabled.extend-button.extend-warning:focus, .extend-button.extend-warning.extend-disabled:focus, button.warning.disabled:visited,
-input.warning[type=submit].disabled:visited,
-input.warning[type=button].disabled:visited,
-input.warning[type=reset].disabled:visited, .warning.button.disabled:visited, .warning[role~=button].disabled:visited, .warning.extend-button.extend-disabled:visited, button.disabled.extend-button.extend-warning:visited,
-input[type=submit].disabled.extend-button.extend-warning:visited,
-input[type=button].disabled.extend-button.extend-warning:visited,
-input[type=reset].disabled.extend-button.extend-warning:visited, .button.disabled.extend-button.extend-warning:visited, [role~=button].disabled.extend-button.extend-warning:visited, .extend-button.extend-warning.extend-disabled:visited {
-  color: #fae9d5;
-  background: #f0b979;
-  border-color: #e99534;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.error,
-input.error[type=submit],
-input.error[type=button],
-input.error[type=reset], .error.button, .error[role~=button], .error.extend-button, .extend-button.extend-error {
-  background-color: #b84c4c;
-  color: white;
-  border-color: #b14454;
-}
-button.error.active,
-input.error[type=submit].active,
-input.error[type=button].active,
-input.error[type=reset].active, .error.button.active, .error[role~=button].active, .error.extend-button.extend-active, button.active.extend-button.extend-error,
-input[type=submit].active.extend-button.extend-error,
-input[type=button].active.extend-button.extend-error,
-input[type=reset].active.extend-button.extend-error, .button.active.extend-button.extend-error, [role~=button].active.extend-button.extend-error, .extend-button.extend-error.extend-active, button.error:hover,
-input.error[type=submit]:hover,
-input.error[type=button]:hover,
-input.error[type=reset]:hover, .error.button:hover, .error[role~=button]:hover, .error.extend-button:hover, .extend-button.extend-error:hover, button.error:focus,
-input.error[type=submit]:focus,
-input.error[type=button]:focus,
-input.error[type=reset]:focus, .error.button:focus, .error[role~=button]:focus, .error.extend-button:focus, .extend-button.extend-error:focus {
-  background: #9a3d3d;
-}
-button.error.disabled,
-input.error[type=submit].disabled,
-input.error[type=button].disabled,
-input.error[type=reset].disabled, .error.button.disabled, .error[role~=button].disabled, .error.extend-button.extend-disabled, button.disabled.extend-button.extend-error,
-input[type=submit].disabled.extend-button.extend-error,
-input[type=button].disabled.extend-button.extend-error,
-input[type=reset].disabled.extend-button.extend-error, .button.disabled.extend-button.extend-error, [role~=button].disabled.extend-button.extend-error, .extend-button.extend-error.extend-disabled {
-  color: #e3d1d1;
-  background: #bd9291;
-  border-color: #a06261;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.error.disabled:hover,
-input.error[type=submit].disabled:hover,
-input.error[type=button].disabled:hover,
-input.error[type=reset].disabled:hover, .error.button.disabled:hover, .error[role~=button].disabled:hover, .error.extend-button.extend-disabled:hover, button.disabled.extend-button.extend-error:hover,
-input[type=submit].disabled.extend-button.extend-error:hover,
-input[type=button].disabled.extend-button.extend-error:hover,
-input[type=reset].disabled.extend-button.extend-error:hover, .button.disabled.extend-button.extend-error:hover, [role~=button].disabled.extend-button.extend-error:hover, .extend-button.extend-error.extend-disabled:hover, button.error.disabled:focus,
-input.error[type=submit].disabled:focus,
-input.error[type=button].disabled:focus,
-input.error[type=reset].disabled:focus, .error.button.disabled:focus, .error[role~=button].disabled:focus, .error.extend-button.extend-disabled:focus, button.disabled.extend-button.extend-error:focus,
-input[type=submit].disabled.extend-button.extend-error:focus,
-input[type=button].disabled.extend-button.extend-error:focus,
-input[type=reset].disabled.extend-button.extend-error:focus, .button.disabled.extend-button.extend-error:focus, [role~=button].disabled.extend-button.extend-error:focus, .extend-button.extend-error.extend-disabled:focus, button.error.disabled:visited,
-input.error[type=submit].disabled:visited,
-input.error[type=button].disabled:visited,
-input.error[type=reset].disabled:visited, .error.button.disabled:visited, .error[role~=button].disabled:visited, .error.extend-button.extend-disabled:visited, button.disabled.extend-button.extend-error:visited,
-input[type=submit].disabled.extend-button.extend-error:visited,
-input[type=button].disabled.extend-button.extend-error:visited,
-input[type=reset].disabled.extend-button.extend-error:visited, .button.disabled.extend-button.extend-error:visited, [role~=button].disabled.extend-button.extend-error:visited, .extend-button.extend-error.extend-disabled:visited {
-  color: #e3d1d1;
-  background: #bd9291;
-  border-color: #a06261;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.success,
-input.success[type=submit],
-input.success[type=button],
-input.success[type=reset], .success.button, .success[role~=button], .success.extend-button, .extend-button.extend-success {
-  background-color: #67b646;
-  color: white;
-  border-color: #6da43f;
-}
-button.success.active,
-input.success[type=submit].active,
-input.success[type=button].active,
-input.success[type=reset].active, .success.button.active, .success[role~=button].active, .success.extend-button.extend-active, button.active.extend-button.extend-success,
-input[type=submit].active.extend-button.extend-success,
-input[type=button].active.extend-button.extend-success,
-input[type=reset].active.extend-button.extend-success, .button.active.extend-button.extend-success, [role~=button].active.extend-button.extend-success, .extend-button.extend-success.extend-active, button.success:hover,
-input.success[type=submit]:hover,
-input.success[type=button]:hover,
-input.success[type=reset]:hover, .success.button:hover, .success[role~=button]:hover, .success.extend-button:hover, .extend-button.extend-success:hover, button.success:focus,
-input.success[type=submit]:focus,
-input.success[type=button]:focus,
-input.success[type=reset]:focus, .success.button:focus, .success[role~=button]:focus, .success.extend-button:focus, .extend-button.extend-success:focus {
-  background: #549539;
-}
-button.success.disabled,
-input.success[type=submit].disabled,
-input.success[type=button].disabled,
-input.success[type=reset].disabled, .success.button.disabled, .success[role~=button].disabled, .success.extend-button.extend-disabled, button.disabled.extend-button.extend-success,
-input[type=submit].disabled.extend-button.extend-success,
-input[type=button].disabled.extend-button.extend-success,
-input[type=reset].disabled.extend-button.extend-success, .button.disabled.extend-button.extend-success, [role~=button].disabled.extend-button.extend-success, .extend-button.extend-success.extend-disabled {
-  color: #b9c8b9;
-  background: #809b80;
-  border-color: #5b735b;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.success.disabled:hover,
-input.success[type=submit].disabled:hover,
-input.success[type=button].disabled:hover,
-input.success[type=reset].disabled:hover, .success.button.disabled:hover, .success[role~=button].disabled:hover, .success.extend-button.extend-disabled:hover, button.disabled.extend-button.extend-success:hover,
-input[type=submit].disabled.extend-button.extend-success:hover,
-input[type=button].disabled.extend-button.extend-success:hover,
-input[type=reset].disabled.extend-button.extend-success:hover, .button.disabled.extend-button.extend-success:hover, [role~=button].disabled.extend-button.extend-success:hover, .extend-button.extend-success.extend-disabled:hover, button.success.disabled:focus,
-input.success[type=submit].disabled:focus,
-input.success[type=button].disabled:focus,
-input.success[type=reset].disabled:focus, .success.button.disabled:focus, .success[role~=button].disabled:focus, .success.extend-button.extend-disabled:focus, button.disabled.extend-button.extend-success:focus,
-input[type=submit].disabled.extend-button.extend-success:focus,
-input[type=button].disabled.extend-button.extend-success:focus,
-input[type=reset].disabled.extend-button.extend-success:focus, .button.disabled.extend-button.extend-success:focus, [role~=button].disabled.extend-button.extend-success:focus, .extend-button.extend-success.extend-disabled:focus, button.success.disabled:visited,
-input.success[type=submit].disabled:visited,
-input.success[type=button].disabled:visited,
-input.success[type=reset].disabled:visited, .success.button.disabled:visited, .success[role~=button].disabled:visited, .success.extend-button.extend-disabled:visited, button.disabled.extend-button.extend-success:visited,
-input[type=submit].disabled.extend-button.extend-success:visited,
-input[type=button].disabled.extend-button.extend-success:visited,
-input[type=reset].disabled.extend-button.extend-success:visited, .button.disabled.extend-button.extend-success:visited, [role~=button].disabled.extend-button.extend-success:visited, .extend-button.extend-success.extend-disabled:visited {
-  color: #b9c8b9;
-  background: #809b80;
-  border-color: #5b735b;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-small.button, small[role~=button], small.extend-button, button.small,
-input.small[type=submit],
-input.small[type=button],
-input.small[type=reset], .small.button, .small[role~=button], .small.extend-button, .extend-button.extend-small {
-  font-size: 0.8em;
-}
-button.large,
-input.large[type=submit],
-input.large[type=button],
-input.large[type=reset], .large.button, .large[role~=button], .large.extend-button, .extend-button.extend-large {
-  font-size: 1.5em;
-}
-button.square,
-input[type=submit].square,
-input[type=button].square,
-input[type=reset].square, .button.square, [role~=button].square, .extend-button.extend-square {
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-button.round,
-input[type=submit].round,
-input[type=button].round,
-input[type=reset].round, .button.round, [role~=button].round, .round.extend-button, .extend-button.extend-round {
-  -ms-border-radius: 9999px;
-  -o-border-radius: 9999px;
-  -moz-border-radius: 9999px;
-  -webkit-border-radius: 9999px;
-  border-radius: 9999px;
-}
-button.block,
-input[type=submit].block,
-input[type=button].block,
-input[type=reset].block, button.dropdown.on ul.button, button.dropdown.on ul[role~=button], button.dropdown.on ul.extend-button, .button.block, .button.dropdown.on ul.button, .button.dropdown.on ul[role~=button], .button.dropdown.on ul.extend-button, [role~=button].block, .block.extend-button, .extend-button.extend-block {
-  display: block;
-  width: 100%;
-}
-
-button.dropdown, .button.dropdown,
-a.button.dropdown,
-a.button.dropdown:visited {
-  position: relative;
-  padding-right: 2em;
-}
-button.dropdown:after, .button.dropdown:after {
-  content: '...';
-  position: absolute;
-  right: 1em;
-  bottom: 0.25em;
-}
-
-button.dropdown ul, .button.dropdown ul,
-a.button.dropdown ul,
-a.button:visited.dropdown ul {
-  text-align: left;
-  margin: 0.3em 0 0;
-  padding: 0;
-  list-style: none;
-  display: none;
-  background: white;
-  border: 1px solid #dddddd;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  font-size: 0.9em;
-  -ms-border-radius: 0 0 4px 4px;
-  -o-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-}
-
-button.dropdown ul li, .button.dropdown ul li {
-  display: block;
-}
-button.dropdown ul li a, .button.dropdown ul li a {
-  display: block;
-  padding: 0.5em 1em;
-  border: none;
-  color: #2b2b2d;
-  text-shadow: none;
-  text-decoration: none;
-}
-button.dropdown ul li a:hover, .button.dropdown ul li a:hover, button.dropdown ul li a:focus, .button.dropdown ul li a:focus {
-  background: #efefef;
-}
-button.dropdown ul li:last-child, .button.dropdown ul li:last-child {
-  -ms-border-radius: 0 0 4px 4px;
-  -o-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  -webkit-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-}
-
-button.dropdown ul li hr, .button.dropdown ul li hr {
-  margin: 0;
-  border-color: #ececec;
-}
-
-ul.button-list,
-ol.button-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul.button-list:after,
-ol.button-list:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-ul.button-list li,
-ol.button-list li {
-  display: block;
-  float: left;
-  margin: 0;
-  border-radius: 0;
-}
-ul.button-list li:first-child a,
-ol.button-list li:first-child a {
-  border-radius: 4px 0 0 4px;
-}
-ul.button-list li:last-child a,
-ol.button-list li:last-child a {
-  border-radius: 0 4px 4px 0;
-}
-ul.button-list li a,
-ol.button-list li a {
-  display: block;
-  word-wrap: break-word;
-  padding: 0.25em 1em;
-  background: #1dabb8;
-  border: 1px solid #198d98;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 1.5;
-  -ms-transition: background-color 0.25s ease-out;
-  -o-transition: background-color 0.25s ease-out;
-  -moz-transition: background-color 0.25s ease-out;
-  -webkit-transition: background-color 0.25s ease-out;
-  transition: background-color 0.25s ease-out;
-}
-ul.button-list li a:hover,
-ol.button-list li a:hover, ul.button-list li a:focus,
-ol.button-list li a:focus {
-  background: #198d98;
-  text-decoration: none;
-  color: white;
-  border: 1px solid #198d98;
-}
-ul.button-list li a.button.active,
-ol.button-list li a.button.active, ul.button-list li a[role~=button].active,
-ol.button-list li a[role~=button].active, ul.button-list li a.extend-button.extend-active,
-ol.button-list li a.extend-button.extend-active, ul.button-list li a.button.active:hover,
-ol.button-list li a.button.active:hover, ul.button-list li a[role~=button].active:hover,
-ol.button-list li a[role~=button].active:hover, ul.button-list li a.extend-button.extend-active:hover,
-ol.button-list li a.extend-button.extend-active:hover, ul.button-list li a.button.active:focus,
-ol.button-list li a.button.active:focus, ul.button-list li a[role~=button].active:focus,
-ol.button-list li a[role~=button].active:focus, ul.button-list li a.extend-button.extend-active:focus,
-ol.button-list li a.extend-button.extend-active:focus {
-  background: #198d98;
-  color: white;
-}
-ul.button-list li a.button.disabled,
-ol.button-list li a.button.disabled, ul.button-list li a[role~=button].disabled,
-ol.button-list li a[role~=button].disabled, ul.button-list li a.extend-button.extend-disabled,
-ol.button-list li a.extend-button.extend-disabled {
-  color: #a4dee3;
-  background: #57c1cb;
-  border-color: #3299a3;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-ul.button-list li a.button.disabled:hover,
-ol.button-list li a.button.disabled:hover, ul.button-list li a[role~=button].disabled:hover,
-ol.button-list li a[role~=button].disabled:hover, ul.button-list li a.extend-button.extend-disabled:hover,
-ol.button-list li a.extend-button.extend-disabled:hover, ul.button-list li a.button.disabled:focus,
-ol.button-list li a.button.disabled:focus, ul.button-list li a[role~=button].disabled:focus,
-ol.button-list li a[role~=button].disabled:focus, ul.button-list li a.extend-button.extend-disabled:focus,
-ol.button-list li a.extend-button.extend-disabled:focus, ul.button-list li a.button.disabled:visited,
-ol.button-list li a.button.disabled:visited, ul.button-list li a[role~=button].disabled:visited,
-ol.button-list li a[role~=button].disabled:visited, ul.button-list li a.extend-button.extend-disabled:visited,
-ol.button-list li a.extend-button.extend-disabled:visited {
-  color: #a4dee3;
-  background: #57c1cb;
-  border-color: #3299a3;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
 }
 
 @-moz-keyframes spin {
@@ -3735,12 +3100,7 @@ ol.button-list li a.extend-button.extend-disabled:visited {
   width: auto;
 }
 
-button.block,
-input[type=submit].block,
-input[type=button].block,
-input[type=reset].block, button.dropdown.on ul, .button.block,
-a.button.block,
-a.button.block:visited, .button.dropdown.on ul, [role~=button].block, .block, .extend-button.extend-block {
+.block {
   display: block;
 }
 
@@ -3822,44 +3182,12 @@ a.button.block:visited, .button.dropdown.on ul, [role~=button].block, .block, .e
   height: 10px;
 }
 
-button.round,
-input[type=submit].round,
-input[type=button].round,
-input[type=reset].round, .button.round,
-a.button.round,
-a.button.round:visited, [role~=button].round, .round, .extend-button.extend-round {
+.round {
   -ms-border-radius: 9999px;
   -o-border-radius: 9999px;
   -moz-border-radius: 9999px;
   -webkit-border-radius: 9999px;
   border-radius: 9999px;
-}
-
-button.disabled,
-input[type=submit].disabled,
-input[type=button].disabled,
-input[type=reset].disabled, .button.disabled,
-a.button.disabled,
-a.button.disabled:visited, [role~=button].disabled, .extend-button.extend-disabled {
-  color: #d9d9d9;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
-}
-button.disabled:hover,
-input[type=submit].disabled:hover,
-input[type=button].disabled:hover,
-input[type=reset].disabled:hover, .button.disabled:hover, [role~=button].disabled:hover, .extend-button.extend-disabled:hover, button.disabled:focus,
-input[type=submit].disabled:focus,
-input[type=button].disabled:focus,
-input[type=reset].disabled:focus, .button.disabled:focus, [role~=button].disabled:focus, .extend-button.extend-disabled:focus, button.disabled:visited,
-input[type=submit].disabled:visited,
-input[type=button].disabled:visited,
-input[type=reset].disabled:visited, .button.disabled:visited, [role~=button].disabled:visited, .extend-button.extend-disabled:visited {
-  color: #d9d9d9;
-  cursor: not-allowed;
-  text-decoration: none;
-  outline: none;
 }
 
 .rotate-90 {

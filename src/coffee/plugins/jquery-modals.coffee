@@ -1,7 +1,10 @@
 ###
  *
  *  jQuery Modals by Gary Hepting
- *   https://github.com/ghepting/modal  
+ *  
+ *  Open source under the MIT License. 
+ *
+ *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
 ###
 

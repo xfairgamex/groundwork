@@ -1,26 +1,45 @@
-@import "groundwork";
+$root_path: '../../';   // path to HTML document root (relative from $css_path)
+@import "settings";     // optional
+@import "core";         // required
+@import "base";         // required
+
+@import "font-awesome";
+@import "typography";
+// @import "buttons";
+// @import "forms";
+// @import "navigation";
+// @import "tabs";
+// @import "ui-elements";
+// @import "tables";
+// @import "social-icons";
+// @import "tooltips";
+// @import "popovers";
+// @import "modals";
+// @import "tiles";
+@import "helpers";
+@import "responsive";
 
 
-$tests: inline block 
-        zero 
-        pull-right pull-left 
-        bordered border-right border-left border-top border-bottom 
-        align-top align-right align-bottom align-left align-center justify 
-        truncate 
-        center 
-        spacer 
-        round 
-        rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr 
-        spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
+$helpers: inline block 
+          zero 
+          pull-right pull-left 
+          bordered border-right border-left border-top border-bottom 
+          align-top align-right align-bottom align-left align-center justify 
+          truncate 
+          center 
+          spacer 
+          round 
+          rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr 
+          spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
 
-@for $i from 1 through length($tests) {
-  .extend-#{nth($tests, $i)} { @extend %#{nth($tests, $i)}; }
+@for $i from 1 through length($helpers) {
+  .extend-#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
 
   // interpolated mixin/function calls not currently supported
-  // .include-#{nth($tests, $i)} { @include _#{nth($tests, $i)}; }
+  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
 
   // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($tests, $i)} { @call _#{nth($tests, $i)}; }
+  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
 }
 
 
@@ -36,10 +55,10 @@ $modifiers: double triple;
     }
   }
   // interpolated mixin/function calls not currently supported
-  // .include-#{nth($tests, $i)} { @include _#{nth($tests, $i)}; }
+  // .include-#{nth($helpers, $i)} { @include _#{nth($helpers, $i)}; }
 
   // proposed syntax with be something like: @call or @invoke
-  // .include-#{nth($tests, $i)} { @call _#{nth($tests, $i)}; }
+  // .include-#{nth($helpers, $i)} { @call _#{nth($helpers, $i)}; }
 }
 
 
