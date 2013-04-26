@@ -28,7 +28,7 @@ html
       
       - var element = "button"
       
-      - var types = ["info", "alert", "warning", "error", "success"]
+      - var types = ["", "info", "alert", "warning", "error", "success"]
 
       each type in types
         .row
@@ -72,3 +72,22 @@ html
             .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{style}")
               | .extend-#{element}.#{type}.#{style}
 
+      .row
+        .one.third
+          button(class="dropdown")
+            | &lt;button class="dropdown"&gt;
+            ul
+              li
+                a(href="#") Example menu item
+        .one.third
+          span(class="button dropdown")
+            | &lt;span class="button dropdown"&gt;
+            span(class="dropdown-list")
+              span(class="dropdown-list-item")
+                span(class="dropdown-menu-item") Example menu item
+        .one.third
+          span(class="extend-button extend-dropdown")
+            | &lt;span class="extend-button extend-dropdown"&gt;
+            span(class="extend-dropdown-list")
+              span(class="extend-dropdown-list-item")
+                span(class="extend-dropdown-menu-item") Example menu item

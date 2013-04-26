@@ -16,51 +16,49 @@ html
           li Elements appear as they should regardless of whether classes or extends are used.
 
       .row.headings(style="text-align: center; background-color: #444; color: white;")
-        .one.third
-          h2 Tag
-          p &lt;foo&gt;
-        .one.third
+        .one.half
           h2 Classes
           p .foo
-        .one.third
+        .one.half
           h2 Placeholders
           p @extend %foo;
       
-      - var element = "callout"
+      - var elements = ["callout", "message"]
+
+      each element in elements
       
-      - var types = ["", "info", "alert", "warning", "error", "success"]
+        - var types = ["", "info", "alert", "warning", "error", "success"]
 
-      each type in types
-        .row
-          .one.half: div(class="#{element} #{type}")
-            | .#{element}.#{type}
-          .one.half: div(class="extend-#{element} extend-#{type}")
-            | .extend-#{element}.#{type}
-      
-        - var states = ["active", "disabled"]
-
-        each state in states
+        each type in types
           .row
-            .one.half: div(class="#{element} #{type} #{state}")
-              | .#{element}.#{type}.#{state}
-            .one.half: div(class="extend-#{element} extend-#{type} extend-#{state}")
-              | .extend-#{element}.#{type}.#{state}
+            .one.half: div(class="#{element} #{type}")
+              | .#{element}.#{type}
+            .one.half: div(class="extend-#{element} extend-#{type}")
+              | .extend-#{element}.extend-#{type}
         
-        - var sizes = ["small", "large"]
+          - var states = ["active", "disabled"] // dismissible requires inclusion of javascript component
 
-        each size in sizes
-          .row
-            .one.half: div(class="#{element} #{type} #{size}")
-              | .#{element}.#{type}.#{size}
-            .one.half: div(class="extend-#{element} extend-#{type} extend-#{size}")
-              | .extend-#{element}.#{type}.#{size}
-        
-        - var styles = ["square", "round", "block"]
+          each state in states
+            .row
+              .one.half: div(class="#{element} #{type} #{state}")
+                | .#{element}.#{type}.#{state}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{state}")
+                | .extend-#{element}.extend-#{type}.extend-#{state}
+          
+          - var sizes = ["small", "large"]
 
-        each style in styles
-          .row
-            .one.half: div(class="#{element} #{type} #{style}")
-              | .#{element}.#{type}.#{style}
-            .one.half: div(class="extend-#{element} extend-#{type} extend-#{style}")
-              | .extend-#{element}.#{type}.#{style}
+          each size in sizes
+            .row
+              .one.half: div(class="#{element} #{type} #{size}")
+                | .#{element}.#{type}.#{size}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{size}")
+                | .extend-#{element}.extend-#{type}.extend-#{size}
+          
+          - var styles = ["square", "round"]
 
+          each style in styles
+            .row
+              .one.half: div(class="#{element} #{type} #{style}")
+                | .#{element}.#{type}.#{style}
+              .one.half: div(class="extend-#{element} extend-#{type} extend-#{style}")
+                | .extend-#{element}.extend-#{type}.extend-#{style}
