@@ -4,8 +4,8 @@
   alt="GroundworkCSS">
 </a>
 
-GroundworkCSS Beta v1.6
-=======================
+GroundworkCSS
+=============
 
 Say hello to responsive design made easy.
 
@@ -25,6 +25,7 @@ work on virtually any device. Key features that make GroundworkCSS stand out are
 * unique approach to responsive tables
 * supports purely semantic implementations by utilizing Sass @extend, @mixin and 
   %placeholder classes
+  
 
 Getting Started with GroundworkCSS
 ==================================

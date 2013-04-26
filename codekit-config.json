@@ -105,6 +105,18 @@
       "initialSize" : 632,
       "fileType" : 8192
     },
+    "\/src\/scss\/_constants.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/scss\/_constants.scss",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_constants.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/src\/scss\/_messages.scss" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -240,17 +252,6 @@
       "outputAbbreviatedPath" : "\/js\/libs\/html5shiv.min.min.js",
       "fileType" : 64
     },
-    "\/src\/jade\/tests\/test-ui-elements.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/src\/jade\/tests\/test-ui-elements.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 0,
-      "outputAbbreviatedPath" : "\/tests\/test-ui-elements.html",
-      "fileType" : 512
-    },
     "\/images\/black_linen_v2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -261,6 +262,17 @@
       "outputAbbreviatedPath" : "\/images\/black_linen_v2.png",
       "initialSize" : 140335,
       "fileType" : 8192
+    },
+    "\/src\/jade\/tests\/test-ui-elements.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/src\/jade\/tests\/test-ui-elements.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 0,
+      "outputAbbreviatedPath" : "\/tests\/test-ui-elements.html",
+      "fileType" : 512
     },
     "\/images\/social-icons\/github-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -302,17 +314,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/images\/social-icons\/tripadvisor.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor.png",
-      "initialSize" : 1277,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/dropbox.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -322,6 +323,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/dropbox.png",
       "initialSize" : 1820,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/tripadvisor.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor.png",
+      "initialSize" : 1277,
       "fileType" : 8192
     },
     "\/images\/social-icons\/lastfm.png" : {
@@ -369,17 +381,6 @@
       "initialSize" : 650,
       "fileType" : 8192
     },
-    "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png",
-      "initialSize" : 812,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/skitch-s.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -389,6 +390,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/skitch-s.png",
       "initialSize" : 1750,
+      "fileType" : 8192
+    },
+    "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/apple-icons\/apple-touch-icon-114x114-precomposed.png",
+      "initialSize" : 812,
       "fileType" : 8192
     },
     "\/images\/social-icons\/renren-s.png" : {
@@ -491,17 +503,6 @@
       "initialSize" : 1326,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/bitbucket-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/bitbucket-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/bitbucket-s.png",
-      "initialSize" : 1868,
-      "fileType" : 8192
-    },
     "\/src\/jade\/layout-4.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -512,6 +513,17 @@
       "compileDebug" : 0,
       "outputAbbreviatedPath" : "\/layout-4.html",
       "fileType" : 512
+    },
+    "\/images\/social-icons\/bitbucket-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/bitbucket-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/bitbucket-s.png",
+      "initialSize" : 1868,
+      "fileType" : 8192
     },
     "\/src\/coffee\/components\/responsiveTables.coffee" : {
       "ignoreWasSetByUser" : 1,
@@ -616,17 +628,6 @@
       "initialSize" : 967,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/wordpress.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/wordpress.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/wordpress.png",
-      "initialSize" : 2101,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/tent.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -636,6 +637,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/tent.png",
       "initialSize" : 1106,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/wordpress.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/wordpress.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/wordpress.png",
+      "initialSize" : 2101,
       "fileType" : 8192
     },
     "\/images\/social-icons\/vimeo-s.png" : {
@@ -671,17 +683,6 @@
       "initialSize" : 1301,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/instagram.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/instagram.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/instagram.png",
-      "initialSize" : 2999,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/stumbleupon-m.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -691,6 +692,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/stumbleupon-m.png",
       "initialSize" : 2095,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/instagram.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/instagram.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/instagram.png",
+      "initialSize" : 2999,
       "fileType" : 8192
     },
     "\/src\/jade\/tests\/test-helpers.jade" : {
@@ -800,17 +812,6 @@
       "initialSize" : 2369,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/fairheadcreative-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-s.png",
-      "initialSize" : 655,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/bitbucket-m.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -820,6 +821,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/bitbucket-m.png",
       "initialSize" : 2411,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/fairheadcreative-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-s.png",
+      "initialSize" : 655,
       "fileType" : 8192
     },
     "\/images\/social-icons\/fairheadcreative.png" : {
@@ -954,17 +966,6 @@
       "initialSize" : 1692,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/bitbucket.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/bitbucket.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/bitbucket.png",
-      "initialSize" : 3299,
-      "fileType" : 8192
-    },
     "\/js\/plugins\/jquery.tooltip.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -975,6 +976,17 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/plugins\/jquery.tooltip.min.js",
       "fileType" : 64
+    },
+    "\/images\/social-icons\/bitbucket.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/bitbucket.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/bitbucket.png",
+      "initialSize" : 3299,
+      "fileType" : 8192
     },
     "\/images\/social-icons\/googleplus-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -999,6 +1011,17 @@
       "outputStyle" : 1,
       "fileType" : 32
     },
+    "\/images\/social-icons\/mail-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/mail-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/mail-s.png",
+      "initialSize" : 1536,
+      "fileType" : 8192
+    },
     "\/tests\/test-typography.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1019,17 +1042,6 @@
       "initialSize" : 2139,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/mail-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/mail-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/mail-s.png",
-      "initialSize" : 1536,
-      "fileType" : 8192
-    },
     "\/images\/apple-icons\/apple-touch-icon-72x72-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1041,16 +1053,17 @@
       "initialSize" : 679,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/tripadvisor-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/src\/scss\/_reset.scss" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor-s.png",
-      "initialSize" : 577,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/src\/scss\/_reset.scss",
+      "outputStyle" : 3,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/_reset.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/js\/plugins\/jquery.cycle2.js" : {
       "ignoreWasSetByUser" : 1,
@@ -1085,18 +1098,6 @@
       "outputAbbreviatedPath" : "\/js\/plugins\/cycle\/jquery.cycle2.tile.min.js",
       "fileType" : 64
     },
-    "\/src\/scss\/_reset.scss" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/scss\/_reset.scss",
-      "outputStyle" : 3,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/_reset.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/js\/plugins\/cycle\/jquery.cycle2.ie-fade.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -1106,6 +1107,17 @@
       "outputStyle" : 0,
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/plugins\/cycle\/jquery.cycle2.ie-fade.min.js",
+      "fileType" : 64
+    },
+    "\/js\/libs\/modernizr-2.6.2.min.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/libs\/modernizr-2.6.2.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/libs\/modernizr-2.6.2.min.min.js",
       "fileType" : 64
     },
     "\/js\/components\/disabled.js" : {
@@ -1119,16 +1131,16 @@
       "outputAbbreviatedPath" : "\/js\/components\/disabled.min.js",
       "fileType" : 64
     },
-    "\/js\/libs\/modernizr-2.6.2.min.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
+    "\/images\/social-icons\/tripadvisor-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/libs\/modernizr-2.6.2.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/libs\/modernizr-2.6.2.min.min.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/tripadvisor-s.png",
+      "initialSize" : 577,
+      "fileType" : 8192
     },
     "\/images\/social-icons\/behance-m.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1301,17 +1313,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/social-icons\/fairheadcreative-m.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-m.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-m.png",
-      "initialSize" : 908,
-      "fileType" : 8192
-    },
     "\/src\/scss\/_helpers.scss" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -1323,6 +1324,17 @@
       "outputAbbreviatedPath" : "\/css\/_helpers.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/images\/social-icons\/mail.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/mail.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/mail.png",
+      "initialSize" : 1151,
+      "fileType" : 8192
     },
     "\/images\/social-icons\/msn-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1359,8 +1371,8 @@
     },
     "\/src\/jade\/tests\/test-grid.jade" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/src\/jade\/tests\/test-grid.jade",
       "outputStyle" : 0,
@@ -1379,15 +1391,15 @@
       "outputAbbreviatedPath" : "\/template.html",
       "fileType" : 512
     },
-    "\/images\/social-icons\/mail.png" : {
+    "\/images\/social-icons\/goodreads-s.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/mail.png",
+      "inputAbbreviatedPath" : "\/images\/social-icons\/goodreads-s.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/mail.png",
-      "initialSize" : 1151,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/goodreads-s.png",
+      "initialSize" : 606,
       "fileType" : 8192
     },
     "\/images\/social-icons\/weibo-s.png" : {
@@ -1401,15 +1413,15 @@
       "initialSize" : 706,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/goodreads-s.png" : {
+    "\/images\/social-icons\/fairheadcreative-m.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/goodreads-s.png",
+      "inputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-m.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/goodreads-s.png",
-      "initialSize" : 606,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/fairheadcreative-m.png",
+      "initialSize" : 908,
       "fileType" : 8192
     },
     "\/images\/social-icons\/picasa.png" : {
@@ -1432,6 +1444,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/googleplus-m.png",
       "initialSize" : 2219,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/evernote-m.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/evernote-m.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/evernote-m.png",
+      "initialSize" : 2244,
       "fileType" : 8192
     },
     "\/images\/social-icons\/quora-m.png" : {
@@ -1465,17 +1488,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/aboutme-m.png",
       "initialSize" : 668,
-      "fileType" : 8192
-    },
-    "\/images\/social-icons\/evernote-m.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/evernote-m.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/evernote-m.png",
-      "initialSize" : 2244,
       "fileType" : 8192
     },
     "\/src\/scss\/_mobile-reset.scss" : {
@@ -1755,6 +1767,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/images\/social-icons\/soundcloud-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/soundcloud-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/soundcloud-s.png",
+      "initialSize" : 403,
+      "fileType" : 8192
+    },
     "\/images\/social-icons\/svn.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1777,17 +1800,6 @@
       "initialSize" : 556,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/soundcloud-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/soundcloud-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/soundcloud-s.png",
-      "initialSize" : 403,
-      "fileType" : 8192
-    },
     "\/css\/no-svg.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1796,6 +1808,17 @@
       "inputAbbreviatedPath" : "\/css\/no-svg.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/images\/social-icons\/adn-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/adn-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/adn-s.png",
+      "initialSize" : 454,
+      "fileType" : 8192
     },
     "\/src\/coffee\/components\/menus.coffee" : {
       "ignoreWasSetByUser" : 1,
@@ -1809,16 +1832,14 @@
       "outputStyle" : 1,
       "fileType" : 32
     },
-    "\/images\/social-icons\/adn-s.png" : {
+    "\/templates\/kitchen-sink.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/adn-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/adn-s.png",
-      "initialSize" : 454,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/templates\/kitchen-sink.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/src\/coffee\/plugins\/jquery.responsiveTables.coffee" : {
       "ignoreWasSetByUser" : 1,
@@ -1831,15 +1852,6 @@
       "outputAbbreviatedPath" : "\/js\/plugins\/jquery.responsiveTables.js",
       "outputStyle" : 1,
       "fileType" : 32
-    },
-    "\/templates\/kitchen-sink.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/templates\/kitchen-sink.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/src\/scss\/_webfonts.scss" : {
       "ignoreWasSetByUser" : 1,
@@ -1886,17 +1898,6 @@
       "initialSize" : 2043,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/creativecloud.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/creativecloud.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/creativecloud.png",
-      "initialSize" : 1514,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/tent-m.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1906,6 +1907,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/tent-m.png",
       "initialSize" : 704,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/creativecloud.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/creativecloud.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/creativecloud.png",
+      "initialSize" : 1514,
       "fileType" : 8192
     },
     "\/config.rb" : {
@@ -2019,17 +2031,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/images\/social-icons\/skitch-m.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/skitch-m.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/skitch-m.png",
-      "initialSize" : 2197,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/instagram-s.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2039,6 +2040,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/instagram-s.png",
       "initialSize" : 926,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/skitch-m.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/skitch-m.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/skitch-m.png",
+      "initialSize" : 2197,
       "fileType" : 8192
     },
     "\/images\/social-icons\/renren-m.png" : {
@@ -2073,17 +2085,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/images\/social-icons\/renren.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/renren.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/renren.png",
-      "initialSize" : 1407,
-      "fileType" : 8192
-    },
     "\/src\/scss\/_global.scss" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -2095,6 +2096,17 @@
       "outputAbbreviatedPath" : "\/css\/_global.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/images\/social-icons\/renren.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/renren.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/renren.png",
+      "initialSize" : 1407,
+      "fileType" : 8192
     },
     "\/js\/plugins\/jquery.popover.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2171,17 +2183,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/social-icons\/creativecloud-m.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/creativecloud-m.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/creativecloud-m.png",
-      "initialSize" : 2324,
-      "fileType" : 8192
-    },
     "\/templates\/layout-2.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2200,6 +2201,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/social-icons\/weibo.png",
       "initialSize" : 1835,
+      "fileType" : 8192
+    },
+    "\/images\/social-icons\/creativecloud-m.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/creativecloud-m.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/creativecloud-m.png",
+      "initialSize" : 2324,
       "fileType" : 8192
     },
     "\/images\/social-icons\/skype.png" : {
@@ -2400,17 +2412,6 @@
       "initialSize" : 1576,
       "fileType" : 8192
     },
-    "\/js\/components\/menus.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/components\/menus.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/components\/menus.min.js",
-      "fileType" : 64
-    },
     "\/images\/social-icons\/stumbleupon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2421,6 +2422,17 @@
       "outputAbbreviatedPath" : "\/images\/social-icons\/stumbleupon.png",
       "initialSize" : 1188,
       "fileType" : 8192
+    },
+    "\/js\/components\/menus.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/components\/menus.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/components\/menus.min.js",
+      "fileType" : 64
     },
     "\/images\/social-icons\/stackoverflow-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2755,17 +2767,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/images\/social-icons\/orkut-s.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/orkut-s.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/orkut-s.png",
-      "initialSize" : 588,
-      "fileType" : 8192
-    },
     "\/tests\/helium\/helium.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -2776,6 +2777,17 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/tests\/helium\/helium.min.js",
       "fileType" : 64
+    },
+    "\/images\/social-icons\/orkut-s.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/orkut-s.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/orkut-s.png",
+      "initialSize" : 588,
+      "fileType" : 8192
     },
     "\/images\/apple-icons\/apple-touch-icon-57x57-precomposed.png" : {
       "ignoreWasSetByUser" : 0,
@@ -3017,15 +3029,15 @@
       "initialSize" : 1759,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/skype-m.png" : {
+    "\/images\/social-icons\/zerply.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/skype-m.png",
+      "inputAbbreviatedPath" : "\/images\/social-icons\/zerply.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/skype-m.png",
-      "initialSize" : 2279,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/zerply.png",
+      "initialSize" : 1083,
       "fileType" : 8192
     },
     "\/src\/scss\/_ui-elements.scss" : {
@@ -3040,6 +3052,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/images\/social-icons\/skype-m.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/social-icons\/skype-m.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/skype-m.png",
+      "initialSize" : 2279,
+      "fileType" : 8192
+    },
     "\/src\/scss\/_forms.scss" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -3051,17 +3074,6 @@
       "outputAbbreviatedPath" : "\/css\/_forms.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/images\/social-icons\/zerply.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/zerply.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/zerply.png",
-      "initialSize" : 1083,
-      "fileType" : 8192
     },
     "\/images\/social-icons\/icloud-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -3161,17 +3173,6 @@
       "initialSize" : 682,
       "fileType" : 8192
     },
-    "\/images\/social-icons\/apple-m.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/social-icons\/apple-m.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/social-icons\/apple-m.png",
-      "initialSize" : 559,
-      "fileType" : 8192
-    },
     "\/images\/social-icons\/apple.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3183,14 +3184,16 @@
       "initialSize" : 819,
       "fileType" : 8192
     },
-    "\/css\/tests\/test-buttons.css" : {
+    "\/images\/social-icons\/apple-m.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 1,
+      "ignore" : 0,
+      "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/tests\/test-buttons.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/images\/social-icons\/apple-m.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/social-icons\/apple-m.png",
+      "initialSize" : 559,
+      "fileType" : 8192
     },
     "\/images\/social-icons\/rdio-s.png" : {
       "ignoreWasSetByUser" : 0,
@@ -3224,6 +3227,15 @@
       "outputAbbreviatedPath" : "\/images\/social-icons\/xing.png",
       "initialSize" : 1026,
       "fileType" : 8192
+    },
+    "\/css\/tests\/test-buttons.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/tests\/test-buttons.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/js\/plugins\/cycle\/jquery.cycle2.scrollVert.js" : {
       "ignoreWasSetByUser" : 1,
