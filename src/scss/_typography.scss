@@ -1,31 +1,22 @@
-// ===================================
-//       Groundwork Typography
-// ===================================
+/* =============================================
+ *                Typography
+ *          Last Updated:2013-4-24
+ * ===========================================*/
 
 
 
 
-body {
+%document {
   font-family:$font-family;
   font-size:$font-size;
   line-height:1.2;
   color:$font-color;
 }
-::selection {
+%selection {
   background:$selection-color;
   color:$selection-text;
 }
-::-moz-selection {
-  background:$selection-color;
-  color:$selection-text;
-}
-// * {
-//   outline:none;
-//   &:focus {
-//     @include filter-shadow(rgba(0,0,0,0.35), 15px, 0, 0);
-//   }
-// }
-a, a:visited {
+%links {
   color:$link-color;
   @include transition(color 0.25s);
   &:hover, &:focus {
@@ -33,51 +24,69 @@ a, a:visited {
     text-decoration:underline;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+%heading {
   line-height:1.3;
   margin-bottom:15px;
 }
-h1 {
+%h1 {
+  @extend %heading;
   font-weight:200;
   font-size:$font-size * 2.3333333333;
 }
-h2 {
+%h2 {
+  @extend %heading;
   font-weight:200;
   font-size:$font-size * 2;
 }
-h3 {
+%h3 {
+  @extend %heading;
   font-weight:500;
   font-size:$font-size * 1.5;
 }
-h4 {
+%h4 {
+  @extend %heading;
   font-weight:500;
   font-size:$font-size * 1.3333333333;
 }
-h5 {
+%h5 {
+  @extend %heading;
   font-weight:900;
   font-size:$font-size * 1.1666666667;
 }
-h6 {
+%h6 {
+  @extend %heading;
   font-weight:900;
   font-size:$font-size * 1.1666666667;
   text-transform:uppercase;
 }
-p, ul, ol, dl {
+%p, %ul, %ol, %dl {
   margin-bottom:10px;
   font-weight:normal;
   font-size:1em;
   line-height:1.6;
 }
-ul, ol {
+%list {
   margin-left:20px;
-  li {
+  %list-item {
     display:list-item;
   }
 }
-ul.list {
+%dl {
+  %dt {
+    font-weight:bold;
+  }
+  %dd {
+    padding-left:1em;
+    margin-bottom:$gutter;
+  }
+}
+%unstyled-list {
   list-style:none;
+}
+%ul-list {
+  @extend %unstyled-list;
   margin-left:0;
-  > li {
+  %list-item {
     &:before {
       content:'\f00c';
       display:inline-block;
@@ -98,11 +107,11 @@ ul.list {
     }
   }
 }
-ol.list {
+%ol-list {
+  @extend %unstyled-list;
   counter-reset:li;
-  list-style:none;
   margin-left:1.5em;
-  > li {
+  %list-item {
     position:relative;
     padding:2px 6px 0;
     &:before {
@@ -122,16 +131,7 @@ ol.list {
     }
   }
 }
-dl {
-  dt {
-    font-weight:bold;
-  }
-  dd {
-    padding-left:1em;
-    margin-bottom:$gutter;
-  }
-}
-blockquote {
+%blockquote {
   padding:1.3em 4em 1em;
   color:$font-color;
   font-size:$font-size*1.15;
@@ -160,7 +160,7 @@ blockquote {
     z-index:-1;
   }
 }
-cite {
+%cite {
   display:block;
   position:relative;
   left:-1em;
@@ -173,14 +173,13 @@ cite {
     content:'\2014';
   }
 }
-small, .small { font-size:0.8em; }
-big, .big, .large { font-size:1.5em; }
-em, .italic { font-style:italic; }
-b, strong, .bold, .strong { font-weight:900; }
-sup { font-size:0.8em; }
-sub { font-size:0.8em; }
-
-code {
+%small { font-size:0.8em; }
+%big, %large { font-size:1.5em; }
+%em, %italic { font-style:italic; }
+%b, %bold, %strong { font-weight:900; }
+%sup { font-size:0.8em; }
+%sub { font-size:0.8em; }
+%code {
 	white-space:pre-wrap;
 	word-wrap:break-word;
 	min-height:1em;
@@ -192,8 +191,7 @@ code {
 	font-weight:normal;
 	line-height:inherit;
 }
-
-pre {
+%pre {
 	$border:2.6em;
 	color:white;
 	background:#050505;
@@ -218,20 +216,85 @@ pre {
 		}
 	}
 }
-
-.error, .invalid {
+%info {
+  color:$info-color;
+}
+%alert {
+  color:$alert-color;
+}
+%warning {
+  color:$warning-color;
+}
+%error, %invalid {
   color:$error-color;
 }
-.success, .valid {
+%success, %valid {
   color:$success-color;
-}
-.warning {
-  color:$warning-color;
 }
 // responsive headings
 .js {
   .responsive:not(table) {
     @extend %truncate;
     @include transition(font 0.25s);
+  }
+}
+@if $tags {
+  body {
+    @extend %document;
+  }
+  ::selection {
+    @extend %selection;
+  }
+  ::-moz-selection {
+    @extend %selection;
+  }
+  a, a:visited {
+    @extend %links;
+  }
+  ul, ol {
+    @extend %list;
+    li {
+      @extend %list-item;
+    }
+  }
+  dl {
+    @extend %dl;
+    dt {
+      @extend %dt;
+    }
+    dd {
+      @extend %dd;
+    }
+  }
+  $elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big em b strong sup sub code pre;
+  @for $i from 1 through length($elements) {
+    #{nth($elements, $i)} {
+      @extend %#{nth($elements, $i)};
+    }
+  }
+}
+@if $classes {
+  $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;
+  @for $i from 1 through length($names) {
+    .#{nth($names, $i)} {
+      @extend %#{nth($names, $i)};
+    }
+  }
+  ul, ol {
+    &.unstyled {
+      @extend %unstyled-list;
+    }
+  }
+  ul.list {
+    @extend %ul-list;
+    > li {
+      @extend %list-item;
+    }
+  }
+  ol.list {
+    @extend %ol-list;
+    > li {
+      @extend %list-item;
+    }
   }
 }

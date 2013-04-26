@@ -1,43 +1,34 @@
-@import "compass";
 /* =============================================
  *       GroundworkCSS by Gary Hepting
- *          Last Updated:2013-3-30
+ *          Last Updated:2013-4-24
  * ===========================================*/
 
-// variables & mixins
-@import "variables";
-@import "mixins";
 
-// set the stage
-@import "reset";
-@import "global";
+// custom settings
+@import "settings";     // optional
 
-// webfonts
-@import "webfonts";
-
-// grid
-@import "grid";
+// core
+@import "core";         // required
+@import "base";         // required
 
 // components
-@import "typography";
-@import "buttons";
-@import "forms";
-@import "navigation";
-@import "tabs";
-@import "ui-elements";
-@import "tables";
-@import "font-awesome";
-@import "social-icons";
-@import "tooltips";
-// @import "popovers";
-@import "modals";
-@import "tiles";
+@import "font-awesome"; // recommended (used by other components)
+// @import "typography";   // optional
+// @import "buttons";      // optional (required by navigation)
+// @import "forms";        // optional
+// @import "navigation";   // optional
+// @import "tabs";         // optional
+// @import "ui-elements";  // optional
+// @import "tables";       // optional
+// @import "social-icons"; // optional
+// @import "tooltips";     // optional
+// @import "popovers";     // optional (WIP)
+// @import "modals";       // optional
+// @import "tiles";        // optional
+// @import "webfonts";     // optional (WIP)
 
-// CSS animations (required by helpers)
-@import "animations";
-
-// helper classes
-@import "helpers";
+// helpers
+@import "helpers";      // required
 
 // responsive adjustments
-@import "responsive";
+@import "responsive";   // recommended (required for responsive adaptations)

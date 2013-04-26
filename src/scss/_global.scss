@@ -1,7 +1,7 @@
-// =============================================
-//        Global styles by Gary Hepting 
-//          Last Updated:2013-1-23
-// =============================================
+/* =============================================
+ *               Global Styles
+ *          Last Updated:2013-4-24
+ * ===========================================*/
 
 
 
@@ -30,18 +30,24 @@
   border:none;
 }
 @if $tags {
-  html {
-    @extend %html;
+  $elements: html hr img;
+  @for $i from 1 through length($elements) {
+    #{nth($elements, $i)} {
+      @extend %#{nth($elements, $i)};
+    }
   }
-  html,
-  body {
+  html, body {
     @extend %document;
   }
-  hr {
-    @extend %hr;
-  }
-  img,
   a img {
     @extend %img;
+  }
+}
+@if $classes {
+  $names: html document hr img;
+  @for $i from 1 through length($names) {
+    .#{nth($names, $i)} {
+      @extend %#{nth($names, $i)};
+    }
   }
 }

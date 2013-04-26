@@ -1,5 +1,13 @@
+/* =============================================
+ *            Font Awesome 3.0.2b
+ *          Last Updated:2013-4-24
+ * ===========================================*/
+
+
+
+
 /*!
- *  Font Awesome 3.0.2
+ *  Font Awesome 3.0.2b (customized for use with Groundwork)
  *  the iconic font designed for use with Twitter Bootstrap
  *  -------------------------------------------------------
  *  The full suite of pictographic icons, examples, and documentation
@@ -24,7 +32,7 @@
 $fontAwesomePath:   "#{$root_path}#{$fonts_path}" !default;
 $borderColor:       #eee;
 $iconMuted:         #eee;
-@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
+// @mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
 
 
 @font-face {

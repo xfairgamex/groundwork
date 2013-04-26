@@ -1,6 +1,7 @@
-// ===================================
-//              Panels
-// ===================================
+/* =============================================
+ *              Callout Panels
+ *          Last Updated:2013-4-24
+ * ===========================================*/
 
 
 
@@ -14,48 +15,62 @@
   color:$button-text;
   margin-bottom:15px;
   @include rounded($radius);
-  &.small {
+  &%small {
     font-size:0.8em;
   }
-  &.large {
+  &%large {
     font-size:1.5em;
   }
-  &.info {
+  &%info {
     background-color:$info-background;
     color:$info-color;
     border-color:$info-border;
   }
-  &.alert {
+  &%alert {
     background-color:$alert-background;
     color:$alert-color;
     border-color:$alert-border;
   }
-  &.warning {
+  &%warning {
     background:$warning-background;
     color:$warning-color;
     border-color:$warning-border;
   }
-  &.error {
+  &%error {
     background:$error-background;
     color:$error-color;
     border-color:$error-border;
   }
-  &.success {
+  &%success {
     background:$success-background;
     color:$success-color;
     border-color:$success-border;
   }
-  &.square {
+  &%square {
     @include rounded(0);
   }
-  &.round {
+  &%round {
     @include rounded(9999px);
   }
-  &.disabled {
+  &%disabled {
     @include state(disabled);
   }
+  &%dismissible {
+    padding-right:3em;
+    &:after {
+      content:'X';
+      display:block;
+      padding:0.5em 0;
+      font-size:0.8em;
+      text-align:center;
+      position:absolute;
+      top:0;
+      right:1em;
+      line-height:1.5;
+    }
+  }
   // content overrides
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, p {
     color:inherit;
   }
   *:last-child {
@@ -65,6 +80,13 @@
 @if $classes {
   .callout {
     @extend %callout;
+
+    $modifiers: small large info alert warning error success square round disabled;
+    @for $i from 1 through length($modifiers) {
+      &.#{nth($modifiers, $i)} {
+        @extend %#{nth($modifiers, $i)};
+      }
+    }
   }
 }
 @if $aria {

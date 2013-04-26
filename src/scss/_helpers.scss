@@ -1,12 +1,20 @@
+/* =============================================
+ *              Layout Helpers
+ *          Last Updated:2013-4-24
+ * ===========================================*/
+
+
+@import "animations";   // required
+
+
 // ================================
-//    layout helpers: mixins 
+//             mixins
 // ================================
 
-@mixin _clear {
-  clear: both;
-  &:after {content:''; display:block; clear:both;}
+@mixin _clear                     { clear: both;
+  &:after                         { content:''; display:block; clear:both; }
 }
-@mixin _clearfix {@include _clear;}
+@mixin _clearfix                  { @include _clear; } // alias
 
 @mixin _padded($multiple: 1)      { padding: $gutter * $multiple; }
 @mixin _pad-top($multiple: 1)     { padding-top: $gutter * $multiple; }
@@ -32,33 +40,43 @@
 
 @mixin _inline                    { display:inline-block; width:auto; }
 @mixin _block                     { display:block; }
+@mixin _hidden                    { display:none !important; }
+
 @mixin _zero                      { margin:0; padding:0; }
+
 @mixin _pull-right                { float:right; }
 @mixin _pull-left                 { float:left; }
+
 @mixin _bordered                  { border: 1px solid $border-color; }
 @mixin _border-top                { border-top:1px solid $border-color; }
 @mixin _border-right              { border-right:1px solid $border-color; }
 @mixin _border-bottom             { border-bottom:1px solid $border-color; }
 @mixin _border-left               { border-left:1px solid $border-color; }
+
 @mixin _align-top                 { display:table-cell; vertical-align:top; } // must have height (experimental)
 @mixin _align-right               { text-align:right; }
 @mixin _align-bottom              { display:table-cell; vertical-align:bottom; } // must have height (experimental)
 @mixin _align-left                { text-align:left; }
 @mixin _align-center              { text-align:center; }
 @mixin _justify                   { text-align:justify; }
+
 @mixin _truncate                  { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+
 @mixin _center                    { @include _block; margin:0 auto; }
+
 @mixin _spacer                    { height:$gutter; }
-@mixin _round                     { @include rounded(9999px); } // function is found in _mixins.scss
+
+@mixin _round                     { @include rounded(9999px); }
+
 @mixin _disabled                  { @include state(disabled,textOnly); }
 
-// Seems like redundant rotate and spin mixins, but are there any side implications if we move "@include _inline;" into the rotate() and spin() mixin in _mixins.scss?
 @mixin _rotate-90                 { @include _inline; @include rotate(90deg); }
 @mixin _rotate-180                { @include _inline; @include rotate(180deg); }
 @mixin _rotate-270                { @include _inline; @include rotate(270deg); }
 @mixin _rotate-90-ctr             { @include _inline; @include rotate(-90deg); }
 @mixin _rotate-180-ctr            { @include _inline; @include rotate(-180deg); }
 @mixin _rotate-270-ctr            { @include _inline; @include rotate(-270deg); }
+
 @mixin _spin                      { @include _inline; @include spin; }
 @mixin _spin-once                 { @include _inline; @include spin(1); }
 @mixin _spin-twice                { @include _inline; @include spin(2); }
@@ -72,8 +90,11 @@
 @mixin _spin-slow-twice           { @include _inline; @include spin(2,5s); }
 @mixin _spin-slow-thrice          { @include _inline; @include spin(3,5s); }
 
+
+
+
 // ================================
-//    layout helpers: placeholders
+//          placeholders
 // ================================
 
 %clear, %clearfix { @include _clear;}
@@ -98,6 +119,7 @@
   &%double        { @include _pad-left(2); }
   &%triple        { @include _pad-left(3); }
 }
+
 %gapped           { @include _gapped;
   &%double        { @include _gapped(2); }
   &%triple        { @include _gapped(3); }
@@ -118,8 +140,9 @@
   &%double        { @include _gap-left(2); }
   &%triple        { @include _gap-left(3); }
 }
+
 %stick            { @include _stick;
-  &%top           { @include _stick(top); } // Will this compile position:fixed and z:1 twice? Have to check.
+  &%top           { @include _stick(top); }
   &%right         { @include _stick(right); }
   &%bottom        { @include _stick(bottom); }
   &%left          { @include _stick(left); }
@@ -129,31 +152,43 @@
 
 %inline           { @include _inline; }
 %block            { @include _block; }
+%hidden           { @include _hidden; }
+
 %zero             { @include _zero; }
+
 %pull-right       { @include _pull-right; }
 %pull-left        { @include _pull-left; }
+
 %bordered         { @include _bordered; }
 %border-top       { @include _border-top; }
 %border-right     { @include _border-right; }
 %border-bottom    { @include _border-bottom; }
 %border-left      { @include _border-left; }
+
 %align-top        { @include _align-top; } // must have height (experimental)
 %align-right      { @include _align-right; }
 %align-bottom     { @include _align-bottom; } // must have height (experimental)
 %align-left       { @include _align-left; }
 %align-center     { @include _align-center; }   
 %justify          { @include _justify; }
+
 %truncate         { @include _truncate; }
+
 %center           { @include _center; }
+
 %spacer           { @include _spacer; }
+
 %round            { @include _round; }
+
 %disabled         { @include _disabled; }
-%rotate-90        { @include _rotate-90; } // As mentioned above, might be referring to redundant mixins.
+
+%rotate-90        { @include _rotate-90; }
 %rotate-180       { @include _rotate-180; }
 %rotate-270       { @include _rotate-270; }
 %rotate-90-ctr    { @include _rotate-90-ctr; }
 %rotate-180-ctr   { @include _rotate-180-ctr; }
 %rotate-270-ctr   { @include _rotate-270-ctr; }
+
 %spin             { @include _spin; }
 %spin-once        { @include _spin-once; }
 %spin-twice       { @include _spin-twice; }
@@ -168,22 +203,23 @@
 %spin-slow-thrice { @include _spin-slow-thrice; }
 
 
+
+
 // ================================
-//    layout helpers: classes
+//            classes
 // ================================
 
 @if $classes {
 
-  $helpers: inline block zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
-
-  // function to generate the helpers
+  // function to generate the simple helpers
+  $helpers: inline block hidden zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
   @for $i from 1 through length($helpers) {
     .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
   }
 
+  // function to generate the spacers (with nested modifiers)
   $spacers: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left;
   $modifiers: double triple;
-  // function to generate the spacers
   @for $i from 1 through length($spacers) {
     .#{nth($spacers, $i)} {
       @extend %#{nth($spacers, $i)};
@@ -193,12 +229,11 @@
     }
   }
 
+  // manual declaration of the more complex helpers
   .clear, .clearfix { @extend %clear;
     &:after         { content:''; display:block; clear:both; }
   }
-
   .disabled         { @include state(disabled,textOnly); }
-
   .stick            { @extend %stick;
     &.top           { @extend %top; }
     &.right         { @extend %right; }

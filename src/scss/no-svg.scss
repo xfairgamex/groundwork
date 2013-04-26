@@ -3,10 +3,12 @@
 //           Last Updated:2013-2-15
 // =============================================
 
-// variables & mixins
-@import "variables";
-@import "mixins";
 
+// custom settings
+@import "settings";     // optional
+
+// core
+@import "core";         // required
 
 
 

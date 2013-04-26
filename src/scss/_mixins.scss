@@ -1,7 +1,7 @@
-// =============================================
-//        SCSS mixins by Gary Hepting 
-//          Last Updated:2013-1-21
-// =============================================
+/* =============================================
+ *              Global Mixins
+ *          Last Updated:2013-4-24
+ * ===========================================*/
 
 
 
@@ -79,7 +79,7 @@
 }
 
 // ====================
-//       helpers
+//     helper reset
 // ====================
 
 @mixin helper_reset($properties: padding margin, $spacers: padded pad-top pad-right pad-bottom pad-left gapped gap-top gap-right gap-bottom gap-left) {
@@ -91,8 +91,6 @@
     }
   }
 }
-
-@mixin _zero { margin:0; padding:0; }
 
 // ====================
 //      functions
@@ -112,23 +110,9 @@
 // inline image with fallback support for IE 7-
 @mixin data-image($file) {
   background-image:url("#{$root_path}#{$images_path}#{$file}");       // fallback
-  background-image:inline-image($file);             // data URI
+  background-image:inline-image($file);                               // data URI
   *background-image:url("#{$root_path}#{$images_path}#{$file}");      // IE7- hack
 }
-
-// // vertical gradient with support for IE 6-8 & 10
-// @mixin vertical-gradient($startColor, $endColor) {
-//   background:$endColor;
-//   @include background-image(linear-gradient($startColor, $endColor));
-//   @include filter-gradient($startColor, $endColor);
-// }
-
-// // horizontal gradient with support for IE 6-8 & 10
-// @mixin horizontal-gradient($startColor, $endColor) {
-//   background:$endColor;
-//   @include background-image(linear-gradient(left, $startColor, $endColor));
-//   @include filter-gradient($startColor, $endColor, 1);
-// }
 
 // vertical gradient
 @mixin gradient($startColor:$white, $endColor:$gray-2) {

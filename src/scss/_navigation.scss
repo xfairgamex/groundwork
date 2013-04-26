@@ -265,7 +265,7 @@
   // hamburger menu
   &.menu {
     .menu-toggle {
-      @extend .button;
+      @extend %button;
       display:none !important;
     }
   }

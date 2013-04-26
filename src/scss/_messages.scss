@@ -1,11 +1,12 @@
-// ===================================
-//             Messages
-// ===================================
+/* =============================================
+ *              Message Boxes
+ *          Last Updated:2013-4-24
+ * ===========================================*/
 
 
 
 
-.message {
+%message {
   position:relative;
   word-wrap:break-word;
   padding:0.25em 1em;
@@ -15,44 +16,47 @@
   font-weight:bold;
   text-decoration:none;
   @include rounded($radius);
-  &.small {
+  &%small {
     font-size:0.8em;
   }
-  &.large {
+  &%large {
     font-size:1.5em;
   }
-  &.info {
+  &%info {
     background-color:$info-background;
     color:$info-color;
     border-color:$info-border;
   }
-  &.alert {
+  &%alert {
     background-color:$alert-background;
     color:$alert-color;
     border-color:$alert-border;
   }
-  &.warning {
+  &%warning {
     background:$warning-background;
     color:$warning-color;
     border-color:$warning-border;
   }
-  &.error {
+  &%error {
     background:$error-background;
     color:$error-color;
     border-color:$error-border;
   }
-  &.success {
+  &%success {
     background:$success-background;
     color:$success-color;
     border-color:$success-border;
   }
-  &.square {
+  &%square {
     @include rounded(0);
   }
-  &.round {
+  &%round {
     @include rounded(9999px);
   }
-  &.dismissible {
+  &%disabled {
+    @include state(disabled);
+  }
+  &%dismissible {
     padding-right:3em;
     &:after {
       content:'X';
@@ -65,5 +69,22 @@
       right:1em;
       line-height:1.5;
     }
+  }
+}
+@if $classes {
+  .message {
+    @extend %message;
+
+    $modifiers: small large info alert warning error success square round disabled dismissible;
+    @for $i from 1 through length($modifiers) {
+      &.#{nth($modifiers, $i)} {
+        @extend %#{nth($modifiers, $i)};
+      }
+    }
+  }
+}
+@if $aria {
+  [role~=alert] {
+    @extend %message;
   }
 }
