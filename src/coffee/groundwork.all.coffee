@@ -1,8 +1,8 @@
 ###
  *
  *  GroundworkCSS JS by Gary Hepting - https://github.com/groundworkcss/groundwork
- *  
- *  Open source under the BSD License. 
+ *
+ *  Open source under the MIT License
  *
  *  Copyright © 2013 Gary Hepting. All rights reserved.
  *
