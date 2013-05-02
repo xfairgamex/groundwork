@@ -33,26 +33,41 @@
   background-color:$info-background;
   color:$info-color;
   border-color:$info-border;
+  &%disabled-callout {
+    @include state(disabled,normal,desaturate($info-color,20%));
+  }
 }
 %alert-callout{
   background-color:$alert-background;
   color:$alert-color;
   border-color:$alert-border;
+  &%disabled-callout {
+    @include state(disabled,normal,desaturate($alert-color,20%));
+  }
 }
 %warning-callout {
   background:$warning-background;
   color:$warning-color;
   border-color:$warning-border;
+  &%disabled-callout {
+    @include state(disabled,normal,desaturate($warning-color,20%));
+  }
 }
 %error-callout {
   background:$error-background;
   color:$error-color;
   border-color:$error-border;
+  &%disabled-callout {
+    @include state(disabled,normal,desaturate($error-color,20%));
+  }
 }
 %success-callout {
   background:$success-background;
   color:$success-color;
   border-color:$success-border;
+  &%disabled-callout {
+    @include state(disabled,normal,desaturate($success-color,20%));
+  }
 }
 %square-callout {
   @include rounded(0);
@@ -61,7 +76,7 @@
   @include rounded(9999px);
 }
 %disabled-callout {
-  @include state(disabled);
+  @include state(disabled,normal,desaturate($button-color,20%));
 }
 %dismissible-callout {
   padding-right:3em;

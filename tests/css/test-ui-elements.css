@@ -2939,11 +2939,43 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
   color: #3a87ad;
   border-color: #bce8f1;
 }
+.message.info.disabled, .message.info.extend-message.extend-disabled, .message.disabled.extend-message.extend-info, [role~=alert].info.disabled, [role~=alert].info.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-info, .extend-message.extend-info.extend-disabled {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.info.disabled:hover, .message.info.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-info:hover, [role~=alert].info.disabled:hover, [role~=alert].info.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-info:hover, .extend-message.extend-info.extend-disabled:hover, .message.info.disabled:focus, .message.info.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-info:focus, [role~=alert].info.disabled:focus, [role~=alert].info.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-info:focus, .extend-message.extend-info.extend-disabled:focus, .message.info.disabled:visited, .message.info.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-info:visited, [role~=alert].info.disabled:visited, [role~=alert].info.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-info:visited, .extend-message.extend-info.extend-disabled:visited {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .message.alert, [role~=alert].alert, .extend-message.extend-alert {
   background-color: #fcf8e3;
   color: #c09853;
   border-color: #fbeee0;
+}
+.message.alert.disabled, .message.alert.extend-message.extend-disabled, .message.disabled.extend-message.extend-alert, [role~=alert].alert.disabled, [role~=alert].alert.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-alert, .extend-message.extend-alert.extend-disabled {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.alert.disabled:hover, .message.alert.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-alert:hover, [role~=alert].alert.disabled:hover, [role~=alert].alert.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-alert:hover, .extend-message.extend-alert.extend-disabled:hover, .message.alert.disabled:focus, .message.alert.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-alert:focus, [role~=alert].alert.disabled:focus, [role~=alert].alert.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-alert:focus, .extend-message.extend-alert.extend-disabled:focus, .message.alert.disabled:visited, .message.alert.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-alert:visited, [role~=alert].alert.disabled:visited, [role~=alert].alert.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-alert:visited, .extend-message.extend-alert.extend-disabled:visited {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 
 .message.warning, [role~=alert].warning, .extend-message.extend-warning {
@@ -2951,17 +2983,65 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
   color: #ff971e;
   border-color: #ffdbb3;
 }
+.message.warning.disabled, .message.warning.extend-message.extend-disabled, .message.disabled.extend-message.extend-warning, [role~=alert].warning.disabled, [role~=alert].warning.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-warning, .extend-message.extend-warning.extend-disabled {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.warning.disabled:hover, .message.warning.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-warning:hover, [role~=alert].warning.disabled:hover, [role~=alert].warning.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-warning:hover, .extend-message.extend-warning.extend-disabled:hover, .message.warning.disabled:focus, .message.warning.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-warning:focus, [role~=alert].warning.disabled:focus, [role~=alert].warning.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-warning:focus, .extend-message.extend-warning.extend-disabled:focus, .message.warning.disabled:visited, .message.warning.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-warning:visited, [role~=alert].warning.disabled:visited, [role~=alert].warning.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-warning:visited, .extend-message.extend-warning.extend-disabled:visited {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .message.error, [role~=alert].error, .extend-message.extend-error {
   background: #f2dede;
   color: #b94a48;
   border-color: #eed3d7;
 }
+.message.error.disabled, .message.error.extend-message.extend-disabled, .message.disabled.extend-message.extend-error, [role~=alert].error.disabled, [role~=alert].error.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-error, .extend-message.extend-error.extend-disabled {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.error.disabled:hover, .message.error.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-error:hover, [role~=alert].error.disabled:hover, [role~=alert].error.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-error:hover, .extend-message.extend-error.extend-disabled:hover, .message.error.disabled:focus, .message.error.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-error:focus, [role~=alert].error.disabled:focus, [role~=alert].error.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-error:focus, .extend-message.extend-error.extend-disabled:focus, .message.error.disabled:visited, .message.error.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-error:visited, [role~=alert].error.disabled:visited, [role~=alert].error.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-error:visited, .extend-message.extend-error.extend-disabled:visited {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .message.success, [role~=alert].success, .extend-message.extend-success {
   background: #dff0d8;
   color: #468847;
   border-color: #d6e9c6;
+}
+.message.success.disabled, .message.success.extend-message.extend-disabled, .message.disabled.extend-message.extend-success, [role~=alert].success.disabled, [role~=alert].success.extend-message.extend-disabled, [role~=alert].disabled.extend-message.extend-success, .extend-message.extend-success.extend-disabled {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.message.success.disabled:hover, .message.success.extend-message.extend-disabled:hover, .message.disabled.extend-message.extend-success:hover, [role~=alert].success.disabled:hover, [role~=alert].success.extend-message.extend-disabled:hover, [role~=alert].disabled.extend-message.extend-success:hover, .extend-message.extend-success.extend-disabled:hover, .message.success.disabled:focus, .message.success.extend-message.extend-disabled:focus, .message.disabled.extend-message.extend-success:focus, [role~=alert].success.disabled:focus, [role~=alert].success.extend-message.extend-disabled:focus, [role~=alert].disabled.extend-message.extend-success:focus, .extend-message.extend-success.extend-disabled:focus, .message.success.disabled:visited, .message.success.extend-message.extend-disabled:visited, .message.disabled.extend-message.extend-success:visited, [role~=alert].success.disabled:visited, [role~=alert].success.extend-message.extend-disabled:visited, [role~=alert].disabled.extend-message.extend-success:visited, .extend-message.extend-success.extend-disabled:visited {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 
 .message.square, [role~=alert].square, .extend-message.extend-square {
@@ -2981,17 +3061,17 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
 }
 
 .message.disabled, [role~=alert].disabled, .extend-message.extend-disabled {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 .message.disabled:hover, [role~=alert].disabled:hover, .extend-message.extend-disabled:hover, .message.disabled:focus, [role~=alert].disabled:focus, .extend-message.extend-disabled:focus, .message.disabled:visited, [role~=alert].disabled:visited, .extend-message.extend-disabled:visited {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
@@ -3046,11 +3126,43 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
   color: #3a87ad;
   border-color: #bce8f1;
 }
+.callout.info.disabled, .callout.info.extend-callout.extend-disabled, .callout.disabled.extend-callout.extend-info, [role~=status].info.disabled, [role~=status].info.extend-callout.extend-disabled, [role~=status].disabled.extend-callout.extend-info, .extend-callout.extend-info.extend-disabled {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.info.disabled:hover, .callout.info.extend-callout.extend-disabled:hover, .callout.disabled.extend-callout.extend-info:hover, [role~=status].info.disabled:hover, [role~=status].info.extend-callout.extend-disabled:hover, [role~=status].disabled.extend-callout.extend-info:hover, .extend-callout.extend-info.extend-disabled:hover, .callout.info.disabled:focus, .callout.info.extend-callout.extend-disabled:focus, .callout.disabled.extend-callout.extend-info:focus, [role~=status].info.disabled:focus, [role~=status].info.extend-callout.extend-disabled:focus, [role~=status].disabled.extend-callout.extend-info:focus, .extend-callout.extend-info.extend-disabled:focus, .callout.info.disabled:visited, .callout.info.extend-callout.extend-disabled:visited, .callout.disabled.extend-callout.extend-info:visited, [role~=status].info.disabled:visited, [role~=status].info.extend-callout.extend-disabled:visited, [role~=status].disabled.extend-callout.extend-info:visited, .extend-callout.extend-info.extend-disabled:visited {
+  color: #bed2dc;
+  background: #7ca4b8;
+  border-color: #517f96;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .callout.alert, [role~=status].alert, .extend-callout.extend-alert {
   background-color: #fcf8e3;
   color: #c09853;
   border-color: #fbeee0;
+}
+.callout.alert.disabled, .callout.alert.extend-callout.extend-disabled, .callout.disabled.extend-callout.extend-alert, [role~=status].alert.disabled, [role~=status].alert.extend-callout.extend-disabled, [role~=status].disabled.extend-callout.extend-alert, .extend-callout.extend-alert.extend-disabled {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.alert.disabled:hover, .callout.alert.extend-callout.extend-disabled:hover, .callout.disabled.extend-callout.extend-alert:hover, [role~=status].alert.disabled:hover, [role~=status].alert.extend-callout.extend-disabled:hover, [role~=status].disabled.extend-callout.extend-alert:hover, .extend-callout.extend-alert.extend-disabled:hover, .callout.alert.disabled:focus, .callout.alert.extend-callout.extend-disabled:focus, .callout.disabled.extend-callout.extend-alert:focus, [role~=status].alert.disabled:focus, [role~=status].alert.extend-callout.extend-disabled:focus, [role~=status].disabled.extend-callout.extend-alert:focus, .extend-callout.extend-alert.extend-disabled:focus, .callout.alert.disabled:visited, .callout.alert.extend-callout.extend-disabled:visited, .callout.disabled.extend-callout.extend-alert:visited, [role~=status].alert.disabled:visited, [role~=status].alert.extend-callout.extend-disabled:visited, [role~=status].disabled.extend-callout.extend-alert:visited, .extend-callout.extend-alert.extend-disabled:visited {
+  color: #eae5db;
+  background: #c5b59b;
+  border-color: #a9926a;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 
 .callout.warning, [role~=status].warning, .extend-callout.extend-warning {
@@ -3058,17 +3170,65 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
   color: #ff971e;
   border-color: #ffdbb3;
 }
+.callout.warning.disabled, .callout.warning.extend-callout.extend-disabled, .callout.disabled.extend-callout.extend-warning, [role~=status].warning.disabled, [role~=status].warning.extend-callout.extend-disabled, [role~=status].disabled.extend-callout.extend-warning, .extend-callout.extend-warning.extend-disabled {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.warning.disabled:hover, .callout.warning.extend-callout.extend-disabled:hover, .callout.disabled.extend-callout.extend-warning:hover, [role~=status].warning.disabled:hover, [role~=status].warning.extend-callout.extend-disabled:hover, [role~=status].disabled.extend-callout.extend-warning:hover, .extend-callout.extend-warning.extend-disabled:hover, .callout.warning.disabled:focus, .callout.warning.extend-callout.extend-disabled:focus, .callout.disabled.extend-callout.extend-warning:focus, [role~=status].warning.disabled:focus, [role~=status].warning.extend-callout.extend-disabled:focus, [role~=status].disabled.extend-callout.extend-warning:focus, .extend-callout.extend-warning.extend-disabled:focus, .callout.warning.disabled:visited, .callout.warning.extend-callout.extend-disabled:visited, .callout.disabled.extend-callout.extend-warning:visited, [role~=status].warning.disabled:visited, [role~=status].warning.extend-callout.extend-disabled:visited, [role~=status].disabled.extend-callout.extend-warning:visited, .extend-callout.extend-warning.extend-disabled:visited {
+  color: #fae9d5;
+  background: #f0b979;
+  border-color: #e99534;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .callout.error, [role~=status].error, .extend-callout.extend-error {
   background: #f2dede;
   color: #b94a48;
   border-color: #eed3d7;
 }
+.callout.error.disabled, .callout.error.extend-callout.extend-disabled, .callout.disabled.extend-callout.extend-error, [role~=status].error.disabled, [role~=status].error.extend-callout.extend-disabled, [role~=status].disabled.extend-callout.extend-error, .extend-callout.extend-error.extend-disabled {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.error.disabled:hover, .callout.error.extend-callout.extend-disabled:hover, .callout.disabled.extend-callout.extend-error:hover, [role~=status].error.disabled:hover, [role~=status].error.extend-callout.extend-disabled:hover, [role~=status].disabled.extend-callout.extend-error:hover, .extend-callout.extend-error.extend-disabled:hover, .callout.error.disabled:focus, .callout.error.extend-callout.extend-disabled:focus, .callout.disabled.extend-callout.extend-error:focus, [role~=status].error.disabled:focus, [role~=status].error.extend-callout.extend-disabled:focus, [role~=status].disabled.extend-callout.extend-error:focus, .extend-callout.extend-error.extend-disabled:focus, .callout.error.disabled:visited, .callout.error.extend-callout.extend-disabled:visited, .callout.disabled.extend-callout.extend-error:visited, [role~=status].error.disabled:visited, [role~=status].error.extend-callout.extend-disabled:visited, [role~=status].disabled.extend-callout.extend-error:visited, .extend-callout.extend-error.extend-disabled:visited {
+  color: #e3d1d1;
+  background: #bd9291;
+  border-color: #a06261;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
 
 .callout.success, [role~=status].success, .extend-callout.extend-success {
   background: #dff0d8;
   color: #468847;
   border-color: #d6e9c6;
+}
+.callout.success.disabled, .callout.success.extend-callout.extend-disabled, .callout.disabled.extend-callout.extend-success, [role~=status].success.disabled, [role~=status].success.extend-callout.extend-disabled, [role~=status].disabled.extend-callout.extend-success, .extend-callout.extend-success.extend-disabled {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
+}
+.callout.success.disabled:hover, .callout.success.extend-callout.extend-disabled:hover, .callout.disabled.extend-callout.extend-success:hover, [role~=status].success.disabled:hover, [role~=status].success.extend-callout.extend-disabled:hover, [role~=status].disabled.extend-callout.extend-success:hover, .extend-callout.extend-success.extend-disabled:hover, .callout.success.disabled:focus, .callout.success.extend-callout.extend-disabled:focus, .callout.disabled.extend-callout.extend-success:focus, [role~=status].success.disabled:focus, [role~=status].success.extend-callout.extend-disabled:focus, [role~=status].disabled.extend-callout.extend-success:focus, .extend-callout.extend-success.extend-disabled:focus, .callout.success.disabled:visited, .callout.success.extend-callout.extend-disabled:visited, .callout.disabled.extend-callout.extend-success:visited, [role~=status].success.disabled:visited, [role~=status].success.extend-callout.extend-disabled:visited, [role~=status].disabled.extend-callout.extend-success:visited, .extend-callout.extend-success.extend-disabled:visited {
+  color: #b9c8b9;
+  background: #809b80;
+  border-color: #5b735b;
+  cursor: not-allowed;
+  text-decoration: none;
+  outline: none;
 }
 
 .callout.square, [role~=status].square, .extend-callout.extend-square {
@@ -3088,17 +3248,17 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
 }
 
 .callout.disabled, [role~=status].disabled, .extend-callout.extend-disabled {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;
 }
 .callout.disabled:hover, [role~=status].disabled:hover, .extend-callout.extend-disabled:hover, .callout.disabled:focus, [role~=status].disabled:focus, .extend-callout.extend-disabled:focus, .callout.disabled:visited, [role~=status].disabled:visited, .extend-callout.extend-disabled:visited {
-  color: #d9d9d9;
-  background: #a6a6a6;
-  border-color: gray;
+  color: #a4dee3;
+  background: #57c1cb;
+  border-color: #3299a3;
   cursor: not-allowed;
   text-decoration: none;
   outline: none;

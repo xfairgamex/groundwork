@@ -27,26 +27,41 @@
   background-color:$info-background;
   color:$info-color;
   border-color:$info-border;
+  &%disabled-message {
+    @include state(disabled,normal,desaturate($info-color,20%));
+  }
 }
 %alert-message {
   background-color:$alert-background;
   color:$alert-color;
   border-color:$alert-border;
+  &%disabled-message {
+    @include state(disabled,normal,desaturate($alert-color,20%));
+  }
 }
 %warning-message {
   background:$warning-background;
   color:$warning-color;
   border-color:$warning-border;
+  &%disabled-message {
+    @include state(disabled,normal,desaturate($warning-color,20%));
+  }
 }
 %error-message {
   background:$error-background;
   color:$error-color;
   border-color:$error-border;
+  &%disabled-message {
+    @include state(disabled,normal,desaturate($error-color,20%));
+  }
 }
 %success-message {
   background:$success-background;
   color:$success-color;
   border-color:$success-border;
+  &%disabled-message {
+    @include state(disabled,normal,desaturate($success-color,20%));
+  }
 }
 %square-message {
   @include rounded(0);
@@ -55,7 +70,7 @@
   @include rounded(9999px);
 }
 %disabled-message {
-  @include state(disabled);
+  @include state(disabled,normal,desaturate($button-color,20%));
 }
 %dismissible-message {
   padding-right:3em;

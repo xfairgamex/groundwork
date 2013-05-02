@@ -14,7 +14,7 @@
 
 %nav {
   @extend %clear;
-  &:not(.inline) {
+  &:not(.inline):not(.pagination) {
     > ul:not(.row) {
       display:inline-block;
     }
