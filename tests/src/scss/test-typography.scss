@@ -1,23 +1,25 @@
 $root_path: '../../';   // path to HTML document root (relative from $css_path)
-@import "settings";     // optional
-@import "core";         // required
-@import "base";         // required
+@import "../../../src/scss/settings";     // optional
+@import "../../../src/scss/core";         // required
+@import "../../../src/scss/base";         // required
 
-@import "font-awesome";
-@import "typography";
-// @import "buttons";
-// @import "forms";
-// @import "navigation";
-// @import "tabs";
-// @import "ui-elements";
-// @import "tables";
-// @import "social-icons";
-// @import "tooltips";
-// @import "popovers";
-// @import "modals";
-// @import "tiles";
-@import "helpers";
-@import "responsive";
+@import "../../../src/scss/font-awesome";
+@import "../../../src/scss/typography";
+// @import "../../../src/scss/buttons";
+// @import "../../../src/scss/forms";
+// @import "../../../src/scss/navigation";
+// @import "../../../src/scss/tabs";
+// @import "../../../src/scss/ui-elements";
+// @import "../../../src/scss/tables";
+// @import "../../../src/scss/social-icons";
+// @import "../../../src/scss/tooltips";
+// @import "../../../src/scss/popovers";
+// @import "../../../src/scss/modals";
+// @import "../../../src/scss/tiles";
+@import "../../../src/scss/helpers";
+@import "../../../src/scss/responsive";
+
+@import "demo";
 
 
 $elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big large em italic b bold strong sup sub code pre error invalid success valid warning;

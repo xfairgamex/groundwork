@@ -3,11 +3,9 @@ html
   head
     meta(charset="utf-8")
     title Groundwork Tests: Grids
-    link(rel="stylesheet", href="../css/tests/test-grid.css")
+    link(rel="stylesheet", href="css/test-grid.css")
     script(type='text/javascript', src='../js/libs/jquery-1.8.2.min.js')
     script(type='text/javascript', src='../js/components/equalizeColumns.js')
-  
-    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
   
   body
     .container
@@ -20,68 +18,71 @@ html
     
       - var selectors = { class: "", extend: "extend-"}
       
-      h2 #1 Grids
+      .row.headings
+        .one.whole Standard Grid
       each type, name in selectors
         div(class="#{type}container")
-          div(class="#{type}row")
+          div.demo(class="#{type}row")
             - for (var i = 1; i <= 3; i++) {
-              div(class="#{type}one #{type}third")
-                h3 Heading
-                p One third #{name} 
+              div(class="#{type}one #{type}third") one third #{name}
             - }
-      
-      h2 #2 Re-ordering
+      br
+
+      .row.headings
+        .one.whole Re-ordering
       each type, name in selectors
         div(class="#{type}container")
-          div(class="#{type}row")
+          div.demo(class="#{type}row")
             div(class="#{type}three #{type}fifths")
-              p First block #{name}
+              p First (#{name})
             div(class="#{type}two #{type}fifths")
-              p Second block #{name}
-          div(class="#{type}row")
-            div(class="#{type}three #{type}fifths #{type}right-one")
-              p First block right-one #{name}
-            div(class="#{type}two #{type}fifths #{type}left-one")
-              p Second block left-one #{name}
-          div(class="#{type}row")
+              p Second (#{name})
+          div.demo(class="#{type}row")
             div(class="#{type}three #{type}fifths #{type}right-two")
-              p First block right-two #{name}
+              p First (right-two #{name})
             div(class="#{type}two #{type}fifths #{type}left-three")
-              p Second block left-three #{name}
-      
-      h2 #3 Centering
+              p Second (left-three #{name})
+      br
+
+      .row.headings
+        .one.whole Centering
       each type, name in selectors
         div(class="#{type}container")
-          div(class="#{type}row")
+          div.demo(class="#{type}row")
             div(class="#{type}one #{type}third #{type}centered")
               p One third centered #{name}
+      br
 
-      h2 #4 Offsetting
+      .row.headings
+        .one.whole Offsetting
       each type, name in selectors
         div(class="#{type}container")
-          div(class="#{type}row")
+          div.demo(class="#{type}row")
             div(class="#{type}one #{type}fifths")
               p One fifths #{name}
             div(class="#{type}two #{type}fifths #{type}skip-two")
               p Two fifths skip-two #{name}
-      
-      h2 #5 Mobile Adjustments
+      br
+
+      .row.headings
+        .one.whole Mobile Grid
       each type, name in selectors
         div(class="#{type}container")
-          div(class="#{type}row")
-            each device in ["small-tablet", "mobile"]
+          each device in ["small-tablet", "mobile"]
+            div.demo(class="#{type}row")
               div(class="#{type}one #{type}fifths #{type}#{device}")
                 p One fifths #{device} #{name}
               div(class="#{type}one #{type}fifths #{type}right-one #{type}#{device}")
                 p One fifths right-one #{device} #{name}
               div(class="#{type}one #{type}fifths #{type}skip-two #{type}#{device}")
                 p One fifths skip-two #{device} #{name}
-      
-            
-      h2 #6 Equal Height Columns (To be created)
+      br
+
+      .row.headings
+        .one.whole Equal Height Columns
       div(class="container")
         each device in ["", "small-tablet", "mobile"]
-          div(class="row equalize")
+          div.demo(class="row equalize")
             div(class="one third #{device}", style="background:#999;")
               img(src="http://placehold.it/100x100&amp;text=Short")
             div(class="one third #{device}", style="background:#777;")

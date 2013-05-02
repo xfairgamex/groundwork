@@ -3,9 +3,7 @@ html
   head
     meta(charset="utf-8")
     title Groundwork Tests: UI Elements
-    link(rel="stylesheet", href="../css/tests/test-ui-elements.css")
-  
-    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
+    link(rel="stylesheet", href="css/test-ui-elements.css")
   
   body
     .container
@@ -15,13 +13,9 @@ html
         ul.list
           li Elements appear as they should regardless of whether classes or extends are used.
 
-      .row.headings(style="text-align: center; background-color: #444; color: white;")
-        .one.half
-          h2 Classes
-          p .foo
-        .one.half
-          h2 Placeholders
-          p @extend %foo;
+      .row.headings
+        .one.half Classes
+        .one.half Placeholders
       
       - var elements = ["callout", "message"]
 
@@ -30,7 +24,7 @@ html
         - var types = ["", "info", "alert", "warning", "error", "success"]
 
         each type in types
-          .row
+          .row.demo
             .one.half: div(class="#{element} #{type}")
               | .#{element}.#{type}
             .one.half: div(class="extend-#{element} extend-#{type}")
@@ -39,7 +33,7 @@ html
           - var states = ["active", "disabled"] // dismissible requires inclusion of javascript component
 
           each state in states
-            .row
+            .row.demo
               .one.half: div(class="#{element} #{type} #{state}")
                 | .#{element}.#{type}.#{state}
               .one.half: div(class="extend-#{element} extend-#{type} extend-#{state}")
@@ -48,7 +42,7 @@ html
           - var sizes = ["small", "large"]
 
           each size in sizes
-            .row
+            .row.demo
               .one.half: div(class="#{element} #{type} #{size}")
                 | .#{element}.#{type}.#{size}
               .one.half: div(class="extend-#{element} extend-#{type} extend-#{size}")
@@ -57,7 +51,7 @@ html
           - var styles = ["square", "round"]
 
           each style in styles
-            .row
+            .row.demo
               .one.half: div(class="#{element} #{type} #{style}")
                 | .#{element}.#{type}.#{style}
               .one.half: div(class="extend-#{element} extend-#{type} extend-#{style}")

@@ -3,9 +3,7 @@ html
   head
     meta(charset="utf-8")
     title Groundwork Tests: Typography
-    link(rel="stylesheet", href="../css/tests/test-typography.css")
-  
-    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
+    link(rel="stylesheet", href="css/test-typography.css")
   
   body
     .container
@@ -15,21 +13,15 @@ html
         ul.list
           li Elements appear as they should regardless of whether tags, classes or extends are used.
 
-      .row.headings(style="text-align: center; background-color: #444; color: white;")
-        .one.third
-          h2 Tags
-          p foo
-        .one.third
-          h2 Classes
-          p .foo
-        .one.third
-          h2 Placeholders
-          p @extend %foo;
+      .row.headings
+        .one.third Tags
+        .one.third Classes
+        .one.third Placeholders
       
       - var elements = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "sup", "sub", "small", "big", "em", "b", "blockquote", "code", "pre"]
 
       each element in elements
-        .row
+        .row.demo
           .one.third: #{element}
             | #{element}
           .one.third: div(class="#{element}")
@@ -60,4 +52,4 @@ html
 
         #{structure}
           each element, i in elements
-              #{element} #{text[i]}
+            #{element} #{text[i]}

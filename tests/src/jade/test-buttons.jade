@@ -3,9 +3,7 @@ html
   head
     meta(charset="utf-8")
     title Groundwork Tests: Buttons
-    link(rel="stylesheet", href="../css/tests/test-buttons.css")
-  
-    style div > div > div {background-color: rgba(0,0,0,0.1); border: 1px dashed white;}
+    link(rel="stylesheet", href="css/test-buttons.css")
   
   body
     .container
@@ -15,23 +13,17 @@ html
         ul.list
           li Elements appear as they should regardless of whether classes or extends are used.
 
-      .row.headings(style="text-align: center; background-color: #444; color: white;")
-        .one.third
-          h2 Tag
-          p &lt;foo&gt;
-        .one.third
-          h2 Classes
-          p .foo
-        .one.third
-          h2 Placeholders
-          p @extend %foo;
+      .row.headings
+        .one.third Tags
+        .one.third Classes
+        .one.third Placeholders
       
       - var element = "button"
       
       - var types = ["", "info", "alert", "warning", "error", "success"]
 
       each type in types
-        .row
+        .row.demo
           .one.third: #{element}(class="#{type}")
             | &lt;#{element} class="#{type}"&gt;
           .one.third: a(href="#", class="#{element} #{type}")
@@ -42,7 +34,7 @@ html
         - var states = ["active", "disabled"]
 
         each state in states
-          .row
+          .row.demo
             .one.third: #{element}(class="#{type} #{state}")
               | &lt;#{element} class="#{type} #{state}"&gt;
             .one.third: a(href="#", class="#{element} #{type} #{state}")
@@ -53,7 +45,7 @@ html
         - var sizes = ["small", "large"]
 
         each size in sizes
-          .row
+          .row.demo
             .one.third: #{element}(class="#{type} #{size}")
               | &lt;#{element} class="#{type} #{size}"&gt;
             .one.third: a(href="#", class="#{element} #{type} #{size}")
@@ -64,7 +56,7 @@ html
         - var styles = ["square", "round", "block"]
 
         each style in styles
-          .row
+          .row.demo
             .one.third: #{element}(class="#{type} #{style}")
               | &lt;#{element} class="#{type} #{style}"&gt;
             .one.third: a(href="#", class="#{element} #{type} #{style}")
@@ -72,22 +64,22 @@ html
             .one.third: a(href="#", class="extend-#{element} extend-#{type} extend-#{style}")
               | .extend-#{element}.#{type}.#{style}
 
-      .row
-        .one.third
-          button(class="dropdown")
-            | &lt;button class="dropdown"&gt;
-            ul
-              li
-                a(href="#") Example menu item
-        .one.third
-          span(class="button dropdown")
-            | &lt;span class="button dropdown"&gt;
-            span(class="dropdown-list")
-              span(class="dropdown-list-item")
-                span(class="dropdown-menu-item") Example menu item
-        .one.third
-          span(class="extend-button extend-dropdown")
-            | &lt;span class="extend-button extend-dropdown"&gt;
-            span(class="extend-dropdown-list")
-              span(class="extend-dropdown-list-item")
-                span(class="extend-dropdown-menu-item") Example menu item
+      //- .row.demo
+      //-   .one.third
+      //-     button(class="dropdown")
+      //-       | &lt;button class="dropdown"&gt;
+      //-       ul
+      //-         li
+      //-           a(href="#") Example menu item
+      //-   .one.third
+      //-     span(class="button dropdown")
+      //-       | &lt;span class="button dropdown"&gt;
+      //-       span(class="dropdown-list")
+      //-         span(class="dropdown-list-item")
+      //-           span(class="dropdown-menu-item") Example menu item
+      //-   .one.third
+      //-     span(class="extend-button extend-dropdown")
+      //-       | &lt;span class="extend-button extend-dropdown"&gt;
+      //-       span(class="extend-dropdown-list")
+      //-         span(class="extend-dropdown-list-item")
+      //-           span(class="extend-dropdown-menu-item") Example menu item
