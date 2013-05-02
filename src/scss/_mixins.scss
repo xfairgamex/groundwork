@@ -4,80 +4,6 @@
 // =============================================
 
 
-
-
-// ====================
-//  media query helpers
-// ====================
-
-@mixin large-desktop {
-  @media only screen and (min-width:1201px) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media only screen and (min-width:1025px) {
-    .hide-on-desktop { display:none; }
-    // helper overrides
-    .no-padding-desktop { padding:0; }
-    .no-margin-desktop { margin:0; }
-    .zero-desktop { @include _zero; }
-    @content;
-  }
-}
-
-@mixin ipad {
-  @media only screen and (min-width:768px) and (max-width:1024px) {
-    .ipad-only { display:inline-block; }
-    .hide-on-ipad { display:none; }
-    .desktop-only { display:none; }
-    // helper overrides
-    .no-padding-ipad { padding:0; }
-    .no-margin-ipad { margin:0; }
-    .zero-ipad { @include _zero; }
-    @content;
-  }
-}
-
-@mixin ipad-above {
-  @media only screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin small-tablet {
-  @media only screen and (max-width:767px) {
-    .small-tablet-only { display:inline-block; }
-    .hide-on-small-tablet { display:none; }
-    .desktop-only { display:none; }
-    // helper overrides
-    .no-padding-small-tablet { padding:0; }
-    .no-margin-small-tablet { margin:0; }
-    .zero-small-tablet { @include _zero; }
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media only screen and (max-width:480px) {
-    .mobile-only { display:inline-block; }
-    .hide-on-mobile { display:none; }
-    .desktop-only { display:none; }
-    // helper overrides
-    .no-padding-mobile { padding:0; }
-    .no-margin-mobile { margin:0; }
-    .zero-mobile { @include _zero; }
-    @content;
-  }
-}
-
-@mixin small-mobile {
-  @media only screen and (max-width:319px) {
-    @content;
-  }
-}
-
 // ====================
 //     helper reset
 // ====================
@@ -86,11 +12,12 @@
   @for $i from 1 through length($spacers) {
     &.#{nth($spacers, $i)}, &.#{nth($spacers, $i)}.double, &.#{nth($spacers, $i)}.triple {
       @for $i from 1 through length($properties) {
-        #{nth($properties, $i)}:0;
+        #{nth($properties, $i)}:0 !important;
       }
     }
   }
 }
+
 
 // ====================
 //      functions
@@ -102,6 +29,7 @@
   $number: $val / ($val * 0 + 1);
   @return $number;
 }
+
 
 // ====================
 //      utilities
@@ -270,8 +198,6 @@
   -webkit-transform-origin:$x $y; // Webkit (Safari, Chrome, other)
   transform-origin:$x $y;
 }
-
-
 
 
 // ====================

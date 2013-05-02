@@ -1,51 +1,104 @@
+///////////////////////
+//    conditionals   //
+///////////////////////
+
+// desktop helpers
 .desktop-only { display:block; }
 .hide-on-desktop {}
-
+// ipad helpers
 .ipad-only { display:none; }
 .hide-on-ipad {}
-
+// small tablet helpers
 .small-tablet-only { display:none; }
 .hide-on-small-tablet {}
-
+// mobile helpers
 .mobile-only { display:none; }
 .hide-on-mobile {}
 
-///////////////////////
-//   large desktops  //
-///////////////////////
-// @include large-desktop {
-//  
-// }
-
-
-
 
 ///////////////////////
-//      desktops     //
+//    breakpoints    //
+///////////////////////
+
+@mixin desktop {
+  @media only screen and (min-width:1025px) {
+    // conditional helpers
+    .hide-on-desktop { display:none !important; }
+    // spacer overrides
+    .zero-desktop { @include helper_reset(); }
+    .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media only screen and (min-width:768px) and (max-width:1024px) {
+    // conditional helpers
+    .ipad-only { display:inline-block !important; }
+    .hide-on-ipad { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-ipad { @include helper_reset(); }
+    .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+@mixin small-tablet {
+  @media only screen and (max-width:767px) {
+    // responsive grid
+    @include grid-responsive();
+    // conditional helpers
+    .small-tablet-only { display:inline-block !important; }
+    .hide-on-small-tablet { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-small-tablet { @include helper_reset(); }
+    .no-padding-small-tablet, .no-pad-small-tablet { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width:480px) {
+    // responsive grid
+    @include grid-responsive(false);
+    // conditional helpers
+    .mobile-only { display:inline-block !important; }
+    .hide-on-mobile { display:none !important; }
+    .desktop-only { display:none !important; }
+    // spacer overrides
+    .zero-mobile { @include helper_reset(); }
+    .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
+    .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
+    @content;
+  }
+}
+
+
+///////////////////////
+//      desktop      //
 ///////////////////////
 @include desktop {
   // do not remove -- required for desktop helpers
 }
 
 
-
-
 ///////////////////////
-//       ipads       //
+//       ipad        //
 ///////////////////////
 @include ipad {
   // do not remove -- required for ipad helpers
 }
 
 
-
-
 ///////////////////////
-//   small tablets   //
+//    small tablet   //
 ///////////////////////
 @include small-tablet {
-  // do not remove -- required for small-tablet helpers and adaptations
-  @include grid-responsive();
   .nav, .nav.inline {
     width:100%;
     ul, ul.row {
@@ -113,7 +166,7 @@
       }
     }
   }
-  // hamburger menu
+  // hamburger menus
   .nav {
     &.menu {
       display:block;
@@ -189,26 +242,13 @@
       }
     }
   }
-  .zero-small-tablet {
-    @include helper_reset();
-  }
-  .no-pad-small-tablet {
-    @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left);
-  }
-  .no-gap-small-tablet {
-    @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left);
-  }
 }
 
 
-
-
 ///////////////////////
-//     handhelds     //
+//      mobile       //
 ///////////////////////
 @include mobile {
-  // do not remove -- required for mobile helpers and adaptations
-  @include grid-responsive(false);
   .tabs:not(.mobile) {
     > ul {
       li {
@@ -224,23 +264,4 @@
       }
     }
   }
-  .zero-mobile {
-    @include helper_reset();
-  }
-  .no-pad-mobile {
-    @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left);
-  }
-  .no-gap-mobile {
-    @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left);
-  }
 }
-
-
-
-
-///////////////////////
-//  small handhelds  //
-///////////////////////
-// @include small-mobile {
-
-// }

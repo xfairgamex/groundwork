@@ -32,16 +32,16 @@
   background:white;
   border:1px solid $border-color;
   @include rounded($radius);
-  &%error, &%invalid {
-    color:$error-color;
-    background:lighten($error-color, 62%);
-    border-color:$error-color;
-  }
-  &%success, &%valid {
-    color:$success-color;
-    background:lighten($success-color, 62%);
-    border-color:$success-color;
-  }
+}
+%error-field, %invalid-field {
+  color:$error-color;
+  background:lighten($error-color, 62%);
+  border-color:$error-color;
+}
+%success-field, %valid-field {
+  color:$success-color;
+  background:lighten($success-color, 62%);
+  border-color:$success-color;
 }
 %input {
   @extend %field;
@@ -61,30 +61,30 @@
 %textarea {
   height:10em;
 }
-%error {
-  %field {
-    background:$error-background;
-    color:$error-color;
-    border-color:$error-border;
-  }
-  %prefix, %suffix {
-    color:lighten($error-color, 62%);;
-    background:$error-color;
-    border-color:$error-color;
-  }
-}
-%success {
-  %field {
-    background:$success-background;
-    color:$success-color;
-    border-color:$success-border;
-  }
-  %prefix, %suffix {
-    color:lighten($success-color, 62%);;
-    background:$success-color;
-    border-color:$success-color;
-  }
-}
+// %error {
+//   %field {
+//     background:$error-background;
+//     color:$error-color;
+//     border-color:$error-border;
+//   }
+//   %prefix, %suffix {
+//     color:lighten($error-color, 62%);;
+//     background:$error-color;
+//     border-color:$error-color;
+//   }
+// }
+// %success {
+//   %field {
+//     background:$success-background;
+//     color:$success-color;
+//     border-color:$success-border;
+//   }
+//   %prefix, %suffix {
+//     color:lighten($success-color, 62%);;
+//     background:$success-color;
+//     border-color:$success-color;
+//   }
+// }
 %select-wrap {
   display:block;
   color:gray;
@@ -106,25 +106,25 @@
     right:0;
     background:darken(white, 12.5%);
   }
-  %select {
-    -ms-appearance:none;
-    -o-appearance:none;
-    -moz-appearance:none;
-    -webkit-appearance:none;
-    appearance:none;
-    border:none;
-    background:none;
-    padding:0.4em;
-    font-family:monospace;
-    font-size:1em;
-    line-height:1.5;
-    height:2.25em;
-    padding-right:2.5em;
-    position:relative;
-    z-index:2;
-    &.unselected {
-      color:#999;
-    }
+}
+%select {
+  -ms-appearance:none;
+  -o-appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  appearance:none;
+  border:none;
+  background:none;
+  padding:0.4em;
+  font-family:monospace;
+  font-size:1em;
+  line-height:1.5;
+  height:2.25em;
+  padding-right:2.5em;
+  position:relative;
+  z-index:2;
+  &.unselected {
+    color:#999;
   }
 }
 %radio-list {
@@ -216,10 +216,10 @@
     @extend %radio-list;
   }
   .error, .invalid {
-    @extend %error;
+    @extend %error-field;
   }
   .success, .valid {
-    @extend %success;
+    @extend %success-field;
   }
   .prefix {
     @extend %prefix;

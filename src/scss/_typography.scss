@@ -179,7 +179,11 @@
 %b, %bold, %strong { font-weight:900; }
 %sup { font-size:0.8em; }
 %sub { font-size:0.8em; }
+%monospace {
+  font-family:monospace;
+}
 %code {
+  @extend %monospace;
 	white-space:pre-wrap;
 	word-wrap:break-word;
 	min-height:1em;
@@ -192,6 +196,7 @@
 	line-height:inherit;
 }
 %pre {
+  @extend %monospace;
 	$border:2.6em;
 	color:white;
 	background:#050505;
@@ -200,7 +205,7 @@
 	display:block;
 	border-left:#{$border} solid gray;
 	counter-reset:linenumber;
-	code {
+	%code {
     display:block;
 		background:inherit;
 		margin:0;

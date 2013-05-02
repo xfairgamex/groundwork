@@ -233,7 +233,7 @@
   .clear, .clearfix { @extend %clear;
     &:after         { content:''; display:block; clear:both; }
   }
-  .disabled         { @include state(disabled,textOnly); }
+  .disabled         { @extend %disabled; }
   .stick            { @extend %stick;
     &.top           { @extend %top; }
     &.right         { @extend %right; }
