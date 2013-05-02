@@ -108,9 +108,11 @@
     @include callout_modifiers;
   }
 }
+
 @if $aria {
   [role~=status] {
     @extend %callout;
+    
     @if $classes {
       @include callout_modifiers;
     }

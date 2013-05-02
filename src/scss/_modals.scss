@@ -101,11 +101,13 @@ div%modal {
     left:10px;
   }
 }
+
 @if $classes {
   div.modal {
     @extend div%modal;
   }
 }
+
 @if $aria {
   div[role~=dialog] {
     @extend div%modal;

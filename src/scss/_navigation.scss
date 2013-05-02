@@ -378,11 +378,13 @@
     }
   }
 }
+
 @if $tags {
   nav {
     @extend %nav;
   }
 }
+
 @if $classes {
   .nav {
     @extend %nav;

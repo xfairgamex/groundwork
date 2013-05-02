@@ -4097,36 +4097,39 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 .tabs, [role~=tabpanel] {
   position: relative;
 }
-.tabs > ul, .tabs > ol, .tabs [role~=tablist], [role~=tabpanel] > ul, [role~=tabpanel] > ol, [role~=tabpanel] [role~=tablist] {
+
+.tabs > ul, .tabs > ol, [role~=tabpanel] [role~=tablist] {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.tabs > ul:after, .tabs > ol:after, .tabs [role~=tablist]:after, [role~=tabpanel] > ul:after, [role~=tabpanel] > ol:after, [role~=tabpanel] [role~=tablist]:after {
+.tabs > ul:after, .tabs > ol:after, [role~=tabpanel] [role~=tablist]:after {
   content: '';
   display: block;
   clear: both;
 }
-.tabs > ul li, .tabs > ul [role~=tab], .tabs > ol li, .tabs > ol [role~=tab], .tabs [role~=tablist] li, .tabs [role~=tablist] [role~=tab], [role~=tabpanel] > ul li, [role~=tabpanel] > ul [role~=tab], [role~=tabpanel] > ol li, [role~=tabpanel] > ol [role~=tab], [role~=tabpanel] [role~=tablist] li, [role~=tabpanel] [role~=tablist] [role~=tab] {
+
+.tabs > ul li, .tabs > ol li, [role~=tabpanel] [role~=tablist] [role~=tab] {
   display: block;
   float: left;
   margin: 0 2px;
 }
-.tabs > ul li.pull-right, .tabs > ul [role~=tab].pull-right, .tabs > ol li.pull-right, .tabs > ol [role~=tab].pull-right, .tabs [role~=tablist] li.pull-right, .tabs [role~=tablist] [role~=tab].pull-right, [role~=tabpanel] > ul li.pull-right, [role~=tabpanel] > ul [role~=tab].pull-right, [role~=tabpanel] > ol li.pull-right, [role~=tabpanel] > ol [role~=tab].pull-right, [role~=tabpanel] [role~=tablist] li.pull-right, [role~=tabpanel] [role~=tablist] [role~=tab].pull-right {
+.tabs > ul li.pull-right, .tabs > ol li.pull-right, [role~=tabpanel] [role~=tablist] .pull-right[role~=tab] {
   float: right;
 }
-.tabs > ul li.pull-left, .tabs > ul [role~=tab].pull-left, .tabs > ol li.pull-left, .tabs > ol [role~=tab].pull-left, .tabs [role~=tablist] li.pull-left, .tabs [role~=tablist] [role~=tab].pull-left, [role~=tabpanel] > ul li.pull-left, [role~=tabpanel] > ul [role~=tab].pull-left, [role~=tabpanel] > ol li.pull-left, [role~=tabpanel] > ol [role~=tab].pull-left, [role~=tabpanel] [role~=tablist] li.pull-left, [role~=tabpanel] [role~=tablist] [role~=tab].pull-left {
+.tabs > ul li.pull-left, .tabs > ol li.pull-left, [role~=tabpanel] [role~=tablist] .pull-left[role~=tab] {
   float: left;
 }
-.tabs > ul li:first-child, .tabs > ul [role~=tab]:first-child, .tabs > ol li:first-child, .tabs > ol [role~=tab]:first-child, .tabs [role~=tablist] li:first-child, .tabs [role~=tablist] [role~=tab]:first-child, [role~=tabpanel] > ul li:first-child, [role~=tabpanel] > ul [role~=tab]:first-child, [role~=tabpanel] > ol li:first-child, [role~=tabpanel] > ol [role~=tab]:first-child, [role~=tabpanel] [role~=tablist] li:first-child, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child {
+.tabs > ul li:first-child, .tabs > ol li:first-child, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child {
   margin-left: 0;
 }
-.tabs > ul li:first-child a:before, .tabs > ul li:first-child a:visited:before, .tabs > ul [role~=tab]:first-child a:before, .tabs > ul [role~=tab]:first-child a:visited:before, .tabs > ol li:first-child a:before, .tabs > ol li:first-child a:visited:before, .tabs > ol [role~=tab]:first-child a:before, .tabs > ol [role~=tab]:first-child a:visited:before, .tabs [role~=tablist] li:first-child a:before, .tabs [role~=tablist] li:first-child a:visited:before, .tabs [role~=tablist] [role~=tab]:first-child a:before, .tabs [role~=tablist] [role~=tab]:first-child a:visited:before, [role~=tabpanel] > ul li:first-child a:before, [role~=tabpanel] > ul li:first-child a:visited:before, [role~=tabpanel] > ul [role~=tab]:first-child a:before, [role~=tabpanel] > ul [role~=tab]:first-child a:visited:before, [role~=tabpanel] > ol li:first-child a:before, [role~=tabpanel] > ol li:first-child a:visited:before, [role~=tabpanel] > ol [role~=tab]:first-child a:before, [role~=tabpanel] > ol [role~=tab]:first-child a:visited:before, [role~=tabpanel] [role~=tablist] li:first-child a:before, [role~=tabpanel] [role~=tablist] li:first-child a:visited:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:visited:before {
+.tabs > ul li:first-child a:before, .tabs > ol li:first-child a:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:before, .tabs > ul li:first-child a:visited:before, .tabs > ol li:first-child a:visited:before, [role~=tabpanel] [role~=tablist] [role~=tab]:first-child a:visited:before {
   display: none;
 }
-.tabs > ul li a, .tabs > ul li a:visited, .tabs > ul [role~=tab] a, .tabs > ul [role~=tab] a:visited, .tabs > ol li a, .tabs > ol li a:visited, .tabs > ol [role~=tab] a, .tabs > ol [role~=tab] a:visited, .tabs [role~=tablist] li a, .tabs [role~=tablist] li a:visited, .tabs [role~=tablist] [role~=tab] a, .tabs [role~=tablist] [role~=tab] a:visited, [role~=tabpanel] > ul li a, [role~=tabpanel] > ul li a:visited, [role~=tabpanel] > ul [role~=tab] a, [role~=tabpanel] > ul [role~=tab] a:visited, [role~=tabpanel] > ol li a, [role~=tabpanel] > ol li a:visited, [role~=tabpanel] > ol [role~=tab] a, [role~=tabpanel] > ol [role~=tab] a:visited, [role~=tabpanel] [role~=tablist] li a, [role~=tabpanel] [role~=tablist] li a:visited, [role~=tabpanel] [role~=tablist] [role~=tab] a, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited {
+
+.tabs > ul li a, .tabs > ol li a {
   display: block;
   position: relative;
   width: 100%;
@@ -4153,31 +4156,31 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-.tabs > ul li a:hover, .tabs > ul li a:focus, .tabs > ul li a:visited:hover, .tabs > ul li a:visited:focus, .tabs > ul [role~=tab] a:hover, .tabs > ul [role~=tab] a:focus, .tabs > ul [role~=tab] a:visited:hover, .tabs > ul [role~=tab] a:visited:focus, .tabs > ol li a:hover, .tabs > ol li a:focus, .tabs > ol li a:visited:hover, .tabs > ol li a:visited:focus, .tabs > ol [role~=tab] a:hover, .tabs > ol [role~=tab] a:focus, .tabs > ol [role~=tab] a:visited:hover, .tabs > ol [role~=tab] a:visited:focus, .tabs [role~=tablist] li a:hover, .tabs [role~=tablist] li a:focus, .tabs [role~=tablist] li a:visited:hover, .tabs [role~=tablist] li a:visited:focus, .tabs [role~=tablist] [role~=tab] a:hover, .tabs [role~=tablist] [role~=tab] a:focus, .tabs [role~=tablist] [role~=tab] a:visited:hover, .tabs [role~=tablist] [role~=tab] a:visited:focus, [role~=tabpanel] > ul li a:hover, [role~=tabpanel] > ul li a:focus, [role~=tabpanel] > ul li a:visited:hover, [role~=tabpanel] > ul li a:visited:focus, [role~=tabpanel] > ul [role~=tab] a:hover, [role~=tabpanel] > ul [role~=tab] a:focus, [role~=tabpanel] > ul [role~=tab] a:visited:hover, [role~=tabpanel] > ul [role~=tab] a:visited:focus, [role~=tabpanel] > ol li a:hover, [role~=tabpanel] > ol li a:focus, [role~=tabpanel] > ol li a:visited:hover, [role~=tabpanel] > ol li a:visited:focus, [role~=tabpanel] > ol [role~=tab] a:hover, [role~=tabpanel] > ol [role~=tab] a:focus, [role~=tabpanel] > ol [role~=tab] a:visited:hover, [role~=tabpanel] > ol [role~=tab] a:visited:focus, [role~=tabpanel] [role~=tablist] li a:hover, [role~=tabpanel] [role~=tablist] li a:focus, [role~=tabpanel] [role~=tablist] li a:visited:hover, [role~=tabpanel] [role~=tablist] li a:visited:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:focus {
+.tabs > ul li a:hover, .tabs > ol li a:hover, .tabs > ul li a:focus, .tabs > ol li a:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   text-decoration: none;
 }
-.tabs > ul li a:hover:before, .tabs > ul li a:focus:before, .tabs > ul li a:visited:hover:before, .tabs > ul li a:visited:focus:before, .tabs > ul [role~=tab] a:hover:before, .tabs > ul [role~=tab] a:focus:before, .tabs > ul [role~=tab] a:visited:hover:before, .tabs > ul [role~=tab] a:visited:focus:before, .tabs > ol li a:hover:before, .tabs > ol li a:focus:before, .tabs > ol li a:visited:hover:before, .tabs > ol li a:visited:focus:before, .tabs > ol [role~=tab] a:hover:before, .tabs > ol [role~=tab] a:focus:before, .tabs > ol [role~=tab] a:visited:hover:before, .tabs > ol [role~=tab] a:visited:focus:before, .tabs [role~=tablist] li a:hover:before, .tabs [role~=tablist] li a:focus:before, .tabs [role~=tablist] li a:visited:hover:before, .tabs [role~=tablist] li a:visited:focus:before, .tabs [role~=tablist] [role~=tab] a:hover:before, .tabs [role~=tablist] [role~=tab] a:focus:before, .tabs [role~=tablist] [role~=tab] a:visited:hover:before, .tabs [role~=tablist] [role~=tab] a:visited:focus:before, [role~=tabpanel] > ul li a:hover:before, [role~=tabpanel] > ul li a:focus:before, [role~=tabpanel] > ul li a:visited:hover:before, [role~=tabpanel] > ul li a:visited:focus:before, [role~=tabpanel] > ul [role~=tab] a:hover:before, [role~=tabpanel] > ul [role~=tab] a:focus:before, [role~=tabpanel] > ul [role~=tab] a:visited:hover:before, [role~=tabpanel] > ul [role~=tab] a:visited:focus:before, [role~=tabpanel] > ol li a:hover:before, [role~=tabpanel] > ol li a:focus:before, [role~=tabpanel] > ol li a:visited:hover:before, [role~=tabpanel] > ol li a:visited:focus:before, [role~=tabpanel] > ol [role~=tab] a:hover:before, [role~=tabpanel] > ol [role~=tab] a:focus:before, [role~=tabpanel] > ol [role~=tab] a:visited:hover:before, [role~=tabpanel] > ol [role~=tab] a:visited:focus:before, [role~=tabpanel] [role~=tablist] li a:hover:before, [role~=tabpanel] [role~=tablist] li a:focus:before, [role~=tabpanel] [role~=tablist] li a:visited:hover:before, [role~=tabpanel] [role~=tablist] li a:visited:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:focus:before {
+.tabs > ul li a:hover:before, .tabs > ol li a:hover:before, .tabs > ul li a:focus:before, .tabs > ol li a:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a:hover:after, .tabs > ul li a:focus:after, .tabs > ul li a:visited:hover:after, .tabs > ul li a:visited:focus:after, .tabs > ul [role~=tab] a:hover:after, .tabs > ul [role~=tab] a:focus:after, .tabs > ul [role~=tab] a:visited:hover:after, .tabs > ul [role~=tab] a:visited:focus:after, .tabs > ol li a:hover:after, .tabs > ol li a:focus:after, .tabs > ol li a:visited:hover:after, .tabs > ol li a:visited:focus:after, .tabs > ol [role~=tab] a:hover:after, .tabs > ol [role~=tab] a:focus:after, .tabs > ol [role~=tab] a:visited:hover:after, .tabs > ol [role~=tab] a:visited:focus:after, .tabs [role~=tablist] li a:hover:after, .tabs [role~=tablist] li a:focus:after, .tabs [role~=tablist] li a:visited:hover:after, .tabs [role~=tablist] li a:visited:focus:after, .tabs [role~=tablist] [role~=tab] a:hover:after, .tabs [role~=tablist] [role~=tab] a:focus:after, .tabs [role~=tablist] [role~=tab] a:visited:hover:after, .tabs [role~=tablist] [role~=tab] a:visited:focus:after, [role~=tabpanel] > ul li a:hover:after, [role~=tabpanel] > ul li a:focus:after, [role~=tabpanel] > ul li a:visited:hover:after, [role~=tabpanel] > ul li a:visited:focus:after, [role~=tabpanel] > ul [role~=tab] a:hover:after, [role~=tabpanel] > ul [role~=tab] a:focus:after, [role~=tabpanel] > ul [role~=tab] a:visited:hover:after, [role~=tabpanel] > ul [role~=tab] a:visited:focus:after, [role~=tabpanel] > ol li a:hover:after, [role~=tabpanel] > ol li a:focus:after, [role~=tabpanel] > ol li a:visited:hover:after, [role~=tabpanel] > ol li a:visited:focus:after, [role~=tabpanel] > ol [role~=tab] a:hover:after, [role~=tabpanel] > ol [role~=tab] a:focus:after, [role~=tabpanel] > ol [role~=tab] a:visited:hover:after, [role~=tabpanel] > ol [role~=tab] a:visited:focus:after, [role~=tabpanel] [role~=tablist] li a:hover:after, [role~=tabpanel] [role~=tablist] li a:focus:after, [role~=tabpanel] [role~=tablist] li a:visited:hover:after, [role~=tabpanel] [role~=tablist] li a:visited:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:focus:after {
+.tabs > ul li a:hover:after, .tabs > ol li a:hover:after, .tabs > ul li a:focus:after, .tabs > ol li a:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.active, .tabs > ul li a.active:hover, .tabs > ul li a.active:focus, .tabs > ul li a:visited.active, .tabs > ul li a:visited.active:hover, .tabs > ul li a:visited.active:focus, .tabs > ul [role~=tab] a.active, .tabs > ul [role~=tab] a.active:hover, .tabs > ul [role~=tab] a.active:focus, .tabs > ul [role~=tab] a:visited.active, .tabs > ul [role~=tab] a:visited.active:hover, .tabs > ul [role~=tab] a:visited.active:focus, .tabs > ol li a.active, .tabs > ol li a.active:hover, .tabs > ol li a.active:focus, .tabs > ol li a:visited.active, .tabs > ol li a:visited.active:hover, .tabs > ol li a:visited.active:focus, .tabs > ol [role~=tab] a.active, .tabs > ol [role~=tab] a.active:hover, .tabs > ol [role~=tab] a.active:focus, .tabs > ol [role~=tab] a:visited.active, .tabs > ol [role~=tab] a:visited.active:hover, .tabs > ol [role~=tab] a:visited.active:focus, .tabs [role~=tablist] li a.active, .tabs [role~=tablist] li a.active:hover, .tabs [role~=tablist] li a.active:focus, .tabs [role~=tablist] li a:visited.active, .tabs [role~=tablist] li a:visited.active:hover, .tabs [role~=tablist] li a:visited.active:focus, .tabs [role~=tablist] [role~=tab] a.active, .tabs [role~=tablist] [role~=tab] a.active:hover, .tabs [role~=tablist] [role~=tab] a.active:focus, .tabs [role~=tablist] [role~=tab] a:visited.active, .tabs [role~=tablist] [role~=tab] a:visited.active:hover, .tabs [role~=tablist] [role~=tab] a:visited.active:focus, [role~=tabpanel] > ul li a.active, [role~=tabpanel] > ul li a.active:hover, [role~=tabpanel] > ul li a.active:focus, [role~=tabpanel] > ul li a:visited.active, [role~=tabpanel] > ul li a:visited.active:hover, [role~=tabpanel] > ul li a:visited.active:focus, [role~=tabpanel] > ul [role~=tab] a.active, [role~=tabpanel] > ul [role~=tab] a.active:hover, [role~=tabpanel] > ul [role~=tab] a.active:focus, [role~=tabpanel] > ul [role~=tab] a:visited.active, [role~=tabpanel] > ul [role~=tab] a:visited.active:hover, [role~=tabpanel] > ul [role~=tab] a:visited.active:focus, [role~=tabpanel] > ol li a.active, [role~=tabpanel] > ol li a.active:hover, [role~=tabpanel] > ol li a.active:focus, [role~=tabpanel] > ol li a:visited.active, [role~=tabpanel] > ol li a:visited.active:hover, [role~=tabpanel] > ol li a:visited.active:focus, [role~=tabpanel] > ol [role~=tab] a.active, [role~=tabpanel] > ol [role~=tab] a.active:hover, [role~=tabpanel] > ol [role~=tab] a.active:focus, [role~=tabpanel] > ol [role~=tab] a:visited.active, [role~=tabpanel] > ol [role~=tab] a:visited.active:hover, [role~=tabpanel] > ol [role~=tab] a:visited.active:focus, [role~=tabpanel] [role~=tablist] li a.active, [role~=tabpanel] [role~=tablist] li a.active:hover, [role~=tabpanel] [role~=tablist] li a.active:focus, [role~=tabpanel] [role~=tablist] li a:visited.active, [role~=tabpanel] [role~=tablist] li a:visited.active:hover, [role~=tabpanel] [role~=tablist] li a:visited.active:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a.active, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:focus {
+.tabs > ul li a.active, .tabs > ol li a.active, .tabs > ul li a.active:hover, .tabs > ol li a.active:hover, .tabs > ul li a.active:focus, .tabs > ol li a.active:focus {
   background: #198d98;
   border: 1px solid #198d98;
   color: white;
   z-index: 2;
 }
-.tabs > ul li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ul li a:visited.active:before, .tabs > ul li a:visited.active:hover:before, .tabs > ul li a:visited.active:focus:before, .tabs > ul [role~=tab] a.active:before, .tabs > ul [role~=tab] a.active:hover:before, .tabs > ul [role~=tab] a.active:focus:before, .tabs > ul [role~=tab] a:visited.active:before, .tabs > ul [role~=tab] a:visited.active:hover:before, .tabs > ul [role~=tab] a:visited.active:focus:before, .tabs > ol li a.active:before, .tabs > ol li a.active:hover:before, .tabs > ol li a.active:focus:before, .tabs > ol li a:visited.active:before, .tabs > ol li a:visited.active:hover:before, .tabs > ol li a:visited.active:focus:before, .tabs > ol [role~=tab] a.active:before, .tabs > ol [role~=tab] a.active:hover:before, .tabs > ol [role~=tab] a.active:focus:before, .tabs > ol [role~=tab] a:visited.active:before, .tabs > ol [role~=tab] a:visited.active:hover:before, .tabs > ol [role~=tab] a:visited.active:focus:before, .tabs [role~=tablist] li a.active:before, .tabs [role~=tablist] li a.active:hover:before, .tabs [role~=tablist] li a.active:focus:before, .tabs [role~=tablist] li a:visited.active:before, .tabs [role~=tablist] li a:visited.active:hover:before, .tabs [role~=tablist] li a:visited.active:focus:before, .tabs [role~=tablist] [role~=tab] a.active:before, .tabs [role~=tablist] [role~=tab] a.active:hover:before, .tabs [role~=tablist] [role~=tab] a.active:focus:before, .tabs [role~=tablist] [role~=tab] a:visited.active:before, .tabs [role~=tablist] [role~=tab] a:visited.active:hover:before, .tabs [role~=tablist] [role~=tab] a:visited.active:focus:before, [role~=tabpanel] > ul li a.active:before, [role~=tabpanel] > ul li a.active:hover:before, [role~=tabpanel] > ul li a.active:focus:before, [role~=tabpanel] > ul li a:visited.active:before, [role~=tabpanel] > ul li a:visited.active:hover:before, [role~=tabpanel] > ul li a:visited.active:focus:before, [role~=tabpanel] > ul [role~=tab] a.active:before, [role~=tabpanel] > ul [role~=tab] a.active:hover:before, [role~=tabpanel] > ul [role~=tab] a.active:focus:before, [role~=tabpanel] > ul [role~=tab] a:visited.active:before, [role~=tabpanel] > ul [role~=tab] a:visited.active:hover:before, [role~=tabpanel] > ul [role~=tab] a:visited.active:focus:before, [role~=tabpanel] > ol li a.active:before, [role~=tabpanel] > ol li a.active:hover:before, [role~=tabpanel] > ol li a.active:focus:before, [role~=tabpanel] > ol li a:visited.active:before, [role~=tabpanel] > ol li a:visited.active:hover:before, [role~=tabpanel] > ol li a:visited.active:focus:before, [role~=tabpanel] > ol [role~=tab] a.active:before, [role~=tabpanel] > ol [role~=tab] a.active:hover:before, [role~=tabpanel] > ol [role~=tab] a.active:focus:before, [role~=tabpanel] > ol [role~=tab] a:visited.active:before, [role~=tabpanel] > ol [role~=tab] a:visited.active:hover:before, [role~=tabpanel] > ol [role~=tab] a:visited.active:focus:before, [role~=tabpanel] [role~=tablist] li a.active:before, [role~=tabpanel] [role~=tablist] li a.active:hover:before, [role~=tabpanel] [role~=tablist] li a.active:focus:before, [role~=tabpanel] [role~=tablist] li a:visited.active:before, [role~=tabpanel] [role~=tablist] li a:visited.active:hover:before, [role~=tabpanel] [role~=tablist] li a:visited.active:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:hover:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:focus:before {
+.tabs > ul li a.active:before, .tabs > ol li a.active:before, .tabs > ul li a.active:hover:before, .tabs > ol li a.active:hover:before, .tabs > ul li a.active:focus:before, .tabs > ol li a.active:focus:before {
   box-shadow: 2px 1px 0 #198d98;
 }
-.tabs > ul li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ul li a:visited.active:after, .tabs > ul li a:visited.active:hover:after, .tabs > ul li a:visited.active:focus:after, .tabs > ul [role~=tab] a.active:after, .tabs > ul [role~=tab] a.active:hover:after, .tabs > ul [role~=tab] a.active:focus:after, .tabs > ul [role~=tab] a:visited.active:after, .tabs > ul [role~=tab] a:visited.active:hover:after, .tabs > ul [role~=tab] a:visited.active:focus:after, .tabs > ol li a.active:after, .tabs > ol li a.active:hover:after, .tabs > ol li a.active:focus:after, .tabs > ol li a:visited.active:after, .tabs > ol li a:visited.active:hover:after, .tabs > ol li a:visited.active:focus:after, .tabs > ol [role~=tab] a.active:after, .tabs > ol [role~=tab] a.active:hover:after, .tabs > ol [role~=tab] a.active:focus:after, .tabs > ol [role~=tab] a:visited.active:after, .tabs > ol [role~=tab] a:visited.active:hover:after, .tabs > ol [role~=tab] a:visited.active:focus:after, .tabs [role~=tablist] li a.active:after, .tabs [role~=tablist] li a.active:hover:after, .tabs [role~=tablist] li a.active:focus:after, .tabs [role~=tablist] li a:visited.active:after, .tabs [role~=tablist] li a:visited.active:hover:after, .tabs [role~=tablist] li a:visited.active:focus:after, .tabs [role~=tablist] [role~=tab] a.active:after, .tabs [role~=tablist] [role~=tab] a.active:hover:after, .tabs [role~=tablist] [role~=tab] a.active:focus:after, .tabs [role~=tablist] [role~=tab] a:visited.active:after, .tabs [role~=tablist] [role~=tab] a:visited.active:hover:after, .tabs [role~=tablist] [role~=tab] a:visited.active:focus:after, [role~=tabpanel] > ul li a.active:after, [role~=tabpanel] > ul li a.active:hover:after, [role~=tabpanel] > ul li a.active:focus:after, [role~=tabpanel] > ul li a:visited.active:after, [role~=tabpanel] > ul li a:visited.active:hover:after, [role~=tabpanel] > ul li a:visited.active:focus:after, [role~=tabpanel] > ul [role~=tab] a.active:after, [role~=tabpanel] > ul [role~=tab] a.active:hover:after, [role~=tabpanel] > ul [role~=tab] a.active:focus:after, [role~=tabpanel] > ul [role~=tab] a:visited.active:after, [role~=tabpanel] > ul [role~=tab] a:visited.active:hover:after, [role~=tabpanel] > ul [role~=tab] a:visited.active:focus:after, [role~=tabpanel] > ol li a.active:after, [role~=tabpanel] > ol li a.active:hover:after, [role~=tabpanel] > ol li a.active:focus:after, [role~=tabpanel] > ol li a:visited.active:after, [role~=tabpanel] > ol li a:visited.active:hover:after, [role~=tabpanel] > ol li a:visited.active:focus:after, [role~=tabpanel] > ol [role~=tab] a.active:after, [role~=tabpanel] > ol [role~=tab] a.active:hover:after, [role~=tabpanel] > ol [role~=tab] a.active:focus:after, [role~=tabpanel] > ol [role~=tab] a:visited.active:after, [role~=tabpanel] > ol [role~=tab] a:visited.active:hover:after, [role~=tabpanel] > ol [role~=tab] a:visited.active:focus:after, [role~=tabpanel] [role~=tablist] li a.active:after, [role~=tabpanel] [role~=tablist] li a.active:hover:after, [role~=tabpanel] [role~=tablist] li a.active:focus:after, [role~=tabpanel] [role~=tablist] li a:visited.active:after, [role~=tabpanel] [role~=tablist] li a:visited.active:hover:after, [role~=tabpanel] [role~=tablist] li a:visited.active:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.active:focus:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:hover:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.active:focus:after {
+.tabs > ul li a.active:after, .tabs > ol li a.active:after, .tabs > ul li a.active:hover:after, .tabs > ol li a.active:hover:after, .tabs > ul li a.active:focus:after, .tabs > ol li a.active:focus:after {
   box-shadow: -2px 1px 0 #198d98;
 }
-.tabs > ul li a.disabled, .tabs > ul li a:visited.disabled, .tabs > ul [role~=tab] a.disabled, .tabs > ul [role~=tab] a:visited.disabled, .tabs > ol li a.disabled, .tabs > ol li a:visited.disabled, .tabs > ol [role~=tab] a.disabled, .tabs > ol [role~=tab] a:visited.disabled, .tabs [role~=tablist] li a.disabled, .tabs [role~=tablist] li a:visited.disabled, .tabs [role~=tablist] [role~=tab] a.disabled, .tabs [role~=tablist] [role~=tab] a:visited.disabled, [role~=tabpanel] > ul li a.disabled, [role~=tabpanel] > ul li a:visited.disabled, [role~=tabpanel] > ul [role~=tab] a.disabled, [role~=tabpanel] > ul [role~=tab] a:visited.disabled, [role~=tabpanel] > ol li a.disabled, [role~=tabpanel] > ol li a:visited.disabled, [role~=tabpanel] > ol [role~=tab] a.disabled, [role~=tabpanel] > ol [role~=tab] a:visited.disabled, [role~=tabpanel] [role~=tablist] li a.disabled, [role~=tabpanel] [role~=tablist] li a:visited.disabled, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled {
+.tabs > ul li a.disabled, .tabs > ol li a.disabled {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4186,7 +4189,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   outline: none;
   border-bottom-color: #57c1cb !important;
 }
-.tabs > ul li a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ul li a:visited.disabled:hover, .tabs > ul li a:visited.disabled:focus, .tabs > ul li a:visited.disabled:visited, .tabs > ul [role~=tab] a.disabled:hover, .tabs > ul [role~=tab] a.disabled:focus, .tabs > ul [role~=tab] a.disabled:visited, .tabs > ul [role~=tab] a:visited.disabled:hover, .tabs > ul [role~=tab] a:visited.disabled:focus, .tabs > ul [role~=tab] a:visited.disabled:visited, .tabs > ol li a.disabled:hover, .tabs > ol li a.disabled:focus, .tabs > ol li a.disabled:visited, .tabs > ol li a:visited.disabled:hover, .tabs > ol li a:visited.disabled:focus, .tabs > ol li a:visited.disabled:visited, .tabs > ol [role~=tab] a.disabled:hover, .tabs > ol [role~=tab] a.disabled:focus, .tabs > ol [role~=tab] a.disabled:visited, .tabs > ol [role~=tab] a:visited.disabled:hover, .tabs > ol [role~=tab] a:visited.disabled:focus, .tabs > ol [role~=tab] a:visited.disabled:visited, .tabs [role~=tablist] li a.disabled:hover, .tabs [role~=tablist] li a.disabled:focus, .tabs [role~=tablist] li a.disabled:visited, .tabs [role~=tablist] li a:visited.disabled:hover, .tabs [role~=tablist] li a:visited.disabled:focus, .tabs [role~=tablist] li a:visited.disabled:visited, .tabs [role~=tablist] [role~=tab] a.disabled:hover, .tabs [role~=tablist] [role~=tab] a.disabled:focus, .tabs [role~=tablist] [role~=tab] a.disabled:visited, .tabs [role~=tablist] [role~=tab] a:visited.disabled:hover, .tabs [role~=tablist] [role~=tab] a:visited.disabled:focus, .tabs [role~=tablist] [role~=tab] a:visited.disabled:visited, [role~=tabpanel] > ul li a.disabled:hover, [role~=tabpanel] > ul li a.disabled:focus, [role~=tabpanel] > ul li a.disabled:visited, [role~=tabpanel] > ul li a:visited.disabled:hover, [role~=tabpanel] > ul li a:visited.disabled:focus, [role~=tabpanel] > ul li a:visited.disabled:visited, [role~=tabpanel] > ul [role~=tab] a.disabled:hover, [role~=tabpanel] > ul [role~=tab] a.disabled:focus, [role~=tabpanel] > ul [role~=tab] a.disabled:visited, [role~=tabpanel] > ul [role~=tab] a:visited.disabled:hover, [role~=tabpanel] > ul [role~=tab] a:visited.disabled:focus, [role~=tabpanel] > ul [role~=tab] a:visited.disabled:visited, [role~=tabpanel] > ol li a.disabled:hover, [role~=tabpanel] > ol li a.disabled:focus, [role~=tabpanel] > ol li a.disabled:visited, [role~=tabpanel] > ol li a:visited.disabled:hover, [role~=tabpanel] > ol li a:visited.disabled:focus, [role~=tabpanel] > ol li a:visited.disabled:visited, [role~=tabpanel] > ol [role~=tab] a.disabled:hover, [role~=tabpanel] > ol [role~=tab] a.disabled:focus, [role~=tabpanel] > ol [role~=tab] a.disabled:visited, [role~=tabpanel] > ol [role~=tab] a:visited.disabled:hover, [role~=tabpanel] > ol [role~=tab] a:visited.disabled:focus, [role~=tabpanel] > ol [role~=tab] a:visited.disabled:visited, [role~=tabpanel] [role~=tablist] li a.disabled:hover, [role~=tabpanel] [role~=tablist] li a.disabled:focus, [role~=tabpanel] [role~=tablist] li a.disabled:visited, [role~=tabpanel] [role~=tablist] li a:visited.disabled:hover, [role~=tabpanel] [role~=tablist] li a:visited.disabled:focus, [role~=tabpanel] [role~=tablist] li a:visited.disabled:visited, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:visited, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled:hover, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled:focus, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled:visited {
+.tabs > ul li a.disabled:hover, .tabs > ol li a.disabled:hover, .tabs > ul li a.disabled:focus, .tabs > ol li a.disabled:focus, .tabs > ul li a.disabled:visited, .tabs > ol li a.disabled:visited {
   color: #a4dee3;
   background: #57c1cb;
   border-color: #3299a3;
@@ -4194,35 +4197,33 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   text-decoration: none;
   outline: none;
 }
-.tabs > ul li a.disabled:before, .tabs > ul li a:visited.disabled:before, .tabs > ul [role~=tab] a.disabled:before, .tabs > ul [role~=tab] a:visited.disabled:before, .tabs > ol li a.disabled:before, .tabs > ol li a:visited.disabled:before, .tabs > ol [role~=tab] a.disabled:before, .tabs > ol [role~=tab] a:visited.disabled:before, .tabs [role~=tablist] li a.disabled:before, .tabs [role~=tablist] li a:visited.disabled:before, .tabs [role~=tablist] [role~=tab] a.disabled:before, .tabs [role~=tablist] [role~=tab] a:visited.disabled:before, [role~=tabpanel] > ul li a.disabled:before, [role~=tabpanel] > ul li a:visited.disabled:before, [role~=tabpanel] > ul [role~=tab] a.disabled:before, [role~=tabpanel] > ul [role~=tab] a:visited.disabled:before, [role~=tabpanel] > ol li a.disabled:before, [role~=tabpanel] > ol li a:visited.disabled:before, [role~=tabpanel] > ol [role~=tab] a.disabled:before, [role~=tabpanel] > ol [role~=tab] a:visited.disabled:before, [role~=tabpanel] [role~=tablist] li a.disabled:before, [role~=tabpanel] [role~=tablist] li a:visited.disabled:before, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled:before {
+.tabs > ul li a.disabled:before, .tabs > ol li a.disabled:before {
   box-shadow: 2px 1px 0 #57c1cb;
 }
-.tabs > ul li a.disabled:after, .tabs > ul li a:visited.disabled:after, .tabs > ul [role~=tab] a.disabled:after, .tabs > ul [role~=tab] a:visited.disabled:after, .tabs > ol li a.disabled:after, .tabs > ol li a:visited.disabled:after, .tabs > ol [role~=tab] a.disabled:after, .tabs > ol [role~=tab] a:visited.disabled:after, .tabs [role~=tablist] li a.disabled:after, .tabs [role~=tablist] li a:visited.disabled:after, .tabs [role~=tablist] [role~=tab] a.disabled:after, .tabs [role~=tablist] [role~=tab] a:visited.disabled:after, [role~=tabpanel] > ul li a.disabled:after, [role~=tabpanel] > ul li a:visited.disabled:after, [role~=tabpanel] > ul [role~=tab] a.disabled:after, [role~=tabpanel] > ul [role~=tab] a:visited.disabled:after, [role~=tabpanel] > ol li a.disabled:after, [role~=tabpanel] > ol li a:visited.disabled:after, [role~=tabpanel] > ol [role~=tab] a.disabled:after, [role~=tabpanel] > ol [role~=tab] a:visited.disabled:after, [role~=tabpanel] [role~=tablist] li a.disabled:after, [role~=tabpanel] [role~=tablist] li a:visited.disabled:after, [role~=tabpanel] [role~=tablist] [role~=tab] a.disabled:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited.disabled:after {
+.tabs > ul li a.disabled:after, .tabs > ol li a.disabled:after {
   box-shadow: -2px 1px 0 #57c1cb;
 }
-.tabs > ul li a:before, .tabs > ul li a:after, .tabs > ul li a:visited:before, .tabs > ul li a:visited:after, .tabs > ul [role~=tab] a:before, .tabs > ul [role~=tab] a:after, .tabs > ul [role~=tab] a:visited:before, .tabs > ul [role~=tab] a:visited:after, .tabs > ol li a:before, .tabs > ol li a:after, .tabs > ol li a:visited:before, .tabs > ol li a:visited:after, .tabs > ol [role~=tab] a:before, .tabs > ol [role~=tab] a:after, .tabs > ol [role~=tab] a:visited:before, .tabs > ol [role~=tab] a:visited:after, .tabs [role~=tablist] li a:before, .tabs [role~=tablist] li a:after, .tabs [role~=tablist] li a:visited:before, .tabs [role~=tablist] li a:visited:after, .tabs [role~=tablist] [role~=tab] a:before, .tabs [role~=tablist] [role~=tab] a:after, .tabs [role~=tablist] [role~=tab] a:visited:before, .tabs [role~=tablist] [role~=tab] a:visited:after, [role~=tabpanel] > ul li a:before, [role~=tabpanel] > ul li a:after, [role~=tabpanel] > ul li a:visited:before, [role~=tabpanel] > ul li a:visited:after, [role~=tabpanel] > ul [role~=tab] a:before, [role~=tabpanel] > ul [role~=tab] a:after, [role~=tabpanel] > ul [role~=tab] a:visited:before, [role~=tabpanel] > ul [role~=tab] a:visited:after, [role~=tabpanel] > ol li a:before, [role~=tabpanel] > ol li a:after, [role~=tabpanel] > ol li a:visited:before, [role~=tabpanel] > ol li a:visited:after, [role~=tabpanel] > ol [role~=tab] a:before, [role~=tabpanel] > ol [role~=tab] a:after, [role~=tabpanel] > ol [role~=tab] a:visited:before, [role~=tabpanel] > ol [role~=tab] a:visited:after, [role~=tabpanel] [role~=tablist] li a:before, [role~=tabpanel] [role~=tablist] li a:after, [role~=tabpanel] [role~=tablist] li a:visited:before, [role~=tabpanel] [role~=tablist] li a:visited:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:after {
+.tabs > ul li a:before, .tabs > ol li a:before, .tabs > ul li a:after, .tabs > ol li a:after {
   position: absolute;
   bottom: -1px;
   width: 6px;
   height: 6px;
   content: '';
 }
-.tabs > ul li a:before, .tabs > ul li a:visited:before, .tabs > ul [role~=tab] a:before, .tabs > ul [role~=tab] a:visited:before, .tabs > ol li a:before, .tabs > ol li a:visited:before, .tabs > ol [role~=tab] a:before, .tabs > ol [role~=tab] a:visited:before, .tabs [role~=tablist] li a:before, .tabs [role~=tablist] li a:visited:before, .tabs [role~=tablist] [role~=tab] a:before, .tabs [role~=tablist] [role~=tab] a:visited:before, [role~=tabpanel] > ul li a:before, [role~=tabpanel] > ul li a:visited:before, [role~=tabpanel] > ul [role~=tab] a:before, [role~=tabpanel] > ul [role~=tab] a:visited:before, [role~=tabpanel] > ol li a:before, [role~=tabpanel] > ol li a:visited:before, [role~=tabpanel] > ol [role~=tab] a:before, [role~=tabpanel] > ol [role~=tab] a:visited:before, [role~=tabpanel] [role~=tablist] li a:before, [role~=tabpanel] [role~=tablist] li a:visited:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:before, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:before {
+.tabs > ul li a:before, .tabs > ol li a:before {
   left: -6px;
   border-bottom-right-radius: 6px;
   border-width: 0 1px 1px 0;
   box-shadow: 2px 1px 0 #1dabb8;
 }
-.tabs > ul li a:after, .tabs > ul li a:visited:after, .tabs > ul [role~=tab] a:after, .tabs > ul [role~=tab] a:visited:after, .tabs > ol li a:after, .tabs > ol li a:visited:after, .tabs > ol [role~=tab] a:after, .tabs > ol [role~=tab] a:visited:after, .tabs [role~=tablist] li a:after, .tabs [role~=tablist] li a:visited:after, .tabs [role~=tablist] [role~=tab] a:after, .tabs [role~=tablist] [role~=tab] a:visited:after, [role~=tabpanel] > ul li a:after, [role~=tabpanel] > ul li a:visited:after, [role~=tabpanel] > ul [role~=tab] a:after, [role~=tabpanel] > ul [role~=tab] a:visited:after, [role~=tabpanel] > ol li a:after, [role~=tabpanel] > ol li a:visited:after, [role~=tabpanel] > ol [role~=tab] a:after, [role~=tabpanel] > ol [role~=tab] a:visited:after, [role~=tabpanel] [role~=tablist] li a:after, [role~=tabpanel] [role~=tablist] li a:visited:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:after, [role~=tabpanel] [role~=tablist] [role~=tab] a:visited:after {
+.tabs > ul li a:after, .tabs > ol li a:after {
   right: -6px;
   border-bottom-left-radius: 6px;
   border-width: 0 0 1px 1px;
   box-shadow: -2px 1px 0 #1dabb8;
 }
-.tabs [role~=tablist], [role~=tabpanel] [role~=tablist] {
-  background: none;
-}
-.tabs > div, .tabs [role~=tabpanel], [role~=tabpanel] > div, [role~=tabpanel] [role~=tabpanel] {
+
+.tabs > div, [role~=tabpanel] [role~=tabpanel] {
   display: none;
   padding: 20px;
   background: white;
@@ -4232,17 +4233,18 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-.tabs > div *:first-child, .tabs [role~=tabpanel] *:first-child, [role~=tabpanel] > div *:first-child, [role~=tabpanel] [role~=tabpanel] *:first-child {
+.tabs > div *:first-child, [role~=tabpanel] [role~=tabpanel] *:first-child {
   margin-top: 0;
 }
-.tabs > div *:last-child, .tabs [role~=tabpanel] *:last-child, [role~=tabpanel] > div *:last-child, [role~=tabpanel] [role~=tabpanel] *:last-child {
+.tabs > div *:last-child, [role~=tabpanel] [role~=tabpanel] *:last-child {
   margin-bottom: 0;
 }
-.tabs > div.active, .tabs [role~=tabpanel].active, [role~=tabpanel] > div.active, [role~=tabpanel] [role~=tabpanel].active {
+.tabs > div.active, [role~=tabpanel] .active[role~=tabpanel] {
   display: block;
   border: 1px solid #198d98;
 }
-.tabs.vertical > ul, .tabs.vertical > ol, .tabs.vertical [role~=tablist], [role~=tabpanel].vertical > ul, [role~=tabpanel].vertical > ol, [role~=tabpanel].vertical [role~=tablist] {
+
+.tabs.vertical > ul, .tabs.vertical > ol, .tabs.vertical [role~=tablist] {
   height: 100%;
   position: absolute;
   width: 20%;
@@ -4254,18 +4256,20 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
 }
-.tabs.vertical > ul li, .tabs.vertical > ul [role~=tab], .tabs.vertical > ol li, .tabs.vertical > ol [role~=tab], .tabs.vertical [role~=tablist] li, .tabs.vertical [role~=tablist] [role~=tab], [role~=tabpanel].vertical > ul li, [role~=tabpanel].vertical > ul [role~=tab], [role~=tabpanel].vertical > ol li, [role~=tabpanel].vertical > ol [role~=tab], [role~=tabpanel].vertical [role~=tablist] li, [role~=tabpanel].vertical [role~=tablist] [role~=tab] {
+
+.tabs.vertical > ul li, .tabs.vertical > ol li, .tabs.vertical [role~=tablist] [role~=tab] {
   float: none;
   margin: 0 -1px 0 0;
 }
-.tabs.vertical > ul li:first-child a, .tabs.vertical > ul li:first-child a:visited, .tabs.vertical > ul [role~=tab]:first-child a, .tabs.vertical > ul [role~=tab]:first-child a:visited, .tabs.vertical > ol li:first-child a, .tabs.vertical > ol li:first-child a:visited, .tabs.vertical > ol [role~=tab]:first-child a, .tabs.vertical > ol [role~=tab]:first-child a:visited, .tabs.vertical [role~=tablist] li:first-child a, .tabs.vertical [role~=tablist] li:first-child a:visited, .tabs.vertical [role~=tablist] [role~=tab]:first-child a, .tabs.vertical [role~=tablist] [role~=tab]:first-child a:visited, [role~=tabpanel].vertical > ul li:first-child a, [role~=tabpanel].vertical > ul li:first-child a:visited, [role~=tabpanel].vertical > ul [role~=tab]:first-child a, [role~=tabpanel].vertical > ul [role~=tab]:first-child a:visited, [role~=tabpanel].vertical > ol li:first-child a, [role~=tabpanel].vertical > ol li:first-child a:visited, [role~=tabpanel].vertical > ol [role~=tab]:first-child a, [role~=tabpanel].vertical > ol [role~=tab]:first-child a:visited, [role~=tabpanel].vertical [role~=tablist] li:first-child a, [role~=tabpanel].vertical [role~=tablist] li:first-child a:visited, [role~=tabpanel].vertical [role~=tablist] [role~=tab]:first-child a, [role~=tabpanel].vertical [role~=tablist] [role~=tab]:first-child a:visited {
+.tabs.vertical > ul li:first-child a, .tabs.vertical > ol li:first-child a, .tabs.vertical [role~=tablist] [role~=tab]:first-child a, .tabs.vertical > ul li:first-child a:visited, .tabs.vertical > ol li:first-child a:visited, .tabs.vertical [role~=tablist] [role~=tab]:first-child a:visited {
   -ms-border-radius: 4px 0 0 0;
   -o-border-radius: 4px 0 0 0;
   -moz-border-radius: 4px 0 0 0;
   -webkit-border-radius: 4px 0 0 0;
   border-radius: 4px 0 0 0;
 }
-.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ul [role~=tab] a, .tabs.vertical > ul [role~=tab] a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited, .tabs.vertical > ol [role~=tab] a, .tabs.vertical > ol [role~=tab] a:visited, .tabs.vertical [role~=tablist] li a, .tabs.vertical [role~=tablist] li a:visited, .tabs.vertical [role~=tablist] [role~=tab] a, .tabs.vertical [role~=tablist] [role~=tab] a:visited, [role~=tabpanel].vertical > ul li a, [role~=tabpanel].vertical > ul li a:visited, [role~=tabpanel].vertical > ul [role~=tab] a, [role~=tabpanel].vertical > ul [role~=tab] a:visited, [role~=tabpanel].vertical > ol li a, [role~=tabpanel].vertical > ol li a:visited, [role~=tabpanel].vertical > ol [role~=tab] a, [role~=tabpanel].vertical > ol [role~=tab] a:visited, [role~=tabpanel].vertical [role~=tablist] li a, [role~=tabpanel].vertical [role~=tablist] li a:visited, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited {
+
+.tabs.vertical > ul li a, .tabs.vertical > ol li a {
   height: auto;
   border-bottom: 1px solid #198d98;
   -ms-border-radius: 0;
@@ -4274,20 +4278,21 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-.tabs.vertical > ul li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ul li a:visited:before, .tabs.vertical > ul li a:visited:after, .tabs.vertical > ul [role~=tab] a:before, .tabs.vertical > ul [role~=tab] a:after, .tabs.vertical > ul [role~=tab] a:visited:before, .tabs.vertical > ul [role~=tab] a:visited:after, .tabs.vertical > ol li a:before, .tabs.vertical > ol li a:after, .tabs.vertical > ol li a:visited:before, .tabs.vertical > ol li a:visited:after, .tabs.vertical > ol [role~=tab] a:before, .tabs.vertical > ol [role~=tab] a:after, .tabs.vertical > ol [role~=tab] a:visited:before, .tabs.vertical > ol [role~=tab] a:visited:after, .tabs.vertical [role~=tablist] li a:before, .tabs.vertical [role~=tablist] li a:after, .tabs.vertical [role~=tablist] li a:visited:before, .tabs.vertical [role~=tablist] li a:visited:after, .tabs.vertical [role~=tablist] [role~=tab] a:before, .tabs.vertical [role~=tablist] [role~=tab] a:after, .tabs.vertical [role~=tablist] [role~=tab] a:visited:before, .tabs.vertical [role~=tablist] [role~=tab] a:visited:after, [role~=tabpanel].vertical > ul li a:before, [role~=tabpanel].vertical > ul li a:after, [role~=tabpanel].vertical > ul li a:visited:before, [role~=tabpanel].vertical > ul li a:visited:after, [role~=tabpanel].vertical > ul [role~=tab] a:before, [role~=tabpanel].vertical > ul [role~=tab] a:after, [role~=tabpanel].vertical > ul [role~=tab] a:visited:before, [role~=tabpanel].vertical > ul [role~=tab] a:visited:after, [role~=tabpanel].vertical > ol li a:before, [role~=tabpanel].vertical > ol li a:after, [role~=tabpanel].vertical > ol li a:visited:before, [role~=tabpanel].vertical > ol li a:visited:after, [role~=tabpanel].vertical > ol [role~=tab] a:before, [role~=tabpanel].vertical > ol [role~=tab] a:after, [role~=tabpanel].vertical > ol [role~=tab] a:visited:before, [role~=tabpanel].vertical > ol [role~=tab] a:visited:after, [role~=tabpanel].vertical [role~=tablist] li a:before, [role~=tabpanel].vertical [role~=tablist] li a:after, [role~=tabpanel].vertical [role~=tablist] li a:visited:before, [role~=tabpanel].vertical [role~=tablist] li a:visited:after, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:before, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:after, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited:before, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited:after {
+.tabs.vertical > ul li a:before, .tabs.vertical > ol li a:before, .tabs.vertical > ul li a:after, .tabs.vertical > ol li a:after {
   display: none !important;
 }
-.tabs.vertical > ul li a.active, .tabs.vertical > ul li a:visited.active, .tabs.vertical > ul [role~=tab] a.active, .tabs.vertical > ul [role~=tab] a:visited.active, .tabs.vertical > ol li a.active, .tabs.vertical > ol li a:visited.active, .tabs.vertical > ol [role~=tab] a.active, .tabs.vertical > ol [role~=tab] a:visited.active, .tabs.vertical [role~=tablist] li a.active, .tabs.vertical [role~=tablist] li a:visited.active, .tabs.vertical [role~=tablist] [role~=tab] a.active, .tabs.vertical [role~=tablist] [role~=tab] a:visited.active, [role~=tabpanel].vertical > ul li a.active, [role~=tabpanel].vertical > ul li a:visited.active, [role~=tabpanel].vertical > ul [role~=tab] a.active, [role~=tabpanel].vertical > ul [role~=tab] a:visited.active, [role~=tabpanel].vertical > ol li a.active, [role~=tabpanel].vertical > ol li a:visited.active, [role~=tabpanel].vertical > ol [role~=tab] a.active, [role~=tabpanel].vertical > ol [role~=tab] a:visited.active, [role~=tabpanel].vertical [role~=tablist] li a.active, [role~=tabpanel].vertical [role~=tablist] li a:visited.active, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a.active, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited.active {
+.tabs.vertical > ul li a.active, .tabs.vertical > ol li a.active {
   border-right: none;
   color: #2b2b2d;
   background: white;
 }
-.tabs.vertical > ul li a.active:hover, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ul li a:visited.active:hover, .tabs.vertical > ul li a:visited.active:focus, .tabs.vertical > ul [role~=tab] a.active:hover, .tabs.vertical > ul [role~=tab] a.active:focus, .tabs.vertical > ul [role~=tab] a:visited.active:hover, .tabs.vertical > ul [role~=tab] a:visited.active:focus, .tabs.vertical > ol li a.active:hover, .tabs.vertical > ol li a.active:focus, .tabs.vertical > ol li a:visited.active:hover, .tabs.vertical > ol li a:visited.active:focus, .tabs.vertical > ol [role~=tab] a.active:hover, .tabs.vertical > ol [role~=tab] a.active:focus, .tabs.vertical > ol [role~=tab] a:visited.active:hover, .tabs.vertical > ol [role~=tab] a:visited.active:focus, .tabs.vertical [role~=tablist] li a.active:hover, .tabs.vertical [role~=tablist] li a.active:focus, .tabs.vertical [role~=tablist] li a:visited.active:hover, .tabs.vertical [role~=tablist] li a:visited.active:focus, .tabs.vertical [role~=tablist] [role~=tab] a.active:hover, .tabs.vertical [role~=tablist] [role~=tab] a.active:focus, .tabs.vertical [role~=tablist] [role~=tab] a:visited.active:hover, .tabs.vertical [role~=tablist] [role~=tab] a:visited.active:focus, [role~=tabpanel].vertical > ul li a.active:hover, [role~=tabpanel].vertical > ul li a.active:focus, [role~=tabpanel].vertical > ul li a:visited.active:hover, [role~=tabpanel].vertical > ul li a:visited.active:focus, [role~=tabpanel].vertical > ul [role~=tab] a.active:hover, [role~=tabpanel].vertical > ul [role~=tab] a.active:focus, [role~=tabpanel].vertical > ul [role~=tab] a:visited.active:hover, [role~=tabpanel].vertical > ul [role~=tab] a:visited.active:focus, [role~=tabpanel].vertical > ol li a.active:hover, [role~=tabpanel].vertical > ol li a.active:focus, [role~=tabpanel].vertical > ol li a:visited.active:hover, [role~=tabpanel].vertical > ol li a:visited.active:focus, [role~=tabpanel].vertical > ol [role~=tab] a.active:hover, [role~=tabpanel].vertical > ol [role~=tab] a.active:focus, [role~=tabpanel].vertical > ol [role~=tab] a:visited.active:hover, [role~=tabpanel].vertical > ol [role~=tab] a:visited.active:focus, [role~=tabpanel].vertical [role~=tablist] li a.active:hover, [role~=tabpanel].vertical [role~=tablist] li a.active:focus, [role~=tabpanel].vertical [role~=tablist] li a:visited.active:hover, [role~=tabpanel].vertical [role~=tablist] li a:visited.active:focus, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a.active:hover, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a.active:focus, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited.active:hover, [role~=tabpanel].vertical [role~=tablist] [role~=tab] a:visited.active:focus {
+.tabs.vertical > ul li a.active:hover, .tabs.vertical > ol li a.active:hover, .tabs.vertical > ul li a.active:focus, .tabs.vertical > ol li a.active:focus {
   border-right: none;
   color: #2b2b2d;
   background: white;
 }
-.tabs.vertical > div, .tabs.vertical [role~=tabpanel], [role~=tabpanel].vertical > div, [role~=tabpanel].vertical [role~=tabpanel] {
+
+.tabs.vertical > div, .tabs.vertical [role~=tabpanel] {
   position: relative;
   left: 20%;
   width: 80%;
@@ -4296,6 +4301,10 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
+}
+
+[role~=tabpanel] [role~=tablist] {
+  background: none;
 }
 
 .message, [role~=alert] {
@@ -4660,12 +4669,15 @@ table {
   margin: 0;
   font-size: 1em;
 }
-table.align-center th, table.align-center td {
+
+table.align-center th th, table.align-center td th, table.align-center th td, table.align-center td td {
   text-align: center;
 }
+
 table.responsive {
   table-layout: fixed;
 }
+
 table th, table td {
   padding: 10px;
   background: #fcfcfc;
@@ -4673,29 +4685,37 @@ table th, table td {
   word-wrap: break-word;
   text-align: left;
 }
+
 table td {
   font-size: 0.9em;
 }
+
 table tr:nth-child(even) th, table tr:nth-child(even) td {
   background: #f2f2f2;
 }
+
 table thead tr th {
   font-size: 1.1em;
   font-weight: bold;
 }
+
 table thead tr th, table thead tr td {
   background: #1dabb8;
   color: white;
 }
+
 table thead tr td {
   font-weight: normal;
 }
+
 table tbody tr th {
   font-size: 0.9em;
 }
+
 table tfoot tr th {
   font-size: 1em;
 }
+
 table tfoot tr td {
   background: #e0e0e0;
   color: #5a5a5a;

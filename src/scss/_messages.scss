@@ -95,15 +95,18 @@
     }
   }
 }
+
 @if $classes {
   .message {
     @extend %message;
     @include message-modifiers;
   }
 }
+
 @if $aria {
   [role~=alert] {
     @extend %message;
+    
     @if $classes {
       @include message-modifiers;
     }

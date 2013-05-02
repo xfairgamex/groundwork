@@ -30,6 +30,7 @@
   max-width:100%;
   border:none;
 }
+
 @if $tags {
   $elements: html hr img;
   @for $i from 1 through length($elements) {
@@ -44,6 +45,7 @@
     @extend %img;
   }
 }
+
 @if $classes {
   $names: html document hr img;
   @for $i from 1 through length($names) {
