@@ -6673,18 +6673,6 @@ input[size], [size].input, select[size], textarea[size], [size].select, [size].t
   height: auto;
 }
 
-.error, .invalid {
-  color: #b94a48;
-  background: white;
-  border-color: #b94a48;
-}
-
-.success, .valid {
-  color: #468847;
-  background: white;
-  border-color: #468847;
-}
-
 input[size], [size].input {
   height: auto;
 }

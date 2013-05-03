@@ -40,17 +40,17 @@
   }
 }
 
-%error-field, %invalid-field {
-  color:$error-color;
-  background:lighten($error-color, 62%);
-  border-color:$error-color;
-}
+// %error-field, %invalid-field {
+//   color:$error-color;
+//   background:lighten($error-color, 62%);
+//   border-color:$error-color;
+// }
 
-%success-field, %valid-field {
-  color:$success-color;
-  background:lighten($success-color, 62%);
-  border-color:$success-color;
-}
+// %success-field, %valid-field {
+//   color:$success-color;
+//   background:lighten($success-color, 62%);
+//   border-color:$success-color;
+// }
 
 %input {
   @extend %field;
