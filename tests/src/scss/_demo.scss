@@ -1,42 +1,14 @@
-// color palette
-$white:         #ffffff;
-$black:         #000000;
-
-$gray:          #505050;
-$lt-gray:       #e7e7e7;
-$md-gray:       #c7c7c7;
-$dk-gray:       #2c2c2f;
-
-$green:         #bada55;
-$lt-green:      lighten($green, 15%);
-$dk-green:      darken($green, 15%);
-
-$blue-1:        #55ADAB;
-$blue-2:        #1DABB8;
-$blue-3:        #198D98;
-$blue:          $blue-3;
-$lt-blue:       lighten($blue, 15%);  // #24cada
-$dk-blue:       darken($blue, 15%); 
-$navy:          #282830;
-
-$red:           #c82647;
-$lt-red:        lighten($red, 15%);
-$dk-red:        darken($red, 15%);
-
-$purple:        #AE81FF;
-$yellow:        #E6DB74;
-$orange:        #F0971E;
 
 .headings > .one {
   padding:$gutter;
   font-size:1.5em;
   text-align:center;
   color:$button-text;
-  &:nth-child(1) { background:$success-color; }
-  &:nth-child(2) { background:$info-color; }
-  &:nth-child(3) { background:$warning-color; }
-  &:nth-child(4) { background:$error-color; }
-  &:nth-child(5) { background:$alert-color; }
+  &:nth-child(1) { background:$asphalt; }
+  &:nth-child(2) { background:$blue; }
+  &:nth-child(3) { background:$purple; }
+  &:nth-child(4) { background:$yellow; }
+  &:nth-child(5) { background:$orange; }
 }
 
 .demo {
