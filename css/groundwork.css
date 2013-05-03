@@ -5530,6 +5530,32 @@ div.modal .fullscreen, div[role~=dialog] .fullscreen {
   border-color: #222f3d;
 }
 
+@font-face {
+  font-family: "AverageSans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/average-sans-webfont#iefix");
+  src: url("../font/average-sans-webfont.eot") format("embedded-opentype"), url("../font/average-sans-webfont.woff") format("woff"), url("../font/average-sans-webfont.ttf") format("truetype");
+}
+
+.AverageSans {
+  /* might add inline-font-files() at some point */
+  font-family: AverageSans, Arial, Helvetica, Geneva, sans-serif;
+}
+
+@font-face {
+  font-family: "AmericanTypewriter";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/americantypewriterstd-bold#iefix");
+  src: url("../font/americantypewriterstd-bold.eot") format("embedded-opentype"), url("../font/americantypewriterstd-bold.woff") format("woff"), url("../font/americantypewriterstd-bold.ttf") format("truetype");
+}
+
+.AmericanTypewriter {
+  /* might add inline-font-files() at some point */
+  font-family: AmericanTypewriter, Arial, Helvetica, Geneva, sans-serif;
+}
+
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg);

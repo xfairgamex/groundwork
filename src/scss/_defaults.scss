@@ -111,9 +111,9 @@ $html5-elements:  html body
 //     web fonts     //
 ///////////////////////
 
-// font names
-// $web-font-names:      Average Sans, 
-//                       American Typewriter !default;
+// font names (no spaces or special characters, these are used to build selectors)
+$web-font-names:      AverageSans, 
+                      AmericanTypewriter !default;
 // font files (must all be named the same as listed below and include .eot, .woff and .ttf file types)
-// $web-font-files:      average-sans-webfont, 
-//                       americantypewriterstd-bold !default;
+$web-font-files:      average-sans-webfont, 
+                      americantypewriterstd-bold !default;

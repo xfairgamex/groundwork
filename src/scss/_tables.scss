@@ -72,7 +72,6 @@
       }
     }
     thead {
-      @extend %table-head;
       tr {
         th {
           @extend %table-head-th;
