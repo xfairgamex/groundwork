@@ -2,7 +2,6 @@
  *                 IE hacks
  *          Last Updated:2013-4-24
  * ===========================================*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000316}}
 input[type=checkbox], input[type=radio] {
   padding: 0;
   background: none;
@@ -17,94 +16,74 @@ input[type=checkbox], input[type=radio] {
   border-radius: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000328}}
 html.lt-ie9 {
   min-width: 1200px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000330}}
 html.lt-ie9 body {
   width: auto !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000333}}
 html.lt-ie9 .container {
   width: auto !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000338}}
 html.lt-ie9 input:focus, html.lt-ie9 select:focus, html.lt-ie9 textarea:focus {
   border-color: #198d98;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000344}}
 html.lt-ie9 span.select:after {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000347}}
 html.lt-ie9 span.select select {
   padding: 0;
   height: 2.1em;
   vertical-align: top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000351}}
 html.lt-ie9 span.select select:focus {
   border: 1px solid #198d98;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000357}}
 html.lt-ie9 .social-icon {
   filter: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000362}}
 html.lt-ie9 div.modal .close, html.lt-ie9 div.modal .fullscreen {
   padding: 6px 7px;
   top: 2px;
   right: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000367}}
 html.lt-ie9 div.modal .fullscreen {
   right: auto;
   left: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000378}}
 html.lt-ie8 nav.inline > ul li {
   display: block;
   float: left;
   white-space-collapse: preserve;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000382}}
 html.lt-ie8 nav.inline > ul li ul {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000384}}
 html.lt-ie8 nav.inline > ul li ul li {
   float: none;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000394}}
 html.lt-ie8 h1, html.lt-ie8 h2, html.lt-ie8 h3, html.lt-ie8 h4, html.lt-ie8 h5, html.lt-ie8 h6 {
   line-height: 1.5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\0000398}}
 html.lt-ie8 ul, html.lt-ie8 ul.list,
 html.lt-ie8 ol, html.lt-ie8 ol.list {
   margin-left: 0;
   padding-left: 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\00003103}}
 html.lt-ie8 ul.list {
   list-style: disc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\00003108}}
 html.lt-ie8 ol.list {
   list-style: decimal;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\00003110}}
 html.lt-ie8 ol.list li {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\00003117}}
 html.lt-ie8 ul.button-list, html.lt-ie8 ol.button-list {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/ghepting\/Dropbox\/Websites\/groundworkcss\/groundwork\/src\/scss\/groundwork-ie\.scss}line{font-family:\00003124}}
 html.lt-ie8 button.dropdown ul, html.lt-ie8 .button.dropdown ul, html.lt-ie8 a.button.dropdown ul, html.lt-ie8 a.button:visited.dropdown ul {
   top: 2em;
 }
