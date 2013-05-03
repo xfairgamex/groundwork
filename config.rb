@@ -11,6 +11,11 @@ fonts_dir = "font"
 output_style = :expanded
 environment = :development
 
+# To enable debug info. Uncomment:
+# if environment != :production
+#   sass_options = {:debug_info => true}
+# end
+
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
