@@ -320,6 +320,9 @@
         var difference;
 
         difference = $this.get(0).scrollWidth - $this.width();
+        if (difference > scrollTime) {
+          scrollTime = difference;
+        }
         if (difference > 0) {
           return $this.stop().animate({
             "text-indent": -difference
@@ -959,7 +962,7 @@
         return tooltip.css(attrs);
       };
       resettooltip = function() {
-        return tooltip.text('').removeClass('left right top bottom').css({
+        return tooltip.text('').removeClass().css({
           left: 'auto',
           right: 'auto',
           top: 'auto',
@@ -981,6 +984,11 @@
             "opacity": 0,
             "display": "block"
           }).text(trigger.attr('data-title'));
+          $.each(['disabled', 'info', 'alert', 'warning', 'error', 'success', 'green', 'blue', 'purple', 'yellow', 'orange', 'red', 'asphalt'], function(index, value) {
+            if (trigger.hasClass(value)) {
+              return tooltip.addClass(value);
+            }
+          });
           setPosition(trigger);
           trigger.addClass('on');
           return tooltip.animate({
