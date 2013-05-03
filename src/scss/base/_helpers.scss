@@ -42,6 +42,9 @@
 @mixin _block                     { display:block; }
 @mixin _hidden                    { display:none !important; }
 
+@mixin _small                     { font-size:0.8em; }
+@mixin _large                     { font-size:1.5em; }
+
 @mixin _zero                      { margin:0; padding:0; }
 
 @mixin _pull-right                { float:right; }
@@ -66,6 +69,7 @@
 
 @mixin _spacer                    { height:$gutter; }
 
+@mixin _square                    { @include rounded(0); }
 @mixin _round                     { @include rounded(9999px); }
 
 @mixin _disabled                  { @include state(disabled,textOnly); }
@@ -154,6 +158,9 @@
 %block            { @include _block; }
 %hidden           { @include _hidden; }
 
+%small            { @include _small; }
+%big, %large      { @include _large; }
+
 %zero             { @include _zero; }
 
 %pull-right       { @include _pull-right; }
@@ -178,6 +185,7 @@
 
 %spacer           { @include _spacer; }
 
+%square           { @include _square; }
 %round            { @include _round; }
 
 %disabled         { @include _disabled; }
@@ -212,7 +220,7 @@
 @if $classes {
 
   // function to generate the simple helpers
-  $helpers: inline block hidden zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
+  $helpers: inline block hidden small large zero pull-right pull-left bordered border-right border-left border-top border-bottom align-top align-right align-bottom align-left align-center justify truncate center spacer square round rotate-90 rotate-180 rotate-270 rotate-90-ctr rotate-180-ctr rotate-270-ctr spin spin-once spin-twice spin-thrice spin-fast spin-fast-once spin-fast-twice spin-fast-thrice spin-slow spin-slow-once spin-slow-twice spin-slow-thrice;
   @for $i from 1 through length($helpers) {
     .#{nth($helpers, $i)} { @extend %#{nth($helpers, $i)}; }
   }

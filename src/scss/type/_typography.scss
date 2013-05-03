@@ -12,10 +12,12 @@
   line-height:1.2;
   color:$font-color;
 }
+
 %selection {
   background:$selection-color;
   color:$selection-text;
 }
+
 %links {
   color:$link-color;
   @include transition(color 0.25s);
@@ -24,53 +26,63 @@
     text-decoration:underline;
   }
 }
+
 %heading {
   line-height:1.3;
   margin-bottom:15px;
 }
+
 %h1 {
   @extend %heading;
   font-weight:200;
   font-size:$font-size * 2.3333333333;
 }
+
 %h2 {
   @extend %heading;
   font-weight:200;
   font-size:$font-size * 2;
 }
+
 %h3 {
   @extend %heading;
   font-weight:500;
   font-size:$font-size * 1.5;
 }
+
 %h4 {
   @extend %heading;
   font-weight:500;
   font-size:$font-size * 1.3333333333;
 }
+
 %h5 {
   @extend %heading;
   font-weight:900;
   font-size:$font-size * 1.1666666667;
 }
+
 %h6 {
   @extend %heading;
   font-weight:900;
   font-size:$font-size * 1.1666666667;
   text-transform:uppercase;
 }
+
 %p, %ul, %ol, %dl {
   margin-bottom:10px;
   font-weight:normal;
   font-size:1em;
   line-height:1.6;
 }
+
 %list {
   margin-left:20px;
   %list-item {
     display:list-item;
   }
 }
+
 %dl {
   %dt {
     font-weight:bold;
@@ -80,9 +92,11 @@
     margin-bottom:$gutter;
   }
 }
+
 %unstyled-list {
   list-style:none;
 }
+
 %ul-list {
   @extend %unstyled-list;
   margin-left:0;
@@ -107,6 +121,7 @@
     }
   }
 }
+
 %ol-list {
   @extend %unstyled-list;
   counter-reset:li;
@@ -131,6 +146,7 @@
     }
   }
 }
+
 %blockquote {
   padding:1.3em 4em 1em;
   color:$font-color;
@@ -160,6 +176,7 @@
     z-index:-1;
   }
 }
+
 %cite {
   display:block;
   position:relative;
@@ -173,15 +190,27 @@
     content:'\2014';
   }
 }
-%small { font-size:0.8em; }
-%big, %large { font-size:1.5em; }
-%em, %italic { font-style:italic; }
-%b, %bold, %strong { font-weight:900; }
-%sup { font-size:0.8em; }
-%sub { font-size:0.8em; }
-%monospace {
-  font-family:monospace;
+
+%abbr {
+  border-bottom:1px dotted;
+  cursor:help;
 }
+
+%small              { @extend %small; }
+%big, %large        { @extend %large; }
+%em, %italic        { font-style:italic; }
+%b, %bold, %strong  { font-weight:900; }
+%sup                { @extend %small; }
+%sub                { @extend %small; }
+%monospace          { font-family:monospace; }
+%del, %strike       { text-decoration: line-through; }
+
+@for $i from 1 through length($modifier-name) {
+  %#{nth($modifier-name, $i)} {
+    color:#{nth($modifier-text, $i)};
+  }
+}
+
 %code {
   @extend %monospace;
 	white-space:pre-wrap;
@@ -195,6 +224,7 @@
 	font-weight:normal;
 	line-height:inherit;
 }
+
 %pre {
   @extend %monospace;
 	$border:2.6em;
@@ -221,21 +251,13 @@
 		}
 	}
 }
-%info {
-  color:$info-color;
-}
-%alert {
-  color:$alert-color;
-}
-%warning {
-  color:$warning-color;
-}
-%error, %invalid {
-  color:$error-color;
-}
-%success, %valid {
-  color:$success-color;
-}
+
+%info             { color:$info-color; }
+%alert            { color:$alert-color; }
+%warning          { color:$warning-color; }
+%error, %invalid  { color:$error-color; }
+%success, %valid  { color:$success-color; }
+
 // responsive headings
 .js {
   .responsive:not(table) {
@@ -243,6 +265,7 @@
     @include transition(font 0.25s);
   }
 }
+
 @if $tags {
   body {
     @extend %document;
@@ -271,7 +294,11 @@
       @extend %dd;
     }
   }
-  $elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big em b strong sup sub code pre;
+  abbr[title], dfn[title],
+  abbr[data-title], dfn[data-title] {
+    @extend %abbr;
+  }
+  $elements: h1 h2 h3 h4 h5 h6 p ul ol dl blockquote cite small big em b strong sup sub del strike code pre;
   @for $i from 1 through length($elements) {
     #{nth($elements, $i)} {
       @extend %#{nth($elements, $i)};
@@ -279,10 +306,15 @@
   }
 }
 @if $classes {
-  $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;
+  $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub del strike code pre info alert warning error invalid success valid;
   @for $i from 1 through length($names) {
     .#{nth($names, $i)} {
       @extend %#{nth($names, $i)};
+    }
+  }
+  @for $i from 1 through length($modifier-name) {
+    .#{nth($modifier-name, $i)} {
+      color:#{nth($modifier-code, $i)};
     }
   }
   ul, ol {
@@ -298,6 +330,16 @@
   }
   ol.list {
     @extend %ol-list;
+
+    @for $i from 1 through length($modifier-name) {
+      &.#{nth($modifier-name, $i)} {
+        li {
+          &:before {
+            background:#{nth($modifier-code, $i)};
+          }
+        }
+      }
+    }
     > li {
       @extend %list-item;
     }

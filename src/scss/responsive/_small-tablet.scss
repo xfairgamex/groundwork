@@ -1,50 +1,9 @@
-///////////////////////
-//    conditionals   //
-///////////////////////
-
-// desktop helpers
-.desktop-only { display:block; }
-.hide-on-desktop {}
-// ipad helpers
-.ipad-only { display:none; }
-.hide-on-ipad {}
-// small tablet helpers
-.small-tablet-only { display:none; }
-.hide-on-small-tablet {}
-// mobile helpers
-.mobile-only { display:none; }
-.hide-on-mobile {}
+// ===================================
+//            Small Tablet
+// ===================================
 
 
-///////////////////////
-//    breakpoints    //
-///////////////////////
 
-@mixin desktop {
-  @media only screen and (min-width:1025px) {
-    // conditional helpers
-    .hide-on-desktop { display:none !important; }
-    // spacer overrides
-    .zero-desktop { @include helper_reset(); }
-    .no-padding-desktop, .no-pad-desktop { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-    .no-margin-desktop, .no-gap-desktop { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-    @content;
-  }
-}
-
-@mixin ipad {
-  @media only screen and (min-width:768px) and (max-width:1024px) {
-    // conditional helpers
-    .ipad-only { display:inline-block !important; }
-    .hide-on-ipad { display:none !important; }
-    .desktop-only { display:none !important; }
-    // spacer overrides
-    .zero-ipad { @include helper_reset(); }
-    .no-padding-ipad, .no-pad-ipad { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-    .no-margin-ipad, .no-gap-ipad { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-    @content;
-  }
-}
 
 @mixin small-tablet {
   @media only screen and (max-width:767px) {
@@ -60,38 +19,6 @@
     .no-margin-small-tablet, .no-gap-small-tablet { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
     @content;
   }
-}
-
-@mixin mobile {
-  @media only screen and (max-width:480px) {
-    // responsive grid
-    @include grid-responsive(false);
-    // conditional helpers
-    .mobile-only { display:inline-block !important; }
-    .hide-on-mobile { display:none !important; }
-    .desktop-only { display:none !important; }
-    // spacer overrides
-    .zero-mobile { @include helper_reset(); }
-    .no-padding-mobile, .no-pad-mobile { @include helper_reset(padding, $spacers: padded pad-top pad-right pad-bottom pad-left); }
-    .no-margin-mobile, .no-gap-mobile { @include helper_reset(margin, $spacers: gapped gap-top gap-right gap-bottom gap-left); }
-    @content;
-  }
-}
-
-
-///////////////////////
-//      desktop      //
-///////////////////////
-@include desktop {
-  // do not remove -- required for desktop helpers
-}
-
-
-///////////////////////
-//       ipad        //
-///////////////////////
-@include ipad {
-  // do not remove -- required for ipad helpers
 }
 
 
@@ -235,28 +162,6 @@
           &:before, &:after {
             display:none !important;
           }
-        }
-        &:first-child a {
-          @include rounded($radius $radius 0 0);
-        }
-      }
-    }
-  }
-}
-
-
-///////////////////////
-//      mobile       //
-///////////////////////
-@include mobile {
-  .tabs:not(.mobile) {
-    > ul {
-      li {
-        float:none;
-        width:100%;
-        a {
-          @include rounded(0);
-          border-bottom:none;
         }
         &:first-child a {
           @include rounded($radius $radius 0 0);

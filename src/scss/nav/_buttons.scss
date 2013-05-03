@@ -15,7 +15,7 @@
   color:$button-text;
   font-family:$font-family;
   font-weight:bold;
-  font-size:1em;
+  // font-size:1em;
   text-decoration:none;
   cursor:pointer;
   line-height:1.5;
@@ -30,89 +30,104 @@
     color:$button-active-text;
   }
 }
-%on-button {
+
+%button-on {
   background:$button-active;
   text-decoration:none;
   color:$button-active-text;
 }
-%active-button, %active-button:hover, %active-button:focus {
+
+%button-active, %button-active:hover, %button-active:focus {
   background:$button-active;
   color:$button-active-text;
 }
-%disabled-button {
-  @include state(disabled,normal,desaturate($button-color,20%));
+
+%button-small     { @extend %small; }
+%button-large     { @extend %large; }
+%button-square    { @extend %square; }
+%button-round     { @extend %round; }
+%button-disabled  { @include state(disabled,normal,desaturate($button-color,20%)); }
+
+@for $i from 1 through length($modifier-name) {
+  %button-#{nth($modifier-name, $i)} {
+    background-color:#{nth($modifier-code, $i)};
+    color:#{nth($modifier-text, $i)};
+    border-color:darken(nth($modifier-code, $i), 5%);
+    &%active, &:hover, &:focus {
+      background:darken(nth($modifier-code, $i), 5%);
+      border-color:darken(nth($modifier-code, $i), 10%);
+    }
+    &%button-disabled {
+      @include state(disabled,normal,desaturate(nth($modifier-code, $i),20%));
+    }
+  }
 }
-%info-button {
+
+%button-info {
   background-color:darken($info-background, 40%);
   color:$button-text;
   border-color:darken($info-border, 40%);
   &%active, &:hover, &:focus {
     background:darken($info-background, 49%);
   }
-  &%disabled-button {
+  &%button-disabled {
     @include state(disabled,normal,desaturate($info-color,20%));
   }
 }
-%alert-button {
+
+%button-alert {
   background-color:darken($alert-background, 40%);
   color:$button-text;
   border-color:darken($alert-border, 25%);
   &%active, &:hover, &:focus {
     background:darken($alert-background, 45%);
   }
-  &%disabled-button {
+  &%button-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
   }
 }
-%warning-button {
+
+%button-warning {
   background-color:darken($warning-background, 40%);
   color:$button-text;
   border-color:darken($warning-border, 40%);
   &%active, &:hover, &:focus {
     background:darken($warning-background, 45%);
   }
-  &%disabled-button {
+  &%button-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
   }
 }
-%error-button {
+
+%button-error {
   background-color:darken($error-background, 40%);
   color:$button-text;
   border-color:darken($error-border, 40%);
   &%active, &:hover, &:focus {
     background:darken($error-background, 49%);
   }
-  &%disabled-button {
+  &%button-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
   }
 }
-%success-button {
+
+%button-success {
   background-color:darken($success-background, 40%);
   color:$button-text;
   border-color:darken($success-border, 40%);
   &%active, &:hover, &:focus {
     background:darken($success-background, 49%);
   }
-  &%disabled-button {
+  &%button-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
   }
 }
-%small-button {
-  font-size:0.8em;
-}
-%large-button {
-  font-size:1.5em;
-}
-%square-button {
-  @include rounded(0);
-}
-%round-button {
-  @include rounded(9999px);
-}
-%block-button {
+
+%button-block {
   display:block;
   width:100%;
 }
+
 %dropdown-button {
   position:relative;
   padding-right:2em;
@@ -123,6 +138,7 @@
     bottom:0.25em;
   }
 }
+
 %dropdown-list {
   text-align:left;
   margin:0.3em 0 0;
@@ -135,9 +151,10 @@
   left:0;
   width:100%;
   z-index:10;
-  font-size:0.9em;
+  // font-size:0.9em;
   @include rounded(0 0 $radius $radius);
 }
+
 %dropdown-list-item {
   display:block;
   %dropdown-menu-item {
@@ -150,15 +167,20 @@
     &:hover, &:focus {
       background:#efefef;
     }
+    &%disabled {
+      @include state(disabled,textOnly);
+    }
   }
   &:last-child {
     @include rounded(0 0 $radius $radius);
   }
 }
+
 %dropdown-divider {
   margin:0;
   border-color:#ececec;
 }
+
 %button-list {
   list-style:none;
   margin:0;
@@ -187,7 +209,7 @@
       border:1px solid $button-active;
       color:$button-text;
       font-weight:bold;
-      font-size:1em;
+      // font-size:1em;
       text-decoration:none;
       cursor:pointer;
       line-height:1.5;
@@ -213,7 +235,13 @@
   $modifiers: small large on active disabled info alert warning error success square round block;
   @for $i from 1 through length($modifiers) {
     &.#{nth($modifiers, $i)} {
-      @extend %#{nth($modifiers, $i)}-button;
+      @extend %button-#{nth($modifiers, $i)};
+    }
+  }
+  // modifier colors
+  @for $i from 1 through length($modifier-name) {
+    &.#{nth($modifier-name, $i)} {
+      @extend %button-#{nth($modifier-name, $i)};
     }
   }
 }

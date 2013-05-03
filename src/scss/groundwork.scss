@@ -5,30 +5,15 @@
 
 
 // custom settings
-@import "settings";     // optional
+@import "settings";     // customizable settings
 
-// core
-@import "core";         // required
-@import "base";         // required
+// core (required)
+@import "core/all";     // constants, defaults, mixins
+@import "base/all";     // reset, globals, grid, helpers, animations
 
 // components
-@import "font-awesome"; // recommended (used by other components)
-@import "typography";   // optional
-@import "buttons";      // optional (required by navigation)
-@import "forms";        // optional
-@import "navigation";   // optional
-@import "tabs";         // optional
-@import "ui-elements";  // optional
-@import "tables";       // optional
-@import "social-icons"; // optional
-@import "tooltips";     // optional
-@import "modals";       // optional
-@import "tiles";        // optional
-// @import "popovers";     // optional (WIP)
-@import "webfonts";     // optional (WIP)
-
-// helpers
-@import "helpers";      // required
-
-// responsive adjustments
-@import "responsive";   // recommended (required for responsive adaptations)
+@import "type/all";     // typography, font awesome, web fonts
+@import "nav/all";      // buttons, navigation, tabs
+@import "ui/all";       // messages, callouts, tables, tooltips, popovers, modals
+@import "form/all";     // forms, tiles
+@import "misc/all";     // social icons

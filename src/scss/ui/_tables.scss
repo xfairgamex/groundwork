@@ -13,14 +13,17 @@
   margin:0;
   font-size:1em;
 }
+
 %center-table {
   th, td {
     text-align:center;
   }
 }
+
 %responsive-table {
   table-layout:fixed;
 }
+
 %table-cells {
   padding:$gutter;
   background:darken(white, 1%);
@@ -28,29 +31,46 @@
   word-wrap:break-word;
   text-align:left;
 }
+
 %table-cell {
   font-size:0.9em;
 }
+
 %even-cells {
   background:darken(white, 5%);
 }
+
 %table-head-th {
   font-size:1.1em;
   font-weight:bold;
 }
+
 %table-head-cells {
   background:$button-color;
   color:$button-text;
 }
+
+@for $i from 1 through length($modifier-name) {
+  %table-#{nth($modifier-name, $i)} {
+    %table-head-cells {
+      background:#{nth($modifier-code, $i)};
+      color:#{nth($modifier-text, $i)};
+    }
+  }
+}
+
 %table-head-cell {
   font-weight:normal;
 }
+
 %table-body-th {
   font-size:0.9em;
 }
+
 %table-foot-th {
   font-size:1em;
 }
+
 %table-foot-cell {
   background:lighten(gray, 37.5%);
   color:darken(gray, 15%);
@@ -110,6 +130,12 @@
       }
       &.responsive {
         @extend %responsive-table;
+      }
+      // modifier colors
+      @for $i from 1 through length($modifier-name) {
+        &.#{nth($modifier-name, $i)} {
+          @extend %table-#{nth($modifier-name, $i)};
+        }
       }
     }
   }

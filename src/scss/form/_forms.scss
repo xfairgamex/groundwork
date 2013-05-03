@@ -10,23 +10,26 @@
   border:1px solid $border-color;
   padding:$gutter;
 }
+
 %legend {
   font-weight:900;
-  font-size:0.8em;
+  // font-size:0.8em;
   color:darken($background-color, 35%);
   margin-bottom:0;
 }
+
 %label {
   display:block;
   padding:0.4em 0.2em;
 }
+
 %field {
   display:block;
   width:100%;
   margin:0;
   padding:0.4em;
   font-family:monospace;
-  font-size:1em;
+  // font-size:1em;
   line-height:1.5;
   height:2.25em;
   background:white;
@@ -36,16 +39,19 @@
     height:auto;
   }
 }
+
 %error-field, %invalid-field {
   color:$error-color;
   background:lighten($error-color, 62%);
   border-color:$error-color;
 }
+
 %success-field, %valid-field {
   color:$success-color;
   background:lighten($success-color, 62%);
   border-color:$success-color;
 }
+
 %input {
   @extend %field;
   &[size] {
@@ -61,29 +67,35 @@
     @include rounded($radius);
   }
 }
+
 %textarea {
   height:10em;
 }
+
 %error-block {
   background:$error-background;
   color:$error-color;
   border-color:$error-border;
 }
+
 %error-block-prefix, %error-block-suffix {
   color:lighten($error-color, 62%);;
   background:$error-color;
   border-color:$error-color;
 }
+
 %success-block {
   background:$success-background;
   color:$success-color;
   border-color:$success-border;
 }
+
 %success-block-prefix, %success-block-suffix {
   color:lighten($success-color, 62%);;
   background:$success-color;
   border-color:$success-color;
 }
+
 %select-wrap {
   display:block;
   color:gray;
@@ -106,6 +118,7 @@
     background:darken(white, 12.5%);
   }
 }
+
 %select {
   -ms-appearance:none;
   -o-appearance:none;
@@ -116,7 +129,7 @@
   background:none;
   padding:0.4em;
   font-family:monospace;
-  font-size:1em;
+  // font-size:1em;
   line-height:1.5;
   height:2.25em;
   padding-right:2.5em;
@@ -126,11 +139,13 @@
     color:#999;
   }
 }
+
 %radio-list {
   list-style:none;
   margin:0;
   padding:0;
 }
+
 %prefix, %suffix {
   display:block;
   position:relative;
@@ -142,7 +157,7 @@
   margin:0;
   padding:0.4em;
   font-family:monospace;
-  font-size:1em;
+  // font-size:1em;
   line-height:1.25;
   height:2.25em;
   text-align:center;
@@ -150,10 +165,12 @@
   background:darken(white, 12.5%);
   border:1px solid darken(white, 17.5%);
 }
+
 %prefix {
   left:2px;
   @include rounded($radius 0 0 $radius);
 }
+
 %suffix {
   left:-2px;
   @include rounded(0 $radius $radius 0);

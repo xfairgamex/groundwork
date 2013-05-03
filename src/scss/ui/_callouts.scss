@@ -1,78 +1,81 @@
 // =============================================
-//              Message Boxes
+//              Callout Panels
 //          Last Updated:2013-4-24
 // =============================================
 
 
 
 
-%message {
+%callout {
   position:relative;
   word-wrap:break-word;
-  padding:0.25em 1em;
+  padding:1em;
   background:$button-color;
   border:1px solid $button-active;
   color:$button-text;
-  font-weight:bold;
-  text-decoration:none;
+  margin-bottom:15px;
   @include rounded($radius);
+  // content overrides
+  h1, h2, h3, h4, h5, h6, p {
+    color:inherit;
+  }
+  *:last-child {
+    margin-bottom:0;
+  }
 }
-%small-message {
-  font-size:0.8em;
-}
-%large-message {
-  font-size:1.5em;
-}
-%info-message {
+
+%callout-small { @include _small; }
+%callout-large { @include _large; }
+%callout-square { @include _square; }
+%callout-round { @include _round; }
+%callout-disabled { @include state(disabled,normal,desaturate($button-color,20%)); }
+
+%callout-info {
   background-color:$info-background;
   color:$info-color;
   border-color:$info-border;
-  &%disabled-message {
+  &%callout-disabled {
     @include state(disabled,normal,desaturate($info-color,20%));
   }
 }
-%alert-message {
+
+%callout-alert{
   background-color:$alert-background;
   color:$alert-color;
   border-color:$alert-border;
-  &%disabled-message {
+  &%callout-disabled {
     @include state(disabled,normal,desaturate($alert-color,20%));
   }
 }
-%warning-message {
+
+%callout-warning {
   background:$warning-background;
   color:$warning-color;
   border-color:$warning-border;
-  &%disabled-message {
+  &%callout-disabled {
     @include state(disabled,normal,desaturate($warning-color,20%));
   }
 }
-%error-message {
+
+%callout-error {
   background:$error-background;
   color:$error-color;
   border-color:$error-border;
-  &%disabled-message {
+  &%callout-disabled {
     @include state(disabled,normal,desaturate($error-color,20%));
   }
 }
-%success-message {
+
+%callout-success {
   background:$success-background;
   color:$success-color;
   border-color:$success-border;
-  &%disabled-message {
+  &%callout-disabled {
     @include state(disabled,normal,desaturate($success-color,20%));
   }
 }
-%square-message {
-  @include rounded(0);
-}
-%round-message {
-  @include rounded(9999px);
-}
-%disabled-message {
-  @include state(disabled,normal,desaturate($button-color,20%));
-}
-%dismissible-message {
+
+%callout-dismissible {
   padding-right:3em;
   &:after {
     content:'X';
@@ -87,28 +90,28 @@
   }
 }
 
-@mixin message-modifiers() {
-  $modifiers: small large info alert warning error success square round disabled dismissible;
+@mixin callout_modifiers() {
+  $modifiers: small large info alert warning error success square round disabled;
   @for $i from 1 through length($modifiers) {
     &.#{nth($modifiers, $i)} {
-      @extend %#{nth($modifiers, $i)}-message;
+      @extend %callout-#{nth($modifiers, $i)};
     }
   }
 }
 
 @if $classes {
-  .message {
-    @extend %message;
-    @include message-modifiers;
+  .callout {
+    @extend %callout;
+    @include callout_modifiers;
   }
 }
 
 @if $aria {
-  [role~=alert] {
-    @extend %message;
+  [role~=status] {
+    @extend %callout;
     
     @if $classes {
-      @include message-modifiers;
+      @include callout_modifiers;
     }
   }
 }

@@ -44,16 +44,25 @@
 
 %document {
   -webkit-text-size-adjust:none;
+  line-height:1;
 }
 
 %html5-elements {
   margin:0;
   padding:0;
   border: 0;
+  font-size:1em;
+  font:inherit;
+  vertical-align:baseline;
 }
 
 %block-elements {
   display:block;
+}
+
+%table-elements {
+  border-collapse:collapse;
+  border-spacing:0;
 }
 
 @if $tags {
@@ -66,5 +75,8 @@
   }
   header, footer, aside, menu, nav, section, article, details {
     @extend %block-elements;
+  }
+  table {
+    @extend %table-elements;
   }
 }

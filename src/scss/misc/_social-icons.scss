@@ -35,6 +35,10 @@
   &.round {
     @include rounded(50% 50%);
   }
+  &.disabled {
+    -webkit-filter:grayscale(100%);
+    filter:grayscale(100%);
+  }
   &.aboutme       { @include data-image("social-icons/aboutme.svg"); }
   &.adn           { @include data-image("social-icons/adn.svg"); }
   &.android       { @include data-image("social-icons/android.svg"); }
