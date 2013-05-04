@@ -282,7 +282,8 @@
       padding:0 3px 0 2px;
       min-width:29px;
       a {
-        display:block;
+        display:inline-block;
+        width:auto;
         background:$button-color;
         font-size:1em;
         line-height:1.5;
@@ -291,7 +292,7 @@
         text-decoration:none;
         text-align:center;
         padding:0 3px;
-        @include rounded(4px);
+        @include rounded($radius);
         &:hover, &:focus {
           background:$button-active;
           color:$button-text;

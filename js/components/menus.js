@@ -1,4 +1,12 @@
 (function() {
+  var navSelector;
+
+  if ($('.nav').size() > 0) {
+    navSelector = '.nav';
+  } else {
+    navSelector = 'nav';
+  }
+
   $(function() {
     var delay, openMenu,
       _this = this;
@@ -7,34 +15,34 @@
     openMenu = function(target) {
       return $(target).parent('li.menu').toggleClass('on');
     };
-    $('body').on('mouseenter', '.nav > ul > li.menu:not(.disabled)', function(e) {
+    $('body').on('mouseenter', navSelector + ' > ul > li.menu:not(.disabled)', function(e) {
       if ($(window).width() >= 768) {
         clearTimeout(delay);
-        $('.nav > ul > li.menu.on').removeClass('on');
+        $(navSelector + ' > ul > li.menu.on').removeClass('on');
         return $(this).addClass('on');
       }
     });
-    $('body').on('mouseleave', '.nav > ul > li.menu:not(.disabled)', function(e) {
+    $('body').on('mouseleave', navSelector + ' > ul > li.menu:not(.disabled)', function(e) {
       if ($(window).width() >= 768) {
         return delay = setTimeout((function() {
-          return $('.nav > ul > li.menu.on').removeClass('on');
+          return $(navSelector + ' > ul > li.menu.on').removeClass('on');
         }), 350);
       }
     });
-    $('body').on('click', '.nav > ul > li.menu:not(.disabled) > a', function(e) {
+    $('body').on('click', navSelector + ' > ul > li.menu:not(.disabled) > a', function(e) {
       if (Modernizr.touch || $(window).width() < 768) {
         openMenu(e.target);
       } else {
-        $('.nav > ul > li.menu.on').removeClass('on');
+        $(navSelector + ' > ul > li.menu.on').removeClass('on');
         $(e.target).parents('li.menu').addClass('on');
       }
       e.preventDefault();
       return false;
     });
-    $('body').on('focus', '.nav > ul > li:not(.on) > a', function() {
-      return $('.nav > ul > li.menu.on').removeClass('on');
+    $('body').on('focus', navSelector + ' > ul > li:not(.on) > a', function() {
+      return $(navSelector + ' > ul > li.menu.on').removeClass('on');
     });
-    $('body').on('focus', '.nav > ul > li.menu > a', function(e) {
+    $('body').on('focus', navSelector + ' > ul > li.menu > a', function(e) {
       openMenu(e.target);
       e.preventDefault();
       return false;
@@ -47,8 +55,8 @@
           $('.dropdown').filter('.on').removeClass('on');
         }
       }
-      if ($('.nav > ul > li').filter('.menu.on').length) {
-        return $('.nav > ul > li').filter('.menu.on').removeClass('on');
+      if ($(navSelector + ' > ul > li').filter('.menu.on').length) {
+        return $(navSelector + ' > ul > li').filter('.menu.on').removeClass('on');
       }
     });
     $('body').on('focus', '.dropdown', function(e) {
@@ -57,7 +65,7 @@
     $('body').on('blur', '.dropdown li:last-child a', function(e) {
       return $('.dropdown').filter('.on').removeClass('on');
     });
-    $('.nav.menu').each(function() {
+    $(navSelector + '.menu').each(function() {
       if (!$(this).attr('data-label')) {
         $(this).attr('data-label', 'Menu');
       }
@@ -65,22 +73,22 @@
         return $(this).prepend('<a href="#" class="menu-toggle"><i class="icon-reorder"></i></a>');
       }
     });
-    $('body').on('click', '.nav.menu .menu-toggle', function(e) {
-      $(this).parent('.nav.menu').toggleClass('on');
+    $('body').on('click', navSelector + '.menu .menu-toggle', function(e) {
+      $(this).parent(navSelector + '.menu').toggleClass('on');
       e.preventDefault();
       return false;
     });
     $('body').on('focus', '.menu-toggle', function(e) {
-      return $(e.target).parent('.nav.menu').addClass('on');
+      return $(e.target).parent(navSelector + '.menu').addClass('on');
     });
-    $('body').on('blur', '.nav.menu > ul > li:last-child a', function(e) {
-      return $('.nav.menu').filter('.on').removeClass('on');
+    $('body').on('blur', navSelector + '.menu > ul > li:last-child a', function(e) {
+      return $(navSelector + '.menu').filter('.on').removeClass('on');
     });
   });
 
   $(window).on('resize', function() {
-    if ($('.nav > ul > li.menu.on').length > 1) {
-      return $('.nav > ul > li.menu.on').removeClass('on').first().addClass('on');
+    if ($(navSelector + ' > ul > li.menu.on').length > 1) {
+      return $(navSelector + ' > ul > li.menu.on').removeClass('on').first().addClass('on');
     }
   });
 
