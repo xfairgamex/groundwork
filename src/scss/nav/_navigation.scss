@@ -266,7 +266,7 @@
   &.menu {
     .menu-toggle {
       @extend %button;
-      display:none !important;
+      display:none;
     }
   }
 }

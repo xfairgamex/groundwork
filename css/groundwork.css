@@ -5374,7 +5374,7 @@ nav.inline ul li ul li:last-child a, .inline.nav ul li ul li:last-child a, nav.i
   border-radius: 0 0 4px 4px;
 }
 nav.menu .menu-toggle, .menu.nav .menu-toggle {
-  display: none !important;
+  display: none;
 }
 
 .pagination ul {
