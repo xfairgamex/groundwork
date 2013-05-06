@@ -6177,7 +6177,7 @@ textarea, .textarea {
   background: #dfdfdf;
 }
 
-.select-wrap select, .select-wrap .select {
+select, .select-wrap select, .select-wrap .select {
   -ms-appearance: none;
   -o-appearance: none;
   -moz-appearance: none;
@@ -6193,7 +6193,7 @@ textarea, .textarea {
   position: relative;
   z-index: 2;
 }
-.select-wrap select.unselected, .select-wrap .unselected.select {
+select.unselected, .select-wrap .unselected.select {
   color: #999;
 }
 
