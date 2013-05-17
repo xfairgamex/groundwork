@@ -2211,14 +2211,24 @@ block content
         br
         h2.AmericanTypewriter Modals
         .row
-          .one.third.small-tablet
+          .one.fourth.small-tablet
             p
-              a.button.green(href='#example-modal') Inline Content
+              a.image.modal.button.asphalt(href='http://placekitten.com/g/200/300', title='http://placekitten.com/g/200/300') Image
+            h4 Image Gallery:
+            p.modal.gallery
+              a.button.yellow(href='http://placekitten.com/g/200/300', title='http://placekitten.com/g/200/300') 1
+              | 
+              a.button.yellow(href='http://placekitten.com/g/200/310', title='http://placekitten.com/g/200/310') 2
+              | 
+              a.button.yellow(href='http://placekitten.com/g/200/320', title='http://placekitten.com/g/200/320') 3
+              | 
+              a.button.yellow(href='http://placekitten.com/g/200/330', title='http://placekitten.com/g/200/330') 4
+              | 
+              a.button.yellow(href='http://placekitten.com/g/200/340', title='http://placekitten.com/g/200/340') 5
+          .one.fourth.small-tablet
             p
-              a.fullscreen.button.blue(href='#example-modal') 
-                i.icon-fullscreen
-                |  Fullscreen
-            #example-modal.modal
+              a.modal.button.green(href='#example-modal') Inline Content
+            #example-modal.mfp-hide
               img.pull-right.gap-left.gap-bottom(src='http://placekitten.com/g/200/300', alt='')
               h1 HTML Ipsum Presents
               p
@@ -2233,23 +2243,15 @@ block content
                 li Aliquam tincidunt mauris eu risus.
               p
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-          .one.third.small-tablet
+          .one.fourth.small-tablet
             p
               a.modal.button.purple(href='http://placekitten.com/')
                 | External Content 
                 i.icon-external-link
+          .one.fourth.small-tablet
             p
-              a.modal.fullscreen.button.asphalt(href='http://placekitten.com/')
-                | Fullscreen External Content 
-                i.icon-external-link
-          .one.third.small-tablet
-            p
-              a.modal.button.orange(href='http://www.youtube.com/embed/eDO23-eLoGA') 
+              a.modal.button.orange(href='http://www.youtube.com/watch?v=eDO23-eLoGA') 
                 | YouTube Video 
-                i.icon-play-circle
-            p
-              a.modal.fullscreen.button.red(href='http://www.youtube.com/embed/eDO23-eLoGA') 
-                | Fullscreen YouTube Video 
                 i.icon-play-circle
         hr
         br
