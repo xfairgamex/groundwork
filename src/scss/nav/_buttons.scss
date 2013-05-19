@@ -152,6 +152,7 @@
   width:100%;
   z-index:10;
   // font-size:0.9em;
+  @include drop-shadow(rgba(0,0,0,0.25), 5px, 0, 0);
   @include rounded(0 0 $radius $radius);
 }
 
