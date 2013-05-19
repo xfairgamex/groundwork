@@ -98,17 +98,17 @@
   }
   @for $i from 1 through length($modifier-name) {
     &.#{nth($modifier-name, $i)} {
-      background-color:lighten(nth($modifier-code, $i),10%);
-      border-color:#{nth($modifier-code, $i)};
+      background-color:nth($modifier-code, $i);
+      border-color:darken(nth($modifier-code, $i),10%);
       color:#{nth($modifier-text, $i)};
       &.top.right, &.top.left {
         &:after, &:before {
-          border-top-color:lighten(nth($modifier-code, $i),10%);
+          border-top-color:nth($modifier-code, $i);
         }
       }
       &.bottom.right, &.bottom.left {
         &:after, &:before {
-          border-bottom-color:lighten(nth($modifier-code, $i),10%);
+          border-bottom-color:nth($modifier-code, $i);
         }
       }
     }

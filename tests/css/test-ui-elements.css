@@ -4184,103 +4184,103 @@ table tfoot tr td {
   border-bottom-color: #58a959;
 }
 #tooltip.green {
-  background-color: #54d98c;
-  border-color: #2ecc71;
+  background-color: #2ecc71;
+  border-color: #25a25a;
   color: white;
 }
 #tooltip.green.top.right:after, #tooltip.green.top.right:before, #tooltip.green.top.left:after, #tooltip.green.top.left:before {
-  border-top-color: #54d98c;
+  border-top-color: #2ecc71;
 }
 #tooltip.green.bottom.right:after, #tooltip.green.bottom.right:before, #tooltip.green.bottom.left:after, #tooltip.green.bottom.left:before {
-  border-bottom-color: #54d98c;
+  border-bottom-color: #2ecc71;
 }
 #tooltip.blue {
-  background-color: #5faee3;
-  border-color: #3498db;
+  background-color: #3498db;
+  border-color: #217dbb;
   color: white;
 }
 #tooltip.blue.top.right:after, #tooltip.blue.top.right:before, #tooltip.blue.top.left:after, #tooltip.blue.top.left:before {
-  border-top-color: #5faee3;
+  border-top-color: #3498db;
 }
 #tooltip.blue.bottom.right:after, #tooltip.blue.bottom.right:before, #tooltip.blue.bottom.left:after, #tooltip.blue.bottom.left:before {
-  border-bottom-color: #5faee3;
+  border-bottom-color: #3498db;
 }
 #tooltip.purple {
-  background-color: #b07cc6;
-  border-color: #9b59b6;
+  background-color: #9b59b6;
+  border-color: #804399;
   color: white;
 }
 #tooltip.purple.top.right:after, #tooltip.purple.top.right:before, #tooltip.purple.top.left:after, #tooltip.purple.top.left:before {
-  border-top-color: #b07cc6;
+  border-top-color: #9b59b6;
 }
 #tooltip.purple.bottom.right:after, #tooltip.purple.bottom.right:before, #tooltip.purple.bottom.left:after, #tooltip.purple.bottom.left:before {
-  border-bottom-color: #b07cc6;
+  border-bottom-color: #9b59b6;
 }
 #tooltip.yellow {
-  background-color: #f4d03f;
-  border-color: #f1c40f;
+  background-color: #f1c40f;
+  border-color: #c29d0b;
   color: white;
 }
 #tooltip.yellow.top.right:after, #tooltip.yellow.top.right:before, #tooltip.yellow.top.left:after, #tooltip.yellow.top.left:before {
-  border-top-color: #f4d03f;
+  border-top-color: #f1c40f;
 }
 #tooltip.yellow.bottom.right:after, #tooltip.yellow.bottom.right:before, #tooltip.yellow.bottom.left:after, #tooltip.yellow.bottom.left:before {
-  border-bottom-color: #f4d03f;
+  border-bottom-color: #f1c40f;
 }
 #tooltip.orange {
-  background-color: #eb9950;
-  border-color: #e67e22;
+  background-color: #e67e22;
+  border-color: #bf6516;
   color: white;
 }
 #tooltip.orange.top.right:after, #tooltip.orange.top.right:before, #tooltip.orange.top.left:after, #tooltip.orange.top.left:before {
-  border-top-color: #eb9950;
+  border-top-color: #e67e22;
 }
 #tooltip.orange.bottom.right:after, #tooltip.orange.bottom.right:before, #tooltip.orange.bottom.left:after, #tooltip.orange.bottom.left:before {
-  border-bottom-color: #eb9950;
+  border-bottom-color: #e67e22;
 }
 #tooltip.red {
-  background-color: #ed7669;
-  border-color: #e74c3c;
+  background-color: #e74c3c;
+  border-color: #d62c1a;
   color: white;
 }
 #tooltip.red.top.right:after, #tooltip.red.top.right:before, #tooltip.red.top.left:after, #tooltip.red.top.left:before {
-  border-top-color: #ed7669;
+  border-top-color: #e74c3c;
 }
 #tooltip.red.bottom.right:after, #tooltip.red.bottom.right:before, #tooltip.red.bottom.left:after, #tooltip.red.bottom.left:before {
-  border-bottom-color: #ed7669;
+  border-bottom-color: #e74c3c;
 }
 #tooltip.pink {
-  background-color: #f35493;
-  border-color: #f02475;
+  background-color: #f02475;
+  border-color: #d30e5c;
   color: white;
 }
 #tooltip.pink.top.right:after, #tooltip.pink.top.right:before, #tooltip.pink.top.left:after, #tooltip.pink.top.left:before {
-  border-top-color: #f35493;
+  border-top-color: #f02475;
 }
 #tooltip.pink.bottom.right:after, #tooltip.pink.bottom.right:before, #tooltip.pink.bottom.left:after, #tooltip.pink.bottom.left:before {
-  border-bottom-color: #f35493;
+  border-bottom-color: #f02475;
 }
 #tooltip.turquoise {
-  background-color: #28e1bd;
-  border-color: #1abc9c;
+  background-color: #1abc9c;
+  border-color: #148f77;
   color: white;
 }
 #tooltip.turquoise.top.right:after, #tooltip.turquoise.top.right:before, #tooltip.turquoise.top.left:after, #tooltip.turquoise.top.left:before {
-  border-top-color: #28e1bd;
+  border-top-color: #1abc9c;
 }
 #tooltip.turquoise.bottom.right:after, #tooltip.turquoise.bottom.right:before, #tooltip.turquoise.bottom.left:after, #tooltip.turquoise.bottom.left:before {
-  border-bottom-color: #28e1bd;
+  border-bottom-color: #1abc9c;
 }
 #tooltip.asphalt {
-  background-color: #46627f;
-  border-color: #34495e;
+  background-color: #34495e;
+  border-color: #222f3d;
   color: white;
 }
 #tooltip.asphalt.top.right:after, #tooltip.asphalt.top.right:before, #tooltip.asphalt.top.left:after, #tooltip.asphalt.top.left:before {
-  border-top-color: #46627f;
+  border-top-color: #34495e;
 }
 #tooltip.asphalt.bottom.right:after, #tooltip.asphalt.bottom.right:before, #tooltip.asphalt.bottom.left:after, #tooltip.asphalt.bottom.left:before {
-  border-bottom-color: #46627f;
+  border-bottom-color: #34495e;
 }
 #tooltip.top.right:after {
   top: auto;

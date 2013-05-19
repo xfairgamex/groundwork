@@ -952,7 +952,7 @@ block content
         h2.AmericanTypewriter Tables
         .row
           .one.whole.padded
-            table.responsive
+            table.responsive.tooltip(title='responsive data table')
               thead
                 tr
                   th(style='width: 25%; height: 16%; font-size: 13px;') Table Heading
@@ -988,7 +988,7 @@ block content
                   td(style='width: 25%; height: 16%; font-size: 13px;') Footer cell
         .row
           .one.third.padded
-            table.responsive.blue
+            table.responsive.blue.tooltip(title='blue')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
@@ -1005,7 +1005,7 @@ block content
                 tr
                   td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
           .one.third.padded
-            table.responsive.green
+            table.responsive.green.tooltip(title='green')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
@@ -1022,59 +1022,7 @@ block content
                 tr
                   td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
           .one.third.padded
-            table.responsive.purple
-              thead
-                tr
-                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
-              tbody
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-              tfoot
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
-        .row
-          .one.third.padded
-            table.responsive.yellow
-              thead
-                tr
-                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
-              tbody
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-              tfoot
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
-          .one.third.padded
-            table.responsive.orange
-              thead
-                tr
-                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
-              tbody
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
-              tfoot
-                tr
-                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
-          .one.third.padded
-            table.responsive.red
+            table.responsive.purple.tooltip(title='purple')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
@@ -1092,7 +1040,7 @@ block content
                   td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
         .row
           .one.third.padded
-            table.responsive.pink
+            table.responsive.yellow.tooltip(title='yellow')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
@@ -1109,7 +1057,7 @@ block content
                 tr
                   td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
           .one.third.padded
-            table.responsive.turquoise
+            table.responsive.orange.tooltip(title='orange')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
@@ -1126,7 +1074,59 @@ block content
                 tr
                   td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
           .one.third.padded
-            table.responsive.asphalt
+            table.responsive.red.tooltip(title='red')
+              thead
+                tr
+                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
+              tbody
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+              tfoot
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
+        .row
+          .one.third.padded
+            table.responsive.pink.tooltip(title='pink')
+              thead
+                tr
+                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
+              tbody
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+              tfoot
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
+          .one.third.padded
+            table.responsive.turquoise.tooltip(title='turquoise')
+              thead
+                tr
+                  th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
+              tbody
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Table cell
+              tfoot
+                tr
+                  td(style='width: 100%; height: 16%; font-size: 13px;') Footer cell
+          .one.third.padded
+            table.responsive.asphalt.tooltip(title='asphalt')
               thead
                 tr
                   th(style='width: 100%; height: 16%; font-size: 13px;') Table Heading
