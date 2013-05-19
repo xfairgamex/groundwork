@@ -5,7 +5,7 @@
 </a>
 
 GroundworkCSS
-=============
+====
 
 Say hello to responsive design made easy.
 
@@ -27,11 +27,11 @@ work on virtually any device. Key features that make GroundworkCSS stand out are
   %placeholder classes
   
 
-Getting Started with GroundworkCSS
-==================================
+Getting Started using GroundworkCSS
+====
 
 Default Build
--------------
+----
 
 The easiest way to incorporate GroundworkCSS into your project is to copy the
 pre-compiled CSS and JS files into your project, and then refer to them in
@@ -61,8 +61,9 @@ All in all, you may end up with markup that looks like the following:
     <script type="text/javascript" src="/js/plugins/jquery.cycle2.js"></script>
     <script type="text/javascript" src="/js/groundwork.all.js"></script>
 
+
 Custom Build
-------------
+----
 
 If you use SCSS and you want to compile your own build of groundwork you can do
 so (good if you need lean CSS output for your site).
@@ -77,3 +78,8 @@ generate grid/helper classes or not.
 You can then output your own groundwork.css, or import groundwork.scss as part
 of your project's SCSS. The latter lets you utilise GroundworkCSS's library
 through ```@include``` or ```@extend``` for your custom classes.
+
+
+Want to develop on and contribute to GroundworkCSS?
+----
+Read [Contributing to Groundwork](https://github.com/groundworkcss/groundwork/wiki/Contributing-to-Groundwork) and fork away!  :)
