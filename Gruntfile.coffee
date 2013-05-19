@@ -26,6 +26,9 @@ module.exports = (grunt) ->
           join: true
         files:
           "js/groundwork.all.js":       ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
+      stacktable:
+        files:
+          'src/modules/stacktable.js/stacktable.js': 'src/modules/stacktable.js/src/coffee/stacktable.coffee'
 
     jade:
       groundwork:
