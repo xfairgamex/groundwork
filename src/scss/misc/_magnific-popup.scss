@@ -3,7 +3,7 @@
 ////////////////////////
 //
 // Contents:
-// 
+//
 // 1. Variables
 // 2. General styles
 //    - Transluscent overlay
@@ -20,7 +20,7 @@
 //    - Image content type styles
 //    - Media query where size of arrows is reduced
 //    - IE7 support
-//    
+//
 ////////////////////////
 
 
@@ -30,8 +30,8 @@
 // 1. Variables
 ////////////////////////
 
-$overlay-color: #0b0b0b; 
-$overlay-opacity: 0.8; 
+$overlay-color: #0b0b0b;
+$overlay-opacity: 0.8;
 $shadow: 0 0 8px rgba(0, 0, 0, 0.6); // shadow on image or iframe
 $popup-padding-left: 8px; // Padding from left and from right side
 $popup-padding-left-mobile: 6px; // Same as above, but is applied when width of window is less than 800px
@@ -81,7 +81,7 @@ $caption-subtitle-color: #BDBDBD;
 
   background: $overlay-color;
   opacity: $overlay-opacity;
-  @if $IE7support { 
+  @if $IE7support {
     filter: alpha(opacity=$overlay-opacity*100);
   }
 }
@@ -100,7 +100,6 @@ $caption-subtitle-color: #BDBDBD;
 
 // Root container
 .mfp-container {
-  height: 100%;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -213,7 +212,7 @@ $caption-subtitle-color: #BDBDBD;
 // Hide content when it was not loaded
 .mfp-s-error .mfp-content {
   display: none;
-} 
+}
 
 
 // CSS-reset for buttons
@@ -259,13 +258,13 @@ button::-moz-focus-inner {
   }
 
   &:active {
-    top: 1px; 
+    top: 1px;
   }
 }
 .mfp-close-btn-in .mfp-close {
   color: $inner-close-icon-color;
 }
-.mfp-image-holder .mfp-close, 
+.mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
   color: $controls-color;
   right: -6px;
@@ -314,7 +313,7 @@ button::-moz-focus-inner {
     .mfp-a {
       content: '';
       display: block;
-      width: 0; 
+      width: 0;
       height: 0;
       position: absolute;
       left: 0;
@@ -331,7 +330,7 @@ button::-moz-focus-inner {
       border-bottom-width: 12px;
       top:8px;
     }
-    
+
     &:before,
     .mfp-b {
       border-top-width: 20px;
@@ -353,7 +352,7 @@ button::-moz-focus-inner {
        border-right: 20px solid #FFF;
     }
   }
-  
+
   .mfp-arrow-right {
     right: 0;
     &:after,
@@ -385,17 +384,17 @@ button::-moz-focus-inner {
     width: 100%;
     height: 0;
     overflow: hidden;
-    padding-top: $iframe-ratio * 100%;       
+    padding-top: $iframe-ratio * 100%;
   }
-  .mfp-iframe-scaler iframe {  
-    position: absolute;              
-    top: -3px;                          
-    left: 0;                         
-    width: 100%;                     
-    height: 100%;  
+  .mfp-iframe-scaler iframe {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
     box-shadow: $shadow;
     background: $iframe-background;
-  }  
+  }
   .mfp-iframe-holder .mfp-close {
     top: -43px;
   }
@@ -531,27 +530,27 @@ button::-moz-focus-inner {
 // Scale navigation arrows and reduce padding from sides
 @media all and (max-width: 800px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75); 
-    transform: scale(0.75); 
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
   }
   .mfp-arrow-left {
-    -webkit-transform-origin: 0; 
+    -webkit-transform-origin: 0;
     transform-origin: 0;
   }
   .mfp-arrow-right {
-     -webkit-transform-origin: 100%; 
+     -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
   .mfp-container {
     padding-left: $popup-padding-left-mobile;
     padding-right: $popup-padding-left-mobile;
   }
-} 
+}
 
 
 // IE7 support
 // Styles that make popup look nicier in old IE
-@if $IE7support { 
+@if $IE7support {
   .mfp-ie7 {
     .mfp-img {
       padding: 0;
