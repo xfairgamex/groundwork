@@ -136,7 +136,8 @@ $caption-subtitle-color: #BDBDBD;
 }
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   cursor: auto;
 }
 
