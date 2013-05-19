@@ -5150,7 +5150,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
 }
 .pagination ul li a {
   display: inline-block;
-  width: auto;
+  width: 100%;
   background: #1dabb8;
   font-size: 1em;
   line-height: 1.5;
