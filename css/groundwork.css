@@ -6739,8 +6739,8 @@ select.unselected, .select-wrap .unselected.select {
   overflow: hidden;
   position: fixed;
   background: #0b0b0b;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .mfp-wrap {
@@ -6961,7 +6961,7 @@ button::-moz-focus-inner {
 }
 .mfp-arrow:after,
 .mfp-arrow .mfp-a {
-  opacity: 0.8;
+  opacity: 0.5;
   border-top-width: 12px;
   border-bottom-width: 12px;
   top: 8px;
