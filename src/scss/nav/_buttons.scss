@@ -178,7 +178,7 @@
 }
 
 %dropdown-divider {
-  margin:0 !important;
+  margin:0;
   border-color:#ececec;
 }
 
@@ -275,10 +275,10 @@
             a, a:visited {
               @extend %dropdown-menu-item;
             }
-            hr {
-              @extend %dropdown-divider;
-            }
           }
+        }
+        hr {
+          @extend %dropdown-divider;
         }
       }
     }
@@ -305,10 +305,10 @@
           a, a:visited {
             @extend %dropdown-menu-item;
           }
-          hr {
-            @extend %dropdown-divider;
-          }
         }
+      }
+      hr {
+        @extend %dropdown-divider;
       }
     }
   }
