@@ -10,6 +10,7 @@ GroundworkCSS
 Say hello to responsive design made easy.
 
 Home page: [http://groundwork.sidereel.com](http://groundwork.sidereel.com)
+
 Developer guide: [Contributing to Groundwork](https://github.com/groundworkcss/groundwork/wiki/Contributing-to-Groundwork)
 
 [GroundworkCSS](http://groundwork.sidereel.com) is a fully responsive HTML5, CSS 
