@@ -2211,21 +2211,23 @@ block content
         br
         h2.AmericanTypewriter Modals
         .row
-          .one.fourth.small-tablet
+          .one.third.small-tablet
+            h4 Image:
             p
               a.image.modal.button.asphalt(href='http://placekitten.com/g/200/300', title='http://placekitten.com/g/200/300') Image
             h4 Image Gallery:
             p.modal.gallery
               a.button.yellow(href='http://placekitten.com/g/200/300', title='http://placekitten.com/g/200/300') 1
               | 
-              a.button.yellow(href='http://placekitten.com/g/200/310', title='http://placekitten.com/g/200/310') 2
+              a.button.orange(href='http://placekitten.com/g/250/350', title='http://placekitten.com/g/250/350') 2
               | 
-              a.button.yellow(href='http://placekitten.com/g/200/320', title='http://placekitten.com/g/200/320') 3
+              a.button.red(href='http://placekitten.com/g/300/300', title='http://placekitten.com/g/300/300') 3
               | 
-              a.button.yellow(href='http://placekitten.com/g/200/330', title='http://placekitten.com/g/200/330') 4
+              a.button.piink(href='http://placekitten.com/g/350/250', title='http://placekitten.com/g/350/250') 4
               | 
-              a.button.yellow(href='http://placekitten.com/g/200/340', title='http://placekitten.com/g/200/340') 5
-          .one.fourth.small-tablet
+              a.button.purple(href='http://placekitten.com/g/300/200', title='http://placekitten.com/g/300/200') 5
+          .one.third.small-tablet
+            h4 Inline Content:
             p
               a.modal.button.green(href='#example-modal') Inline Content
             #example-modal.mfp-hide
@@ -2243,14 +2245,36 @@ block content
                 li Aliquam tincidunt mauris eu risus.
               p
                 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-          .one.fourth.small-tablet
+            p
+              a.modal.button.blue(href='#subscribe') Inline Content (Form)
+            #subscribe.mfp-hide
+              form#subForm(action='http://groundworkcss.createsend.com/t/t/s/niuuy/', method='post')
+                .row
+                  .one.whole.padded
+                    h4 Get notified when big things happen.
+                    input#name(type='text', name='cm-name', tab-index='1', placeholder='First & Last Name')
+                    br
+                    input#niuuy-niuuy(type='text', name='cm-niuuy-niuuy', tab-index='2', placeholder='Email Address')
+                    br
+                    h3.pull-left
+                      a.tooltip(href='http://github.com/groundworkcss', target='_blank', title='Follow @groundworkcss')
+                        i.icon-github-alt
+                      |  
+                      a.tooltip(href='http://twitter.com/groundworkCSS/', target='_blank', title='Follow @GroundworkCSS')
+                        i.icon-twitter
+                      |  
+                      a.tooltip(href='mailto:groundwork@sidereel.com', target='_blank', title='Email GroundworkCSS')
+                        i.icon-envelope-alt
+                    input.pull-right.blue(type='submit', value='Subscribe')
+          .one.third.small-tablet
+            h4 External Content (iframe):
             p
               a.modal.button.purple(href='http://placekitten.com/')
                 | External Content 
                 i.icon-external-link
-          .one.fourth.small-tablet
+            h4 YouTube Video (iframe):
             p
-              a.modal.button.orange(href='http://www.youtube.com/watch?v=eDO23-eLoGA') 
+              a.modal.button.red(href='http://www.youtube.com/watch?v=eDO23-eLoGA') 
                 | YouTube Video 
                 i.icon-play-circle
         hr

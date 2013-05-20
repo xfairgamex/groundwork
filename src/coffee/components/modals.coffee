@@ -31,6 +31,12 @@ $ ->
 
   # external content
   $("a.modal[href^='http']").not(".image").not("[href*='.jpg']").not("[href*='.jpeg']").not("[href*='.gif']").not("[href*='.png']").magnificPopup({
+      type: 'iframe',
+      height: '100%'
+  });
+
+  # video content
+  $("a.video.modal[href^='http']").magnificPopup({
       type: 'iframe'
   });
 

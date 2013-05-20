@@ -23,6 +23,10 @@
       mainClass: 'inline-modal'
     });
     $("a.modal[href^='http']").not(".image").not("[href*='.jpg']").not("[href*='.jpeg']").not("[href*='.gif']").not("[href*='.png']").magnificPopup({
+      type: 'iframe',
+      height: '100%'
+    });
+    $("a.video.modal[href^='http']").magnificPopup({
       type: 'iframe'
     });
     return $("a.modal[href]").not("[href^='#']").not(".image").not("[href^='http']").not("[href*='.jpg']").not("[href*='.jpeg']").not("[href*='.gif']").not("[href*='.png']").magnificPopup({
