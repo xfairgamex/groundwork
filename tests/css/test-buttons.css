@@ -4724,7 +4724,7 @@ button.dropdown ul li:last-child, .button.dropdown ul li:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-button.dropdown ul li hr, .button.dropdown ul li hr {
+button.dropdown hr, .button.dropdown hr {
   margin: 0;
   border-color: #ececec;
 }
