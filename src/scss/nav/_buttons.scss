@@ -315,6 +315,11 @@
   ul.button-list,
   ol.button-list {
     @extend %button-list;
+    li {
+      a {
+        @include button_modifiers;
+      }
+    }
   }
 }
 
