@@ -6000,6 +6000,11 @@ table tfoot tr td {
 
 .mfp-content {
   max-width: 1200px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .mfp-iframe-holder .mfp-content {

@@ -16,6 +16,7 @@
 
 .mfp-content {
   max-width: $max-width;
+  @include rounded($radius);
 }
 
 .mfp-iframe-holder {
