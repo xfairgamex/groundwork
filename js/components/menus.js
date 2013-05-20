@@ -49,6 +49,7 @@
     });
     $('body').on('click', function(e) {
       if ($(e.target).hasClass('dropdown')) {
+        $('.dropdown').not(e.target).removeClass('on');
         $(e.target).toggleClass('on');
       } else {
         if ($('.dropdown').filter('.on').length) {
