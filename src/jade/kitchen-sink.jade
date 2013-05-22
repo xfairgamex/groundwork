@@ -45,12 +45,18 @@ block content
               abbr.tooltip(title='Abreviated') abbr
               |  text
           .one.third.padded
-            ul
+            ul.unstyled
               li Unstyled list item 1
               li Unstyled list item 2
-            ol
+            ol.unstyled
               li Unstyled ordered list item 1
               li Unstyled ordered list item 2
+            ul
+              li Normal list item 1
+              li Normal list item 2
+            ol
+              li Ordered list item 1
+              li Ordered list item 2
             ul.list
               li Styled list item 1
               li Styled list item 2
@@ -61,107 +67,79 @@ block content
         .row
           .one.third.padded
             b
-              .info Info
+              span.yellow Yellow
               br
-              .alert Alert
+              span.orange Orange
               br
-              .warning Warning
+              span.red Red
               br
-              .error Error
+              span.pink Pink
               br
-              .success Success
+              span.purple Purple
               br
-              .yellow Yellow
+              span.asphalt Asphalt
               br
-              .orange Orange
+              span.blue Blue
               br
-              .red Red
+              span.turquoise Turquoise
               br
-              .pink Pink
-              br
-              .purple Purple
-              br
-              .asphalt Asphalt
-              br
-              .blue Blue
-              br
-              .turquoise Turquoise
-              br
-              .green Green
+              span.green Green
           .one.third.padded
-            ul.yellow
-              li Unstyled list item 1
-            ul.orange
-              li Unstyled list item 1
-            ul.red
-              li Unstyled list item 1
-            ul.pink
-              li Unstyled list item 1
-            ul.purple
-              li Unstyled list item 1
-            ul.asphalt
-              li Unstyled list item 1
-            ul.blue
-              li Unstyled list item 1
-            ul.turquoise
-              li Unstyled list item 1
-            ul.green
-              li Unstyled list item 1
-            ul.list.yellow
-              li Styled colored list item 1
-            ul.list.orange
-              li Styled colored list item 1
-            ul.list.red
-              li Styled colored list item 1
-            ul.list.pink
-              li Styled colored list item 1
-            ul.list.purple
-              li Styled colored list item 1
-            ul.list.asphalt
-              li Styled colored list item 1
-            ul.list.blue
-              li Styled colored list item 1
-            ul.list.turquoise
-              li Styled colored list item 1
-            ul.list.green
-              li Styled colored list item 1
+            ul
+              li.yellow Normal list item
+              li.orange Normal list item
+              li.red Normal list item
+              li.pink Normal list item
+              li.purple Normal list item
+              li.asphalt Normal list item
+              li.blue Normal list item
+              li.turquoise Normal list item
+              li.green Normal list item
           .one.third.padded
-            ol.yellow
-              li Unstyled ordered list item 1
-            ol.orange
-              li Unstyled ordered list item 1
-            ol.red
-              li Unstyled ordered list item 1
-            ol.pink
-              li Unstyled ordered list item 1
-            ol.purple
-              li Unstyled ordered list item 1
-            ol.asphalt
-              li Unstyled ordered list item 1
-            ol.blue
-              li Unstyled ordered list item 1
-            ol.turquoise
-              li Unstyled ordered list item 1
-            ol.green
-              li Unstyled ordered list item 1
-            ol.list.yellow
-              li Styled colored ordered list item 1
-            ol.list.orange
-              li Styled colored ordered list item 1
-            ol.list.red
-              li Styled colored ordered list item 1
-            ol.list.pink
-              li Styled colored ordered list item 1
-            ol.list.purple
-              li Styled colored ordered list item 1
-            ol.list.asphalt
-              li Styled colored ordered list item 1
-            ol.list.blue
-              li Styled colored ordered list item 1
-            ol.list.turquoise
-              li Styled colored ordered list item 1
-            ol.list.green
-              li Styled colored ordered list item 1
+            ol
+              li.yellow Ordered list item
+              li.orange Ordered list item
+              li.red Ordered list item
+              li.pink Ordered list item
+              li.purple Ordered list item
+              li.asphalt Ordered list item
+              li.blue Ordered list item
+              li.turquoise Ordered list item
+              li.green Ordered list item
+        .row
+          .one.third.padded
+            b
+              span.info Info
+              br
+              span.alert Alert
+              br
+              span.warning Warning
+              br
+              span.error Error
+              br
+              span.success Success
+          .one.third.padded
+            ul.list
+              li.yellow Styled list item
+              li.orange Styled list item
+              li.red Styled list item
+              li.pink Styled list item
+              li.purple Styled list item
+              li.asphalt Styled list item
+              li.blue Styled list item
+              li.turquoise Styled list item
+              li.green Styled list item
+          .one.third.padded
+            ol.list
+              li.yellow Styled ordered list item
+              li.orange Styled ordered list item
+              li.red Styled ordered list item
+              li.pink Styled ordered list item
+              li.purple Styled ordered list item
+              li.asphalt Styled ordered list item
+              li.blue Styled ordered list item
+              li.turquoise Styled ordered list item
+              li.green Styled ordered list item
         h4.AverageSans Links
         .row
           .one.third.padded
@@ -207,14 +185,14 @@ block content
           .one.third.padded
             ul
               li
-                a(href="#") Unstyled list link item 1
+                a(href="#") Normal list link item 1
               li
-                a(href="#") Unstyled list link item 2
+                a(href="#") Normal list link item 2
             ol
               li
-                a(href="#") Unstyled ordered list link item 1
+                a(href="#") Ordered list link item 1
               li
-                a(href="#") Unstyled ordered list link item 2
+                a(href="#") Ordered list link item 2
             ul.list
               li
                 a(href="#") Styled list link item 1

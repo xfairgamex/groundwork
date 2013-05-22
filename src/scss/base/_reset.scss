@@ -37,8 +37,6 @@
 //
 // =======================================================
 
-/* vertical rhythm */
-@include establish-baseline;
 
 %everything {
   @include box-sizing(border-box);
@@ -46,7 +44,6 @@
 }
 
 %document {
-  @include adjust-font-size-to($base-font-size);
   -webkit-text-size-adjust:none;
 }
 
@@ -54,7 +51,7 @@
   margin:0;
   padding:0;
   border: 0;
-  font-family:inherit;
+  font:inherit;
   vertical-align:baseline;
 }
 

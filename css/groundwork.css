@@ -3312,7 +3312,7 @@ dl dd {
   margin-bottom: 10px;
 }
 
-ul.list, ol.list, ul.unstyled, ol.unstyled {
+ul.list, ol.list, .unstyled, ul.unstyled, ol.unstyled {
   list-style: none;
 }
 
@@ -3331,7 +3331,6 @@ ul.list li:before {
   line-height: 2.20779em;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
-  line-height: normal;
   vertical-align: baseline;
   background-image: none;
   background-position: 0% 0%;
@@ -3566,6 +3565,33 @@ ol.list.turquoise li:before {
   background: #1abc9c;
 }
 ol.list.asphalt li:before {
+  background: #34495e;
+}
+ol.list li.green:before {
+  background: #2ecc71;
+}
+ol.list li.blue:before {
+  background: #3498db;
+}
+ol.list li.purple:before {
+  background: #9b59b6;
+}
+ol.list li.yellow:before {
+  background: #f1c40f;
+}
+ol.list li.orange:before {
+  background: #e67e22;
+}
+ol.list li.red:before {
+  background: #e74c3c;
+}
+ol.list li.pink:before {
+  background: #f02475;
+}
+ol.list li.turquoise:before {
+  background: #1abc9c;
+}
+ol.list li.asphalt:before {
   background: #34495e;
 }
 
@@ -6269,7 +6295,7 @@ textarea, .textarea {
   background: #dfdfdf;
 }
 
-select, .select-wrap select, .select-wrap .select {
+.select-wrap select, .select-wrap .select {
   -ms-appearance: none;
   -o-appearance: none;
   -moz-appearance: none;
@@ -6285,7 +6311,7 @@ select, .select-wrap select, .select-wrap .select {
   position: relative;
   z-index: 2;
 }
-select.unselected, .select-wrap .unselected.select {
+.select-wrap select.unselected, .select-wrap .unselected.select {
   color: #999;
 }
 

@@ -6,6 +6,9 @@
 
 
 
+/* vertical rhythm */
+@include establish-baseline;
+
 %document {
   font-family:$font-family;
   color:$font-color;
@@ -89,12 +92,12 @@
   }
 }
 
-%unstyled-list {
+%unstyled {
   list-style:none;
 }
 
 %ul-list {
-  @extend %unstyled-list;
+  @extend %unstyled;
   margin-left:0;
   %list-item {
     &:before {
@@ -108,7 +111,6 @@
       @include adjust-font-size-to($base-font-size * 1.1);
       text-decoration:inherit;
       -webkit-font-smoothing:antialiased;
-      line-height:normal;
       vertical-align:baseline;
       background-image:none;
       background-position:0% 0%;
@@ -119,7 +121,7 @@
 }
 
 %ol-list {
-  @extend %unstyled-list;
+  @extend %unstyled;
   counter-reset:li;
   margin-left:1.5em;
   @include adjust-font-size-to($base-font-size);
@@ -306,7 +308,7 @@
   }
 }
 @if $classes {
-  $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub del strike code pre info alert warning error invalid success valid;
+  $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub del strike code pre info alert warning error invalid success valid unstyled;
   @for $i from 1 through length($names) {
     .#{nth($names, $i)} {
       @extend %#{nth($names, $i)};
@@ -319,7 +321,7 @@
   }
   ul, ol {
     &.unstyled {
-      @extend %unstyled-list;
+      @extend %unstyled;
     }
   }
   ul.list {
@@ -334,6 +336,15 @@
     @for $i from 1 through length($modifier-name) {
       &.#{nth($modifier-name, $i)} {
         li {
+          &:before {
+            background:#{nth($modifier-code, $i)};
+          }
+        }
+      }
+    }
+    li {
+      @for $i from 1 through length($modifier-name) {
+        &.#{nth($modifier-name, $i)} {
           &:before {
             background:#{nth($modifier-code, $i)};
           }
