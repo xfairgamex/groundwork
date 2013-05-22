@@ -88,7 +88,7 @@
           }
         }
         &.on {
-          > a {
+          > a, > a:visited {
             background:$button-active;
             text-decoration:none;
           }
@@ -121,7 +121,7 @@
       width:auto;
       z-index:101;
       li {
-        a {
+        a, a:visited {
           @include rounded(0);
           border:none;
           border-top:1px solid $button-color;
@@ -282,7 +282,7 @@
       @include rounded($radius);
       padding:0 3px 0 2px;
       min-width:29px;
-      a {
+      a, a:visited {
         display:inline-block;
         width:100%;
         background:$button-color;
@@ -308,7 +308,7 @@
         }
       }
       &.prev, &.next {
-        a {
+        a, a:visited {
           padding:0 4px;
           background:$button-color;
           color:#fff;
@@ -360,7 +360,7 @@
   li {
     display:inline-block;
     padding:0.2em 0;
-    a {
+    a, a:visited {
       border:none;
       color:gray;
       &:before {
