@@ -1,13 +1,3 @@
-/* vertical rhythm */
-* html {
-  font-size: 100%;
-}
-
-html {
-  font-size: 16px;
-  line-height: 1.5em;
-}
-
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -16,8 +6,6 @@ html {
 }
 
 html, body, .document, .html, .body {
-  font-size: 1em;
-  line-height: 1.5em;
   -webkit-text-size-adjust: none;
 }
 
@@ -25,7 +13,7 @@ html, body, div, span, header, footer, aside, nav, menu, section, article, detai
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline;
 }
 
@@ -3274,6 +3262,16 @@ ul.icons li [class*=" icon-"] {
 .AmericanTypewriter {
   /* might add inline-font-files() at some point */
   font-family: AmericanTypewriter, Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* vertical rhythm */
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 html, body, .document, .html, .body {
