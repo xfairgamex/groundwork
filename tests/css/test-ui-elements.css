@@ -4386,6 +4386,14 @@ table tfoot tr td {
   border-radius: 4px;
 }
 
+.mfp-iframe {
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .mfp-iframe-holder .mfp-content {
   width: 100%;
   height: auto;
