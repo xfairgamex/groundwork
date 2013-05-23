@@ -26,19 +26,5 @@
 //      mobile       //
 ///////////////////////
 @include mobile {
-  .tabs:not(.mobile) {
-    > ul {
-      li {
-        float:none;
-        width:100%;
-        a {
-          @include rounded(0);
-          border-bottom:none;
-        }
-        &:first-child a {
-          @include rounded($radius $radius 0 0);
-        }
-      }
-    }
-  }
+  // do not remove -- required for mobile helpers
 }
