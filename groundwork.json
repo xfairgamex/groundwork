@@ -1,22 +1,18 @@
 {
   "name": "GroundworkCSS",
   "title": "GroundworkCSS",
-  "description": "A Responsive HTML5, CSS & Javascript Framework",
+  "description": "A responsive, fractions-based, nestable, fluid grid system created by [@ghepting] ",
   "keywords": [
     "groundworkcss",
     "groundwork",
     "responsive",
-    "framework",
     "grid",
     "fluid",
     "css",
     "sass",
-    "scss",
-    "coffeescript",
-    "javascript",
-    "jquery"
+    "scss"
   ],
-  "version": "1.7.2",
+  "version": "0.1.0",
   "author": {
     "name": "Gary Hepting",
     "url": "http://groundworkcss.github.com"
@@ -30,5 +26,5 @@
   "bugs": "https://github.com/groundworkcss/groundwork/issues",
   "homepage": "http://groundworkcss.github.com/",
   "docs": "http://groundworkcss.github.com/",
-  "download": "https://github.com/groundworkcss/groundwork/archive/master.zip"
+  "download": "https://github.com/groundworkcss/groundwork/archive/grid.zip"
 }
