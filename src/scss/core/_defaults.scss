@@ -44,8 +44,8 @@ $gutter:              10px !default;       // gutter spacing
 // base styles
 $background-color:    #ffffff !default;
 $font-color:          #2b2b2d !default;
-$base-font-size:      16px !default;       // these are actually already set by Compass
-$base-line-height:    24px !default;       // these are actually already set by Compass
+$base-font-size:      16px !default;       // these are already set by Compass, changing these here will do nothing
+$base-line-height:    24px !default;       // these are already set by Compass, changing these here will do nothing
 $font-family:         Helvetica, Arial, Geneva, sans-serif !default;
 
 // links
