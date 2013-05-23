@@ -6,17 +6,16 @@ module.exports = (grunt) ->
     watch:
       coffee:
         files: '**/*.coffee'
-        tasks: ['coffee', 'concat:groundwork']
-      jade:
-        files: '**/*.jade'
-        tasks: ['jade:groundwork']
+        tasks: ['coffee']
       compass:
         files: '**/*.scss'
         tasks: ['compass:groundwork']
-      concat:
-       files: ['js/plugins/jquery.cycle2.js',
-               'js/plugins/jquery.magnific-popup.js']
-       tasks: ['concat:groundwork']
+
+    compass:
+      groundwork:
+        options:
+          config: 'config.rb'
+          trace: true
 
     coffee:
       individual:
@@ -25,52 +24,10 @@ module.exports = (grunt) ->
         src: ['components/*.coffee', 'plugins/*.coffee']
         dest: 'js'
         ext: '.js'
-      concatenated:
-        options:
-          join: true
-        files:
-          "js/groundwork.all.js":         ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
-
-    concat:
-      groundwork:
-        src: ['js/groundwork.all.js', 'js/plugins/jquery.cycle2.js', 'js/plugins/jquery.magnific-popup.js']
-        dest: 'js/groundwork.all.js'
-
-    jade:
-      groundwork:
-        files:
-          'templates/home.html':          ['src/jade/home.jade']
-          'templates/kitchen-sink.html':  ['src/jade/kitchen-sink.jade']
-          'templates/layout-1.html':      ['src/jade/layout-1.jade']
-          'templates/layout-2.html':      ['src/jade/layout-2.jade']
-          'templates/layout-3.html':      ['src/jade/layout-3.jade']
-          'templates/layout-4.html':      ['src/jade/layout-4.jade']
-          'templates/layout-5.html':      ['src/jade/layout-5.jade']
-        options:
-          pretty: true
-      tests:
-        files:
-          'tests/test-buttons.html':      ['tests/src/jade/test-buttons.jade']
-          'tests/test-grid.html':         ['tests/src/jade/test-grid.jade']
-          'tests/test-helpers.html':      ['tests/src/jade/test-helpers.jade']
-          'tests/test-typography.html':   ['tests/src/jade/test-typography.jade']
-          'tests/test-ui-elements.html':  ['tests/src/jade/test-ui-elements.jade']
-
-    compass:
-      groundwork:
-        options:
-          config: 'config.rb'
-          trace: true
-      tests:
-        options:
-          config: 'tests/config.rb'
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-compass'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
 
   grunt.registerTask 'default',           ['watch']
-  grunt.registerTask 'build',             ['coffee', 'concat:groundwork', 'jade:groundwork', 'compass:groundwork']
-  grunt.registerTask "tests",             ['jade:tests', 'compass:tests']
+  grunt.registerTask 'build',             ['compass', 'coffee']
