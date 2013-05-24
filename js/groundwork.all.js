@@ -119,6 +119,7 @@
         $target.removeClass('focused');
       }
       e.stopImmediatePropagation();
+      return false;
     });
     $body.on('focusin', navSelector + ' > ul > li.menu > a', function(e) {
       var $target;

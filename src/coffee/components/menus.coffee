@@ -47,7 +47,7 @@ $ ->
 
     e.stopImmediatePropagation()
     
-    return
+    return false
   
   # keyboard accessibility
   $body.on 'focusin', navSelector + ' > ul > li.menu > a', (e) ->
