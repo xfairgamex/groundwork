@@ -6200,7 +6200,7 @@ label, .label {
   padding: 0.4em 0.2em;
 }
 
-input, .input, select, textarea, .select, .textarea {
+input, .input, textarea, .select, .textarea {
   display: block;
   width: 100%;
   margin: 0;
@@ -6216,7 +6216,7 @@ input, .input, select, textarea, .select, .textarea {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 }
-input[size], [size].input, select[size], textarea[size], [size].select, [size].textarea {
+input[size], [size].input, textarea[size], [size].select, [size].textarea {
   height: auto;
 }
 

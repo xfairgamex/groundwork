@@ -161,7 +161,7 @@
 }
 
 @if $tags {
-  $elements: fieldset legend label input select textarea;
+  $elements: fieldset legend label input textarea;
 	@for $i from 1 through length($elements) {
 		$element: nth($elements, $i);
 		@if not index($tag-elements, $element) == false {
