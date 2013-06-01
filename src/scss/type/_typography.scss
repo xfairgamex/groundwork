@@ -14,9 +14,10 @@
   color:$font-color;
 }
 
-%selection {
+@mixin _selection {
   background:$selection-color;
   color:$selection-text;
+  text-shadow:none;
 }
 
 %links {
@@ -270,11 +271,11 @@
   body {
     @extend %document;
   }
-  ::selection {
-    @extend %selection;
-  }
   ::-moz-selection {
-    @extend %selection;
+    @include _selection;
+  }
+  ::selection {
+    @include _selection;
   }
   a, a:visited {
     @extend %links;

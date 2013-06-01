@@ -3279,11 +3279,6 @@ html, body, .document, .html, .body {
   color: #2b2b2d;
 }
 
-::selection, ::-moz-selection {
-  background: #489ac1;
-  color: white;
-}
-
 a, a:visited {
   color: #489ac1;
   -ms-transition: color 0.25s;
@@ -3550,6 +3545,18 @@ pre code:before, .pre code:before, pre .code:before, .pre .code:before {
   -moz-transition: font 0.25s;
   -webkit-transition: font 0.25s;
   transition: font 0.25s;
+}
+
+::-moz-selection {
+  background: #489ac1;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #489ac1;
+  color: white;
+  text-shadow: none;
 }
 
 .green {
