@@ -4421,7 +4421,9 @@ table tfoot tr td {
   word-break: break-word;
 }
 
-.mfp-content {
+.mfp-content,
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
   max-width: 1200px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;

@@ -37,6 +37,7 @@ $max-width:           1200px !default;     // max container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing
 
 
+
 ///////////////////////
 //       colors      //
 ///////////////////////
@@ -147,3 +148,49 @@ $web-font-names:      AverageSans,
 // font files (must all be named the same as listed below and include .eot, .woff and .ttf file types)
 $web-font-files:      average-sans-webfont,
                       americantypewriterstd-bold !default;
+
+
+
+///////////////////////
+//      modals       //
+///////////////////////
+
+// overlay
+$overlay-color:                   #0b0b0b !default;                    // Color of overlay screen
+$overlay-opacity:                 0.5 !default;                        // Opacity of overlay screen
+$shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+
+// spacing
+$popup-padding-left:              8px !default;                        // Padding from left and from right side
+$popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
+
+$z-index-base:                    500 !default;                        // Base z-index of popup
+
+// controls
+$include-arrows:                  true !default;                       // Include styles for nav arrows
+$controls-opacity:                0.65 !default;                       // Opacity of controls
+$controls-color:                  #FFF !default;                       // Color of controls
+$inner-close-icon-color:          #333 !default;                       // Color of close button when inside
+$controls-text-color:             #CCC !default;                       // Color of preloader and "1 of X" indicator
+$controls-text-color-hover:       #FFF !default;                       // Hover color of preloader and "1 of X" indicator
+$IE7support:                      true !default;                       // Very basic IE7 support
+
+// Inline-type options
+$modal-max-width:                 $max-width !default;                 // Maximum width of inline modals
+
+// Iframe-type options
+$include-iframe-type:             true !default;                       // Enable Iframe-type popups
+$iframe-padding-top:              ($gutter*4) !default;                       // Iframe padding top
+$iframe-background:               #000 !default;                       // Background color of iframes
+$iframe-max-width:                $max-width !default;                      // Maximum width of iframes
+$iframe-ratio:                    9/16 !default;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$include-image-type:              true !default;                       // Enable Image-type popups
+$image-padding-top:               ($gutter*4) !default;                       // Image padding top
+$image-padding-bottom:            ($gutter*4) !default;                       // Image padding bottom
+$include-mobile-layout-for-image: true !default;                       // Removes paddings from top and bottom
+
+// Image caption options
+$caption-title-color:             #F3F3F3 !default;                    // Caption title color
+$caption-subtitle-color:          #BDBDBD !default;                    // Caption subtitle color
