@@ -53,20 +53,9 @@
   background:linear-gradient(to bottom, $startColor 0%, $endColor 100%);
 }
 
-// box shadow
+// box shadow (deprecated)
 @mixin drop-shadow($color:rgba(0,0,0,0.2), $blur:5px, $x:2px, $y:2px) { // color, blur, x, y
-  -ms-box-shadow:$x $y $blur $color; // IE10+
-  @if ($x == 0 and $y == 0) { // non directional glow
-    filter: Glow(color=#{ie-hex-str($color)},strength=#{numericvalue($blur)});
-    -ms-filter: glow(color=#{ie-hex-str($color)},strength=#{numericvalue($blur)});
-  } @else {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=#{numericvalue($blur)}, Direction=#{degrees($x, $y)}, Color='#{ie-hex-str($color)}')"; // IE8
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=#{numericvalue($blur)}, Direction=#{degrees($x, $y)}, Color='#{ie-hex-str($color)}'); // IE7-
-  }
-  -o-box-shadow:$x $y $blur $color; // Opera
-  -moz-box-shadow:$x $y $blur $color; // Firefox
-  -webkit-box-shadow:$x $y $blur $color; // Webkit (Safari, Chrome, other)
-  box-shadow:$x $y $blur $color;
+  @include box-shadow($color $x $y $blur);
 }
 // filter drop shadow
 @mixin filter-shadow($color:rgba(0,0,0,0.2), $blur:0, $x:0, $y:0) { // color, blur, x, y
