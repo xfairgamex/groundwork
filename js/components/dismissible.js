@@ -1,7 +1,10 @@
-(function ( $ ) {
-	$('.dismissible').click(function() {
-		$(this).hide(150, function() {
-			$(this).remove();
-		});
-	});
-}( jQuery ));
+(function() {
+  $(function() {
+    return $(".dismissible").click(function() {
+      return $(this).hide(150, function() {
+        return $(this).remove();
+      });
+    });
+  });
+
+}).call(this);

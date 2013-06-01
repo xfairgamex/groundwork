@@ -16,6 +16,14 @@
     });
   });
 
+  $(function() {
+    return $(".dismissible").click(function() {
+      return $(this).hide(150, function() {
+        return $(this).remove();
+      });
+    });
+  });
+
   $(window).on('load resize', function() {
     return equalizeColumns();
   });
@@ -764,21 +772,5 @@
       });
     };
   })(jQuery);
-
-  /*
-   * jQuery Dismissible by John Rodkey aka Puchesjr
-   *
-   * Open Source under MIT License
-   *
-   * Copyright 2013 John Rodkey | All Rights Reserved
-  */
-
-  (function ( $ ) {
-    $('.dismissible').click(function() {
-      $(this).hide(150, function() {
-        $(this).remove();
-      });
-    });
-  }( jQuery ));
 
 }).call(this);
