@@ -6,13 +6,17 @@ module.exports = (grunt) ->
     watch:
       coffee:
         files: '**/*.coffee'
-        tasks: ['coffee']
+        tasks: ['coffee', 'concat:groundwork']
       jade:
         files: '**/*.jade'
         tasks: ['jade:groundwork']
       compass:
         files: '**/*.scss'
         tasks: ['compass:groundwork']
+      concat:
+       files: ['js/plugins/jquery.cycle2.js',
+               'js/plugins/jquery.magnific-popup.js']
+       tasks: ['concat:groundwork']
 
     coffee:
       individual:
@@ -25,10 +29,12 @@ module.exports = (grunt) ->
         options:
           join: true
         files:
-          "js/groundwork.all.js":       ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
-      stacktable:
-        files:
-          'src/modules/stacktable.js/stacktable.js': 'src/modules/stacktable.js/src/coffee/stacktable.coffee'
+          "js/groundwork.all.js":         ["src/coffee/components/*.coffee", "src/coffee/plugins/*.coffee"]
+
+    concat:
+      groundwork:
+        src: ['js/groundwork.all.js', 'js/plugins/jquery.cycle2.js', 'js/plugins/jquery.magnific-popup.js']
+        dest: 'js/groundwork.all.js'
 
     jade:
       groundwork:
@@ -63,7 +69,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-compass'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
 
   grunt.registerTask 'default',           ['watch']
-  grunt.registerTask 'build',             ['coffee', 'jade:groundwork', 'compass:groundwork']
+  grunt.registerTask 'build',             ['coffee', 'concat:groundwork', 'jade:groundwork', 'compass:groundwork']
   grunt.registerTask "tests",             ['jade:tests', 'compass:tests']
