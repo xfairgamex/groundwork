@@ -3284,8 +3284,6 @@ h6, .h6 {
 p, .p, ul, ol, dl {
   margin-bottom: 10px;
   font-weight: normal;
-  font-size: 1em;
-  line-height: 2.42857em;
 }
 
 ul, ol {
@@ -4538,7 +4536,7 @@ ol.button-list li a.block, [role~=button].block {
 .dropdown ul li {
   display: block;
 }
-.dropdown ul li a {
+.dropdown ul li a, .dropdown ul li a:visited {
   display: block;
   padding: 0.5em 1em;
   border: none;
@@ -5154,7 +5152,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   display: none;
 }
 
-.tabs > ul li a, .tabs > ol li a {
+.tabs > ul li a, .tabs > ul li a:visited, .tabs > ol li a, .tabs > ol li a:visited {
   display: block;
   position: relative;
   width: 100%;
@@ -5294,7 +5292,7 @@ nav.menu .menu-toggle, .menu.nav .menu-toggle {
   border-radius: 4px 0 0 0;
 }
 
-.tabs.vertical > ul li a, .tabs.vertical > ol li a {
+.tabs.vertical > ul li a, .tabs.vertical > ul li a:visited, .tabs.vertical > ol li a, .tabs.vertical > ol li a:visited {
   height: auto;
   border-bottom: 1px solid #198d98;
   -ms-border-radius: 0;

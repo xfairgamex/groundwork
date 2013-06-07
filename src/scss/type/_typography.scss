@@ -7,6 +7,8 @@
 
 
 /* vertical rhythm */
+$base-font-size:         14px;
+$base-line-height:       17px;
 @include establish-baseline;
 
 %document {
@@ -73,7 +75,6 @@
 %p, %ul, %ol, %dl {
   margin-bottom:10px;
   font-weight:normal;
-  @include adjust-font-size-to($base-font-size);
 }
 
 %list {

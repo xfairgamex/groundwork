@@ -3266,12 +3266,12 @@ ul.icons li [class*=" icon-"] {
 
 /* vertical rhythm */
 * html {
-  font-size: 100%;
+  font-size: 87.5%;
 }
 
 html {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 14px;
+  line-height: 1.21429em;
 }
 
 html, body, .document, .html, .body {
@@ -3299,45 +3299,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 h1, .h1 {
   font-weight: 200;
   font-size: 2.33333em;
-  line-height: 1.28571em;
+  line-height: 1.56122em;
 }
 
 h2, .h2 {
   font-weight: 200;
   font-size: 2em;
-  line-height: 1.5em;
+  line-height: 1.21429em;
 }
 
 h3, .h3 {
   font-weight: 500;
   font-size: 1.5em;
-  line-height: 2em;
+  line-height: 1.61905em;
 }
 
 h4, .h4 {
   font-weight: 500;
   font-size: 1.33333em;
-  line-height: 2.25em;
+  line-height: 1.82143em;
 }
 
 h5, .h5 {
   font-weight: 900;
   font-size: 1.16667em;
-  line-height: 1.28571em;
+  line-height: 2.08163em;
 }
 
 h6, .h6 {
   font-weight: 900;
   font-size: 1.16667em;
-  line-height: 1.28571em;
+  line-height: 2.08163em;
   text-transform: uppercase;
 }
 
 p, .p, ul, ol, dl {
   margin-bottom: 10px;
   font-weight: normal;
-  font-size: 1em;
-  line-height: 1.5em;
 }
 
 ul, ol {
@@ -3371,7 +3369,7 @@ ul.list li:before {
   font-weight: normal;
   font-style: normal;
   font-size: 1.1em;
-  line-height: 1.36364em;
+  line-height: 2.20779em;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   vertical-align: baseline;
@@ -3385,7 +3383,7 @@ ol.list {
   counter-reset: li;
   margin-left: 1.5em;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 2.42857em;
   line-height: 1.6;
 }
 ol.list li {
@@ -3417,7 +3415,7 @@ blockquote, .blockquote {
   padding: 1.3em 4em 1em;
   color: #2b2b2d;
   font-size: 1em;
-  line-height: 1.725em;
+  line-height: 1.39643em;
   font-weight: bold;
   position: relative;
   z-index: 0;
@@ -3449,7 +3447,7 @@ cite, .cite {
   left: -1em;
   margin-top: 0.25em;
   font-size: 1em;
-  line-height: 1.425em;
+  line-height: 1.15357em;
   font-weight: normal;
   font-style: normal;
   color: #505054;
@@ -3497,7 +3495,7 @@ pre, .pre {
   color: white;
   background: #050505;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.21429em;
   padding: 0.5em;
   display: block;
   border-left: 2.6em solid gray;
