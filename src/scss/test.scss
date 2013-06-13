@@ -1,0 +1,15 @@
+@import "settings";         // customizable settings
+@import "core/all";         // constants, defaults, mixins
+@import "base/all";         // reset, globals, grid, helpers
+@import "responsive/all";   // responsive navigation, tabs
+
+article {
+  @extend %two, %thirds, %padded;
+  background: #f9f9f9;
+}
+
+aside {
+  @extend %one, %third, %padded;
+  background: #e0e0e0;
+}
+
