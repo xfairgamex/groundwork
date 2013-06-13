@@ -3780,6 +3780,60 @@ ol.list li.asphalt:before {
   line-height: 1.5;
 }
 
+.message.green, [role~=alert].green {
+  border-color: #2ecc71;
+  background-color: #54d98c;
+  color: white;
+}
+
+.message.blue, [role~=alert].blue {
+  border-color: #3498db;
+  background-color: #5faee3;
+  color: white;
+}
+
+.message.purple, [role~=alert].purple {
+  border-color: #9b59b6;
+  background-color: #b07cc6;
+  color: white;
+}
+
+.message.yellow, [role~=alert].yellow {
+  border-color: #f1c40f;
+  background-color: #f4d03f;
+  color: white;
+}
+
+.message.orange, [role~=alert].orange {
+  border-color: #e67e22;
+  background-color: #eb9950;
+  color: white;
+}
+
+.message.red, [role~=alert].red {
+  border-color: #e74c3c;
+  background-color: #ed7669;
+  color: white;
+}
+
+.message.pink, [role~=alert].pink {
+  border-color: #f02475;
+  background-color: #f35493;
+  color: white;
+}
+
+.message.turquoise, [role~=alert].turquoise {
+  border-color: #1abc9c;
+  background-color: #28e1bd;
+  color: white;
+}
+
+.message.asphalt, [role~=alert].asphalt {
+  border-color: #34495e;
+  background-color: #46627f;
+  color: white;
+}
+
 .callout, [role~=status], .extend-callout {
   position: relative;
   word-wrap: break-word;
@@ -3965,6 +4019,60 @@ ol.list li.asphalt:before {
   top: 0;
   right: 1em;
   line-height: 1.5;
+}
+
+.callout.green, [role~=status].green {
+  border-color: #2ecc71;
+  background-color: #54d98c;
+  color: white;
+}
+
+.callout.blue, [role~=status].blue {
+  border-color: #3498db;
+  background-color: #5faee3;
+  color: white;
+}
+
+.callout.purple, [role~=status].purple {
+  border-color: #9b59b6;
+  background-color: #b07cc6;
+  color: white;
+}
+
+.callout.yellow, [role~=status].yellow {
+  border-color: #f1c40f;
+  background-color: #f4d03f;
+  color: white;
+}
+
+.callout.orange, [role~=status].orange {
+  border-color: #e67e22;
+  background-color: #eb9950;
+  color: white;
+}
+
+.callout.red, [role~=status].red {
+  border-color: #e74c3c;
+  background-color: #ed7669;
+  color: white;
+}
+
+.callout.pink, [role~=status].pink {
+  border-color: #f02475;
+  background-color: #f35493;
+  color: white;
+}
+
+.callout.turquoise, [role~=status].turquoise {
+  border-color: #1abc9c;
+  background-color: #28e1bd;
+  color: white;
+}
+
+.callout.asphalt, [role~=status].asphalt {
+  border-color: #34495e;
+  background-color: #46627f;
+  color: white;
 }
 
 table {

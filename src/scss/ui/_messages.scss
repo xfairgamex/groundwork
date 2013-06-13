@@ -84,11 +84,24 @@
   }
 }
 
+@for $i from 1 through length($modifier-name) {
+  %message-#{nth($modifier-name, $i)} {
+    border-color:nth($modifier-code, $i);
+    background-color:lighten(nth($modifier-code, $i), 10%);
+    color:nth($modifier-text, $i);
+  }
+}
+
 @mixin message-modifiers() {
   $modifiers: small large info alert warning error success square round disabled dismissible;
   @for $i from 1 through length($modifiers) {
     &.#{nth($modifiers, $i)} {
       @extend %message-#{nth($modifiers, $i)};
+    }
+  }
+  @for $i from 1 through length($modifier-name) {
+    &.#{nth($modifier-name, $i)} {
+      @extend %message-#{nth($modifier-name, $i)};
     }
   }
 }
