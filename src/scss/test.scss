@@ -4,22 +4,23 @@
 @import "responsive/all";   // responsive navigation, tabs
 
 %demo {
+  @extend %padded;
   border: 1px dashed #e0e0e0;
   background: #f9f9f9;
 }
 
-body {
-  @extend %demo;
-}
 article {
   @extend %row;
 }
 
 section {
-  @extend %two, %thirds, %padded, %demo;
+  @extend %two, %thirds, %demo;
 }
 
 aside {
-  @extend %one, %third, %padded, %demo;
+  @extend %one, %third, %demo;
 }
 
+%column {
+  @extend %demo;
+}
