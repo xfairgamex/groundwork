@@ -3,13 +3,24 @@
 @import "base/all";         // reset, globals, grid, helpers
 @import "responsive/all";   // responsive navigation, tabs
 
-article {
-  @extend %two, %thirds, %padded;
+%demo {
+  @extend %padded;
+  border: 1px dashed #e0e0e0;
   background: #f9f9f9;
 }
 
-aside {
-  @extend %one, %third, %padded;
-  background: #e0e0e0;
+article {
+  @extend %row;
 }
 
+section {
+  @extend %two, %thirds, %demo;
+}
+
+aside {
+  @extend %one, %third, %demo;
+}
+
+%column {
+  @extend %demo;
+}
