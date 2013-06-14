@@ -14,14 +14,19 @@
 $classes:             true !default;       // enable CSS class selectors     (WIP)
 
 // file paths
-$root_path:           '../' !default;      // path to HTML document root (relative from $css_path)
-$css_path:            'css/' !default;     // path to CSS output (relative from HTML document root)
-$boxsizing_path:      '/js/libs/boxsizing.htc' !default;  // path to box sizing polyfill (change to absolute path from HTML document root)
+$root_path:           "../" !default;      // path to HTML document root (relative from $css_path)
+$css_path:            "css/" !default;     // path to CSS output (relative from HTML document root)
+$boxsizing_path:      "/js/libs/boxsizing.htc" !default;  // path to box sizing polyfill (change to absolute path from HTML document root)
 
 // layout/grid settings
 $max-width:           1200px !default;     // max container width (i.e. - 960px)
 $gutter:              10px !default;       // gutter spacing
 
+// break points
+$mobile:              "only screen and (max-width:480px)" !default;
+$small-tablet:        "only screen and (max-width:767px)" !default;
+$ipad:                "only screen and (min-width:768px) and (max-width:1024px)" !default;
+$desktop:             "only screen and (min-width:1025px)" !default;
 
 
 ///////////////////////

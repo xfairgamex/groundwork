@@ -14,14 +14,19 @@
 // $classes:             true;       // enable CSS class selectors     (WIP)
 
 // file paths
-// $root_path:           '../';      // path to HTML document root (relative from $css_path)
-// $css_path:            'css/';     // path to CSS output (relative from HTML document root)
-// $boxsizing_path:      '/js/libs/boxsizing.htc';  // path to box sizing polyfill (change to absolute path from HTML document root)
+// $root_path:           "../";      // path to HTML document root (relative from $css_path)
+// $css_path:            "css/";     // path to CSS output (relative from HTML document root)
+// $boxsizing_path:      "/js/libs/boxsizing.htc";  // path to box sizing polyfill (change to absolute path from HTML document root)
 
 // layout/grid settings
 // $max-width:           1200px;     // max container width (i.e. - 960px)
 // $gutter:              10px;       // gutter spacing
 
+// break points
+// $mobile:              "only screen and (max-width:480px)";
+// $small-tablet:        "only screen and (max-width:767px)";
+// $ipad:                "only screen and (min-width:768px) and (max-width:1024px)";
+// $desktop:             "only screen and (min-width:1025px)";
 
 
 ///////////////////////
