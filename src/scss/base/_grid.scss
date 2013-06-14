@@ -23,10 +23,14 @@
   width: $one-whole;
 }
 
-%column {
+@mixin _column() {
   float: left;
   position: relative;
   min-height: 1px;
+}
+
+%column {
+  @include _column;
 }
 
 %centered {
@@ -47,6 +51,7 @@ $selectors: if($classes, "%" ".", "%");
 $numbers: one two three four five six seven eight nine ten eleven twelve;
 $fractions: whole half third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth;
 $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths ninths tenths elevenths twelfths;
+$adapters: $one-half $one-third $one-fourth $one-fifth;
 
 // function to generate the grid code (placeholders and optionally, classes)
 @for $i from 1 through length($selectors) {
@@ -76,6 +81,27 @@ $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths n
   }
 }
 
+// small-tablet grid adapters
+@media #{$small-tablet} {
+  @for $i from 1 through 4 {
+    .#{nth($numbers, ($i + 1))}-up-small-tablet {
+      width: nth($adapters, $i) !important;
+      clear: none !important;
+      float: left !important;
+    }
+  }
+}
+// mobile grid adapters
+@media #{$mobile} {
+  @for $i from 1 through 4 {
+    .#{nth($numbers, ($i + 1))}-up-mobile {
+      width: nth($adapters, $i) !important;
+      clear: none !important;
+      float: left !important;
+    }
+  }
+}
+
 // grid classes responsive
 @mixin grid-responsive($both: true) {
   // responsive grid
@@ -91,12 +117,12 @@ $fractions-plural: wholes halves thirds fourths fifths sixths sevenths eighths n
   %eleventh, %elevenths,
   %twelfth, %twelfths#{if($classes, ", .half, .halves, .third, .thirds, .fourth, .fourths, .fifth, .fifths, .sixth, .sixths, .seventh, .sevenths, .eighth, .eighths, .ninth, .ninths, .tenth, .tenths, .eleventh, .elevenths, .twelfth, .twelfths", "")} {
     @if $both {
-      &:not(.small-tablet):not(.mobile) {
+      &:not(.small-tablet):not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile):not(.two-up-small-tablet):not(.three-up-small-tablet):not(.four-up-small-tablet):not(.five-up-small-tablet) {
         @include grid-collapse();
       }
     }
     @else {
-      &:not(.mobile) {
+      &:not(.mobile):not(.two-up-mobile):not(.three-up-mobile):not(.four-up-mobile):not(.five-up-mobile) {
         @include grid-collapse();
       }
     }
