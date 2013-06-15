@@ -1382,6 +1382,56 @@ img, a img, .img {
   margin-left: 91.66667%;
 }
 
+@media only screen and (max-width: 767px) {
+  .two-up-small-tablet {
+    width: 50% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .three-up-small-tablet {
+    width: 33.33333% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .four-up-small-tablet {
+    width: 25% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .five-up-small-tablet {
+    width: 20% !important;
+    clear: none !important;
+    float: left !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .two-up-mobile {
+    width: 50% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .three-up-mobile {
+    width: 33.33333% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .four-up-mobile {
+    width: 25% !important;
+    clear: none !important;
+    float: left !important;
+  }
+
+  .five-up-mobile {
+    width: 20% !important;
+    clear: none !important;
+    float: left !important;
+  }
+}
 @-moz-keyframes spin {
   0% {
     -moz-transform: rotate(0deg);
