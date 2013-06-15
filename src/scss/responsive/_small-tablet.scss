@@ -6,7 +6,7 @@
 
 
 @mixin small-tablet {
-  @media only screen and (max-width:767px) {
+  @media #{$small-tablet} {
     // responsive grid
     @include grid-responsive();
     // conditional helpers

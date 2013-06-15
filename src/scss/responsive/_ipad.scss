@@ -6,7 +6,7 @@
 
 
 @mixin ipad {
-  @media only screen and (min-width:768px) and (max-width:1024px) {
+  @media #{$ipad} {
     // conditional helpers
     .ipad-only { display:inline-block !important; }
     .hide-on-ipad { display:none !important; }

@@ -6,7 +6,7 @@
 
 
 @mixin mobile {
-  @media only screen and (max-width:480px) {
+  @media #{$mobile} {
     // responsive grid
     @include grid-responsive(false);
     // conditional helpers

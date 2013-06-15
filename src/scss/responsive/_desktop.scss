@@ -6,7 +6,7 @@
 
 
 @mixin desktop {
-  @media only screen and (min-width:1025px) {
+  @media #{$desktop} {
     // conditional helpers
     .hide-on-desktop { display:none !important; }
     // spacer overrides
