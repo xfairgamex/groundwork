@@ -13,7 +13,6 @@
   (function($) {
     return $.fn.tooltip = function(options) {
       var closetooltip, defaults, delayShow, getElementPosition, resettooltip, setPosition, showtooltip, tooltip, trigger;
-
       defaults = {
         topOffset: 0,
         delay: 100,
@@ -29,7 +28,6 @@
       }
       getElementPosition = function(el) {
         var bottom, left, offset, right, top, win;
-
         offset = el.offset();
         win = $(window);
         return {
@@ -41,7 +39,6 @@
       };
       setPosition = function(trigger) {
         var attrs, coords, height, width;
-
         coords = getElementPosition(trigger);
         if (tooltip.outerWidth() > ($(window).width() - 20)) {
           tooltip.css('width', $(window).width() - 20);
@@ -104,7 +101,6 @@
       };
       this.each(function() {
         var $this;
-
         $this = $(this);
         $this.attr('role', 'tooltip').attr('data-title', $this.attr('title'));
         return $this.removeAttr("title");

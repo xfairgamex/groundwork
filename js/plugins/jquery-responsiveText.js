@@ -12,11 +12,9 @@
 (function() {
   (function($) {
     var elems;
-
     elems = [];
     $.fn.responsiveText = function(options) {
       var settings;
-
       settings = {
         compressor: options.compressor || 10,
         minSize: options.minSize || Number.NEGATIVE_INFINITY,
@@ -24,7 +22,6 @@
       };
       return this.each(function() {
         var elem;
-
         elem = $(this);
         elem.attr('data-compression', settings.compressor);
         elem.attr('data-min', settings.minSize);
@@ -36,7 +33,6 @@
     return $(window).on("resize", function() {
       return $(elems).each(function() {
         var elem;
-
         elem = $(this);
         return elem.css("font-size", Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min')))));
       });

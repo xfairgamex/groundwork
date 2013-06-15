@@ -7,7 +7,6 @@
   $(function() {
     $('.responsive').not('table').each(function(index, object) {
       var $this, compression, max, min, scrollReset, scrollTime;
-
       $this = $(this);
       compression = 10;
       min = 10;
@@ -24,7 +23,6 @@
       });
       $this.hover((function() {
         var difference;
-
         difference = $this.get(0).scrollWidth - $this.width();
         if (difference > scrollTime) {
           scrollTime = difference;

@@ -7,7 +7,6 @@
   $(function() {
     $('table.responsive').each(function(index, object) {
       var $this, compression, max, min, padding;
-
       $this = $(this);
       compression = 30;
       min = 8;

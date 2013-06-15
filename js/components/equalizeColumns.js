@@ -8,13 +8,11 @@
   equalizeColumns = function() {
     return $('.row.equalize').each(function() {
       var $row, collapsed, tallest;
-
       $row = $(this);
       tallest = 0;
       collapsed = false;
       $row.children('*').each(function(i) {
         var $this;
-
         $this = $(this);
         $this.css('minHeight', '1px');
         collapsed = $this.outerWidth() === $row.outerWidth();

@@ -12,11 +12,9 @@
 (function() {
   (function($) {
     var elems;
-
     elems = [];
     $.fn.responsiveTable = function(options) {
       var settings;
-
       settings = {
         compressor: options.compressor || 10,
         minSize: options.minSize || Number.NEGATIVE_INFINITY,
@@ -27,7 +25,6 @@
       };
       return this.each(function() {
         var columns, elem, fontSize, rows;
-
         elem = $(this);
         elem.attr('data-compression', settings.compressor);
         elem.attr('data-min', settings.minSize);
@@ -45,7 +42,6 @@
         }
         $("tr th, tr td", elem).each(function() {
           var width;
-
           if ($(this).attr('data-width') !== '') {
             width = parseInt($(this).attr('data-width'));
           } else {
@@ -62,7 +58,6 @@
     return $(window).on("resize", function() {
       return $(elems).each(function() {
         var elem, fontSize;
-
         elem = $(this);
         fontSize = Math.floor(Math.max(Math.min(elem.width() / (elem.attr('data-compression')), parseFloat(elem.attr('data-max'))), parseFloat(elem.attr('data-min'))));
         return $("tr th, tr td", elem).css("font-size", fontSize + "px");
