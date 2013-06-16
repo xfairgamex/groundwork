@@ -1,0 +1,34 @@
+@import "../../../src/scss/settings";         // customizable settings
+@import "../../../src/scss/core/all";         // constants, defaults, mixins
+@import "../../../src/scss/base/all";         // reset, globals, grid, helpers
+@import "../../../src/scss/responsive/all";   // responsive navigation, tabs
+
+@import "demo";
+
+$list: container row one third two three fifths right-one left-one right-two left-three centered skip-two mobile small-tablet;
+
+@each $item in $list {
+  .extend-#{$item} { @extend %#{$item} !optional; }
+}
+
+%demo {
+  @extend %padded;
+  border: 1px dashed #e0e0e0;
+  background: #f9f9f9;
+}
+
+article {
+  @extend %row;
+}
+
+section {
+  @extend %two, %thirds, %demo;
+}
+
+aside {
+  @extend %one, %third, %demo;
+}
+
+%column {
+  @extend %demo;
+}
